@@ -1,0 +1,14 @@
+
+title: Kontist Developer Portal
+email: developer@kontist.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome. Discover all the services of our platform so that
+  you can build or integrate your service with Kontist.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: kontist
+github_username:  kontist
+
+# Build settings
+theme: minima
+
