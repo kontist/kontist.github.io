@@ -47,6 +47,9 @@ ul, ol, dl, figure,
  */
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  line-height: 1.4;
+  color: #4D4B51;
+  font-size: 20px;
 }
 
 
@@ -95,6 +98,14 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #180B32;
 }
 
 
@@ -151,7 +162,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: #FAFAFA;
 }
 
 code {
@@ -200,27 +211,6 @@ pre {
   content: "";
   display: table;
   clear: both;
-}
-
-
-
-/**
- * Icons
- */
-
-.svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$grey-color};
-    padding-right: 5px;
-    vertical-align: text-top;
-}
-
-.social-media-list {
-  li + li {
-    padding-top: 5px;
-  }
 }
 
 
