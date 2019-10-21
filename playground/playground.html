@@ -528,6 +528,8 @@ permalink: /playground/
   <div id="root" />
   <script type="text/javascript">
 
+    const baseUrl = 'http://localhost:3000';
+
     function authorize(callback) {
       sessionStorage.setItem(
         "state",
@@ -539,9 +541,9 @@ permalink: /playground/
       );
 
       const client = new Kontist.Client({
-        baseUrl: "http://localhost:3000",
+        baseUrl,
         clientId: "71b8061a-ac88-456a-b1ef-417a05ac1f51",
-        redirectUri: 'https://e767698e.ngrok.io/playground/',
+        redirectUri: document.URL,
         scopes: ["transactions"],
         state: sessionStorage.getItem("state"),
         verifier: sessionStorage.getItem("verifier")
@@ -557,28 +559,29 @@ permalink: /playground/
       } else {
         // we have a code, the client now can fetch a token
         client.auth.fetchToken(document.location.href).then(function(response) {
-          callback(response.accessToken);
+          const { accessToken } = response || {};
+          if (accessToken) {
+            callback(accessToken);
+          }
         });
       }
     }
-
+  
     function showPlayground(accessToken) {
       const loadingWrapper = document.getElementById('loading-wrapper');
       loadingWrapper.classList.add('fadeOut');
-
 
       const root = document.getElementById('root');
       root.classList.add('playgroundIn');
 
       GraphQLPlayground.init(root, {
-        endpoint: 'http://localhost:3000/api/graphql',
+        endpoint: `${baseUrl}/api/graphql`,
         headers: {
               Authorization:
-                'Bearer ' + accessToken,
+                `Bearer ${accessToken}`,
         }
       });
     }
-
 
     window.addEventListener('load', function (event) {
       authorize(showPlayground);
