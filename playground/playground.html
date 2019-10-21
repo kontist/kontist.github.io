@@ -540,11 +540,11 @@ permalink: /playground/
 
       const client = new Kontist.Client({
         baseUrl: "http://localhost:3000",
-        clientId: "71b8061a-ac88-426a-b1ef-417a05ac1f50",
-        redirectUri: 'https://d36eb961.ngrok.io/playground',
+        clientId: "71b8061a-ac88-456a-b1ef-417a05ac1f51",
+        redirectUri: 'https://e767698e.ngrok.io/playground/',
         scopes: ["transactions"],
-        state: 'ljhgyftdsfdfghjkl',//sessionStorage.getItem("state"),
-        verifier: 'Huag6ykQU7SaEYKtmNUeM8txt4HzEIfG'//sessionStorage.getItem("verifier")
+        state: sessionStorage.getItem("state"),
+        verifier: sessionStorage.getItem("verifier")
       });
   
       const params = new URL(document.location).searchParams;
@@ -556,13 +556,13 @@ permalink: /playground/
         });
       } else {
         // we have a code, the client now can fetch a token
-        client.auth.getToken(document.location.href).then(function() {
-          // do a simple graphql query and output the account id
+        client.auth.fetchToken(document.location.href).then(function(response) {
+          callback(response.accessToken);
         });
       }
     }
 
-    function showPlayground(authCode) {
+    function showPlayground(accessToken) {
       const loadingWrapper = document.getElementById('loading-wrapper');
       loadingWrapper.classList.add('fadeOut');
 
@@ -571,10 +571,10 @@ permalink: /playground/
       root.classList.add('playgroundIn');
 
       GraphQLPlayground.init(root, {
-        endpoint: window.location.search.substring(1) ? window.location.search.substring(1) : "https://api.github.com/graphql",
+        endpoint: 'http://localhost:3000/api/graphql',
         headers: {
               Authorization:
-                'Bearer ' + authCode,
+                'Bearer ' + accessToken,
         }
       });
     }
