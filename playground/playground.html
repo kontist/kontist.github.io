@@ -527,10 +527,10 @@ permalink: /playground/
 
   <div id="root" />
   <script type="text/javascript">
+  
+    const baseUrl = "http://localhost:3000";
 
-    const baseUrl = 'http://localhost:3000';
-
-    function authorize(callback) {
+    const authorize = callback => {
       sessionStorage.setItem(
         "state",
         sessionStorage.getItem("state") || (Math.random() + "").substring(2)
@@ -548,44 +548,44 @@ permalink: /playground/
         state: sessionStorage.getItem("state"),
         verifier: sessionStorage.getItem("verifier")
       });
-  
+
       const params = new URL(document.location).searchParams;
       const code = params.get("code");
       if (!code) {
         // page not called with "code" query parameter, let's redirect the user to the login
-        client.auth.getAuthUri().then(function(url) {
+        client.auth.getAuthUri().then(url => {
           window.location = url;
         });
       } else {
         // we have a code, the client now can fetch a token
-        client.auth.fetchToken(document.location.href).then(function(response) {
+        client.auth.fetchToken(document.location.href).then(response => {
           const { accessToken } = response || {};
           if (accessToken) {
             callback(accessToken);
           }
         });
       }
-    }
-  
-    function showPlayground(accessToken) {
-      const loadingWrapper = document.getElementById('loading-wrapper');
-      loadingWrapper.classList.add('fadeOut');
+    };
 
-      const root = document.getElementById('root');
-      root.classList.add('playgroundIn');
+    const showPlayground = accessToken => {
+      const loadingWrapper = document.getElementById("loading-wrapper");
+      loadingWrapper.classList.add("fadeOut");
+
+      const root = document.getElementById("root");
+      root.classList.add("playgroundIn");
 
       GraphQLPlayground.init(root, {
         endpoint: `${baseUrl}/api/graphql`,
         headers: {
-              Authorization:
-                `Bearer ${accessToken}`,
+          Authorization: `Bearer ${accessToken}`
         }
       });
-    }
+    };
 
-    window.addEventListener('load', function (event) {
+    window.addEventListener("load", event => {
       authorize(showPlayground);
-    })
+    });
+
   </script>
 </body>
 </html>
