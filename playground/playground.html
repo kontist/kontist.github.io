@@ -13,6 +13,7 @@ permalink: /playground/
   <title>GraphQL Playground</title>
   <link rel="stylesheet" href="index.css" />
   <script src="middleware.js"></script>
+  <script src="kontist.bundle.js"></script>
 
 </head>
 
@@ -526,8 +527,42 @@ permalink: /playground/
 
   <div id="root" />
   <script type="text/javascript">
-    window.addEventListener('load', function (event) {
 
+    function authorize(callback) {
+      sessionStorage.setItem(
+        "state",
+        sessionStorage.getItem("state") || (Math.random() + "").substring(2)
+      );
+      sessionStorage.setItem(
+        "verifier",
+        sessionStorage.getItem("verifier") || (Math.random() + "").substring(2)
+      );
+
+      const client = new Kontist.Client({
+        baseUrl: "http://localhost:3000",
+        clientId: "71b8061a-ac88-426a-b1ef-417a05ac1f50",
+        redirectUri: 'https://d36eb961.ngrok.io/playground',
+        scopes: ["transactions"],
+        state: 'ljhgyftdsfdfghjkl',//sessionStorage.getItem("state"),
+        verifier: 'Huag6ykQU7SaEYKtmNUeM8txt4HzEIfG'//sessionStorage.getItem("verifier")
+      });
+  
+      const params = new URL(document.location).searchParams;
+      const code = params.get("code");
+      if (!code) {
+        // page not called with "code" query parameter, let's redirect the user to the login
+        client.auth.getAuthUri().then(function(url) {
+          window.location = url;
+        });
+      } else {
+        // we have a code, the client now can fetch a token
+        client.auth.getToken(document.location.href).then(function() {
+          // do a simple graphql query and output the account id
+        });
+      }
+    }
+
+    function showPlayground(authCode) {
       const loadingWrapper = document.getElementById('loading-wrapper');
       loadingWrapper.classList.add('fadeOut');
 
@@ -539,9 +574,14 @@ permalink: /playground/
         endpoint: window.location.search.substring(1) ? window.location.search.substring(1) : "https://api.github.com/graphql",
         headers: {
               Authorization:
-                'Basic  dGVvQGtvbnRpc3QuY29tOnRlc3QxMjM0',
+                'Bearer ' + authCode,
         }
-      })
+      });
+    }
+
+
+    window.addEventListener('load', function (event) {
+      authorize(showPlayground);
     })
   </script>
 </body>
