@@ -527,9 +527,6 @@ permalink: /playground/
 
   <div id="root" />
   <script type="text/javascript">
-  
-    const baseUrl = "http://localhost:3000";
-
     const authorize = callback => {
       sessionStorage.setItem(
         "state",
@@ -541,9 +538,8 @@ permalink: /playground/
       );
 
       const client = new Kontist.Client({
-        baseUrl,
         clientId: "71b8061a-ac88-456a-b1ef-417a05ac1f51",
-        redirectUri: document.URL,
+        redirectUri: 'https://kontist.dev/playground/',
         scopes: ["transactions"],
         state: sessionStorage.getItem("state"),
         verifier: sessionStorage.getItem("verifier")
@@ -575,7 +571,7 @@ permalink: /playground/
       root.classList.add("playgroundIn");
 
       GraphQLPlayground.init(root, {
-        endpoint: `${baseUrl}/api/graphql`,
+        endpoint: `https://api.kontist.com/api/graphql`,
         headers: {
           Authorization: `Bearer ${accessToken}`
         }
