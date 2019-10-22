@@ -14,7 +14,7 @@ If you just want to explore the API you can use the [Playground](/playground) to
 
 When you want to create your own application you need two kinds of credentials to get such a token: The first part is a fixed pair of client id and client secret. They identify your client application which connects to the API. Each application has its own pair of client id and secret, please use the [API Console](/console) to create your own client credentials.
 
-The second part is obtained through the user and can be done in several ways, here we describe the preferred way through the "Authorization Code" grant type. If you want to develop an pure web application you must use PKCE to not expose the client secret.
+The second part is obtained through the user and can be done in several ways, here we describe the preferred way through the "Authorization Code" grant type. If you want to develop a pure web application you must use PKCE to not expose the client secret.
 
 #### Authorization Code
 In general, the process looks like this:
@@ -84,8 +84,11 @@ Extract the `access_token` and use it in your requests by adding the `Authorizat
 See this example:
 
 ```shell
-curl https://api.kontist.com/api/user \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NzIyODljMy1hNDk4LTQzMDItYjk3My1hNDRlYzdjZDRmZTMiLCJzY29wZSI6Im9mZmxpbmUiLCJjbGllbnRfaWQiOiI3OGI1YzE3MC1hNjAwLTQxOTMtOTc4Yy1lNmNiMzAxOGRiYTkiLCJpYXQiOjE1NjkyMjY3MDksImV4cCI6MTU2OTIzMDMwOX0.XwkfN1jJ_0C5gSIlzvOHRovmbzbpOXRpZ6HCOg1I7j0'
+curl --request POST \
+  --url https://api.kontist.com/api/graphql \
+  --header 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NzIyODljMy1hNDk4LTQzMDItYjk3My1hNDRlYzdjZDRmZTMiLCJzY29wZSI6Im9mZmxpbmUiLCJjbGllbnRfaWQiOiI3OGI1YzE3MC1hNjAwLTQxOTMtOTc4Yy1lNmNiMzAxOGRiYTkiLCJpYXQiOjE1NjkyMjY3MDksImV4cCI6MTU2OTIzMDMwOX0.XwkfN1jJ_0C5gSIlzvOHRovmbzbpOXRpZ6HCOg1I7j0' \
+  --header 'content-type: application/json' \
+  --data '{ "query": "{viewer{id}}" }'
 ```
 
 #### Refresh Token
@@ -146,7 +149,16 @@ Transactions are returned using the [Connection pattern](https://relay.dev/graph
     }
   }
 }
-````
+```
+
+Just send the query inside of a POST request to `/api/graphl` and wrap it into a `query` property.
+```shell
+curl --request POST \
+  --url https://api.kontist.com/api/graphql \
+  --header 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NzIyODljMy1hNDk4LTQzMDItYjk3My1hNDRlYzdjZDRmZTMiLCJzY29wZSI6Im9mZmxpbmUiLCJjbGllbnRfaWQiOiI3OGI1YzE3MC1hNjAwLTQxOTMtOTc4Yy1lNmNiMzAxOGRiYTkiLCJpYXQiOjE1NjkyMjY3MDksImV4cCI6MTU2OTIzMDMwOX0.XwkfN1jJ_0C5gSIlzvOHRovmbzbpOXRpZ6HCOg1I7j0' \
+  --header 'content-type: application/json' \
+  --data '{ "query": "{viewer{mainAccount{...}}}" }'
+```
 
 Result:
 
