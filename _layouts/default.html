@@ -8,6 +8,13 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
+
+      {% if page.sidebar %}
+        <div class="sidebar">
+          {% include toc.html h_min=2 h_max=3 html=content %}
+        </div>
+      {% endif %}
+
       <div class="wrapper">
         {{ content }}
       </div>
