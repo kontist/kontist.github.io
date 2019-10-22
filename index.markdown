@@ -27,3 +27,5 @@ For details, please refer to our [GitHub repository](https://github.com/kontist/
 ## GraphQL Playground
 
 The [Playground](/playground) is an interactive, in-browser application that can be used to explore the GraphQL interface we provide. You may authorize the application with the same credentials that you use for the Kontist mobile app.
+
+![Playground Screenshot](/assets/playground.png){:class="img-responsive"}
