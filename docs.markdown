@@ -20,8 +20,8 @@ The second part is obtained through the user and can be done in several ways, he
 In general, the process looks like this:
 
 1. You redirect the user in a browser to an url on our end.
-2. The user is required to login and needs to accept your application's authorization request. The browser redirects back to your application with a `code` parameter.
-3. Your application can then exchange this `code` together with the `client_secret` into an `access_token` through a backend request to our API.
+2. The user is required to login and needs to accept your application's authorization request. The browser redirects back to your application with a `code` parameter.
+3. Your application can then exchange this `code` together with the `client_secret` into an `access_token` through a backend request to our API.
 
 Let us go through the process step by step. At first we need to send the user to a special url in the browser:
 
