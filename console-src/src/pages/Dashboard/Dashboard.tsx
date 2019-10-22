@@ -1,9 +1,8 @@
 import React from "react";
-
-import withAuth from "../../enhancers/withAuth";
+import withKontistClient from "../../enhancers/withKontistClient";
 
 const Dashboard = () => {
   return <div>Dashboard</div>;
 };
 
-export default withAuth(Dashboard);
+export default withKontistClient(Dashboard);
