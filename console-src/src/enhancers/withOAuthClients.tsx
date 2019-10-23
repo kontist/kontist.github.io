@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import { Client } from "@kontist/client";
 
-import prodConfig from "../config";
-import devConfig from "../config.dev";
-
-import Loading from "../pages/Loading";
-
 import {
   OAuthClient,
   CreateOAuthClientPayload,
@@ -19,32 +14,6 @@ import {
   deleteClientMutation
 } from "../queries";
 
-const { baseAPIUrl, clientId, redirectUri } =
-  process.env.NODE_ENV === "production" ? prodConfig : devConfig;
-
-const STATE_KEY = "state";
-const VERIFIER_KEY = "verifier";
-const CLIENT_SCOPE = "clients";
-const CODE_QUERY_PARAM = "code";
-
-sessionStorage.setItem(
-  STATE_KEY,
-  sessionStorage.getItem(STATE_KEY) || (Math.random() + "").substring(2)
-);
-sessionStorage.setItem(
-  VERIFIER_KEY,
-  sessionStorage.getItem(VERIFIER_KEY) || (Math.random() + "").substring(2)
-);
-
-const client = new Client({
-  baseUrl: baseAPIUrl,
-  clientId,
-  redirectUri,
-  scopes: [CLIENT_SCOPE],
-  state: sessionStorage.getItem(STATE_KEY) || "",
-  verifier: sessionStorage.getItem(VERIFIER_KEY) || ""
-});
-
 interface OAuthClientsContext {
   isLoading: boolean;
   oAuthClients: OAuthClient[];
@@ -53,9 +22,11 @@ interface OAuthClientsContext {
   deleteClient: (payload: DeleteOAuthClientPayload) => Promise<Object> | void;
 }
 
-interface State extends OAuthClientsContext {
-  isAuthenticated: boolean;
-}
+interface State extends OAuthClientsContext {}
+
+type Props = {
+  kontistClient: Client;
+};
 
 const { Provider, Consumer } = React.createContext<OAuthClientsContext>({
   isLoading: false,
@@ -65,21 +36,21 @@ const { Provider, Consumer } = React.createContext<OAuthClientsContext>({
   deleteClient: () => {}
 });
 
-class OAuthClientsProvider extends Component<{}, State> {
+class OAuthClientsProvider extends Component<Props, State> {
   fetchClients: () => Promise<any>;
   createClient: (payload: CreateOAuthClientPayload) => Promise<any>;
   updateClient: (payload: UpdateOAuthClientPayload) => Promise<any>;
   deleteClient: (payload: DeleteOAuthClientPayload) => Promise<any>;
 
-  constructor(props: {}) {
+  constructor(props: Props) {
     super(props);
 
-    this.fetchClients = async () => {
-      this.setState({
-        isLoading: true
-      });
+    const { kontistClient } = props;
 
-      const { viewer } = await client.graphQL.rawQuery(fetchClientsQuery);
+    this.fetchClients = async () => {
+      const { viewer } = await kontistClient.graphQL.rawQuery(
+        fetchClientsQuery
+      );
 
       this.setState({
         isLoading: false,
@@ -90,17 +61,16 @@ class OAuthClientsProvider extends Component<{}, State> {
     };
 
     this.createClient = async (payload: CreateOAuthClientPayload) =>
-      client.graphQL.rawQuery(createClientMutation, payload);
+      kontistClient.graphQL.rawQuery(createClientMutation, payload);
 
     this.updateClient = async (payload: UpdateOAuthClientPayload) =>
-      client.graphQL.rawQuery(updateClientMutation, payload);
+      kontistClient.graphQL.rawQuery(updateClientMutation, payload);
 
     this.deleteClient = async (payload: DeleteOAuthClientPayload) =>
-      client.graphQL.rawQuery(deleteClientMutation, payload);
+      kontistClient.graphQL.rawQuery(deleteClientMutation, payload);
 
     this.state = {
-      isAuthenticated: false,
-      isLoading: false,
+      isLoading: true,
       createClient: this.createClient,
       updateClient: this.updateClient,
       deleteClient: this.deleteClient,
@@ -109,25 +79,7 @@ class OAuthClientsProvider extends Component<{}, State> {
   }
 
   async componentDidMount() {
-    if (client.auth.token) {
-      await this.fetchClients();
-
-      return;
-    }
-
-    const params = new URL(document.location.href).searchParams;
-    const code = params.get(CODE_QUERY_PARAM);
-
-    if (!code) {
-      const url = await client.auth.getAuthUri();
-      window.location.href = url;
-    } else {
-      await client.auth.fetchToken(document.location.href);
-      this.setState({
-        isAuthenticated: true
-      });
-      await this.fetchClients();
-    }
+    await this.fetchClients();
   }
 
   render() {
@@ -136,8 +88,7 @@ class OAuthClientsProvider extends Component<{}, State> {
       isLoading,
       createClient,
       updateClient,
-      deleteClient,
-      isAuthenticated
+      deleteClient
     } = this.state;
 
     return (
@@ -150,7 +101,7 @@ class OAuthClientsProvider extends Component<{}, State> {
           deleteClient
         }}
       >
-        {isAuthenticated ? this.props.children : <Loading />}
+        {this.props.children}
       </Provider>
     );
   }
