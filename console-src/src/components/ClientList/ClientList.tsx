@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import { BodyText } from "../../components/Text";
+import TitledCard from "../../components/TitledCard";
 import { OAuthClient } from "../../types/oAuthClient";
 import colors from "../../theme/colors";
 import copy from "../../copy";
@@ -52,21 +53,11 @@ const ClientItem = (props: ClientItemProps) => {
   );
 };
 
-const ClientListContainer = styled.div`
-  border-radius: 0.25rem;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
-`;
-
-const ClientListHeader = styled.div`
-  border-top: 0.25rem solid ${colors.secondaryPurple};
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  padding: 1rem;
-  min-height: 30px;
+const TitleContainer = styled.div`
   display: flex;
+  height: 100%;
+  width: 100%;
   justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid ${colors.veryLightGrey};
 `;
 
 const ClientList = (props: ClientListProps) => {
@@ -75,19 +66,22 @@ const ClientList = (props: ClientListProps) => {
   }
 
   return (
-    <ClientListContainer>
-      <ClientListHeader>
-        <BodyText className="without-padding primary-black bold">
-          {copy.dashboard.clientList.nameTitle}
-        </BodyText>
-        <BodyText className="without-padding  primary-black bold">
-          {copy.dashboard.clientList.uriTitle}
-        </BodyText>
-      </ClientListHeader>
+    <TitledCard
+      renderTitle={() => (
+        <TitleContainer>
+          <BodyText className="without-padding primary-black bold">
+            {copy.dashboard.clientList.nameTitle}
+          </BodyText>
+          <BodyText className="without-padding  primary-black bold">
+            {copy.dashboard.clientList.uriTitle}
+          </BodyText>
+        </TitleContainer>
+      )}
+    >
       {props.clients.map((client, index) => (
         <ClientItem key={index} client={client} />
       ))}
-    </ClientListContainer>
+    </TitledCard>
   );
 };
 
