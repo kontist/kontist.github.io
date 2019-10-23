@@ -25,6 +25,7 @@ const Footer = styled.footer`
 
 const Content = styled.main`
   width: 660px;
+  max-width: calc(100% - 1rem);
 `;
 
 type Props = {

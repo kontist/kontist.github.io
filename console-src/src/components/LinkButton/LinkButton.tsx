@@ -7,9 +7,7 @@ const LinkButton = styled(Link)`
   outline: none;
   cursor: pointer;
   color: white;
-  width: 150px;
-  min-width: max-content;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   font-weight: 500;

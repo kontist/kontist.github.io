@@ -25,15 +25,29 @@ const ClientItemContainer = styled(Link)`
   border-bottom: 1px solid ${colors.veryLightGrey};
 `;
 
+const ClientItemText = styled(BodyText)`
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const ClientItemUri = styled(ClientItemText)`
+  text-align: right;
+  padding-left: 1rem;
+`;
+
 const ClientItem = (props: ClientItemProps) => {
   const { client } = props;
 
   return (
     <ClientItemContainer to={`/clients/${props.client.id}`}>
-      <BodyText className="without-padding primary-black">
+      <ClientItemText className="without-padding primary-black">
         {client.name}
-      </BodyText>
-      <BodyText className="without-padding">{client.redirectUri}</BodyText>
+      </ClientItemText>
+      <ClientItemUri className="without-padding">
+        {client.redirectUri}
+      </ClientItemUri>
     </ClientItemContainer>
   );
 };
@@ -48,7 +62,7 @@ const ClientListHeader = styled.div`
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   padding: 1rem;
-  height: 30px;
+  min-height: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
