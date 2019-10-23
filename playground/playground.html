@@ -12,9 +12,8 @@ permalink: /playground/
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
   <title>GraphQL Playground</title>
   <link rel="stylesheet" href="index.css" />
+  <script src="https://cdn.kontist.com/sdk.min.js"></script>
   <script src="middleware.js"></script>
-  <script src="kontist.bundle.js"></script>
-
 </head>
 
 <body>
@@ -539,8 +538,8 @@ permalink: /playground/
 
       const client = new Kontist.Client({
         clientId: "71b8061a-ac88-456a-b1ef-417a05ac1f51",
-        redirectUri: 'https://kontist.dev/playground/',
-        scopes: ["transactions"],
+        redirectUri: "https://kontist.dev/playground/",
+        scopes: [ "accounts", "users", "transactions", "transfers", "subscriptions", "statements", "clients" ],
         state: sessionStorage.getItem("state"),
         verifier: sessionStorage.getItem("verifier")
       });
