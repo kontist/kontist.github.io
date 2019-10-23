@@ -26,26 +26,6 @@ const BodyText = styled.p`
     }
   }
 
-  &.p1 {
-    font-size: 34px;
-    line-height: 120%;
-    @media (max-width: 800px) {
-      font-size: 24px;
-    }
-  }
-
-  &.p2 {
-    font-size: 28px;
-  }
-
-  &.small {
-    font-size: 18px;
-  }
-
-  &.verySmall {
-    font-size: 16px;
-  }
-
   @media (max-width: 800px) {
     font-size: 22px;
   }
@@ -56,26 +36,6 @@ const BodyText = styled.p`
 `;
 
 const H1 = styled.h1`
-  font-size: 60px;
-  line-height: 100%;
-  padding-bottom: 16px;
-  color: ${colors.primaryBlack};
-  @media (max-width: 800px) {
-    font-size: 42px;
-  }
-`;
-
-const H2 = styled.h2`
-  font-size: 46px;
-  line-height: 110%;
-  padding-bottom: 16px;
-  color: ${colors.primaryBlack};
-  @media (max-width: 800px) {
-    font-size: 38px;
-  }
-`;
-
-const H3 = styled.h3`
   font-size: 26px;
   line-height: 100%;
   color: ${colors.primaryBlack};
@@ -85,10 +45,4 @@ const H3 = styled.h3`
   }
 `;
 
-const H4 = styled.h4`
-  font-size: 22px;
-  line-height: 120%;
-  color: ${colors.primaryBlack};
-`;
-
-export { BodyText, H1, H2, H3, H4 };
+export { BodyText, H1 };

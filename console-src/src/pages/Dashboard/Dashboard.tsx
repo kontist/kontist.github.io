@@ -4,7 +4,7 @@ import styled from "styled-components";
 import withOAuthClients from "../../enhancers/withOAuthClients";
 import { OAuthClient } from "../../types/oAuthClient";
 import Layout from "../../layout";
-import { BodyText, H3 } from "../../components/Text";
+import { BodyText, H1 } from "../../components/Text";
 import LinkButton from "../../components/LinkButton";
 import ClientList from "../../components/ClientList";
 import ActionBar from "../../components/ActionBar";
@@ -24,7 +24,7 @@ const Dashboard = (props: Props) => {
   return (
     <Layout>
       <TitleContainer>
-        <H3 className="align-center">{copy.dashboard.title}</H3>
+        <H1 className="align-center">{copy.dashboard.title}</H1>
         <BodyText className="align-center">{copy.dashboard.subtitle}</BodyText>
       </TitleContainer>
       {props.isLoading ? (
