@@ -243,6 +243,12 @@ or just load the bundle via
 <script src="node_modules/@kontist/client/dist/bundle.js"></script>
 ```
 
+If you prefer you can use the latest version from our CDN with
+```html
+<script src="https://cdn.kontist.com/sdk.min.js"></script>
+```
+
+
 ### Login (Web Application)
 In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifer` and persist it across page reloads. Next to that you need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [API Console](/console).
 ```javascript
