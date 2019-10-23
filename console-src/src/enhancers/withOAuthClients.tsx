@@ -81,15 +81,12 @@ class OAuthClientsProvider extends Component<{}, State> {
 
       const { viewer } = await client.graphQL.rawQuery(fetchClientsQuery);
 
-      this.setState(
-        (state: State): State => ({
-          ...state,
-          isLoading: false,
-          // Currently rawQuery return type does not include clients
-          // @ts-ignore
-          oAuthClients: viewer.clients
-        })
-      );
+      this.setState({
+        isLoading: false,
+        // Currently rawQuery return type does not include clients
+        // @ts-ignore
+        oAuthClients: viewer.clients
+      });
     };
 
     this.createClient = async (payload: CreateOAuthClientPayload) =>
