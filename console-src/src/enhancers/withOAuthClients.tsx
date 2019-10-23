@@ -22,7 +22,10 @@ interface OAuthClientsContext {
   deleteClient: (payload: DeleteOAuthClientPayload) => Promise<Object> | void;
 }
 
-interface State extends OAuthClientsContext {}
+type State = {
+  isLoading: boolean;
+  oAuthClients: OAuthClient[];
+};
 
 type Props = {
   kontistClient: Client;
@@ -37,43 +40,11 @@ const { Provider, Consumer } = React.createContext<OAuthClientsContext>({
 });
 
 class OAuthClientsProvider extends Component<Props, State> {
-  fetchClients: () => Promise<any>;
-  createClient: (payload: CreateOAuthClientPayload) => Promise<any>;
-  updateClient: (payload: UpdateOAuthClientPayload) => Promise<any>;
-  deleteClient: (payload: DeleteOAuthClientPayload) => Promise<any>;
-
   constructor(props: Props) {
     super(props);
 
-    const { kontistClient } = props;
-
-    this.fetchClients = async () => {
-      const { viewer } = await kontistClient.graphQL.rawQuery(
-        fetchClientsQuery
-      );
-
-      this.setState({
-        isLoading: false,
-        // Currently rawQuery return type does not include clients
-        // @ts-ignore
-        oAuthClients: viewer.clients
-      });
-    };
-
-    this.createClient = async (payload: CreateOAuthClientPayload) =>
-      kontistClient.graphQL.rawQuery(createClientMutation, payload);
-
-    this.updateClient = async (payload: UpdateOAuthClientPayload) =>
-      kontistClient.graphQL.rawQuery(updateClientMutation, payload);
-
-    this.deleteClient = async (payload: DeleteOAuthClientPayload) =>
-      kontistClient.graphQL.rawQuery(deleteClientMutation, payload);
-
     this.state = {
       isLoading: true,
-      createClient: this.createClient,
-      updateClient: this.updateClient,
-      deleteClient: this.deleteClient,
       oAuthClients: []
     };
   }
@@ -82,23 +53,39 @@ class OAuthClientsProvider extends Component<Props, State> {
     await this.fetchClients();
   }
 
+  fetchClients = async () => {
+    const { viewer } = await this.props.kontistClient.graphQL.rawQuery(
+      fetchClientsQuery
+    );
+
+    this.setState({
+      isLoading: false,
+      // Currently rawQuery return type does not include clients
+      // @ts-ignore
+      oAuthClients: viewer.clients
+    });
+  };
+
+  createClient = async (payload: CreateOAuthClientPayload) =>
+    this.props.kontistClient.graphQL.rawQuery(createClientMutation, payload);
+
+  updateClient = async (payload: UpdateOAuthClientPayload) =>
+    this.props.kontistClient.graphQL.rawQuery(updateClientMutation, payload);
+
+  deleteClient = async (payload: DeleteOAuthClientPayload) =>
+    this.props.kontistClient.graphQL.rawQuery(deleteClientMutation, payload);
+
   render() {
-    const {
-      oAuthClients,
-      isLoading,
-      createClient,
-      updateClient,
-      deleteClient
-    } = this.state;
+    const { oAuthClients, isLoading } = this.state;
 
     return (
       <Provider
         value={{
           oAuthClients,
           isLoading,
-          createClient,
-          updateClient,
-          deleteClient
+          createClient: this.createClient,
+          updateClient: this.updateClient,
+          deleteClient: this.deleteClient
         }}
       >
         {this.props.children}
