@@ -31,6 +31,15 @@ const CheckboxContainer = styled.div`
     position: relative;
     left: 1rem;
   }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+    & > * {
+      flex: 1 0 100%;
+      left: 0;
+    }
+  }
 `;
 
 type CheckboxGroupProps = {

@@ -10,12 +10,21 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   padding-bottom: 0.5rem;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const StyledLabel = styled.label`
   flex: 3;
   padding-right: 1rem;
   font-size: 18px;
+
+  @media (max-width: 800px) {
+    padding-bottom: 0.5rem;
+    flex-basis: 100%;
+  }
 `;
 
 const StyledSuffix = styled.span`

@@ -44,11 +44,6 @@ const Button = styled.button`
     color: ${colors.transparentPrimaryPurple};
     cursor: not-allowed;
   }
-
-  @media (max-width: 800px) {
-    width: 38px;
-    max-height: 38px;
-  }
 `;
 
 type Props = {
