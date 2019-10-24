@@ -153,7 +153,9 @@ class ClientForm extends Component<ClientFormProps, State> {
       name,
       redirectUri,
       secret,
-      scopes: (Object.keys(scopes) as (keyof Scopes)[]).filter(scope => scopes[scope])
+      scopes: (Object.keys(scopes) as (keyof Scopes)[]).filter(
+        scope => scopes[scope]
+      )
     });
 
     this.props.history.push("/clients");
@@ -185,10 +187,10 @@ class ClientForm extends Component<ClientFormProps, State> {
           optional
           handleChange={this.handleTextInputChange("secret")}
         />
-        <CheckboxGroup title={copy.clientForm.scopes.title}>
-          {(Object.keys(scopes) as (keyof Scopes)[]).map((scope) => (
+        <CheckboxGroup title={copy.scopes.title}>
+          {(Object.keys(scopes) as (keyof Scopes)[]).map(scope => (
             <Checkbox
-              label={copy.clientForm.scopes[scope]}
+              label={copy.scopes[scope]}
               key={scope}
               checked={scopes[scope]}
               handleClick={this.handleCheckboxClick(scope)}

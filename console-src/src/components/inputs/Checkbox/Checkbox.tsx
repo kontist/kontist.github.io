@@ -40,12 +40,15 @@ const Container = styled.div`
 type Props = {
   checked: boolean;
   label: string;
-  handleClick: (event: React.MouseEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+  handleClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
 };
 
-const Checkbox = ({ checked, handleClick, label }: Props) => {
+const noop = () => {};
+
+const Checkbox = ({ checked, handleClick, label, disabled }: Props) => {
   return (
-    <Container onClick={handleClick}>
+    <Container onClick={disabled ? noop : handleClick}>
       <CheckboxIcon className={checked ? "" : "empty"} />
       <StyledLabel className={checked ? "" : "empty"}>{label}</StyledLabel>
     </Container>
