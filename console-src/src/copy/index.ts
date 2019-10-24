@@ -14,7 +14,9 @@ export default {
     clientDetails: {
       id: "Client ID",
       name: "Name",
-      redirectUri: "Redirect URI"
+      redirectUri: "Redirect URI",
+      updateClientLabel: "Update client",
+      deleteClientLabel: "Delete client"
     }
   },
   createClient: {

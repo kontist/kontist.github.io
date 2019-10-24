@@ -5,6 +5,8 @@ import { OAuthClient } from "../../types/oAuthClient";
 import { BodyText } from "../../components/Text";
 import { Scope } from "../../types/oAuthClient";
 import Checkbox from "../inputs/Checkbox";
+import Button from "../buttons/Button";
+import LinkButton from "../buttons/LinkButton";
 
 import colors from "../../theme/colors";
 import copy from "../../copy";
@@ -74,6 +76,7 @@ const ClientDetails = styled.div`
   padding: 1rem;
   border-bottom: 1px solid ${colors.veryLightGrey}
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const ClientDetailsColumn = styled.div`
@@ -81,6 +84,16 @@ const ClientDetailsColumn = styled.div`
 
   &.wide {
     flex: 0 0 70%;
+  }
+`;
+
+const ClientDetailsActions = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  & > *:first-child {
+    margin-right: 1rem;
   }
 `;
 
@@ -103,6 +116,10 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
 
   toggleDetails = () => {
     this.setState(state => ({ expanded: !state.expanded }));
+  };
+
+  showDeletionConfirmation = () => {
+    // TODO: show a modal to confirm client deletion
   };
 
   render() {
@@ -141,6 +158,14 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
                 title={copy.scopes.title}
               />
             </ClientDetailsColumn>
+            <ClientDetailsActions>
+              <LinkButton to={`/clients/update/${client.id}`}>
+                {copy.dashboard.clientDetails.updateClientLabel}
+              </LinkButton>
+              <Button onClick={this.showDeletionConfirmation} destructive>
+                {copy.dashboard.clientDetails.deleteClientLabel}
+              </Button>
+            </ClientDetailsActions>
           </ClientDetails>
         )}
       </Fragment>
