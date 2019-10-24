@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
+import classnames from "classnames";
 
 import colors from "../../../theme/colors";
 
@@ -32,6 +33,10 @@ const Button = styled.button`
   position: relative;
   z-index: 1;
 
+  &.destructive {
+    background-color: ${colors.darkRed};
+  }
+
   &:hover:not([disabled]) {
     background-color: ${colors.black};
   }
@@ -47,6 +52,7 @@ interface Props {
   children: ReactNode;
   disabled?: boolean;
   loading?: boolean;
+  destructive?: boolean;
   type?: "button" | "submit";
 }
 
@@ -55,9 +61,17 @@ const ButtonComponent = ({
   disabled,
   loading,
   onClick,
+  destructive,
   type = "submit"
 }: Props) => (
-  <Button type={type} disabled={disabled || loading} onClick={onClick}>
+  <Button
+    type={type}
+    disabled={disabled || loading}
+    onClick={onClick}
+    className={classnames({
+      destructive
+    })}
+  >
     {loading && (
       <LoadingContainer>
         <LoadingIndicator small white />
