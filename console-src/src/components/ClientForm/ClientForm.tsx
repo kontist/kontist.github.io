@@ -190,11 +190,11 @@ class ClientForm extends Component<ClientFormProps, State> {
           optional
           handleChange={this.handleTextInputChange("secret")}
         />
-        <CheckboxGroup title={copy.clientForm.scopes.title}>
+        <CheckboxGroup title={copy.scopes.title}>
           {Object.keys(scopes).map(scope => (
             <Checkbox
               // @ts-ignore
-              label={copy.clientForm.scopes[scope]}
+              label={copy.scopes[scope]}
               key={scope}
               checked={scopes[scope]}
               handleClick={this.handleCheckboxClick(scope)}

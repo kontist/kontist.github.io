@@ -1,4 +1,4 @@
-enum Scope {
+export enum Scope {
   OFFLINE = "OFFLINE",
   ACCOUNTS = "ACCOUNTS",
   USERS = "USERS",
