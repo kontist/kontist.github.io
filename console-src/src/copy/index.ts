@@ -1,9 +1,9 @@
 export default {
   dashboard: {
     title: "Welcome to the Kontist API Console",
-    subtitle: "You can manage your oAuth clients below",
+    subtitle: "You can manage your OAuth2 clients below",
     actionBar: {
-      title: "OAuth clients",
+      title: "OAuth2 clients",
       button: "Create client"
     },
     clientList: {
