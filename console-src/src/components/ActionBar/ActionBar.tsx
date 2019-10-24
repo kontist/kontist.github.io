@@ -6,18 +6,24 @@ import { BodyText } from "../Text";
 const ActionBarContainer = styled.div`
   padding: 1rem 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  &.spaced {
+    justify-content: space-between;
+  }
 `;
 
 type Props = {
   children: ReactNode;
-  title: string;
+  className?: string;
+  title?: string;
 };
 
 const ActionBar = (props: Props) => (
-  <ActionBarContainer>
-    <BodyText className="without-padding">{props.title}</BodyText>
+  <ActionBarContainer className={props.className}>
+    {props.title && (
+      <BodyText className="without-padding">{props.title}</BodyText>
+    )}
     {props.children}
   </ActionBarContainer>
 );

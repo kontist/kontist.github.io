@@ -31,7 +31,7 @@ const Dashboard = (props: Props) => {
         <LoadingIndicator />
       ) : (
         <Fragment>
-          <ActionBar title={copy.dashboard.actionBar.title}>
+          <ActionBar title={copy.dashboard.actionBar.title} className="spaced">
             <LinkButton to="/clients/create">
               {copy.dashboard.actionBar.button}
             </LinkButton>
