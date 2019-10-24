@@ -26,7 +26,6 @@ export type CreateOAuthClientPayload = {
   name: string;
   redirectUri?: string;
   scopes?: Scope[];
-  grantTypes?: GrantType[];
 };
 
 export type UpdateOAuthClientPayload = {
