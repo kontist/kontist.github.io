@@ -95,11 +95,7 @@ class OAuthClientsProvider extends Component<Props, State> {
       isLoading: true
     });
 
-    const {
-      // Currently rawQuery return type does not include client mutation results
-      // @ts-ignore
-      deleteClient: client
-    } = await this.props.kontistClient.graphQL.rawQuery(
+    await this.props.kontistClient.graphQL.rawQuery(
       deleteClientMutation,
       payload
     );
@@ -108,7 +104,7 @@ class OAuthClientsProvider extends Component<Props, State> {
       ...state,
       isLoading: false,
       oAuthClients: [...state.oAuthClients].filter(
-        oAuthClient => oAuthClient.id !== client.id
+        oAuthClient => oAuthClient.id !== payload.id
       )
     }));
   };
