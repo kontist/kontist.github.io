@@ -19,7 +19,7 @@ interface OAuthClientsContext {
   oAuthClients: OAuthClient[];
   createClient: (payload: CreateOAuthClientPayload) => Promise<void> | void;
   updateClient: (payload: UpdateOAuthClientPayload) => Promise<Object> | void;
-  deleteClient: (payload: DeleteOAuthClientPayload) => Promise<Object> | void;
+  deleteClient: (payload: DeleteOAuthClientPayload) => Promise<void> | void;
 }
 
 type State = {
@@ -90,8 +90,28 @@ class OAuthClientsProvider extends Component<Props, State> {
   updateClient = async (payload: UpdateOAuthClientPayload) =>
     this.props.kontistClient.graphQL.rawQuery(updateClientMutation, payload);
 
-  deleteClient = async (payload: DeleteOAuthClientPayload) =>
-    this.props.kontistClient.graphQL.rawQuery(deleteClientMutation, payload);
+  deleteClient = async (payload: DeleteOAuthClientPayload) => {
+    this.setState({
+      isLoading: true
+    });
+
+    const {
+      // Currently rawQuery return type does not include client mutation results
+      // @ts-ignore
+      deleteClient: client
+    } = await this.props.kontistClient.graphQL.rawQuery(
+      deleteClientMutation,
+      payload
+    );
+
+    this.setState(state => ({
+      ...state,
+      isLoading: false,
+      oAuthClients: [...state.oAuthClients].filter(
+        oAuthClient => oAuthClient.id !== client.id
+      )
+    }));
+  };
 
   render() {
     const { oAuthClients, isLoading } = this.state;

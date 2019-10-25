@@ -13,6 +13,7 @@ import LoadingIndicator from "src/components/LoadingIndicator";
 
 type Props = {
   oAuthClients: OAuthClient[];
+  deleteClient: Function;
   isLoading: boolean;
 };
 
@@ -27,7 +28,7 @@ const Dashboard = (props: Props) => {
         <H1 className="align-center">{copy.dashboard.title}</H1>
         <BodyText className="align-center">{copy.dashboard.subtitle}</BodyText>
       </TitleContainer>
-      {props.isLoading ? (
+      {props.isLoading && props.oAuthClients.length === 0 ? (
         <LoadingIndicator />
       ) : (
         <Fragment>
@@ -36,7 +37,10 @@ const Dashboard = (props: Props) => {
               {copy.dashboard.actionBar.button}
             </LinkButton>
           </ActionBar>
-          <ClientList clients={props.oAuthClients} />
+          <ClientList
+            clients={props.oAuthClients}
+            deleteClient={props.deleteClient}
+          />
         </Fragment>
       )}
     </Layout>

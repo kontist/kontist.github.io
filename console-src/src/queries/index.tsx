@@ -40,4 +40,14 @@ export const createClientMutation = `
 
 export const updateClientMutation = ``;
 
-export const deleteClientMutation = ``;
+export const deleteClientMutation = `
+  mutation(
+    $id: String!,
+  ) {
+    deleteClient(
+      id: $id
+    ) {
+      id
+    }
+  }
+`;

@@ -120,6 +120,7 @@ const ClientDetailsActions = styled.div`
 
 type ClientItemProps = {
   client: OAuthClient;
+  deleteClient: Function;
 };
 
 type ClientItemState = {
@@ -149,7 +150,8 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
     this.setState({ modalOpen: false });
   };
 
-  deleteClient = () => {
+  deleteClient = async () => {
+    await this.props.deleteClient({ id: this.props.client.id });
     this.setState({ modalOpen: false });
   };
 

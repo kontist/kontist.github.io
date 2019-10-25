@@ -34,6 +34,7 @@ type Props = {
   closeModal: () => void;
   deleteClient: () => void;
   client: OAuthClient;
+  isLoading?: boolean;
 };
 
 const modalStyles = {
@@ -49,7 +50,7 @@ const modalStyles = {
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     width: "420px",
-    maxWidth: "calc(100% - 2rem)",
+    maxWidth: "calc(100% - 4rem)",
     border: "none"
   }
 };
@@ -58,7 +59,8 @@ const ClientDeletionConfirmation = ({
   isOpen,
   closeModal,
   deleteClient,
-  client
+  client,
+  isLoading
 }: Props) => {
   return (
     <Modal
@@ -80,7 +82,7 @@ const ClientDeletionConfirmation = ({
         value={client.name}
       />
       <Actions>
-        <Button onClick={deleteClient} destructive>
+        <Button onClick={deleteClient} loading={isLoading} destructive>
           {copy.clientDeletion.confirm}
         </Button>
         <Button onClick={closeModal}>{copy.clientDeletion.cancel}</Button>
