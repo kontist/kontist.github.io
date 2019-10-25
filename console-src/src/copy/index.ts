@@ -27,6 +27,7 @@ export default {
       secret: "Secret"
     },
     scopes: {
+      OFFLINE: "Offline",
       ACCOUNTS: "Accounts",
       USERS: "Users",
       TRANSACTIONS: "Transactions",

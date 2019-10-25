@@ -67,6 +67,7 @@ type ClientFormProps = {
 };
 
 type Scopes = {
+  OFFLINE: boolean;
   ACCOUNTS: boolean;
   USERS: boolean;
   TRANSACTIONS: boolean;
@@ -104,6 +105,7 @@ class ClientForm extends Component<ClientFormProps, State> {
       redirectUri: undefined,
       secret: undefined,
       scopes: {
+        OFFLINE: false,
         ACCOUNTS: false,
         USERS: false,
         TRANSACTIONS: false,
