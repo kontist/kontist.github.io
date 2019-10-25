@@ -10,6 +10,13 @@ export default {
       emptyListText: "You don't have any existing clients yet.",
       nameTitle: "Client name",
       uriTitle: "Redirect URI"
+    },
+    clientDetails: {
+      id: "Client ID",
+      name: "Name",
+      redirectUri: "Redirect URI",
+      updateClientLabel: "Update client",
+      deleteClientLabel: "Delete client"
     }
   },
   createClient: {
@@ -25,17 +32,17 @@ export default {
       name: "Client name",
       redirectUri: "https://redirect.uri/callback",
       secret: "Secret"
-    },
-    scopes: {
-      OFFLINE: "Offline",
-      ACCOUNTS: "Accounts",
-      USERS: "Users",
-      TRANSACTIONS: "Transactions",
-      TRANSFERS: "Transfers",
-      SUBSCRIPTIONS: "Subscriptions",
-      STATEMENTS: "Statements",
-      title: "Scopes"
     }
+  },
+  scopes: {
+    OFFLINE: "Offline",
+    ACCOUNTS: "Accounts",
+    USERS: "Users",
+    TRANSACTIONS: "Transactions",
+    TRANSFERS: "Transfers",
+    SUBSCRIPTIONS: "Subscriptions",
+    STATEMENTS: "Statements",
+    title: "Scopes"
   },
   backButtonLabel: "Back"
 };
