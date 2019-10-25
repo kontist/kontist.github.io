@@ -10,6 +10,8 @@ import Button from "../buttons/Button";
 import colors from "../../theme/colors";
 import copy from "../../copy";
 
+import { Scope } from "../../types/oAuthClient";
+
 const Separator = styled.div`
   height: 1px;
   width: 100%;
@@ -67,14 +69,7 @@ type ClientFormProps = {
 };
 
 type Scopes = {
-  OFFLINE: boolean;
-  ACCOUNTS: boolean;
-  USERS: boolean;
-  TRANSACTIONS: boolean;
-  TRANSFERS: boolean;
-  SUBSCRIPTIONS: boolean;
-  STATEMENTS: boolean;
-  [key: string]: boolean;
+  [index in keyof typeof Scope]: boolean;
 };
 
 type State = {
@@ -132,7 +127,7 @@ class ClientForm extends Component<ClientFormProps, State> {
     });
   };
 
-  handleCheckboxClick = (key: string) => () => {
+  handleCheckboxClick = (key: keyof Scopes) => () => {
     this.setState((state: State) => {
       const updatedScopes = {
         ...state.scopes,
@@ -158,7 +153,9 @@ class ClientForm extends Component<ClientFormProps, State> {
       name,
       redirectUri,
       secret,
-      scopes: Object.keys(scopes).filter(scope => scopes[scope])
+      scopes: (Object.keys(scopes) as (keyof Scopes)[]).filter(
+        scope => scopes[scope]
+      )
     });
 
     this.props.history.push("/clients");
@@ -190,9 +187,8 @@ class ClientForm extends Component<ClientFormProps, State> {
           handleChange={this.handleTextInputChange("secret")}
         />
         <CheckboxGroup title={copy.scopes.title}>
-          {Object.keys(scopes).map(scope => (
+          {(Object.keys(scopes) as (keyof Scopes)[]).map(scope => (
             <Checkbox
-              // @ts-ignore
               label={copy.scopes[scope]}
               key={scope}
               checked={scopes[scope]}
