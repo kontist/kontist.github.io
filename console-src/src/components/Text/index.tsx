@@ -19,6 +19,10 @@ const BodyText = styled.p`
     font-weight: 500;
   }
 
+  &.small {
+    font-size: 18px;
+  }
+
   &.align-center {
     text-align: center;
     @media (max-width: 800px) {

@@ -5,7 +5,7 @@ import withOAuthClients from "../../enhancers/withOAuthClients";
 import { OAuthClient } from "../../types/oAuthClient";
 import Layout from "../../layout";
 import { BodyText, H1 } from "../../components/Text";
-import LinkButton from "../../components/LinkButton";
+import LinkButton from "../../components/buttons/LinkButton";
 import ClientList from "../../components/ClientList";
 import ActionBar from "../../components/ActionBar";
 import copy from "../../copy";
@@ -31,7 +31,7 @@ const Dashboard = (props: Props) => {
         <LoadingIndicator />
       ) : (
         <Fragment>
-          <ActionBar title={copy.dashboard.actionBar.title}>
+          <ActionBar title={copy.dashboard.actionBar.title} className="spaced">
             <LinkButton to="/clients/create">
               {copy.dashboard.actionBar.button}
             </LinkButton>

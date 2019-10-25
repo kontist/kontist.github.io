@@ -17,7 +17,7 @@ import {
 interface OAuthClientsContext {
   isLoading: boolean;
   oAuthClients: OAuthClient[];
-  createClient: (payload: CreateOAuthClientPayload) => Promise<Object> | void;
+  createClient: (payload: CreateOAuthClientPayload) => Promise<void> | void;
   updateClient: (payload: UpdateOAuthClientPayload) => Promise<Object> | void;
   deleteClient: (payload: DeleteOAuthClientPayload) => Promise<Object> | void;
 }
@@ -66,8 +66,26 @@ class OAuthClientsProvider extends Component<Props, State> {
     });
   };
 
-  createClient = async (payload: CreateOAuthClientPayload) =>
-    this.props.kontistClient.graphQL.rawQuery(createClientMutation, payload);
+  createClient = async (payload: CreateOAuthClientPayload) => {
+    this.setState({
+      isLoading: true
+    });
+
+    const {
+      // Currently rawQuery return type does not include client mutation results
+      // @ts-ignore
+      createClient: client
+    } = await this.props.kontistClient.graphQL.rawQuery(createClientMutation, {
+      ...payload,
+      grantTypes: ["AUTHORIZATION_CODE", "REFRESH_TOKEN"]
+    });
+
+    this.setState(state => ({
+      ...state,
+      isLoading: false,
+      oAuthClients: [...state.oAuthClients, client]
+    }));
+  };
 
   updateClient = async (payload: UpdateOAuthClientPayload) =>
     this.props.kontistClient.graphQL.rawQuery(updateClientMutation, payload);

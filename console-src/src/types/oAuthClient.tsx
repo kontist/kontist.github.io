@@ -1,16 +1,16 @@
-enum Scope {
-  OFFLINE = "offline",
-  ACCOUNTS = "accounts",
-  USERS = "users",
-  TRANSACTIONS = "transactions",
-  TRANSFERS = "transfers",
-  SUBSCRIPTIONS = "subscriptions",
-  STATEMENTS = "statements"
+export enum Scope {
+  OFFLINE = "OFFLINE",
+  ACCOUNTS = "ACCOUNTS",
+  USERS = "USERS",
+  TRANSACTIONS = "TRANSACTIONS",
+  TRANSFERS = "TRANSFERS",
+  SUBSCRIPTIONS = "SUBSCRIPTIONS",
+  STATEMENTS = "STATEMENTS"
 }
 
 enum GrantType {
-  AUTHORIZATION_CODE = "authorization_code",
-  REFRESH_TOKEN = "refresh_token"
+  AUTHORIZATION_CODE = "AUTHORIZATION_CODE",
+  REFRESH_TOKEN = "REFRESH_TOKEN"
 }
 
 export type OAuthClient = {
@@ -26,7 +26,6 @@ export type CreateOAuthClientPayload = {
   name: string;
   redirectUri?: string;
   scopes?: Scope[];
-  grantTypes?: GrantType[];
 };
 
 export type UpdateOAuthClientPayload = {

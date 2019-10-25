@@ -8,6 +8,7 @@ import { OAuthClientsProvider } from "./enhancers/withOAuthClients";
 import KontistClientProvider from "./enhancers/KontistClientProvider";
 import AuthenticateUser from "./enhancers/AuthenticateUser";
 import Dashboard from "./pages/Dashboard";
+import CreateClient from "./pages/CreateClient";
 
 const history = createBrowserHistory();
 
@@ -19,7 +20,8 @@ const App = () => (
           <OAuthClientsProvider kontistClient={kontistClient}>
             <Switch>
               <Route path="/" exact component={Dashboard} />
-              <Route path="/dashboard" exact component={Dashboard} />
+              <Route path="/clients" exact component={Dashboard} />
+              <Route path="/clients/create" exact component={CreateClient} />
             </Switch>
           </OAuthClientsProvider>
         </AuthenticateUser>

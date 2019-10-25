@@ -11,5 +11,31 @@ export default {
       nameTitle: "Client name",
       uriTitle: "Redirect URI"
     }
-  }
+  },
+  createClient: {
+    title: "Create client",
+    buttonLabel: "Create client"
+  },
+  clientForm: {
+    name: "Name",
+    redirectUri: "Redirect URI",
+    secret: "Secret",
+    optionalFields: "Optional",
+    placeholders: {
+      name: "Client name",
+      redirectUri: "https://redirect.uri/callback",
+      secret: "Secret"
+    },
+    scopes: {
+      OFFLINE: "Offline",
+      ACCOUNTS: "Accounts",
+      USERS: "Users",
+      TRANSACTIONS: "Transactions",
+      TRANSFERS: "Transfers",
+      SUBSCRIPTIONS: "Subscriptions",
+      STATEMENTS: "Statements",
+      title: "Scopes"
+    }
+  },
+  backButtonLabel: "Back"
 };
