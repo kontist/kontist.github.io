@@ -182,7 +182,6 @@ class ClientForm extends Component<ClientFormProps, State> {
         <TextInput
           label={copy.clientForm.secret}
           placeholder={copy.clientForm.placeholders.secret}
-          type="password"
           value={secret}
           optional
           handleChange={this.handleTextInputChange("secret")}
