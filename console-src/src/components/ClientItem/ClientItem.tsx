@@ -81,6 +81,7 @@ const ClientDetails = styled.div`
 
 const ClientDetailsColumn = styled.div`
   flex: 0 0 30%;
+  padding-bottom: 1rem;
 
   &.wide {
     flex: 0 0 70%;
@@ -88,6 +89,7 @@ const ClientDetailsColumn = styled.div`
 
   @media (max-width: 800px) {
     flex: 0 0 100%;
+    padding-bottom: 0;
 
     &.wide {
       flex: 0 0 100%;
