@@ -31,6 +31,7 @@ export type CreateOAuthClientPayload = {
 export type UpdateOAuthClientPayload = {
   id: string;
   name?: string;
+  secret?: string;
   redirectUri?: string;
   scopes?: Scope[];
   grantTypes?: GrantType[];

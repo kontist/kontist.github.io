@@ -38,7 +38,33 @@ export const createClientMutation = `
   }
 `;
 
-export const updateClientMutation = ``;
+export const updateClientMutation = `
+  mutation(
+    $id: String!,
+    $name: String,
+    $redirectUri: String,
+    $secret: String,
+    $scopes: [ScopeType!],
+    $grantTypes: [GrantType!]
+  ) {
+    updateClient(
+      client: {
+        id: $id
+        name: $name
+        redirectUri: $redirectUri
+        grantTypes: $grantTypes
+        scopes: $scopes
+        secret: $secret
+      }
+    ) {
+      id
+      redirectUri
+      name
+      grantTypes
+      scopes
+    }
+  }
+`;
 
 export const deleteClientMutation = `
   mutation(

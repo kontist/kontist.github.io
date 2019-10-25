@@ -23,6 +23,12 @@ export default {
     title: "Create client",
     buttonLabel: "Create client"
   },
+  updateClient: {
+    title: "Update client",
+    buttonLabel: "Update client",
+    secretInformation:
+      "Submitting a secret with the update will override the existing secret"
+  },
   clientForm: {
     name: "Name",
     redirectUri: "Redirect URI",

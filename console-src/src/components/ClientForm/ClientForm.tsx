@@ -10,7 +10,7 @@ import Button from "../buttons/Button";
 import colors from "../../theme/colors";
 import copy from "../../copy";
 
-import { Scope } from "../../types/oAuthClient";
+import { Scope, OAuthClient } from "../../types/oAuthClient";
 
 const Separator = styled.div`
   height: 1px;
@@ -66,6 +66,7 @@ type ClientFormProps = {
   isLoading?: boolean;
   buttonLabel: string;
   history: History;
+  client?: OAuthClient;
 };
 
 type Scopes = {
@@ -90,25 +91,47 @@ const hasValidState = (state: State) =>
   Boolean(state.redirectUri) &&
   Boolean(state.name);
 
+const getInitialState = (client?: OAuthClient) => {
+  const defaultState = {
+    isValid: false,
+    name: undefined,
+    redirectUri: undefined,
+    secret: undefined,
+    scopes: {
+      OFFLINE: false,
+      ACCOUNTS: false,
+      USERS: false,
+      TRANSACTIONS: false,
+      TRANSFERS: false,
+      SUBSCRIPTIONS: false,
+      STATEMENTS: false
+    }
+  };
+
+  return {
+    ...defaultState,
+    ...(client
+      ? {
+          isValid: true,
+          name: client.name,
+          redirectUri: client.redirectUri,
+          scopes: {
+            ...defaultState.scopes,
+            ...client.scopes.reduce(
+              (scopes, scope) => ({ ...scopes, [scope]: true }),
+              {}
+            )
+          }
+        }
+      : {})
+  };
+};
+
 class ClientForm extends Component<ClientFormProps, State> {
   constructor(props: ClientFormProps) {
     super(props);
 
-    this.state = {
-      isValid: false,
-      name: undefined,
-      redirectUri: undefined,
-      secret: undefined,
-      scopes: {
-        OFFLINE: false,
-        ACCOUNTS: false,
-        USERS: false,
-        TRANSACTIONS: false,
-        TRANSFERS: false,
-        SUBSCRIPTIONS: false,
-        STATEMENTS: false
-      }
-    };
+    this.state = getInitialState(props.client);
   }
 
   handleTextInputChange = (key: TextInputKeyType) => (
@@ -148,8 +171,10 @@ class ClientForm extends Component<ClientFormProps, State> {
     event.preventDefault();
 
     const { name, redirectUri, secret, scopes } = this.state;
+    const { client } = this.props;
 
     await this.props.action({
+      ...(client ? { id: client.id } : {}),
       name,
       redirectUri,
       secret,
@@ -163,7 +188,9 @@ class ClientForm extends Component<ClientFormProps, State> {
 
   render() {
     const { name, redirectUri, secret, scopes, isValid } = this.state;
-    const { buttonLabel, isLoading } = this.props;
+    const { buttonLabel, isLoading, client } = this.props;
+
+    const isUpdate = Boolean(client);
 
     return (
       <StyledForm onSubmit={this.submitForm}>
@@ -186,6 +213,11 @@ class ClientForm extends Component<ClientFormProps, State> {
           optional
           handleChange={this.handleTextInputChange("secret")}
         />
+        {isUpdate && (
+          <BodyText className="italic x-small">
+            {copy.updateClient.secretInformation}
+          </BodyText>
+        )}
         <CheckboxGroup title={copy.scopes.title}>
           {(Object.keys(scopes) as (keyof Scopes)[]).map(scope => (
             <Checkbox

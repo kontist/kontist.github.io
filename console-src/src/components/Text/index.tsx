@@ -23,6 +23,10 @@ const BodyText = styled.p`
     font-size: 18px;
   }
 
+  &.x-small {
+    font-size: 16px;
+  }
+
   &.italic {
     font-style: italic;
   }
