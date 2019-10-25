@@ -85,6 +85,14 @@ const ClientDetailsColumn = styled.div`
   &.wide {
     flex: 0 0 70%;
   }
+
+  @media (max-width: 800px) {
+    flex: 0 0 100%;
+
+    &.wide {
+      flex: 0 0 100%;
+    }
+  }
 `;
 
 const ClientDetailsActions = styled.div`
@@ -94,6 +102,16 @@ const ClientDetailsActions = styled.div`
 
   & > *:first-child {
     margin-right: 1rem;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-top: 1rem;
+
+    & > *:first-child {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
   }
 `;
 
