@@ -152,7 +152,6 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
 
   deleteClient = async () => {
     await this.props.deleteClient({ id: this.props.client.id });
-    this.setState({ modalOpen: false });
   };
 
   render() {
