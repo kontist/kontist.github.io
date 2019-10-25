@@ -37,9 +37,9 @@ const ClientList = (props: ClientListProps) => {
         </TitleContainer>
       )}
     >
-      {props.clients.map((client, index) => (
+      {props.clients.map(client => (
         <ClientItem
-          key={index}
+          key={client.id}
           client={client}
           deleteClient={props.deleteClient}
         />
