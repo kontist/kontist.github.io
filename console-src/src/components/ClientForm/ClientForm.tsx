@@ -89,6 +89,11 @@ type TextInputKeyType = "name" | "secret" | "redirectUri";
 const hasValidScopes = (scopes: Scopes) =>
   Object.values(scopes).some(scope => scope);
 
+const hasValidState = (state: State) =>
+  hasValidScopes(state.scopes) &&
+  Boolean(state.redirectUri) &&
+  Boolean(state.name);
+
 class ClientForm extends Component<ClientFormProps, State> {
   constructor(props: ClientFormProps) {
     super(props);
@@ -120,8 +125,7 @@ class ClientForm extends Component<ClientFormProps, State> {
       };
       return {
         ...updatedState,
-        isValid:
-          hasValidScopes(updatedState.scopes) && Boolean(updatedState.name)
+        isValid: hasValidState(updatedState)
       };
     });
   };
@@ -132,10 +136,13 @@ class ClientForm extends Component<ClientFormProps, State> {
         ...state.scopes,
         [key]: !state.scopes[key]
       };
-      return {
+      const updatedState = {
         ...state,
-        isValid: hasValidScopes(updatedScopes) && Boolean(state.name),
         scopes: updatedScopes
+      };
+      return {
+        ...updatedState,
+        isValid: hasValidState(updatedState)
       };
     });
   };
@@ -167,6 +174,20 @@ class ClientForm extends Component<ClientFormProps, State> {
           value={name}
           handleChange={this.handleTextInputChange("name")}
         />
+        <TextInput
+          label={copy.clientForm.redirectUri}
+          placeholder={copy.clientForm.placeholders.redirectUri}
+          value={redirectUri}
+          handleChange={this.handleTextInputChange("redirectUri")}
+        />
+        <TextInput
+          label={copy.clientForm.secret}
+          placeholder={copy.clientForm.placeholders.secret}
+          type="password"
+          value={secret}
+          optional
+          handleChange={this.handleTextInputChange("secret")}
+        />
         <CheckboxGroup title={copy.clientForm.scopes.title}>
           {Object.keys(scopes).map(scope => (
             <Checkbox
@@ -178,22 +199,6 @@ class ClientForm extends Component<ClientFormProps, State> {
             />
           ))}
         </CheckboxGroup>
-        <Separator />
-        <TextInput
-          label={copy.clientForm.redirectUri}
-          placeholder={copy.clientForm.placeholders.redirectUri}
-          value={redirectUri}
-          optional
-          handleChange={this.handleTextInputChange("redirectUri")}
-        />
-        <TextInput
-          label={copy.clientForm.secret}
-          placeholder={copy.clientForm.placeholders.secret}
-          type="password"
-          value={secret}
-          optional
-          handleChange={this.handleTextInputChange("secret")}
-        />
         <Separator />
         <ButtonContainer>
           <Button type="submit" loading={isLoading} disabled={!isValid}>
