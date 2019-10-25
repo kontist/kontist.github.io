@@ -34,6 +34,12 @@ export default {
       secret: "Secret"
     }
   },
+  clientDeletion: {
+    title: "Please confirm you want to delete the following OAuth2 client:",
+    subtitle: "This action is not reversible.",
+    confirm: "Delete client",
+    cancel: "Cancel"
+  },
   scopes: {
     OFFLINE: "Offline",
     ACCOUNTS: "Accounts",

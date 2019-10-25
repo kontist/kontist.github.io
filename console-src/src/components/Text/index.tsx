@@ -23,11 +23,12 @@ const BodyText = styled.p`
     font-size: 18px;
   }
 
+  &.italic {
+    font-style: italic;
+  }
+
   &.align-center {
     text-align: center;
-    @media (max-width: 800px) {
-      text-align: left;
-    }
   }
 
   @media (max-width: 800px) {
@@ -49,4 +50,14 @@ const H1 = styled.h1`
   }
 `;
 
-export { BodyText, H1 };
+const H4 = styled.h4`
+  font-size: 22px;
+  line-height: 120%;
+  color: ${colors.primaryBlack};
+
+  &.align-center {
+    text-align: center;
+  }
+`;
+
+export { BodyText, H1, H4 };
