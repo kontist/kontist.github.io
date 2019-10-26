@@ -7,6 +7,7 @@ import { Scope } from "../../types/oAuthClient";
 import Checkbox from "../inputs/Checkbox";
 import Button from "../buttons/Button";
 import LinkButton from "../buttons/LinkButton";
+import ClientDeletionConfirmation from "../ClientDeletionConfirmation";
 
 import colors from "../../theme/colors";
 import copy from "../../copy";
@@ -43,7 +44,7 @@ type ClientDetailsItemProps = {
   value: string;
 };
 
-const ClientDetailsItem = ({ name, value }: ClientDetailsItemProps) => (
+export const ClientDetailsItem = ({ name, value }: ClientDetailsItemProps) => (
   <ClientDetailsItemContainer>
     <BodyText className="primary-black bold without-padding">{name}</BodyText>
     <BodyText className="primary-black">{value}</BodyText>
@@ -119,10 +120,12 @@ const ClientDetailsActions = styled.div`
 
 type ClientItemProps = {
   client: OAuthClient;
+  deleteClient: Function;
 };
 
 type ClientItemState = {
   expanded: boolean;
+  modalOpen: boolean;
 };
 
 class ClientItem extends Component<ClientItemProps, ClientItemState> {
@@ -130,7 +133,8 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
     super(props);
 
     this.state = {
-      expanded: false
+      expanded: false,
+      modalOpen: false
     };
   }
 
@@ -138,12 +142,20 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
     this.setState(state => ({ expanded: !state.expanded }));
   };
 
-  showDeletionConfirmation = () => {
-    // TODO: show a modal to confirm client deletion
+  openDeletionConfirmation = () => {
+    this.setState({ modalOpen: true });
+  };
+
+  closeDeletionConfirmation = () => {
+    this.setState({ modalOpen: false });
+  };
+
+  deleteClient = async () => {
+    await this.props.deleteClient({ id: this.props.client.id });
   };
 
   render() {
-    const { expanded } = this.state;
+    const { expanded, modalOpen } = this.state;
     const { client } = this.props;
 
     return (
@@ -182,12 +194,18 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
               <LinkButton to={`/clients/update/${client.id}`}>
                 {copy.dashboard.clientDetails.updateClientLabel}
               </LinkButton>
-              <Button onClick={this.showDeletionConfirmation} destructive>
+              <Button onClick={this.openDeletionConfirmation} destructive>
                 {copy.dashboard.clientDetails.deleteClientLabel}
               </Button>
             </ClientDetailsActions>
           </ClientDetails>
         )}
+        <ClientDeletionConfirmation
+          isOpen={modalOpen}
+          closeModal={this.closeDeletionConfirmation}
+          deleteClient={this.deleteClient}
+          client={client}
+        />
       </Fragment>
     );
   }

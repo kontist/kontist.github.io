@@ -19,6 +19,7 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
   color: white;
+  min-width: 150px;
   min-height: 50px;
   display: flex;
   align-items: center;

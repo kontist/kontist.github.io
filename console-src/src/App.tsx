@@ -1,5 +1,6 @@
 import React from "react";
 import { Client } from "@kontist/client";
+import Modal from "react-modal";
 
 import { Router, Route, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
@@ -11,6 +12,8 @@ import Dashboard from "./pages/Dashboard";
 import CreateClient from "./pages/CreateClient";
 
 const history = createBrowserHistory();
+
+Modal.setAppElement("#root");
 
 const App = () => (
   <KontistClientProvider>

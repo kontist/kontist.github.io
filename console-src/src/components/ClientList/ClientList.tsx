@@ -9,6 +9,7 @@ import copy from "../../copy";
 
 type ClientListProps = {
   clients: OAuthClient[];
+  deleteClient: Function;
 };
 
 const TitleContainer = styled.div`
@@ -36,8 +37,12 @@ const ClientList = (props: ClientListProps) => {
         </TitleContainer>
       )}
     >
-      {props.clients.map((client, index) => (
-        <ClientItem key={index} client={client} />
+      {props.clients.map(client => (
+        <ClientItem
+          key={client.id}
+          client={client}
+          deleteClient={props.deleteClient}
+        />
       ))}
     </TitledCard>
   );
