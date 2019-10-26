@@ -62,13 +62,7 @@ const ClientDetailsScopes = ({ scopes, title }: ClientDetailsScopesProps) => (
   <ClientDetailsScopesContainer>
     <BodyText className="primary-black bold">{title}</BodyText>
     {scopes.map(scope => (
-      <Checkbox
-        // @ts-ignore
-        label={copy.scopes[scope]}
-        key={scope}
-        checked
-        disabled
-      />
+      <Checkbox label={copy.scopes[scope]} key={scope} checked disabled />
     ))}
   </ClientDetailsScopesContainer>
 );

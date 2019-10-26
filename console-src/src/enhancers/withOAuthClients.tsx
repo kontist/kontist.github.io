@@ -18,7 +18,7 @@ interface OAuthClientsContext {
   isLoading: boolean;
   oAuthClients: OAuthClient[];
   createClient: (payload: CreateOAuthClientPayload) => Promise<void> | void;
-  updateClient: (payload: UpdateOAuthClientPayload) => Promise<Object> | void;
+  updateClient: (payload: UpdateOAuthClientPayload) => Promise<void> | void;
   deleteClient: (payload: DeleteOAuthClientPayload) => Promise<void> | void;
 }
 
@@ -87,8 +87,36 @@ class OAuthClientsProvider extends Component<Props, State> {
     }));
   };
 
-  updateClient = async (payload: UpdateOAuthClientPayload) =>
-    this.props.kontistClient.graphQL.rawQuery(updateClientMutation, payload);
+  updateClient = async (payload: UpdateOAuthClientPayload) => {
+    const { id, name, redirectUri, scopes, secret } = payload;
+    const updatePayload: UpdateOAuthClientPayload = {
+      id,
+      name,
+      redirectUri,
+      scopes
+    };
+
+    if (secret) {
+      updatePayload.secret = secret;
+    }
+
+    const {
+      // Currently rawQuery return type does not include client mutation results
+      // @ts-ignore
+      updateClient: updatedClient
+    } = await this.props.kontistClient.graphQL.rawQuery(updateClientMutation, {
+      ...updatePayload,
+      grantTypes: ["AUTHORIZATION_CODE", "REFRESH_TOKEN"]
+    });
+
+    this.setState(state => ({
+      ...state,
+      isLoading: false,
+      oAuthClients: [...state.oAuthClients].map(oAuthClient =>
+        oAuthClient.id === updatedClient.id ? updatedClient : oAuthClient
+      )
+    }));
+  };
 
   deleteClient = async (payload: DeleteOAuthClientPayload) => {
     this.setState({
