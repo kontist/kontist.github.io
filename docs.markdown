@@ -239,3 +239,8 @@ Result:
 ```
 
 {:/comment}
+
+## GraphQL Models
+
+<!-- START graphql-markdown -->
+<!-- END graphql-markdown -->
