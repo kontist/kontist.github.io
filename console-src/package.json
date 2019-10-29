@@ -1,5 +1,6 @@
 {
   "name": "api-console",
+  "homepage": "https://kontist.dev/console",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
