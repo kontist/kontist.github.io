@@ -10,7 +10,7 @@ The Kontist API Console allows Kontist user to manage (CRUD) their OAuth2 client
 
 1. start your kontist backend locally
 2. `yarn && yarn start` / `npm install && npm start`
-3. go to `http://localhost:3001`
+3. go to `http://localhost:3001/console`
 
 ### Deploying changes
 

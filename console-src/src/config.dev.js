@@ -1,6 +1,6 @@
 module.exports = {
   appDirectory: "console",
   baseAPIUrl: "http://localhost:3000",
-  clientId: "fe8055d9-f496-49e9-9551-5b416139630e",
-  redirectUri: "http://localhost:3001"
+  clientId: "fffd5643-fb7b-472f-9623-6b28361b8af9",
+  redirectUri: "http://localhost:3001/console"
 };
