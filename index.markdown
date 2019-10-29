@@ -5,7 +5,6 @@ permalink: /
 
 Welcome. Discover all the services of our platform so that you can build or integrate your application with Kontist.
 
-
 ## Getting started
 
 We provide you with a [GraphQL API](https://graphql.org) to e.g. fetch transactions or start new transfers.
@@ -16,13 +15,11 @@ When you are ready for implementation you first you need to [register your own a
 
 For an easier start we provide you with [our SDK](/sdk).
 
-
 ## Kontist SDK
 
 Our JavaScript SDK helps you to easily connect to our services. It was developed for Node.js and browser environments and contains TypeScript type definitions. Please run `npm install @kontist/client` to install the latest version.
 
 For details, please refer to our [GitHub repository](https://github.com/kontist/sdk).
-
 
 ## GraphQL Playground
 

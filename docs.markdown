@@ -8,6 +8,7 @@ sidebar: true
 ## GraphQL API
 
 ### Authorization
+
 To manage the data via our API your application needs to gain access on behalf of the user. This is done through obtaining an access token via [OAuth2](https://tools.ietf.org/html/rfc6749). The access token must then be send in each request in the HTTP header like this: "Authorization: Bearer TOKEN".
 
 If you just want to explore the API you can use the [Playground](/playground) to create and insert such an access token to the HTTP header.
@@ -17,6 +18,7 @@ When you want to create your own application you need two kinds of credentials t
 The second part is obtained through the user and can be done in several ways, here we describe the preferred way through the "Authorization Code" grant type. If you want to develop a pure web application you must use PKCE to not expose the client secret.
 
 #### Authorization Code
+
 In general, the process looks like this:
 
 1. You redirect the user in a browser to an url on our end.
@@ -29,14 +31,13 @@ Let us go through the process step by step. At first we need to send the user to
 
 Adjust the parameters like this:
 
-| Parameter | Description |
-| --------- | ----------- |
-| scope | Space delimited list of scopes your application is going to access. Please see the list below.|
-| response_type | Set fixed as "code". |
-| client_id | This is your client id you got from us. Do not include the secret here.|
-| redirect_uri | This is your application's callback url which is bound to your client id.|
-| state | Can be used to verify our response. You can put in anything here and we will send it back to your application later.
-
+| Parameter     | Description                                                                                                          |
+| ------------- | -------------------------------------------------------------------------------------------------------------------- |
+| scope         | Space delimited list of scopes your application is going to access. Please see the list below.                       |
+| response_type | Set fixed as "code".                                                                                                 |
+| client_id     | This is your client id you got from us. Do not include the secret here.                                              |
+| redirect_uri  | This is your application's callback url which is bound to your client id.                                            |
+| state         | Can be used to verify our response. You can put in anything here and we will send it back to your application later. |
 
 #### Response case 1: The user denied giving access to your application:
 
@@ -45,7 +46,6 @@ The browser is being redirected to your url with an error parameter attached.
 `https://your-application/callback?state=OPAQUE_VALUE&error=%7B%22type%22%3A%22AccessDeniedError%22%7D`
 
 Your application might then inform the user that you can not continue without granting access.
-
 
 #### Response case 2: The user accepted giving access to your application:
 
@@ -92,8 +92,8 @@ curl --request POST \
 ```
 
 #### Refresh Token
-The access token obtained in the previous section does expire after some time. If you did specify the "offline" scope you can use the `refresh_token` from the first response to create a new access token.
 
+The access token obtained in the previous section does expire after some time. If you did specify the "offline" scope you can use the `refresh_token` from the first response to create a new access token.
 
 ```shell
 curl https://api.kontist.com/api/oauth/token \
@@ -118,8 +118,8 @@ Response is again a JSON object, similar to the original one:
 
 You can use the refresh token multiple times until the refresh token expires itself and you need to go through the process again.
 
-
 #### Scopes
+
 - accounts
 - clients
 - offline (required for refresh token)
@@ -152,6 +152,7 @@ Transactions are returned using the [Connection pattern](https://relay.dev/graph
 ```
 
 Just send the query inside of a POST request to `/api/graphl` and wrap it into a `query` property.
+
 ```shell
 curl --request POST \
   --url https://api.kontist.com/api/graphql \
@@ -198,13 +199,14 @@ Result:
 }
 ```
 
-
 {::comment}
 
 ### Creating a new transfer
+
 Creating transfers consist of two steps. First the transfer is created with `addTransfer` which will return the `id` of the new transfer. Then we send a SMS to the user that contains a code and we need to call `verifyTransfer`.
 
 #### 1. Step - add a new transfer
+
 ```graphql
 mutation {
     addTransfer(...) {
@@ -214,10 +216,13 @@ mutation {
 ```
 
 Result:
+
 ```json
+
 ```
 
 #### 2. Step - verify the transfer
+
 ```graphql
 mutation {
     verifyTransfer(...) {
@@ -228,51 +233,60 @@ mutation {
 ```
 
 Result:
+
 ```json
+
 ```
+
 {:/comment}
 
 ## Using the SDK
+
 Please install the SDK via `npm install @kontist/client --save`. Depending on your application you can then either import it with
+
 ```typescript
 import { Client } from "@kontist/client";
 ```
 
 or just load the bundle via
+
 ```html
 <script src="node_modules/@kontist/client/dist/bundle.js"></script>
 ```
 
 If you prefer you can use the latest version from our CDN with
+
 ```html
 <script src="https://cdn.kontist.com/sdk.min.js"></script>
 ```
 
-
 ### Login (Web Application)
-In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifer` and persist it across page reloads. Next to that you need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [API Console](/console).
-```javascript
-      // persist two random values
-      sessionStorage.setItem(
-        "state",
-        sessionStorage.getItem("state") || (Math.random() + "").substring(2)
-      );
-      sessionStorage.setItem(
-        "verifier",
-        sessionStorage.getItem("verifier") || (Math.random() + "").substring(2)
-      );
 
-      // initialize Kontist client
-      const client = new Kontist.Client({
-        clientId: "<your client id>",
-        redirectUri: "<your url of the app>",
-        scopes: ["transactions", "transfers"],
-        state: sessionStorage.getItem("state"),
-        verifier: sessionStorage.getItem("verifier")
-      });
+In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifer` and persist it across page reloads. Next to that you need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [API Console](/console).
+
+```javascript
+// persist two random values
+sessionStorage.setItem(
+  "state",
+  sessionStorage.getItem("state") || (Math.random() + "").substring(2)
+);
+sessionStorage.setItem(
+  "verifier",
+  sessionStorage.getItem("verifier") || (Math.random() + "").substring(2)
+);
+
+// initialize Kontist client
+const client = new Kontist.Client({
+  clientId: "<your client id>",
+  redirectUri: "<your url of the app>",
+  scopes: ["transactions", "transfers"],
+  state: sessionStorage.getItem("state"),
+  verifier: sessionStorage.getItem("verifier")
+});
 ```
 
 If the user opens the page the first time we need to redirect him to the API so that he can authorize your application.
+
 ```javascript
       const code = new URL(document.location).searchParams.get("code");
       if (!code) {
@@ -295,8 +309,8 @@ After the authorization of the app the user is redirected back to the app's page
 
 After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
 
-
 ### Login (Backend Application)
+
 If you are developing an application where you can store a `clientSecret` you can authorize with regular OAuth2. In this example we will use `express`.
 
 TypeScript users should add `"lib": ["es2015", "dom"]` to their `tsconfig.json`.
@@ -308,6 +322,7 @@ const app = express();
 ```
 
 We need to provide the values for our app from the [API Console](/console) and set the state to a random number.
+
 ```typescript
 const client = new Client({
   clientId: "<your client id>",
@@ -319,6 +334,7 @@ const client = new Client({
 ```
 
 If the user goes to "/auth" we will redirect him to the Kontist login.
+
 ```typescript
 app.get("/auth", async (req, res) => {
   const uri = await client.auth.getAuthUri();
@@ -327,6 +343,7 @@ app.get("/auth", async (req, res) => {
 ```
 
 After the user authorized the app he will be redirect back to the `redirectUri` which we set to the `/auth/callback` endpoint.
+
 ```typescript
 app.get("/auth/callback", async (req, res) => {
   const callbackUrl = req.originalUrl;
@@ -343,9 +360,10 @@ app.get("/auth/callback", async (req, res) => {
 ```
 
 Last thing left is to start listening on connections.
+
 ```typescript
-app.listen(3000, function () {
-  console.log('Listening on port 3000!');
+app.listen(3000, function() {
+  console.log("Listening on port 3000!");
 });
 ```
 
@@ -364,7 +382,7 @@ const result = await client.models.transaction.fetch();
 ```javascript
 {
   items: [
-  {
+    {
       id: "08995f8f-1f87-42ab-80d2-6e73a3db40e8",
       amount: 4711,
       name: "Example",
@@ -386,7 +404,7 @@ const result = await client.models.transaction.fetch();
       documentDownloadUrl: null,
       documentType: null
     }
-  // ...
+    // ...
   ];
 }
 ```
@@ -394,12 +412,15 @@ const result = await client.models.transaction.fetch();
 If there are more than 50 transactions, `result` will contain also `nextPage` method. When called, `nextPage` will return another `result` object.
 
 {::comment}
+
 ### Creating a new transfer
 
 {:/comment}
 
 ### Plain GraphQL requests
+
 You can use the `rawQuery` method to send plain requests to the GraphQL endpoint like this:
+
 ```typescript
 const query = `{
   viewer {
@@ -413,6 +434,8 @@ const result = await client.graphQL.rawQuery(query);
 ```
 
 {::comment}
+
 ## Model Reference
+
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 {:/comment}
