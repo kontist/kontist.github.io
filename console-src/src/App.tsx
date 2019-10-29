@@ -2,8 +2,7 @@ import React from "react";
 import { Client } from "@kontist/client";
 import Modal from "react-modal";
 
-import { Router, Route, Switch } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { OAuthClientsProvider } from "./enhancers/withOAuthClients";
 import KontistClientProvider from "./enhancers/KontistClientProvider";
@@ -12,14 +11,12 @@ import Dashboard from "./pages/Dashboard";
 import CreateClient from "./pages/CreateClient";
 import UpdateClient from "./pages/UpdateClient";
 
-const history = createBrowserHistory();
-
 Modal.setAppElement("#root");
 
 const App = () => (
   <KontistClientProvider>
     {(kontistClient: Client) => (
-      <Router history={history}>
+      <BrowserRouter basename="/console">
         <AuthenticateUser kontistClient={kontistClient}>
           <OAuthClientsProvider kontistClient={kontistClient}>
             <Switch>
@@ -34,7 +31,7 @@ const App = () => (
             </Switch>
           </OAuthClientsProvider>
         </AuthenticateUser>
-      </Router>
+      </BrowserRouter>
     )}
   </KontistClientProvider>
 );
