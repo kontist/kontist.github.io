@@ -10,7 +10,7 @@ The Kontist API Console allows Kontist user to manage (CRUD) their OAuth2 client
 
 1. start your kontist backend locally
 2. `yarn && yarn start` / `npm install && npm start`
-3. go to `http://localhost:3000` (or `http://localhost:3001` if you already have the backend running on port 3000)
+3. go to `http://localhost:3001`
 
 ### Deploying changes
 
