@@ -129,8 +129,8 @@ You can use the refresh token multiple times until the refresh token expires its
 - transfers
 - users
 
-
 ### Fetching transactions
+
 Transactions are returned using the [Connection pattern](https://relay.dev/graphql/connections.htm) to allow pagination. A simple query showing the first 3 transactions may look like this:
 
 ```graphql
@@ -351,45 +351,47 @@ app.listen(3000, function () {
 
 If you now visit `http://localhost:3000/auth` you will be directed to the Kontist login and then back to your application. The token will then be printed at the console and you can start using the client.
 
-
 ### Fetching transactions
-You can use the `fetchAll` method to fetch the last 50 transactions:
+
+You can use the `fetch` method to fetch the last 50 transactions:
+
 ```typescript
-const result = await client.models.transaction.fetchAll();
+const result = await client.models.transaction.fetch();
 ```
 
-`result` then contains an array like this:
+`result` then has following structure:
 
 ```javascript
-[
+{
+  items: [
   {
-    "id": "08995f8f-1f87-42ab-80d2-6e73a3db40e8",
-    "amount": 4711,
-    "name": "Example",
-    "iban": null,
-    "type": "SEPA_CREDIT_TRANSFER",
-    "bookingDate": "1570399200000",
-    "valutaDate": "2019-10-06T22:00:00.000+00:00",
-    "originalAmount": null,
-    "foreignCurrency": null,
-    "e2eId": null,
-    "mandateNumber": null,
-    "paymentMethod": "bank_account",
-    "category": null,
-    "userSelectedBookingDate": null,
-    "purpose": "kauf+dir+was",
-    "bookingType": "SEPA_CREDIT_TRANSFER",
-    "invoiceNumber": null,
-    "invoicePreviewUrl": null,
-    "invoiceDownloadUrl": null,
-    "documentType": null
-  },
+      id: "08995f8f-1f87-42ab-80d2-6e73a3db40e8",
+      amount: 4711,
+      name: "Example",
+      iban: null,
+      type: "SEPA_CREDIT_TRANSFER",
+      bookingDate: "1570399200000",
+      valutaDate: "2019-10-06T22:00:00.000+00:00",
+      originalAmount: null,
+      foreignCurrency: null,
+      e2eId: null,
+      mandateNumber: null,
+      paymentMethod: "bank_account",
+      category: null,
+      userSelectedBookingDate: null,
+      purpose: "kauf+dir+was",
+      bookingType: "SEPA_CREDIT_TRANSFER",
+      documentNumber: null,
+      documentPreviewUrl: null,
+      documentDownloadUrl: null,
+      documentType: null
+    }
   // ...
-]
+  ];
+}
 ```
 
-
-
+If there are more than 50 transactions, `result` will contain also `nextPage` method. When called, `nextPage` will return another `result` object.
 
 {::comment}
 ### Creating a new transfer
