@@ -12,3 +12,4 @@ github_username:  kontist
 # Build settings
 theme: minima
 
+exclude: ["console-src"]
