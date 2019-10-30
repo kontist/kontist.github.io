@@ -191,7 +191,8 @@ You can use the `rawQuery` method to send plain requests to the GraphQL endpoint
 const query = `{
   viewer {
     mainAccount {
-      id
+      iban
+      balance
     }
   }
 }`;
