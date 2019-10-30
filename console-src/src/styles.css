@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "BrixSans";
+  font-weight: 800;
+  font-style: normal;
+  src: url("./assets/fonts/30D81F_0_0.eot");
+  src: url("./assets/fonts/30D81F_0_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/30D81F_0_0.woff2") format("woff2"),
+    url("./assets/fonts/30D81F_0_0.woff") format("woff"),
+    url("./assets/fonts/30D81F_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BrixSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./assets/fonts/30D81F_1_0.eot");
+  src: url("./assets/fonts/30D81F_1_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/30D81F_1_0.woff2") format("woff2"),
+    url("./assets/fonts/30D81F_1_0.woff") format("woff"),
+    url("./assets/fonts/30D81F_1_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BrixSans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./assets/fonts/30D81F_2_0.eot");
+  src: url("./assets/fonts/30D81F_2_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/30D81F_2_0.woff2") format("woff2"),
+    url("./assets/fonts/30D81F_2_0.woff") format("woff"),
+    url("./assets/fonts/30D81F_2_0.ttf") format("truetype");
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  background: #fff;
+  overflow-x: hidden;
+  font-family: "BrixSans", "system-ui", "Segoe UI", "Roboto", "Helvetica",
+    sans-serif;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:global :focus:not(.focus-visible) {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: inherit;
+  font-size: 60px;
+  line-height: 100%;
+}
+
+.h1 {
+  font-family: inherit;
+  font-size: 60px !important;
+  line-height: 100%;
+}
+
+h2 {
+  font-family: inherit;
+  font-size: 46px;
+  line-height: 110%;
+}
+
+p {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 140%;
+  color: #180b32;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #5a2fb1;
+}
+
+p a {
+  text-decoration: underline;
+  color: #180b32;
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: #5a2fb1;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: scale(0.9);
+}
