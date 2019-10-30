@@ -244,8 +244,6 @@ Result:
 
 <!-- START graphql-markdown -->
 
-# Schema Types
-
 
 ## Query
 <table>
