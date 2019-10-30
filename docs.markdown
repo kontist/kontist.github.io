@@ -246,54 +246,6 @@ Result:
 
 # Schema Types
 
-<details>
-  <summary><strong>Table of Contents</strong></summary>
-
-  * [Query](#query)
-  * [Mutation](#mutation)
-  * [Objects](#objects)
-    * [Account](#account)
-    * [BatchTransfer](#batchtransfer)
-    * [Client](#client)
-    * [CreateTransfersResult](#createtransfersresult)
-    * [DirectDebitFee](#directdebitfee)
-    * [PageInfo](#pageinfo)
-    * [Transaction](#transaction)
-    * [TransactionFee](#transactionfee)
-    * [TransactionsConnection](#transactionsconnection)
-    * [TransactionsConnectionEdge](#transactionsconnectionedge)
-    * [Transfer](#transfer)
-    * [TransfersConnection](#transfersconnection)
-    * [TransfersConnectionEdge](#transfersconnectionedge)
-    * [User](#user)
-  * [Inputs](#inputs)
-    * [CreateClientInput](#createclientinput)
-    * [CreateTransferInput](#createtransferinput)
-    * [TransfersConnectionFilter](#transfersconnectionfilter)
-    * [UpdateClientInput](#updateclientinput)
-  * [Enums](#enums)
-    * [BatchTransferStatus](#batchtransferstatus)
-    * [CompanyType](#companytype)
-    * [DocumentType](#documenttype)
-    * [Gender](#gender)
-    * [GrantType](#granttype)
-    * [IdentificationStatus](#identificationstatus)
-    * [InvoiceStatus](#invoicestatus)
-    * [Nationality](#nationality)
-    * [PaymentFrequency](#paymentfrequency)
-    * [ScopeType](#scopetype)
-    * [TransactionFeeStatus](#transactionfeestatus)
-    * [TransactionFeeType](#transactionfeetype)
-    * [TransactionProjectionType](#transactionprojectiontype)
-    * [TransferStatus](#transferstatus)
-  * [Scalars](#scalars)
-    * [Boolean](#boolean)
-    * [DateTime](#datetime)
-    * [ID](#id)
-    * [Int](#int)
-    * [String](#string)
-
-</details>
 
 ## Query
 <table>
