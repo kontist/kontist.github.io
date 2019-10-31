@@ -569,11 +569,19 @@ permalink: /playground/
       const root = document.getElementById("root");
       root.classList.add("playgroundIn");
 
-      GraphQLPlayground.init(root, {
+      const graphQLServerConfig = {
         endpoint: `https://api.kontist.com/api/graphql`,
         headers: {
           Authorization: `Bearer ${accessToken}`
         }
+      };
+
+      GraphQLPlayground.init(root, {
+        ...graphQLServerConfig,
+        tabs: [
+          // Explicitly pass empty tab for GraphQL Playground to reset all previous tabs with old headers
+          graphQLServerConfig
+        ]
       });
     };
 
