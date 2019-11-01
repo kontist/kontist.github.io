@@ -16,7 +16,7 @@ When you are ready for implementation you first you need to [register your own a
 For an easier start we provide you with [our SDK](/sdk).
 
 We suggest this steps:
-* [Open you Kontist bank account](https://start.kontist.com/?pid=DeveloperProgram) (if you do not have one yet)
+* [Open you Kontist bank account](https://start.kontist.com/?utm_campaign=kontist_dev) (if you do not have one yet)
 * Explore our API with the [Playground](/playground)
 * Read the GraphQL [Docs](/docs)
 * [Register](/console) your own application
