@@ -5,23 +5,25 @@ permalink: /sdk/
 sidebar: true
 ---
 
-We provide you with a NPM package for NodeJS + Browser, please [see GitHub for details](https://github.com/kontist/sdk).
+We provide you with a NPM package for Node.js and Browser environments, please see our [GitHub page for details](https://github.com/kontist/sdk).
 
-## Setup
+## Installation
 
-Please install the SDK via `npm install @kontist/client --save`. Depending on your application type you can then either import it with
+### Node.js
+Please install the SDK via `npm install @kontist/client --save`. Depending on your application type you can then import it with
 
 ```typescript
 import { Client } from "@kontist/client";
 ```
 
-or just load the bundle via
+### Browser
+For your web application you can install the SDK via `npm install @kontist/client --save` and then just load the bundle via
 
 ```html
 <script src="node_modules/@kontist/client/dist/bundle.js"></script>
 ```
 
-If you prefer you can use the latest version from our CDN with
+If you prefer you can skip the `npm install` and just use the latest version from our CDN with
 
 ```html
 <script src="https://cdn.kontist.com/sdk.min.js"></script>
@@ -29,56 +31,7 @@ If you prefer you can use the latest version from our CDN with
 
 ## Authentication
 
-### Web Application
-
-In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifer` and persist it across page reloads. Next to that you need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [API Console](/console).
-
-```javascript
-// persist two random values
-sessionStorage.setItem(
-  "state",
-  sessionStorage.getItem("state") || (Math.random() + "").substring(2)
-);
-sessionStorage.setItem(
-  "verifier",
-  sessionStorage.getItem("verifier") || (Math.random() + "").substring(2)
-);
-
-// initialize Kontist client
-const client = new Kontist.Client({
-  clientId: "<your client id>",
-  redirectUri: "<your url of the app>",
-  scopes: ["transactions", "transfers"],
-  state: sessionStorage.getItem("state"),
-  verifier: sessionStorage.getItem("verifier")
-});
-```
-
-If the user opens the page the first time we need to redirect him to the API so that he can authorize your application.
-
-```javascript
-      const code = new URL(document.location).searchParams.get("code");
-      if (!code) {
-        // "code" query parameter missing, let's redirect the user to the login
-        client.auth.getAuthUri().then(function(url) {
-          window.location = url;
-        });
-      } else {
-```
-
-After the authorization of the app the user is redirected back to the app's page (which must be available at `redirectUri`). There is a `?code=xxxxx` query parameter attached to it. We can just put the whole url into the `fetchToken` method and it returns an access token.
-
-```javascript
-        // we have a code, the client now can fetch a token
-        client.auth.fetchToken(document.location.href).then(function(token) {
-            console.log(token);
-        });
-      }
-```
-
-After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
-
-### Backend Application
+### Node.js
 
 If you are developing an application where you can store a `clientSecret` you can authorize with regular OAuth2. In this example we will use `express`.
 
@@ -90,7 +43,7 @@ import { Client } from "@kontist/client";
 const app = express();
 ```
 
-We need to provide the values for our app from the [API Console](/console) and set the state to a random number.
+We need to provide the values for our app from the [API Console](/console) and set the state to a random number. If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?pid=DeveloperProgram).
 
 ```typescript
 const client = new Client({
@@ -138,6 +91,54 @@ app.listen(3000, function() {
 
 If you now visit `http://localhost:3000/auth` you will be directed to the Kontist login and then back to your application. The token will then be printed at the console and you can start using the client.
 
+### Browser
+In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifier` and persist it across page reloads. Next to that you need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [API Console](/console). If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?pid=DeveloperProgram).
+
+```javascript
+// persist two random values
+sessionStorage.setItem(
+  "state",
+  sessionStorage.getItem("state") || (Math.random() + "").substring(2)
+);
+sessionStorage.setItem(
+  "verifier",
+  sessionStorage.getItem("verifier") || (Math.random() + "").substring(2)
+);
+
+// initialize Kontist client
+const client = new Kontist.Client({
+  clientId: "<your client id>",
+  redirectUri: "<your url of the app>",
+  scopes: ["transactions", "transfers"],
+  state: sessionStorage.getItem("state"),
+  verifier: sessionStorage.getItem("verifier")
+});
+```
+
+If the user opens the page the first time we need to redirect him to the API so that he can authorize your application.
+
+```javascript
+const code = new URL(document.location).searchParams.get("code");
+if (!code) {
+  // "code" query parameter missing, let's redirect the user to the login
+  client.auth.getAuthUri().then(function(url) {
+    window.location = url;
+  });
+} else {
+```
+
+After the authorization of the app the user is redirected back to the app's page (which must be available at `redirectUri`). There is a `?code=xxxxx` query parameter attached to it. We can just put the whole url into the `fetchToken` method and it returns an access token.
+
+```javascript
+  // we have a code, the client now can fetch a token
+  client.auth.fetchToken(document.location.href).then(function(token) {
+      console.log(token);
+  });
+}
+```
+
+After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
+
 ## Using the SDK
 
 ### Fetch transactions
@@ -182,6 +183,13 @@ const result = await client.models.transaction.fetch();
 
 If there are more than 50 transactions, `result` will contain also `nextPage` method. When called, `nextPage` will return another `result` object.
 
+Another way would be to just iterator over `client.models.transaction`. It implements the `AsyncIterator` interface, so you can do this to fetch all transactions:
+```typescript
+let transactions = [];
+for await (const transaction of client.models.transaction) {
+  transactions = transactions.concat(transaction);
+}
+```
 
 ### Create a new transfer
 
@@ -189,15 +197,15 @@ To create and confirm a transfer:
 
 ```typescript
 const confirmationId = await client.models.transfer.createOne({
-  amount: <amount>,
-  recipient: <recipent_name>,
-  iban: <recipent_iban>,
-  purpose: <optional_description>,
-  e2eId: <optional_e2eId>,
+  amount: 1234,
+  recipient: "<recipent_name>",
+  iban: "<recipent_iban>",
+  purpose: "<optional_description>",
+  e2eId: "<optional_e2eId>",
 });
 
 // wait for sms
-const smsToken = ...
+const smsToken = "...";
 
 const result = await client.models.transfer.confirmOne(
   confirmationId,
@@ -211,21 +219,21 @@ To create and confirm multiple transfers (with only one confirmation):
 
 ```typescript
 const confirmationId = await client.models.transfer.createMany([{
-  amount: <amount>,
-  recipient: <recipent_name>,
-  iban: <recipent_iban>,
-  purpose: <optional_description>,
-  e2eId: <optional_e2eId>,
+  amount: 1234,
+  recipient: "<recipent_name>",
+  iban: "<recipent_iban>",
+  purpose: "<optional_description>",
+  e2eId: "<optional_e2eId>",
 }, {
-  amount: <amount>,
-  recipient: <recipent_name>,
-  iban: <recipent_iban>,
-  purpose: <optional_description>,
-  e2eId: <optional_e2eId>,
+  amount: 4567,
+  recipient: "<recipent_name>",
+  iban: "<recipent_iban>",
+  purpose: "<optional_description>",
+  e2eId: "<optional_e2eId>",
 }]);
 
 // wait for sms
-const smsToken = ...
+const smsToken = "...";
 
 const result = await client.models.transfer.confirmMany(
   confirmationId,

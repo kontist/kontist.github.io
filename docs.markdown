@@ -7,11 +7,11 @@ sidebar: true
 
 ## GraphQL API
 
-### Authorization
+### Authentication
 
 To manage the data via our API your application needs to gain access on behalf of the user. This is done through obtaining an access token via [OAuth2](https://tools.ietf.org/html/rfc6749). The access token must then be send in each request in the HTTP header like this: "Authorization: Bearer TOKEN".
 
-If you just want to explore the API you can use the [Playground](/playground) to create and insert such an access token to the HTTP header.
+If you just want to explore the API you can use the [Playground](/playground) which will automatically create and insert such an access token to the HTTP header.
 
 When you want to create your own application you need two kinds of credentials to get such a token: The first part is a fixed pair of client id and client secret. They identify your client application which connects to the API. Each application has its own pair of client id and secret, please use the [API Console](/console) to create your own client credentials.
 
@@ -129,7 +129,7 @@ You can use the refresh token multiple times until the refresh token expires its
 - transfers
 - users
 
-### Fetching transactions
+### Fetch transactions
 
 Transactions are returned using the [Connection pattern](https://relay.dev/graphql/connections.htm) to allow pagination. A simple query showing the first 3 transactions may look like this:
 
@@ -199,46 +199,33 @@ Result:
 }
 ```
 
-{::comment}
+### Create a new transfer
 
-### Creating a new transfer
-
-Creating transfers consist of two steps. First the transfer is created with `addTransfer` which will return the `id` of the new transfer. Then we send a SMS to the user that contains a code and we need to call `verifyTransfer`.
+Creating transfers consist of two steps. First the transfer is created with `createTransfer` which will return the `confirmationId` of the new transfer. Then we send a SMS to the user that contains a code and we need to call `confirmTransfer`.
 
 #### 1. Step - add a new transfer
 
 ```graphql
 mutation {
-    addTransfer(...) {
-        id
-    }
+  createTransfer(
+    transfer: { iban: "DE1234....", recipient: "Johnny Cash", amount: 1234 }
+  ) {
+    id
+  }
 }
-```
-
-Result:
-
-```json
-
 ```
 
 #### 2. Step - verify the transfer
 
 ```graphql
 mutation {
-    verifyTransfer(...) {
-        id
-        status
-    }
+  confirmTransfer(transferId: "1234", authorizationToken: "4567") {
+    id
+    recipient
+  }
 }
 ```
 
-Result:
-
-```json
-
-```
-
-{:/comment}
 
 ## GraphQL Models
 

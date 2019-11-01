@@ -15,11 +15,32 @@ When you are ready for implementation you first you need to [register your own a
 
 For an easier start we provide you with [our SDK](/sdk).
 
+We suggest this steps:
+* [Open you Kontist bank account](https://start.kontist.com/?pid=DeveloperProgram) (if you do not have one yet)
+* Explore our API with the [Playground](/playground)
+* Read the GraphQL [Docs](/docs)
+* [Register](/console) your own application
+* Use our [SDK](/sdk) in your application
+* or directly use the `/api/graphql` endpoint
+
 ## Kontist SDK
 
-Our JavaScript SDK helps you to easily connect to our services. It was developed for Node.js and browser environments and contains TypeScript type definitions. Please run `npm install @kontist/client` to install the latest version.
+Our [JavaScript SDK](/sdk) helps you to easily connect to our services. It was developed for Node.js and browser environments and contains TypeScript type definitions. Just run `npm install @kontist/client` to install the latest version.
 
-For details, please refer to our [GitHub repository](https://github.com/kontist/sdk).
+The SDK supports you with Authentication and provides methods for the most common use cases, e.g. create a new transfer:
+```typescript
+const confirmationId = await client.models.transfer.createOne({
+  amount: 1234,
+  recipient: "Johnny Cash",
+  iban: "DE07123412341234123412",
+  purpose: "test transfer",
+});
+
+// wait for sms
+const smsToken = "...";
+
+await client.models.transfer.confirmOne(confirmationId, smsToken);
+```
 
 ## GraphQL Playground
 
