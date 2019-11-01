@@ -7,9 +7,9 @@ sidebar: true
 
 We provide you with a NPM package for NodeJS + Browser, please [see GitHub for details](https://github.com/kontist/sdk).
 
-## Using the SDK
+## Setup
 
-Please install the SDK via `npm install @kontist/client --save`. Depending on your application you can then either import it with
+Please install the SDK via `npm install @kontist/client --save`. Depending on your application type you can then either import it with
 
 ```typescript
 import { Client } from "@kontist/client";
@@ -27,7 +27,9 @@ If you prefer you can use the latest version from our CDN with
 <script src="https://cdn.kontist.com/sdk.min.js"></script>
 ```
 
-### Login (Web Application)
+## Authentication
+
+### Web Application
 
 In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifer` and persist it across page reloads. Next to that you need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [API Console](/console).
 
@@ -76,7 +78,7 @@ After the authorization of the app the user is redirected back to the app's page
 
 After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
 
-### Login (Backend Application)
+### Backend Application
 
 If you are developing an application where you can store a `clientSecret` you can authorize with regular OAuth2. In this example we will use `express`.
 
@@ -136,7 +138,9 @@ app.listen(3000, function() {
 
 If you now visit `http://localhost:3000/auth` you will be directed to the Kontist login and then back to your application. The token will then be printed at the console and you can start using the client.
 
-### Fetching transactions
+## Using the SDK
+
+### Fetch transactions
 
 You can use the `fetch` method to fetch the last 50 transactions:
 
@@ -179,7 +183,7 @@ const result = await client.models.transaction.fetch();
 If there are more than 50 transactions, `result` will contain also `nextPage` method. When called, `nextPage` will return another `result` object.
 
 
-### Creating a new transfer
+### Create a new transfer
 
 To create and confirm a transfer:
 
@@ -201,7 +205,7 @@ const result = await client.models.transfer.confirmOne(
 );
 ```
 
-### Creating multiple transfers
+### Create multiple transfers
 
 To create and confirm multiple transfers (with only one confirmation):
 
