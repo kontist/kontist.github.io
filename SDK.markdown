@@ -178,11 +178,57 @@ const result = await client.models.transaction.fetch();
 
 If there are more than 50 transactions, `result` will contain also `nextPage` method. When called, `nextPage` will return another `result` object.
 
-{::comment}
 
 ### Creating a new transfer
 
-{:/comment}
+To create and confirm a transfer:
+
+```typescript
+const confirmationId = await client.models.transfer.createOne({
+  amount: <amount>,
+  recipient: <recipent_name>,
+  iban: <recipent_iban>,
+  purpose: <optional_description>,
+  e2eId: <optional_e2eId>,
+});
+
+// wait for sms
+const smsToken = ...
+
+const result = await client.models.transfer.confirmOne(
+  confirmationId,
+  smsToken
+);
+```
+
+### Creating multiple transfers
+
+To create and confirm multiple transfers (with only one confirmation):
+
+```typescript
+const confirmationId = await client.models.transfer.createMany([{
+  amount: <amount>,
+  recipient: <recipent_name>,
+  iban: <recipent_iban>,
+  purpose: <optional_description>,
+  e2eId: <optional_e2eId>,
+}, {
+  amount: <amount>,
+  recipient: <recipent_name>,
+  iban: <recipent_iban>,
+  purpose: <optional_description>,
+  e2eId: <optional_e2eId>,
+}]);
+
+// wait for sms
+const smsToken = ...
+
+const result = await client.models.transfer.confirmMany(
+  confirmationId,
+  smsToken
+);
+```
+
 
 ### Plain GraphQL requests
 
