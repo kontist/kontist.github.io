@@ -60,8 +60,6 @@ class OAuthClientsProvider extends Component<Props, State> {
 
     this.setState({
       isLoading: false,
-      // Currently rawQuery return type does not include clients
-      // @ts-ignore
       oAuthClients: viewer.clients
     });
   };
@@ -72,8 +70,6 @@ class OAuthClientsProvider extends Component<Props, State> {
     });
 
     const {
-      // Currently rawQuery return type does not include client mutation results
-      // @ts-ignore
       createClient: client
     } = await this.props.kontistClient.graphQL.rawQuery(createClientMutation, {
       ...payload,
@@ -101,8 +97,6 @@ class OAuthClientsProvider extends Component<Props, State> {
     }
 
     const {
-      // Currently rawQuery return type does not include client mutation results
-      // @ts-ignore
       updateClient: updatedClient
     } = await this.props.kontistClient.graphQL.rawQuery(updateClientMutation, {
       ...updatePayload,
