@@ -54,8 +54,6 @@ export default {
     TRANSFERS: "Transfers",
     SUBSCRIPTIONS: "Subscriptions",
     STATEMENTS: "Statements",
-    ADMIN: "Admin",
-    CLIENTS: "Clients",
     title: "Scopes"
   },
   backButtonLabel: "Back"

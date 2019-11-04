@@ -20,4 +20,9 @@ export type DeleteOAuthClientPayload = {
   id: string;
 };
 
+export type AuthorizedScopes = Exclude<
+  Schema.ScopeType,
+  Schema.ScopeType.Clients | Schema.ScopeType.Admin
+>;
+
 export { Schema };

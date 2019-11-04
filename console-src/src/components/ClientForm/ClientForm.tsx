@@ -10,7 +10,7 @@ import Button from "../buttons/Button";
 import colors from "../../theme/colors";
 import copy from "../../copy";
 
-import { Schema } from "../../types/oAuthClient";
+import { Schema, AuthorizedScopes } from "../../types/oAuthClient";
 
 const Separator = styled.div`
   height: 1px;
@@ -68,15 +68,6 @@ type ClientFormProps = {
   history: History;
   client?: Schema.Client;
 };
-
-type AuthorizedScopes =
-  | "OFFLINE"
-  | "ACCOUNTS"
-  | "USERS"
-  | "TRANSACTIONS"
-  | "TRANSFERS"
-  | "SUBSCRIPTIONS"
-  | "STATEMENTS";
 
 type Scopes = {
   [index in AuthorizedScopes]: boolean;

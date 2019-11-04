@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 
-import { Schema } from "../../types/oAuthClient";
+import { Schema, AuthorizedScopes } from "../../types/oAuthClient";
 import { BodyText } from "../../components/Text";
 import Checkbox from "../inputs/Checkbox";
 import Button from "../buttons/Button";
@@ -54,7 +54,7 @@ const ClientDetailsScopesContainer = styled.div``;
 
 type ClientDetailsScopesProps = {
   title: string;
-  scopes: Schema.ScopeType[];
+  scopes: AuthorizedScopes[];
 };
 
 const ClientDetailsScopes = ({ scopes, title }: ClientDetailsScopesProps) => (
@@ -179,7 +179,7 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
             </ClientDetailsColumn>
             <ClientDetailsColumn>
               <ClientDetailsScopes
-                scopes={client.scopes || []}
+                scopes={(client.scopes || []) as AuthorizedScopes[]}
                 title={copy.scopes.title}
               />
             </ClientDetailsColumn>
