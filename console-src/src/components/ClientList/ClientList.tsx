@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { BodyText } from "../../components/Text";
 import TitledCard from "../../components/TitledCard";
 import ClientItem from "../../components/ClientItem";
-import { OAuthClient } from "../../types/oAuthClient";
+import { Schema } from "../../types/oAuthClient";
 import copy from "../../copy";
 
 type ClientListProps = {
-  clients: OAuthClient[];
+  clients: Schema.Client[];
   deleteClient: Function;
 };
 

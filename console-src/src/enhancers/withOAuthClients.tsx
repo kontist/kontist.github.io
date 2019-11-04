@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Client } from "@kontist/client";
 
 import {
-  OAuthClient,
   CreateOAuthClientPayload,
   UpdateOAuthClientPayload,
-  DeleteOAuthClientPayload
+  DeleteOAuthClientPayload,
+  Schema
 } from "../types/oAuthClient";
 import {
   fetchClientsQuery,
@@ -16,7 +16,7 @@ import {
 
 interface OAuthClientsContext {
   isLoading: boolean;
-  oAuthClients: OAuthClient[];
+  oAuthClients: Schema.Client[];
   createClient: (payload: CreateOAuthClientPayload) => Promise<void> | void;
   updateClient: (payload: UpdateOAuthClientPayload) => Promise<void> | void;
   deleteClient: (payload: DeleteOAuthClientPayload) => Promise<void> | void;
@@ -24,7 +24,7 @@ interface OAuthClientsContext {
 
 type State = {
   isLoading: boolean;
-  oAuthClients: OAuthClient[];
+  oAuthClients: Schema.Client[];
 };
 
 type Props = {

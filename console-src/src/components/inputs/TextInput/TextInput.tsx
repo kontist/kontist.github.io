@@ -115,7 +115,7 @@ const BaseInput = ({
       type={type}
       placeholder={placeholder}
       className={isInvalid ? "invalid" : ""}
-      value={value}
+      value={value || ""}
       onChange={handleChange}
     />
   </Container>

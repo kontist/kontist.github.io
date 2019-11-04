@@ -7,7 +7,7 @@ import { ClientDetailsItem } from "../ClientItem";
 import { BodyText, H4 } from "../Text";
 
 import copy from "../../copy";
-import { OAuthClient } from "src/types/oAuthClient";
+import { Schema } from "src/types/oAuthClient";
 
 const Actions = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ type Props = {
   isOpen: boolean;
   closeModal: () => void;
   deleteClient: () => void;
-  client: OAuthClient;
+  client: Schema.Client;
   isLoading?: boolean;
 };
 

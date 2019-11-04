@@ -1,31 +1,10 @@
-export enum Scope {
-  OFFLINE = "OFFLINE",
-  ACCOUNTS = "ACCOUNTS",
-  USERS = "USERS",
-  TRANSACTIONS = "TRANSACTIONS",
-  TRANSFERS = "TRANSFERS",
-  SUBSCRIPTIONS = "SUBSCRIPTIONS",
-  STATEMENTS = "STATEMENTS"
-}
-
-enum GrantType {
-  AUTHORIZATION_CODE = "AUTHORIZATION_CODE",
-  REFRESH_TOKEN = "REFRESH_TOKEN"
-}
-
-export type OAuthClient = {
-  id: string;
-  name: string;
-  redirectUri: string;
-  scopes: Scope[];
-  grantTypes: GrantType[];
-};
+import * as Schema from "@kontist/client/dist/graphql/schema";
 
 export type CreateOAuthClientPayload = {
   id: string;
   name: string;
   redirectUri?: string;
-  scopes?: Scope[];
+  scopes?: Schema.ScopeType[];
 };
 
 export type UpdateOAuthClientPayload = {
@@ -33,10 +12,12 @@ export type UpdateOAuthClientPayload = {
   name?: string;
   secret?: string;
   redirectUri?: string;
-  scopes?: Scope[];
-  grantTypes?: GrantType[];
+  scopes?: Schema.ScopeType[];
+  grantTypes?: Schema.GrantType[];
 };
 
 export type DeleteOAuthClientPayload = {
   id: string;
 };
+
+export { Schema };
