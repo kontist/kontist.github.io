@@ -1108,10 +1108,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@kontist/client@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@kontist/client/-/client-0.0.11.tgz#6f633ad2d8e3891c59329d62e2496147fb9fbfe1"
-  integrity sha512-zR4jsnoB7D5YMuAR5++jQ8hy3Y/yGU0Qyw/CkGqRw/B8+7svG5fA9Lz6LCfshuZRsc/c9buYgDR/PRa92kFsqQ==
+"@kontist/client@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@kontist/client/-/client-0.0.16.tgz#5e5157ea6d4f706ad13f1fd97b3a1132ec8435f9"
+  integrity sha512-GymMGlG1O1jg15qFmgcp1Bw62P/IKTfKu6n7f5YcQl9/UAipHjXW4u7CtrY4B0OAMjAjHhxN+HoohhxFb1rmew==
   dependencies:
     abab "^2.0.2"
     client-oauth2 "^4.2.5"
