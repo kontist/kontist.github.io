@@ -242,7 +242,7 @@ const result = await client.models.transfer.confirmMany(
 ```
 
 ### Create a standing order
-See "Create a new transfer", but please include this additional fields:
+See "Create a new transfer", but please include these additional fields:
 ```
 executeAt: "<execution_date>" // e.g. 2017-03-30T12:56:54+00:00
 lastExecutionDate: "<optional_date>" // optional, e.g. 2019-05-28T12:56:54+00:00
