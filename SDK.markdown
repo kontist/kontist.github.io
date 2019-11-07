@@ -195,7 +195,7 @@ Please, make sure that you **never share your private key** and it's **stored in
 After a successful request, you will receive an SMS with OTP that you will need during device verification.
 
 ```typescript
-const result = await clientRef.current.auth.createDevice({
+const result = await client.auth.createDevice({
   name: "iPhone XS",
   key: "..." // The hex-encoded public key without header
 });
@@ -214,7 +214,7 @@ const result = await clientRef.current.auth.createDevice({
 To verify device you need to provide a signature of OTP received on your mobile phone.
 
 ```typescript
-await clientRef.current.auth.verifyDevice(deviceId, {
+await client.auth.verifyDevice(deviceId, {
   challengeId,
   signature: "..." // The hex-encoded signature for the OTP recived in SMS
 });
@@ -226,7 +226,7 @@ The promise will be resolved if verification is successful.
 After the device is created and verified, you need to create a device challenge. As a result, you will get `stringToSign` that should be used during verification of device challenge.
 
 ```typescript
-const result = await clientRef.current.auth.createDeviceChallenge(deviceId);
+const result = await client.auth.createDeviceChallenge(deviceId);
 ```
 
 `result` then has following structure:
@@ -243,7 +243,7 @@ To verify device challenge you need to provide a signature of `stringToSign` rec
 
 
 ```typescript
-const token = await clientRef.current.auth.verifyDeviceChallenge(
+const token = await client.auth.verifyDeviceChallenge(
   deviceId,
   id, // ID of the device challenge
   {
