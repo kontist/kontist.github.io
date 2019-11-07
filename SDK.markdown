@@ -139,6 +139,23 @@ After the authorization of the app the user is redirected back to the app's page
 
 After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
 
+### Renewing access tokens
+
+After the initial authentication steps described above, renewing access tokens can be done using this simple method:
+
+```typescript
+const token = await kontistClient.auth.refresh();
+```
+
+Optionally, this method accepts a number as an argument to specify after how many milliseconds the refresh request should timeout (default is 10000):
+
+```typescript
+// abort after 20 seconds
+const token = await kontistClient.auth.refresh(20000);
+```
+
+The method is the same for both Node.js and Browser environments.
+
 ### Multi-Factor Authentication
 
 Accessing Kontist banking APIs require Multi-Factor Authentication (MFA).
