@@ -154,7 +154,7 @@ Optionally, this method accepts a number as an argument to specify after how man
 const token = await kontistClient.auth.refresh(20000);
 ```
 
-The method is the same for both Node.js and Browser environments.
+The method is the same for both Node.js and Browser environments (it uses refresh tokens or PKCE with `response_mode=web_message` respectively).
 
 ### Multi-Factor Authentication
 
