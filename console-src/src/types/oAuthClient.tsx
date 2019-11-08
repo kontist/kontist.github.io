@@ -1,4 +1,4 @@
-import * as Schema from "@kontist/client/dist/graphql/schema";
+import * as Schema from "kontist/dist/graphql/schema";
 
 export type CreateOAuthClientPayload = {
   id: string;
