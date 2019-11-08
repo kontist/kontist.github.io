@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 
-import { OAuthClient } from "../../types/oAuthClient";
+import { Schema, AuthorizedScopes } from "../../types/oAuthClient";
 import { BodyText } from "../../components/Text";
-import { Scope } from "../../types/oAuthClient";
 import Checkbox from "../inputs/Checkbox";
 import Button from "../buttons/Button";
 import LinkButton from "../buttons/LinkButton";
@@ -55,7 +54,7 @@ const ClientDetailsScopesContainer = styled.div``;
 
 type ClientDetailsScopesProps = {
   title: string;
-  scopes: Scope[];
+  scopes: AuthorizedScopes[];
 };
 
 const ClientDetailsScopes = ({ scopes, title }: ClientDetailsScopesProps) => (
@@ -113,7 +112,7 @@ const ClientDetailsActions = styled.div`
 `;
 
 type ClientItemProps = {
-  client: OAuthClient;
+  client: Schema.Client;
   deleteClient: Function;
 };
 
@@ -175,12 +174,12 @@ class ClientItem extends Component<ClientItemProps, ClientItemState> {
               />
               <ClientDetailsItem
                 name={copy.dashboard.clientDetails.redirectUri}
-                value={client.redirectUri}
+                value={client.redirectUri || ""}
               />
             </ClientDetailsColumn>
             <ClientDetailsColumn>
               <ClientDetailsScopes
-                scopes={client.scopes}
+                scopes={(client.scopes || []) as AuthorizedScopes[]}
                 title={copy.scopes.title}
               />
             </ClientDetailsColumn>

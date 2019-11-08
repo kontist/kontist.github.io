@@ -10,7 +10,7 @@ import Button from "../buttons/Button";
 import colors from "../../theme/colors";
 import copy from "../../copy";
 
-import { Scope, OAuthClient } from "../../types/oAuthClient";
+import { Schema, AuthorizedScopes } from "../../types/oAuthClient";
 
 const Separator = styled.div`
   height: 1px;
@@ -66,17 +66,17 @@ type ClientFormProps = {
   isLoading?: boolean;
   buttonLabel: string;
   history: History;
-  client?: OAuthClient;
+  client?: Schema.Client;
 };
 
 type Scopes = {
-  [index in keyof typeof Scope]: boolean;
+  [index in AuthorizedScopes]: boolean;
 };
 
 type State = {
   isValid: boolean;
   name?: string;
-  redirectUri?: string;
+  redirectUri?: string | null;
   secret?: string;
   scopes: Scopes;
 };
@@ -91,7 +91,7 @@ const hasValidState = (state: State) =>
   Boolean(state.redirectUri) &&
   Boolean(state.name);
 
-const getInitialState = (client?: OAuthClient) => {
+const getInitialState = (client?: Schema.Client) => {
   const defaultState = {
     isValid: false,
     name: undefined,
@@ -117,7 +117,7 @@ const getInitialState = (client?: OAuthClient) => {
           redirectUri: client.redirectUri,
           scopes: {
             ...defaultState.scopes,
-            ...client.scopes.reduce(
+            ...(client.scopes || []).reduce(
               (scopes, scope) => ({ ...scopes, [scope]: true }),
               {}
             )
@@ -203,7 +203,7 @@ class ClientForm extends Component<ClientFormProps, State> {
         <TextInput
           label={copy.clientForm.redirectUri}
           placeholder={copy.clientForm.placeholders.redirectUri}
-          value={redirectUri}
+          value={redirectUri || ""}
           handleChange={this.handleTextInputChange("redirectUri")}
         />
         <TextInput

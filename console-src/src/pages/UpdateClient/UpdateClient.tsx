@@ -10,10 +10,10 @@ import TitledCard from "../../components/TitledCard";
 import ClientForm from "../../components/ClientForm";
 
 import copy from "../../copy";
-import { OAuthClient } from "../../types/oAuthClient";
+import { Schema } from "../../types/oAuthClient";
 
 type Props = {
-  oAuthClients: OAuthClient[];
+  oAuthClients: Schema.Client[];
   updateClient: Function;
   isLoading: boolean;
   history: History;

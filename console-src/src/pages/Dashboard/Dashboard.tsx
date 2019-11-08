@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import withOAuthClients from "../../enhancers/withOAuthClients";
-import { OAuthClient } from "../../types/oAuthClient";
+import { Schema } from "../../types/oAuthClient";
 import Layout from "../../layout";
 import { BodyText, H1 } from "../../components/Text";
 import LinkButton from "../../components/buttons/LinkButton";
@@ -12,7 +12,7 @@ import copy from "../../copy";
 import LoadingIndicator from "src/components/LoadingIndicator";
 
 type Props = {
-  oAuthClients: OAuthClient[];
+  oAuthClients: Schema.Client[];
   deleteClient: Function;
   isLoading: boolean;
 };

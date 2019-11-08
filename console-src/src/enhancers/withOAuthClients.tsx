@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Client } from "@kontist/client";
 
 import {
-  OAuthClient,
   CreateOAuthClientPayload,
   UpdateOAuthClientPayload,
-  DeleteOAuthClientPayload
+  DeleteOAuthClientPayload,
+  Schema
 } from "../types/oAuthClient";
 import {
   fetchClientsQuery,
@@ -16,7 +16,7 @@ import {
 
 interface OAuthClientsContext {
   isLoading: boolean;
-  oAuthClients: OAuthClient[];
+  oAuthClients: Schema.Client[];
   createClient: (payload: CreateOAuthClientPayload) => Promise<void> | void;
   updateClient: (payload: UpdateOAuthClientPayload) => Promise<void> | void;
   deleteClient: (payload: DeleteOAuthClientPayload) => Promise<void> | void;
@@ -24,7 +24,7 @@ interface OAuthClientsContext {
 
 type State = {
   isLoading: boolean;
-  oAuthClients: OAuthClient[];
+  oAuthClients: Schema.Client[];
 };
 
 type Props = {
@@ -60,8 +60,6 @@ class OAuthClientsProvider extends Component<Props, State> {
 
     this.setState({
       isLoading: false,
-      // Currently rawQuery return type does not include clients
-      // @ts-ignore
       oAuthClients: viewer.clients
     });
   };
@@ -72,8 +70,6 @@ class OAuthClientsProvider extends Component<Props, State> {
     });
 
     const {
-      // Currently rawQuery return type does not include client mutation results
-      // @ts-ignore
       createClient: client
     } = await this.props.kontistClient.graphQL.rawQuery(createClientMutation, {
       ...payload,
@@ -101,8 +97,6 @@ class OAuthClientsProvider extends Component<Props, State> {
     }
 
     const {
-      // Currently rawQuery return type does not include client mutation results
-      // @ts-ignore
       updateClient: updatedClient
     } = await this.props.kontistClient.graphQL.rawQuery(updateClientMutation, {
       ...updatePayload,
