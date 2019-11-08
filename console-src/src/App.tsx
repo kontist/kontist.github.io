@@ -1,5 +1,5 @@
 import React from "react";
-import { Client } from "@kontist/client";
+import { Client } from "kontist";
 import Modal from "react-modal";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";

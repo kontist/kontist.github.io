@@ -25,7 +25,7 @@ We suggest this steps:
 
 ## Kontist SDK
 
-Our [JavaScript SDK](/sdk) helps you to easily connect to our services. It was developed for Node.js and browser environments and contains TypeScript type definitions. Just run `npm install @kontist/client` to install the latest version.
+Our [JavaScript SDK](/sdk) helps you to easily connect to our services. It was developed for Node.js and browser environments and contains TypeScript type definitions. Just run `npm install kontist` to install the latest version.
 
 The SDK supports you with Authentication and provides methods for the most common use cases, e.g. create a new transfer:
 ```typescript

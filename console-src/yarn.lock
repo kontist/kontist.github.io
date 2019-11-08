@@ -1108,17 +1108,6 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@kontist/client@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@kontist/client/-/client-0.0.17.tgz#afd3023755486aed5f3e3b59910d930f84ebedb5"
-  integrity sha512-5sBk9fR52pw2PtXAPgdll+7N0GuV7WORsczVdbgr4Tc23HMjr1WEVW2YIv1xWLD4qmcie5JwKN+/bdx5ZPkVZg==
-  dependencies:
-    abab "^2.0.2"
-    client-oauth2 "^4.2.5"
-    graphql-request "^1.8.2"
-    js-sha256 "^0.9.0"
-    lodash "^4.17.15"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -6057,6 +6046,16 @@ kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
+
+kontist@^0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/kontist/-/kontist-0.0.18.tgz#2a6f026b8f2d6f03e785ddd0bdd7b905a90122fc"
+  integrity sha512-Q0ccWgtvuKtzmR5HsZlj/F+1K4MZiiEGNiIep0uqHY61HLtIKLYz2Ni4OUuwtKE3rvzwiR1yDfG17KDxbgu1xA==
+  dependencies:
+    abab "^2.0.2"
+    client-oauth2 "^4.2.5"
+    graphql-request "^1.8.2"
+    js-sha256 "^0.9.0"
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"

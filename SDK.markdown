@@ -10,17 +10,17 @@ We provide you with a NPM package for Node.js and Browser environments, please s
 ## Installation
 
 ### Node.js
-Please install the SDK via `npm install @kontist/client --save`. Depending on your application type you can then import it with
+Please install the SDK via `npm install kontist --save`. Depending on your application type you can then import it with
 
 ```typescript
-import { Client } from "@kontist/client";
+import { Client } from "kontist";
 ```
 
 ### Browser
-For your web application you can install the SDK via `npm install @kontist/client --save` and then just load the bundle via
+For your web application you can install the SDK via `npm install kontist --save` and then just load the bundle via
 
 ```html
-<script src="node_modules/@kontist/client/dist/bundle.js"></script>
+<script src="node_modules/kontist/dist/bundle.js"></script>
 ```
 
 If you prefer you can skip the `npm install` and just use the latest version from our CDN with
@@ -39,7 +39,7 @@ TypeScript users should add `"lib": ["es2015", "dom"]` to their `tsconfig.json`.
 
 ```typescript
 import express from "express";
-import { Client } from "@kontist/client";
+import { Client } from "kontist";
 const app = express();
 ```
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Client } from "@kontist/client";
+import { Client } from "kontist";
 
 import {
   CreateOAuthClientPayload,

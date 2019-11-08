@@ -1,4 +1,4 @@
-import { Client } from "@kontist/client";
+import { Client } from "kontist";
 
 import prodConfig from "../config";
 import devConfig from "../config.dev";
