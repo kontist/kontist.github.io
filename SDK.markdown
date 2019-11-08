@@ -222,14 +222,14 @@ await client.auth.verifyDevice(deviceId, {
 
 The promise will be resolved if verification is successful.
 
-#### Create device challenge
+#### Use device binding as MFA
 After the device is created and verified, you need to create a device challenge. As a result, you will get `stringToSign` that should be used during verification of device challenge.
 
 ```typescript
-const result = await client.auth.createDeviceChallenge(deviceId);
+const challenge = await client.auth.createDeviceChallenge(deviceId);
 ```
 
-`result` then has following structure:
+`challenge` then has following structure:
 
 ```javascript
 {
