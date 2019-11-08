@@ -216,7 +216,7 @@ To verify device you need to provide a signature of OTP received on your mobile 
 ```typescript
 await client.auth.verifyDevice(deviceId, {
   challengeId,
-  signature: "..." // The hex-encoded signature for the OTP recived in SMS
+  signature: "..." // The hex-encoded signature for the OTP received in SMS
 });
 ```
 
