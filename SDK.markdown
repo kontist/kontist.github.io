@@ -211,12 +211,12 @@ const result = await client.auth.createDevice({
 ```
 
 #### Verify device
-To verify device you need to provide a signature of OTP received on your mobile phone.
+To verify device you need to provide a signature (ECDSA with SHA256) of OTP received on your mobile phone.
 
 ```typescript
 await client.auth.verifyDevice(deviceId, {
   challengeId,
-  signature: "..." // The hex-encoded signature for the OTP received in SMS
+  signature: "..." // The hex-encoded signature (ECDSA with SHA256) for the OTP received in SMS
 });
 ```
 
@@ -239,7 +239,7 @@ const challenge = await client.auth.createDeviceChallenge(deviceId);
 ```
 
 #### Verify device challenge
-To verify device challenge you need to provide a signature of `stringToSign` received after challenge creation.
+To verify device challenge you need to provide a signature (ECDSA with SHA256) of `stringToSign` received after challenge creation.
 
 
 ```typescript
@@ -247,7 +247,7 @@ const token = await client.auth.verifyDeviceChallenge(
   deviceId,
   id, // ID of the device challenge
   {
-    signature: "..." // The hex-encoded signature for the `stringToSign`
+    signature: "..." // The hex-encoded signature (ECDSA with SHA256) for the `stringToSign`
   }
 );
 ```
