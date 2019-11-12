@@ -47,3 +47,7 @@ await client.models.transfer.confirmOne(confirmationId, smsToken);
 The [Playground](/playground) is an interactive, in-browser application that can be used to explore the GraphQL interface we provide. You may authorize the application with the same credentials that you use for the Kontist mobile app.
 
 ![Playground Screenshot](/assets/playground.png){:class="img-responsive"}
+
+## Questions? Issues?
+
+Feel free to open a ticket if you would like to give feedback on this website or suggest changes here(https://github.com/kontist/kontist.github.io/issues).
