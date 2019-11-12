@@ -139,6 +139,22 @@ After the authorization of the app the user is redirected back to the app's page
 
 After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
 
+### Using an existing token
+
+If you already obtained an access token previously (either with a previous SDK authentication or with any other method like using Kontist's REST API directly), you can configure your SDK client instance to use this token with this method:
+
+```typescript
+const token = kontistClient.auth.setToken(accessToken);
+```
+
+All SDK requests will then be performed with this new access token.
+
+Optionally, you can also provide a refresh token if you have one:
+
+```typescript
+const token = kontistClient.auth.setToken(accessToken, refreshToken);
+```
+
 ### Renewing access tokens
 
 After the initial authentication steps described above, renewing access tokens can be done using this simple method:
