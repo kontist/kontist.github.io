@@ -339,3 +339,38 @@ const query = `{
 
 const result = await client.graphQL.rawQuery(query);
 ```
+
+### GraphQL error handling
+
+If one of your requests raises an error, an instance of `GraphQLError` will be thrown with the following properties:
+
+| Property    | Type    | Description                                             |
+| ----------- | ------- | ------------------------------------------------------- |
+| name        | name    | The name of the error, i.e. `GraphQLError`              |
+| message     | string  | A message describing the error.                         |
+| status      | number  | The HTTP status code of the error.                      |
+| type        | string  | The type of the error as defined by the Kontist API.    |
+
+You can simply catch the error and execute some logic based on any of the above properties:
+
+```typescript
+try {
+  const confirmationId = await client.models.transfer.createOne({
+    amount: 1234,
+    recipient: "<recipent_name>",
+    iban: "<recipent_iban>",
+    purpose: "<optional_description>",
+    e2eId: "<optional_e2eId>",
+  });
+} catch (error) {
+  // Do something with the error:
+  // GraphQLError {
+  //   name: "GraphQLError",
+  //   message: "There were insufficient funds to complete this action",
+  //   status: 400,
+  //   type: "https://api.kontist.com/problems/transfer/insufficient-funds"
+  // }
+}
+```
+
+*Note:* As per the GraphQL specification, the actual HTTP status code of the response will be either 200 or 500. Do not rely on that and rather use the `status` property of the error you caught.
