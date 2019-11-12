@@ -50,4 +50,4 @@ The [Playground](/playground) is an interactive, in-browser application that can
 
 ## Questions? Issues?
 
-Feel free to open a ticket if you would like to give feedback on this website or suggest changes here(https://github.com/kontist/kontist.github.io/issues).
+Feel free to open a ticket if you would like to give feedback on this website or suggest changes [here](https://github.com/kontist/kontist.github.io/issues).
