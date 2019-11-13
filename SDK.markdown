@@ -322,28 +322,29 @@ executeAt: "<execution_date>" // e.g. 2017-03-30T12:56:54+00:00
 
 Please note that you can only create one (not many) timed orders at the same time.
 
-### Cancel standing order
+### Cancel transfer
 
-To cancel and confirm standing order cancellation:
+To cancel and confirm transfer cancellation:
 
 ```typescript
-const confirmationId = await client.models.transfer.cancelStandingOrder("<standing_order_id>");
-
-// wait for sms
-const smsToken = "...";
-
-const standingOrder = await client.models.transfer.confirmCancelStandingOrder(
-  confirmationId,
-  smsToken
+let canceledTransfer;
+const cancelResult = await client.models.transfer.cancelTransfer(
+  TransferType.STANDING_ORDER,
+  "<standing_order_id>"
 );
-```
 
-### Cancel timed order
+if (!cancelResult.confirmationId) {
+  canceledTransfer = cancelResult;
+} else {
+  // wait for sms
+  const smsToken = "...";
 
-To cancel timed order:
-
-```typescript
-const timedOrder = await client.models.transfer.cancelTimedOrder("<timed_order_id>");
+  canceledTransfer = await client.models.transfer.confirmCancelTransfer(
+    TransferType.STANDING_ORDER,
+    confirmationId,
+    smsToken
+}
+);
 ```
 
 ### Plain GraphQL requests
