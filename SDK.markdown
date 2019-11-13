@@ -343,8 +343,8 @@ if (!cancelResult.confirmationId) {
     TransferType.STANDING_ORDER,
     confirmationId,
     smsToken
+  );
 }
-);
 ```
 
 ### Plain GraphQL requests
