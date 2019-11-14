@@ -16,6 +16,8 @@ Please install the SDK via `npm install kontist --save`. Depending on your appli
 import { Client } from "kontist";
 ```
 
+TypeScript users should add at least `"lib": ["es2018.asynciterable", "es6", "dom"]` to their `tsconfig.json`.
+
 ### Browser
 For your web application you can install the SDK via `npm install kontist --save` and then just load the bundle via
 
@@ -34,8 +36,6 @@ If you prefer you can skip the `npm install` and just use the latest version fro
 ### Node.js
 
 If you are developing an application where you can store a `clientSecret` you can authorize with regular OAuth2. In this example we will use `express`.
-
-TypeScript users should add `"lib": ["es2015", "dom"]` to their `tsconfig.json`.
 
 ```typescript
 import express from "express";
