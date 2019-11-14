@@ -11,7 +11,7 @@ We provide you with a [GraphQL API](https://graphql.org) to e.g. fetch transacti
 
 For exploring the API we recommend the [Playground application](/playground).
 
-When you are ready for implementation you first you need to [register your own application](/console) with us as an OAuth2 client. Then you can use your application to create an access token to access Kontist on behalf of a user. With that access token you then can make requests to our `/api/graphql` endpoint.
+When you are ready for implementation you first need to [register your own application](/console) with us as an OAuth2 client. Then you can use your application to create an access token to access Kontist on behalf of a user. With that access token you then can make requests to our `/api/graphql` endpoint.
 
 For an easier start we provide you with [our SDK](/sdk).
 
