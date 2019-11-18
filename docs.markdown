@@ -121,7 +121,7 @@ You can use the refresh token multiple times until the refresh token expires its
 #### Scopes
 
 - accounts
-- clients
+- clients (manage OAuth2 clients, usually not required)
 - offline (required for refresh token)
 - statements
 - subscriptions
