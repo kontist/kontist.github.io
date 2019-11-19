@@ -263,43 +263,23 @@ mutation {
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>createTransfer</strong></td>
-<td valign="top"><a href="#transfer">Transfer</a>!</td>
+<td colspan="2" valign="top"><strong>cancelTransfer</strong></td>
+<td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">transfer</td>
-<td valign="top"><a href="#createtransferinput">CreateTransferInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>confirmTransfer</strong></td>
-<td valign="top"><a href="#transfer">Transfer</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">transferId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>createTransfers</strong></td>
-<td valign="top"><a href="#createtransfersresult">CreateTransfersResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transfers</td>
-<td valign="top">[<a href="#createtransferinput">CreateTransferInput</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>confirmTransfers</strong></td>
-<td valign="top"><a href="#batchtransfer">BatchTransfer</a>!</td>
+<td colspan="2" valign="top"><strong>confirmCancelTransfer</strong></td>
+<td valign="top"><a href="#transfer">Transfer</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -310,6 +290,11 @@ mutation {
 <tr>
 <td colspan="2" align="right" valign="top">confirmationId</td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -342,6 +327,56 @@ mutation {
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createTransfer</strong></td>
+<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transfer</td>
+<td valign="top"><a href="#createtransferinput">CreateTransferInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmTransfer</strong></td>
+<td valign="top"><a href="#transfer">Transfer</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmationId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createTransfers</strong></td>
+<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transfers</td>
+<td valign="top">[<a href="#createsepatransferinput">CreateSepaTransferInput</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmTransfers</strong></td>
+<td valign="top"><a href="#batchtransfer">BatchTransfer</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmationId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -367,6 +402,41 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>balance</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transfers</strong></td>
+<td valign="top"><a href="#transfersconnection">TransfersConnection</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">where</td>
+<td valign="top"><a href="#transfersconnectionfilter">TransfersConnectionFilter</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">first</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">last</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">after</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">before</td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -415,33 +485,8 @@ mutation {
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>transfers</strong></td>
-<td valign="top"><a href="#transfersconnection">TransfersConnection</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">where</td>
-<td valign="top"><a href="#transfersconnectionfilter">TransfersConnectionFilter</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">first</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">last</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">after</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">before</td>
-<td valign="top"><a href="#string">String</a></td>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -471,7 +516,7 @@ mutation {
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transfers</strong></td>
-<td valign="top">[<a href="#transfer">Transfer</a>!]!</td>
+<td valign="top">[<a href="#sepatransfer">SepaTransfer</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -517,7 +562,7 @@ mutation {
 </tbody>
 </table>
 
-### CreateTransfersResult
+### ConfirmationRequest
 
 <table>
 <thead>
@@ -607,6 +652,201 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>hasPreviousPage</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### SepaTransfer
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#sepatransferstatus">SepaTransferStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recipient</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### StandingOrder
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#standingorderstatus">StandingOrderStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recipient</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>executeAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
+<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>nextOccurrence</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### Subscription
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>newTransaction</strong></td>
+<td valign="top"><a href="#transaction">Transaction</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### TimedOrder
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>executeAt</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#timedorderstatus">TimedOrderStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recipient</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -830,21 +1070,6 @@ mutation {
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#transferstatus">TransferStatus</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purpose</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
@@ -860,8 +1085,43 @@ mutation {
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#transferstatus">TransferStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>executeAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
+<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>nextOccurrence</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -1085,11 +1345,6 @@ mutation {
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>mainAccount</strong></td>
-<td valign="top"><a href="#account">Account</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
 <td valign="top">[<a href="#client">Client</a>!]!</td>
 <td></td>
@@ -1102,6 +1357,11 @@ mutation {
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>mainAccount</strong></td>
+<td valign="top"><a href="#account">Account</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -1148,7 +1408,7 @@ mutation {
 </tbody>
 </table>
 
-### CreateTransferInput
+### CreateSepaTransferInput
 
 <table>
 <thead>
@@ -1182,6 +1442,158 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CreateStandingOrderInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>recipient</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>executeAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
+<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CreateTimedOrderInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>recipient</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>executeAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CreateTransferInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>recipient</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>executeAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
+<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -2566,6 +2978,126 @@ mutation {
 </tbody>
 </table>
 
+### SepaTransferStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>CREATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>AUTHORIZED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CONFIRMED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BOOKED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### StandingOrderReoccurenceType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>MONTHLY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>QUARTERLY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EVERY_SIX_MONTHS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ANNUALLY</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### StandingOrderStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>CREATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CANCELED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### TimedOrderStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>CREATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>AUTHORIZATION_REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CONFIRMATION_REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SCHEDULED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EXECUTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CANCELED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FAILED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ### TransactionFeeStatus
 
 <table>
@@ -2769,6 +3301,61 @@ mutation {
 </tr>
 <tr>
 <td valign="top"><strong>BOOKED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CANCELED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>AUTHORIZATION_REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CONFIRMATION_REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SCHEDULED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EXECUTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FAILED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### TransferType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SEPA_TRANSFER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>STANDING_ORDER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TIMED_ORDER</strong></td>
 <td></td>
 </tr>
 </tbody>
