@@ -13,7 +13,7 @@ To manage the data via our API your application needs to gain access on behalf o
 
 If you just want to explore the API you can use the [Playground](/playground) which will automatically create and insert such an access token to the HTTP header.
 
-When you want to create your own application you need two kinds of credentials to get such a token: The first part is a fixed pair of client id and client secret. They identify your client application which connects to the API. Each application has its own pair of client id and secret, please use the [API Console](/console) to create your own client credentials.
+When you want to create your own application you need two kinds of credentials to get such a token: The first part is a fixed pair of client id and client secret. They identify your client application which connects to the API. Each application has its own pair of client id and secret, please use the [API Client Management](/client-management) to create your own client credentials.
 
 The second part is obtained through the user and can be done in several ways, here we describe the preferred way through the "Authorization Code" grant type. If you want to develop a pure web application you must use PKCE to not expose the client secret.
 

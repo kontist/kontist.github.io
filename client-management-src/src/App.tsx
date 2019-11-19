@@ -16,7 +16,7 @@ Modal.setAppElement("#root");
 const App = () => (
   <KontistClientProvider>
     {(kontistClient: Client) => (
-      <BrowserRouter basename="/console">
+      <BrowserRouter basename="/client-management">
         <AuthenticateUser kontistClient={kontistClient}>
           <OAuthClientsProvider kontistClient={kontistClient}>
             <Switch>
