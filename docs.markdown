@@ -5,9 +5,7 @@ permalink: /docs/
 sidebar: true
 ---
 
-## GraphQL API
-
-### Authentication
+## Authentication
 
 To manage the data via our API your application needs to gain access on behalf of the user. This is done through obtaining an access token via [OAuth2](https://tools.ietf.org/html/rfc6749). The access token must then be send in each request in the HTTP header like this: "Authorization: Bearer TOKEN".
 
@@ -17,7 +15,7 @@ When you want to create your own application you need two kinds of credentials t
 
 The second part is obtained through the user and can be done in several ways, here we describe the preferred way through the "Authorization Code" grant type. If you want to develop a pure web application you must use PKCE to not expose the client secret.
 
-#### Authorization Code
+### Authorization Code
 
 In general, the process looks like this:
 
@@ -91,7 +89,7 @@ curl --request POST \
   --data '{ "query": "{viewer{id}}" }'
 ```
 
-#### Refresh Token
+### Refresh Token
 
 The access token obtained in the previous section does expire after some time. If you did specify the "offline" scope you can use the `refresh_token` from the first response to create a new access token.
 
@@ -118,7 +116,7 @@ Response is again a JSON object, similar to the original one:
 
 You can use the refresh token multiple times until the refresh token expires itself and you need to go through the process again.
 
-#### Scopes
+### Scopes
 
 - accounts
 - clients (manage OAuth2 clients, usually not required)
@@ -129,6 +127,11 @@ You can use the refresh token multiple times until the refresh token expires its
 - transfers
 - users
 
+### Advanced Topics
+Some clients might use device binding with certificates as MFA or make use of other OAuth2 grant types. This depends on the environment where this application will run. Please see our [advanced topics](/docs/advanced-authentication) on authentication.
+
+
+## Using the GraphQL API
 ### Fetch transactions
 
 Transactions are returned using the [Connection pattern](https://relay.dev/graphql/connections.htm) to allow pagination. A simple query showing the first 3 transactions may look like this:
