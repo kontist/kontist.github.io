@@ -1,6 +1,6 @@
 {
-  "name": "api-console",
-  "homepage": "https://kontist.dev/console/",
+  "name": "client-management",
+  "homepage": "https://kontist.dev/client-management/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Console
-permalink: /console/
+title: Client Management
+permalink: /client-management/
 ---
 
 ...
