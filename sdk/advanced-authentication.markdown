@@ -17,7 +17,7 @@ const client = new Kontist.Client({
   scopes: ["users", "subscriptions", "transfers", "accounts"]
 });
 
-client.auth.fetchTokenFromCredentials({ username, password })
+client.auth.tokenManager.fetchTokenFromCredentials({ username, password })
 	.then((tokenData) => {
 	  // do something with tokenData.accessToken
 	  //
@@ -42,7 +42,7 @@ Please, make sure that you **never share your private key** and it's **stored in
 After a successful request, you will receive an SMS with OTP that you will need during device verification.
 
 ```typescript
-const result = await client.auth.createDevice({
+const result = await client.auth.device.createDevice({
   name: "iPhone XS",
   key: "..." // The hex-encoded public key without header
 });
@@ -61,7 +61,7 @@ const result = await client.auth.createDevice({
 To verify device you need to provide a signature (ECDSA with SHA256) of OTP received on your mobile phone.
 
 ```typescript
-await client.auth.verifyDevice(deviceId, {
+await client.auth.device.verifyDevice(deviceId, {
   challengeId,
   signature: "..." // The hex-encoded signature (ECDSA with SHA256) for the OTP received in SMS
 });
@@ -73,7 +73,7 @@ The promise will be resolved if verification is successful.
 After the device is created and verified, you need to create a device challenge. As a result, you will get `stringToSign` that should be used during verification of device challenge.
 
 ```typescript
-const challenge = await client.auth.createDeviceChallenge(deviceId);
+const challenge = await client.auth.device.createDeviceChallenge(deviceId);
 ```
 
 `challenge` then has following structure:
@@ -90,7 +90,7 @@ To verify device challenge you need to provide a signature (ECDSA with SHA256) o
 
 
 ```typescript
-const token = await client.auth.verifyDeviceChallenge(
+const token = await client.auth.device.verifyDeviceChallenge(
   deviceId,
   id, // ID of the device challenge
   {

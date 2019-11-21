@@ -59,7 +59,7 @@ If the user goes to "/auth" we will redirect him to the Kontist login.
 
 ```typescript
 app.get("/auth", async (req, res) => {
-  const uri = await client.auth.getAuthUri();
+  const uri = await client.auth.tokenManager.getAuthUri();
   res.redirect(uri);
 });
 ```
@@ -71,7 +71,7 @@ app.get("/auth/callback", async (req, res) => {
   const callbackUrl = req.originalUrl;
 
   try {
-    const token = await client.auth.fetchToken(callbackUrl);
+    const token = await client.auth.tokenManager.fetchToken(callbackUrl);
     /* got access token, login successful */
     res.send("Successful, your token is " + token.accessToken);
   } catch (e) {
@@ -121,7 +121,7 @@ If the user opens the page the first time we need to redirect him to the API so 
 const code = new URL(document.location).searchParams.get("code");
 if (!code) {
   // "code" query parameter missing, let's redirect the user to the login
-  client.auth.getAuthUri().then(function(url) {
+  client.auth.tokenManager.getAuthUri().then(function(url) {
     window.location = url;
   });
 } else {
@@ -131,7 +131,7 @@ After the authorization of the app the user is redirected back to the app's page
 
 ```javascript
   // we have a code, the client now can fetch a token
-  client.auth.fetchToken(document.location.href).then(function(token) {
+  client.auth.tokenManager.fetchToken(document.location.href).then(function(token) {
       console.log(token);
   });
 }
@@ -144,7 +144,7 @@ After the successful call of `fetchToken` the client application is authorized a
 If you already obtained an access token previously (either with a previous SDK authentication or with any other method like using Kontist's REST API directly), you can configure your SDK client instance to use this token with this method:
 
 ```typescript
-const token = kontistClient.auth.setToken(accessToken);
+const token = client.auth.tokenManager.setToken(accessToken);
 ```
 
 All SDK requests will then be performed with this new access token.
@@ -152,7 +152,7 @@ All SDK requests will then be performed with this new access token.
 Optionally, you can also provide a refresh token if you have one:
 
 ```typescript
-const token = kontistClient.auth.setToken(accessToken, refreshToken);
+const token = client.auth.tokenManager.setToken(accessToken, refreshToken);
 ```
 
 ### Renewing access tokens
@@ -160,14 +160,14 @@ const token = kontistClient.auth.setToken(accessToken, refreshToken);
 After the initial authentication steps described above, renewing access tokens can be done using this simple method:
 
 ```typescript
-const token = await kontistClient.auth.refresh();
+const token = await client.auth.tokenManager.refresh();
 ```
 
 Optionally, this method accepts a number as an argument to specify after how many milliseconds the refresh request should timeout (default is 10000):
 
 ```typescript
 // abort after 20 seconds
-const token = await kontistClient.auth.refresh(20000);
+const token = await client.auth.tokenManager.refresh(20000);
 ```
 
 The method is the same for both Node.js and Browser environments (it uses refresh tokens or PKCE with `response_mode=web_message` respectively).
@@ -183,14 +183,14 @@ The following steps are necessary to complete the MFA procedure:
 2. click the push notification you received on your phone, it will open the Kontist application
 3. login (if applicable) and confirm the MFA by clicking on the corresponding button
 
-Kontist SDK exposes a method to initiate the MFA flow after you successfully received the initial access token:
+Kontist SDK exposes a method to initiate the push notification MFA flow after you successfully received the initial access token:
 
 ```typescript
 // fetch a regular access token
-const token = await client.auth.fetchToken(callbackUrl);
+const token = await client.auth.tokenManager.fetchToken(callbackUrl);
 try {
-  // create an MFA challenge and wait for confirmation
-  const confirmedToken = await client.auth.getMFAConfirmedToken();
+  // create a push notification challenge and wait for confirmation
+  const confirmedToken = await client.auth.push.getConfirmedToken();
   // once it has been verified, your `client` instance will have a confirmed access token
   // the confirmed token is also returned in case you want to store it
 } catch (err) {
@@ -202,13 +202,13 @@ try {
 
 After obtaining a confirmed auth token with this method, you will have access to all banking APIs.
 
-If you want to cancel a pending MFA confirmation, you can call the following method:
+If you want to cancel a pending push notification confirmation, you can call the following method:
 
 ```typescript
-client.auth.cancelMFAConfirmation();
+client.auth.push.cancelConfirmation();
 ```
 
-The Promise returned by `getMFAConfirmedToken` will then reject with a `MFAConfirmationCanceledError`.
+The Promise returned by `getConfirmedToken` will then reject with a `MFAConfirmationCanceledError`.
 
 
 ### Advanced Topics
