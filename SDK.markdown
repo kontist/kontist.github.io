@@ -5,7 +5,7 @@ permalink: /sdk/
 sidebar: true
 ---
 
-We provide you with a NPM package for Node.js and Browser environments, please see our [GitHub page for details](https://github.com/kontist/sdk).
+We provide you with a NPM package for Node.js and Browser environments. Please see our [GitHub page for details](https://github.com/kontist/sdk).
 
 ## Installation
 
@@ -35,7 +35,7 @@ If you prefer you can skip the `npm install` and just use the latest version fro
 
 ### Node.js
 
-If you are developing an application where you can store a `clientSecret` you can authorize with regular OAuth2. In this example we will use `express`.
+If you are developing an application where you can store a `clientSecret` you can authenticate with regular OAuth2. In this example we will use `express`.
 
 ```typescript
 import express from "express";
@@ -43,7 +43,7 @@ import { Client } from "kontist";
 const app = express();
 ```
 
-We need to provide the values for our app from the [Client Management](/client-management) and set the state to a random number. If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
+We need to provide the values for our app from the [Client Management](/client-management) and set the state to a random number. If you did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
 
 ```typescript
 const client = new Client({
@@ -81,7 +81,7 @@ app.get("/auth/callback", async (req, res) => {
 });
 ```
 
-Last thing left is to start listening on connections.
+The last thing left is to start listening on connections.
 
 ```typescript
 app.listen(3000, function() {
@@ -89,10 +89,10 @@ app.listen(3000, function() {
 });
 ```
 
-If you now visit `http://localhost:3000/auth` you will be directed to the Kontist login and then back to your application. The token will then be printed at the console and you can start using the client.
+If you now visit `http://localhost:3000/auth` you will be directed to the Kontist login and then back to your application. The token will then be printed in the console and you can start using the client.
 
 ### Browser
-In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifier` and persist it across page reloads. Next to that you need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [Client Management](/client-management). If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
+In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifier` and persist it across page reloads. You also need to provide your `clientId`, a `state` and `redirectUri`. You can set all of this up in the [Client Management](/client-management). If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
 
 ```javascript
 // persist two random values
@@ -115,7 +115,7 @@ const client = new Kontist.Client({
 });
 ```
 
-If the user opens the page the first time we need to redirect him to the API so that he can authorize your application.
+If the user opens the page the first time we need to redirect him to the API so that he or she can authorize your application.
 
 ```javascript
 const code = new URL(document.location).searchParams.get("code");
@@ -137,7 +137,7 @@ After the authorization of the app the user is redirected back to the app's page
 }
 ```
 
-After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
+After the successful call of `fetchToken` the client application is authorized and you can make requests to the API.
 
 ### Using an existing token
 

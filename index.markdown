@@ -11,12 +11,12 @@ We provide you with a [GraphQL API](https://graphql.org) to e.g. fetch transacti
 
 For exploring the API we recommend the [Playground application](/playground).
 
-When you are ready for implementation you first need to [register your own application](/client-management) with us as an OAuth2 client. Then you can use your application to create an access token to access Kontist on behalf of a user. With that access token you then can make requests to our `/api/graphql` endpoint.
+When you are ready for implementation you first need to [register your own application](/client-management) with us as an OAuth2 client. Then you can use your application to create an access token to access Kontist on behalf of a user. With that access token you can then make requests to our `/api/graphql` endpoint.
 
 For an easier start we provide you with [our SDK](/sdk).
 
-We suggest this steps:
-* [Open you Kontist bank account](https://start.kontist.com/?utm_campaign=kontist_dev) (if you do not have one yet)
+We suggest the following steps:
+* [Open your Kontist bank account](https://start.kontist.com/?utm_campaign=kontist_dev) (if you do not have one yet)
 * Explore our API with the [Playground](/playground)
 * Read the GraphQL [Docs](/docs)
 * [Register](/client-management) your own application
@@ -25,9 +25,9 @@ We suggest this steps:
 
 ## Kontist SDK
 
-Our [JavaScript SDK](/sdk) helps you to easily connect to our services. It was developed for Node.js and browser environments and contains TypeScript type definitions. Just run `npm install kontist` to install the latest version.
+Our [JavaScript SDK](/sdk) helps you easily connect to our services. It was developed for Node.js and the browser and contains TypeScript type definitions. Just run `npm install kontist` to install the latest version.
 
-The SDK supports you with Authentication and provides methods for the most common use cases, e.g. create a new transfer:
+The SDK includes authentication convenience methods and provides methods for the most common use cases, e.g. creating a new transfer:
 ```typescript
 const confirmationId = await client.models.transfer.createOne({
   amount: 1234,
