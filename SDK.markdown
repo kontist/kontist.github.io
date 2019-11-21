@@ -115,7 +115,7 @@ const client = new Kontist.Client({
 });
 ```
 
-If the user opens the page the first time we need to redirect him to the API so that he can authorize your application.
+If the user opens the page the first time we need to redirect him to the API so that he or she can authorize your application.
 
 ```javascript
 const code = new URL(document.location).searchParams.get("code");
@@ -137,7 +137,7 @@ After the authorization of the app the user is redirected back to the app's page
 }
 ```
 
-After the successful call of `fetchToken` the client application is authorized and one can make requests to the API.
+After the successful call of `fetchToken` the client application is authorized and you can make requests to the API.
 
 ### Using an existing token
 
