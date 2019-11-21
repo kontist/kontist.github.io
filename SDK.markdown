@@ -81,7 +81,7 @@ app.get("/auth/callback", async (req, res) => {
 });
 ```
 
-Last thing left is to start listening on connections.
+The last thing left is to start listening on connections.
 
 ```typescript
 app.listen(3000, function() {
