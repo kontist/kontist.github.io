@@ -5,7 +5,7 @@ permalink: /sdk/
 sidebar: true
 ---
 
-We provide you with a NPM package for Node.js and Browser environments, please see our [GitHub page for details](https://github.com/kontist/sdk).
+We provide you with a NPM package for Node.js and Browser environments. Please see our [GitHub page for details](https://github.com/kontist/sdk).
 
 ## Installation
 
