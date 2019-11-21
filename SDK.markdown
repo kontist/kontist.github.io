@@ -92,7 +92,7 @@ app.listen(3000, function() {
 If you now visit `http://localhost:3000/auth` you will be directed to the Kontist login and then back to your application. The token will then be printed in the console and you can start using the client.
 
 ### Browser
-In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifier` and persist it across page reloads. You also need to provide your `clientId`, a `state` and `redirectUri`. You can setup all of this in the [Client Management](/client-management). If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
+In some environments we cannot store a client secret without exposing it (e.g. a web application without a backend). To authorize the client we will use OAuth2 with the PKCE extension. During initialization of the client you just need to provide a `verifier` and persist it across page reloads. You also need to provide your `clientId`, a `state` and `redirectUri`. You can set all of this up in the [Client Management](/client-management). If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
 
 ```javascript
 // persist two random values
