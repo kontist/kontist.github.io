@@ -256,13 +256,96 @@ const result = await client.models.transaction.fetch();
 }
 ```
 
-If there are more than 50 transactions, `result` will contain also `nextPage` method. When called, `nextPage` will return another `result` object.
+If there are more than 50 transactions, `result` will also contain a `nextPage` method. When called, `nextPage` will return another `result` object.
 
-Another way would be to just iterator over `client.models.transaction`. It implements the `AsyncIterator` interface, so you can do this to fetch all transactions:
+Another way would be to just iterate over `client.models.transaction.fetchAll()`. It implements the `AsyncIterator` interface, so you can do this to fetch all transactions:
 ```typescript
 let transactions = [];
-for await (const transaction of client.models.transaction) {
+for await (const transaction of client.models.transaction.fetchAll()) {
   transactions = transactions.concat(transaction);
+}
+```
+
+### Fetch transfers
+
+You can use the `fetch` method to fetch the last 50 transfers of a given type:
+
+```javascript
+const result = await client.models.transfer.fetch({
+  type: "SEPA_TRANSFER"
+});
+```
+
+Specifying the type of transfer is mandatory, existing types are: `SEPA_TRANSFER`, `STANDING_ORDER` and `TIMED_ORDER`.
+
+If you are using typescript you should use the corresponding `Schema.TransferType` enum:
+
+```typescript
+import { Schema } from "kontist";
+
+const result = await client.models.transfer.fetch({
+  type: Schema.TransferType.SepaTransfer
+});
+```
+
+Optionally, you can also specify a filter using the `where` field.
+For example, if you only want to get "scheduled" timed orders:
+
+```javascript
+const result = await client.models.transfer.fetch({
+  type: "TIMED_ORDER",
+  where: {
+    status: "SCHEDULED"
+  }
+});
+```
+
+And using typescript:
+
+```typescript
+import { Schema } from "kontist";
+
+const result = await client.models.transfer.fetch({
+  type: Schema.TransferType.TimedOrder,
+  where: {
+    status: Schema.TransferStatus.Scheduled
+  }
+});
+```
+
+
+`result` then has following structure:
+
+```javascript
+{
+  items: [
+    {
+      amount: 4231,
+      e2eId: "E-0f4c88099b7e6b62e002f302ed490dbc",
+      executeAt: null,
+      iban: "DE18512308000000060339",
+      id: "f4ff3af1d198e222bf5f2be5301827aa",
+      lastExecutionDate: null,
+      nextOccurrence: null,
+      purpose: "Transfer purpose",
+      recipient: "Example",
+      reoccurrence: null,
+      status: "CONFIRMED"
+    }
+    // ...
+  ];
+}
+```
+
+If there are more than 50 transfers, `result` will also contain a `nextPage` method. When called, `nextPage` will return another `result` object.
+
+Another way would be to just iterate over `client.models.transfer.fetchAll()`. It implements the `AsyncIterator` interface, so you can do this to fetch all transfers of a given type:
+```typescript
+let transfers = [];
+for await (const transfer of client.models.transfer.fetchAll({
+  type: Schema.TransferType.StandingOrder
+})) {
+  transfers = transfers.concat(transfer);
 }
 ```
 
