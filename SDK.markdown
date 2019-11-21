@@ -43,7 +43,7 @@ import { Client } from "kontist";
 const app = express();
 ```
 
-We need to provide the values for our app from the [Client Management](/client-management) and set the state to a random number. If did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
+We need to provide the values for our app from the [Client Management](/client-management) and set the state to a random number. If you did not open an account with Kontist yet you [should do so now](https://start.kontist.com/?utm_campaign=kontist_dev).
 
 ```typescript
 const client = new Client({
