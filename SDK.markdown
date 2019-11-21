@@ -35,7 +35,7 @@ If you prefer you can skip the `npm install` and just use the latest version fro
 
 ### Node.js
 
-If you are developing an application where you can store a `clientSecret` you can authorize with regular OAuth2. In this example we will use `express`.
+If you are developing an application where you can store a `clientSecret` you can authenticate with regular OAuth2. In this example we will use `express`.
 
 ```typescript
 import express from "express";
