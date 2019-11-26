@@ -266,6 +266,36 @@ for await (const transaction of client.models.transaction.fetchAll()) {
 }
 ```
 
+### Subscribe to new transactions
+
+A 'Subscribtion' is a GraphQL concept allowing clients to listen to new events published by a GraphQL server.
+
+The SDK allows you to subscribe to new transactions using the `subscribe` method:
+
+```typescript
+const onNext = transaction => {
+  // do something with the transaction
+};
+
+const onError = error => {
+  // do something with the error
+};
+
+client.models.transaction.subscribe(onNext, onError);
+```
+
+Whenever a new transaction is created, the `onNext` function will be called.
+Whenever an error occurs with the subscription, the `onError` function will be called.
+
+The `subscribe` method returns a `Subscription` object with an `unsubscribe` method to be called when you want to unsubscribe to new transactions:
+
+```typescript
+const { unsubscribe } = client.models.transaction.subscribe(onNext, onError);
+// ...
+unsubscribe();
+// after this point, onNext / onError will no longer be called when new transactions / errors are received
+```
+
 ### Fetch transfers
 
 You can use the `fetch` method to fetch the last 50 transfers of a given type:
