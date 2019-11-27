@@ -1,0 +1,34 @@
+name: Update GraphQL Docs
+
+on:
+  release:
+# disabled until credentials are set up
+#  schedule:
+#    - cron: "0 */1 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: build docs
+        env:
+          KONTIST_CLIENT_ID: ${{secrets.DOCS_CLIENT_ID}}
+          KONTIST_CLIENT_SECRET: ${{secrets.DOCS_CLIENT_SECRET}}
+          KONTIST_USERNAME: ${{secrets.DOCS_USER}}
+          KONTIST_PASSWORD: ${{secrets.DOCS_PASSWORD}}
+          KONTIST_CLIENT_SCOPES: accounts,users,transactions,transfers,subscriptions,statements
+        run: |
+          ./update_docs.sh $(npx kontist token)
+      - name: setup git
+        run: |
+          git config --global user.email "developer@kontist.com"
+          git config --global user.name "GitHub"
+      - name: commit and push
+        run: |
+          git commit -m "Update docs with GraphQL changes" -a
+          git push
+
