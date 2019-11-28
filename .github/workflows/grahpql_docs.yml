@@ -1,10 +1,8 @@
 name: Update GraphQL Docs
 
 on:
-  release:
-# disabled until credentials are set up
-#  schedule:
-#    - cron: "0 */1 * * *"
+  schedule:
+    - cron: "51 */1 * * *"
 
 jobs:
   build:
