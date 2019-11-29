@@ -15,6 +15,7 @@ jobs:
           node-version: 12
       - name: build docs
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           KONTIST_CLIENT_ID: ${{secrets.DOCS_CLIENT_ID}}
           KONTIST_CLIENT_SECRET: ${{secrets.DOCS_CLIENT_SECRET}}
           KONTIST_USERNAME: ${{secrets.DOCS_USER}}
@@ -26,7 +27,7 @@ jobs:
         run: |
           git config --global user.email "developer@kontist.com"
           git config --global user.name "GitHub"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/kontist/kontist.github.io.git
           git checkout master
-          git pull
-          git commit -m "Update docs with GraphQL changes" -a
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update docs with GraphQL changes"; git push origin master)
+
