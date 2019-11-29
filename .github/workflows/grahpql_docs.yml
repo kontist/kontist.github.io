@@ -2,7 +2,7 @@ name: Update GraphQL Docs
 
 on:
   schedule:
-    - cron: "51 */1 * * *"
+    - cron: "14 */1 * * *"
 
 jobs:
   build:
