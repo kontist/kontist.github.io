@@ -1,6 +1,6 @@
 name: Update GraphQL Docs
 
-on: [push]
+# on: [push]
   #schedule:
   #  - cron: "18 * * * *"
 
