@@ -3,7 +3,7 @@ layout: page
 permalink: /
 ---
 
-Welcome. Discover all the services of our platform so that you can build or integrate your application with Kontist.
+Discover all the services of our platform so that you can build or integrate your application with Kontist.
 
 ## Getting started
 
