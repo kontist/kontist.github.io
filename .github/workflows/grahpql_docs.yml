@@ -15,7 +15,7 @@ jobs:
           node-version: 12
       - name: build docs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
           KONTIST_CLIENT_ID: ${{secrets.DOCS_CLIENT_ID}}
           KONTIST_CLIENT_SECRET: ${{secrets.DOCS_CLIENT_SECRET}}
           KONTIST_USERNAME: ${{secrets.DOCS_USER}}
