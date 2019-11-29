@@ -29,5 +29,5 @@ jobs:
           git config --global user.name "GitHub"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/kontist/kontist.github.io.git
           git checkout master
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update docs with GraphQL changes"; git push origin master)
+          git diff --quiet && git diff --staged --quiet || (git commit -am "Update docs with GraphQL changes"; git push origin master)
 
