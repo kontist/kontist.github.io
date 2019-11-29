@@ -26,6 +26,8 @@ jobs:
         run: |
           git config --global user.email "developer@kontist.com"
           git config --global user.name "GitHub"
+          git checkout master
+          git pull
       - name: commit and push
         run: |
           git commit -m "Update docs with GraphQL changes" -a
