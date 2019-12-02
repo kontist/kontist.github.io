@@ -331,6 +331,91 @@ mutation {
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createCard</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">cardType</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>activateCard</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">verificationToken</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateCardSettings</strong></td>
+<td valign="top"><a href="#cardsettings">CardSettings</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">settings</td>
+<td valign="top"><a href="#cardsettingsinput">CardSettingsInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>changeCardStatus</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">action</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>changeCardPIN</strong></td>
+<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">pin</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmChangeCardPIN</strong></td>
+<td valign="top"><a href="#confirmationstatus">ConfirmationStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmationId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
 <td></td>
@@ -403,8 +488,18 @@ mutation {
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>cardHolderRepresentation</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>balance</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardHolderRepresentations</strong></td>
+<td valign="top">[<a href="#string">String</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -492,6 +587,11 @@ mutation {
 <td valign="top"><a href="#transfertype">TransferType</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>cards</strong></td>
+<td valign="top">[<a href="#card">Card</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -520,6 +620,151 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>transfers</strong></td>
 <td valign="top">[<a href="#sepatransfer">SepaTransfer</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### Card
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#cardstatus">CardStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#cardtype">CardType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>canceledAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expirationDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>orderedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>holder</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>formattedExpirationDate</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>maskedPan</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>settings</strong></td>
+<td valign="top"><a href="#cardsettings">CardSettings</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardLimit
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>maxAmountCents</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>maxTransactions</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardLimits
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>daily</strong></td>
+<td valign="top"><a href="#cardlimit">CardLimit</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>monthly</strong></td>
+<td valign="top"><a href="#cardlimit">CardLimit</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardSettings
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimits">CardLimits</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimits">CardLimits</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -579,6 +824,26 @@ mutation {
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>confirmationId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### ConfirmationStatus
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -929,7 +1194,7 @@ mutation {
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#string">String</a></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1372,6 +1637,83 @@ mutation {
 
 ## Inputs
 
+### CardLimitInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>maxAmountCents</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>maxTransactions</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardLimitsInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>daily</strong></td>
+<td valign="top"><a href="#cardlimitinput">CardLimitInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>monthly</strong></td>
+<td valign="top"><a href="#cardlimitinput">CardLimitInput</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardSettingsInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>cardPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ### CreateClientInput
 
 <table>
@@ -1693,6 +2035,76 @@ mutation {
 </tr>
 <tr>
 <td valign="top"><strong>SUCCESSFUL</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PROCESSING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BLOCKED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BLOCKED_BY_SOLARIS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACTIVATION_BLOCKED_BY_SOLARIS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CLOSED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CLOSED_BY_SOLARIS</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>VIRTUAL_VISA_BUSINESS_DEBIT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VISA_BUSINESS_DEBIT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MASTERCARD_BUSINESS_DEBIT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VIRTUAL_MASTERCARD_BUSINESS_DEBIT</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -3101,6 +3513,53 @@ mutation {
 </tbody>
 </table>
 
+### TransactionCategory
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PRIVATE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_0</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_REFUND</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_REFUND</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ### TransactionFeeStatus
 
 <table>
@@ -3373,6 +3832,10 @@ The `Boolean` scalar type represents `true` or `false`.
 ### DateTime
 
 The javascript `Date` as string. Type represents date and time as the ISO Date string.
+
+### Float
+
+The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
 
 ### ID
 
