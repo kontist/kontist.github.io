@@ -121,7 +121,8 @@ You can use the refresh token multiple times until the refresh token expires its
 To have access to Kontist API endpoints that require strong customer authentication, you need to pass Multi-Factor Authentication (MFA).
 
 We provide a simplified push notification MFA flow for users who have installed the Kontist Application and paired their device in it.
-Alternatively, if you have setup [Device Binding](/docs/advanced-authentication#device-binding) in your application, you can also implement your own MFA flow on top of it using our API's endpoints.
+
+Alternatively, if you have setup [Device Binding](/docs/advanced-authentication#device-binding) in your application, you can also implement [your own MFA flow](/docs/advanced-authentication#setting-up-your-own-multi-factor-authentication-flow) on top of it using our API's endpoints.
 
 #### Creating a challenge
 
@@ -160,35 +161,8 @@ curl "https://api.kontist.com/api/user/mfa/challenges" \
 
 The next step to pass MFA is to verify the challenge that was just created.
 
-If the user has the Kontist Application on his device, he will receive a push notification prompting him to "Confirm login". After logging into the application and confirming, the challenge will be verified (its status will be updated to `VERIFIED`).
-If you are using the push notification flow that we provide, you can skip to the [next step](#polling-for-challenge-verification)
-
-If you are setting up your own MFA flow, the challenge can also be verified by accessing this endpoint:
-
-```shell
-curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac6d0711192e" \
-  -H "Authorization: Bearer ey..." \
-  -H "Content-Type: application/json" \
-  -X PATCH \
-  -d '{
-        "status": "VERIFIED"
-      }'
-```
-
-**Note:** in order for a challenge to be verified, this endpoint needs to be accessed using a *confirmed* token that you can obtain with [Device Binding](/docs/advanced-authentication#device-binding)
-
-> The above command returns `204 No Content` in case of success.
-
-
-##### HTTP Request
-
-`PATCH https://api.kontist.com/api/user/mfa/challenges/{challenge_id}`
-
-##### Request body
-
-| Parameter   | Mandatory | Description                                                                    |
-| ----------- | --------- | ------------------------------------------------------------------------------ |
-| status      | yes       | The status to update the challenge to. `VERIFIED` and `DENIED` are valid       |
+The Kontist user will receive a push notification on his device prompting him to "Confirm login".
+After logging into the application and confirming, the challenge will be verified (its status will be updated to `VERIFIED`).
 
 
 #### Polling for challenge verification
