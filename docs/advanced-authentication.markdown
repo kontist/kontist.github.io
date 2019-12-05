@@ -157,3 +157,70 @@ curl "https://api.kontist.com/api/user/devices/4e310a55-1b1a-4efb-b9a5-fd04491bd
 | Field         | Description                                                                                                      |
 | ------------- | ---------------------------------------------------------------------------------------------------------------- |
 | token         | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication |
+
+### Setting up your own Multi-Factor Authentication flow
+
+If you have implemented [Device Binding](#device-binding), you can also setup your own Multi-Factor Authentication on top of it for environments not allowing you to store private keys (e.g. a web application).
+
+You can follow all the steps of the [push notification MFA flow](/docs#multi-factor-authentication) that we provide, and setup your own challenge verification procedure.
+
+
+#### Getting pending challenges
+
+In your application with Device Binding, you can get all pending challenges for the current user:
+
+```shell
+curl "https://api.kontist.com/api/user/mfa/challenges" \
+  -H "Authorization: Bearer ey..." \
+  -H "Content-Type: application/json" \
+  -X GET
+```
+
+> The above command returns JSON structured like this:
+```json
+[
+  {
+    "id": "b1ed17e9-2944-4c14-9780-57dce7f01ca8",
+    "status": "PENDING",
+    "expiresAt": "2019-12-05T09:02:22.319+00:00"
+  },
+  {
+    "id": "08e9429c-5e21-4b1d-959d-c435a0f1cd99",
+    "status": "PENDING",
+    "expiresAt": "2019-12-05T09:02:24.641+00:00"
+  }
+]
+```
+
+#### HTTP Request
+
+`GET https://api.kontist.com/api/user/mfa/challenges`
+
+
+#### Verifying challenges
+
+Then, if you are in possession of a *confirmed* token obtained with Device Binding, the MFA challenges can be verified by accessing this endpoint:
+
+```shell
+curl "https://api.kontist.com/api/user/mfa/challenges/b1ed17e9-2944-4c14-9780-57dce7f01ca8" \
+  -H "Authorization: Bearer ey..." \
+  -H "Content-Type: application/json" \
+  -X PATCH \
+  -d '{
+        "status": "VERIFIED"
+      }'
+```
+
+> The above command returns `204 No Content` in case of success.
+
+
+##### HTTP Request
+
+`PATCH https://api.kontist.com/api/user/mfa/challenges/{challenge_id}`
+
+##### Request body
+
+| Parameter   | Mandatory | Description                                                                    |
+| ----------- | --------- | ------------------------------------------------------------------------------ |
+| status      | yes       | The status to update the challenge to. `VERIFIED` and `DENIED` are valid       |
+

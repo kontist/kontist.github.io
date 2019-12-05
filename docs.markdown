@@ -116,6 +116,112 @@ Response is again a JSON object, similar to the original one:
 
 You can use the refresh token multiple times until the refresh token expires itself and you need to go through the process again.
 
+### Multi-Factor Authentication
+
+To have access to Kontist API endpoints that require strong customer authentication, you need to pass Multi-Factor Authentication (MFA).
+
+We provide a simplified push notification MFA flow for users who have installed the Kontist Application and paired their device in it.
+
+#### Creating a challenge
+
+To initiate the MFA procedure, you will need to create an MFA Challenge:
+
+```shell
+curl "https://api.kontist.com/api/user/mfa/challenges" \
+  -H "Authorization: Bearer ey..." \
+  -X POST
+```
+
+
+> The above command returns JSON structured like this:
+```json
+{
+  "id": "5f7c36e2-e0bf-4755-8376-ac6d0711192e",
+  "status": "PENDING",
+  "expiresAt": "2019-12-02T16:25:15.933+00:00"
+}
+```
+
+##### HTTP Request
+
+`POST https://api.kontist.com/api/user/mfa/challenges`
+
+##### Response
+
+| Field      | Description                                                           |
+| ---------- | --------------------------------------------------------------------- |
+| id         | ID of the challenge                                                   |
+| status     | Status of the challenge. When created, it will be "PENDING"           |
+| expiresAt  | Time at which the challenge will expire                               |
+
+
+#### Verifying a challenge
+
+The next step to pass MFA is to verify the challenge that was just created.
+
+The Kontist user will receive a push notification on his device prompting him to "Confirm login".
+After logging into the application and confirming, the challenge will be verified (its status will be updated to `VERIFIED`).
+
+
+#### Polling for challenge verification
+
+Once a challenge has been created and you are waiting for its verification, you can periodically access the below endpoint until the status changes to `VERIFIED` or `DENIED`:
+
+```shell
+curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac6d0711192e" \
+  -H "Authorization: Bearer ey..." \
+  -X GET
+```
+
+> The above command returns JSON structured like this:
+```json
+{
+  "id": "5f7c36e2-e0bf-4755-8376-ac6d0711192e",
+  "status": "VERIFIED",
+  "expiresAt": "2019-12-02T16:25:15.933+00:00"
+}
+```
+
+##### HTTP Request
+
+`GET https://api.kontist.com/api/user/mfa/challenges/{challenge_id}`
+
+##### Response
+
+| Field      | Description                                 |
+| ---------- | ------------------------------------------- |
+| id         | ID of the challenge                         |
+| status     | Status of the challenge.                    |
+| expiresAt  | Time at which the challenge will expire     |
+
+
+#### Getting a confirmed token
+
+Once the challenge has been verified (status updated to `VERIFIED`), you can obtain one (and only one) confirmed access token:
+
+```shell
+curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac6d0711192e/token" \
+  -H "Authorization: Bearer ey..." \
+  -X POST
+```
+
+> The above command returns JSON structured like this:
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODNjNTc4ZS01M2QwLTRhYmEtOTBiNC02MmRmZmFkNTE5NTMiLCJzY29wZSI6ImF1dGgiLCJjbmYiOnsia2lkIjoiMmExNjRlYzYtZTJkNC00OTI4LTk5NDItZDU5YWI2Yzc4ZDU5In0sImlhdCI6MTU2NzQwOTExNSwiZXhwIjoxNTY3NDEyNzE1fQ.m35NDpQMAB5DMebXUxEzWupP3i-iAwoyVy2sGF1zp_8"
+}
+```
+
+##### HTTP Request
+
+`POST https://api.kontist.com/api/user/mfa/challenges/{challenge_id}/token`
+
+##### Response
+
+| Field         | Description                                                                                                      |
+| ------------- | ---------------------------------------------------------------------------------------------------------------- |
+| token         | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication |
+
 ### Scopes
 
 - accounts
