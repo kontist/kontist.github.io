@@ -165,7 +165,41 @@ curl https://api.kontist.com/api/oauth/token \
   -d code_verifier=7963393253896189
 ```
 
-*Note*: Using the PKCE flow will not grant you refresh tokens, even if you specify the `offline` scope.
+*Note*: Using the PKCE flow will not grant you refresh tokens, even if you specify the `offline` scope. In order to renew an access token when using this authorization flow, you can use the [method described below](#renewing-access-tokens-with-pkce).
+
+
+### Renewing access tokens with PKCE
+
+As you will not get refresh tokens when using the PKCE authorization method, you can use an alternative method leveraging session cookies.
+
+If a user has granted access with the PKCE authorization flow, the successful authorization will be saved to this user's session, and you will be able to obtain a new access token without prompting the user by specifying `prompt=none` when accessing the authorization url:
+
+`https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w&prompt=none`
+
+The user will be redirected directly to your application with a new authorization code that you can use to request a new access token.
+
+#### Renewing access token with Web Message Response Mode
+
+While the above method will work for Single Page Applications (SPA), it has the downside of doing redirects, and SPA client application state will be lost.
+
+To work around this issue, we can use the web message response type by following these steps:
+
+1. Setup a web message listener to get the authorization code:
+```javascript
+  window.addEventListener("message", event => {
+    if (event.origin === "https://api.kontist.com") {
+      const { code } = event.data.response;
+    }
+  });
+```
+2. Create an iframe and set its source to the authorization url, specifying `response_mode=web_message`:
+```javascript
+  const iframe = document.createElement("iframe");
+  iframe.style.display = "none";
+  document.body.appendChild(iframe);
+  iframe.src = "https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w&prompt=none&response_mode=web_message"
+```
+3. The server will then send a web message with the new authorization code that we can use to get a new access token
 
 ### Multi-Factor Authentication
 
