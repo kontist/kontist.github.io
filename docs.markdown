@@ -116,6 +116,57 @@ Response is again a JSON object, similar to the original one:
 
 You can use the refresh token multiple times until the refresh token expires itself and you need to go through the process again.
 
+
+### PKCE Extension for Authorization Code
+
+The standarad [Authorization Code](#authorization-code) flow uses client secrets to grant access tokens, however this is not always practical: some environments can't securely store such a secret (e.g. a single page web application).
+
+For these environments, we can use the Proof Key for Code Exchange (PKCE) extension for the Authorization Code flow.
+
+The PKCE-enhanced Authorization Code flow is very similar to the standard Authorization Code flow and uses a concept of Code Verifier which we will have to generate client side. This code verifier will be hashed and sent as a `code_challenge` parameter to the `/authorize` endpoint, and then sent in plain along with the authorization code when requesting the access token.
+
+To generate the code verifier, it is recommended to use the output of a random number generator.
+
+Once the code verifier has been generated, we will need to transform it to a code challenge:
+
+* First hash it using the SHA256 hash function
+* Then encode it to a base64 string
+* And finally, remove padding from the base64 encoded string (as defined in: https://tools.ietf.org/html/rfc7636#appendix-A)
+
+Here is sample javascript code to perform the transformation:
+
+```javascript
+const code_challenge = base64encode(sha256(code_verifier))
+  .split("=")[0]
+  .replace("+", "-")
+  .replace("/", "_");
+```
+
+We will then take users to the authorization url, providing `code_challenge` and `code_challenge_method`:
+
+`https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w`
+
+The parameters are the same as for the standard Authorization Code flow, with these additional parameters:
+| Parameter              | Description                                                           |
+| ---------------------- | --------------------------------------------------------------------- |
+| code_challenge         | Code challenge generated from the Code Verifier                       |
+| code_challenge_method  | Code challenge method, only "S256" is supported                       |
+
+After the user has accepted the access request, you will be able to obtain an access token with the code you received and the code verifier you used to generate the code challenge (without specifying the `client_secret`):
+
+```shell
+curl https://api.kontist.com/api/oauth/token \
+  -X POST \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -d grant_type=authorization_code \
+  -d code=59f53e7cfcf12f1d36e2fb56bb46b8d116fb8406 \
+  -d client_id=78b5c170-a600-4193-978c-e6cb3018dba9 \
+  -d redirect_uri=https://your-application/callback \
+  -d code_verifier=7963393253896189
+```
+
+*Note*: Using the PKCE flow will not grant you refresh tokens, even if you specify the `offline` scope.
+
 ### Multi-Factor Authentication
 
 To have access to Kontist API endpoints that require strong customer authentication, you need to pass Multi-Factor Authentication (MFA).
