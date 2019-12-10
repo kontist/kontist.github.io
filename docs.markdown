@@ -166,6 +166,7 @@ curl https://api.kontist.com/api/oauth/token \
 ```
 
 *Note*: Using the PKCE flow will not grant you refresh tokens, even if you specify the `offline` scope. In order to renew an access token when using this authorization flow, you can use the [method described below](#renewing-access-tokens-with-pkce).
+The above restriction does not apply if you are using a custom scheme for your application (and thus for your `redirect_uri`, e.g. `my-app://callback-uri`).
 
 
 ### Renewing access tokens with PKCE
