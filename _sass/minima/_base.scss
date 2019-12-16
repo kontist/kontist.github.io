@@ -242,3 +242,16 @@ table {
     border: 1px solid $grey-color-light;
   }
 }
+
+
+/* inputs */
+input {
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-family: $base-font-family;
+}
+
+input:focus {
+  border: 2px solid #180B32;
+}

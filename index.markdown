@@ -5,6 +5,27 @@ permalink: /
 
 Discover all the services of our platform so that you can build or integrate your application with Kontist.
 
+<!-- Begin Mailchimp Signup Form -->
+<div class="center_container">
+  <div id="mc_embed_signup_inline">
+    <form action="https://kontist.us10.list-manage.com/subscribe/post?u=a0597b42ebb33ccf3df14bb91&amp;id=2fa43ce69c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+      <h2 class="footer-heading">Subscribe to our developer news</h2>
+    <div class="mc-field-group">
+      <input type="email" value="" autocomplete="home email" name="EMAIL" class="required email" placeholder="Email Address" id="mce-EMAIL">
+      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    </div>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a0597b42ebb33ccf3df14bb91_2fa43ce69c" tabindex="-1" value=""></div>
+        </div>
+    </form>
+  </div>
+</div>
+<!--End mc_embed_signup-->
+
 ## Getting started
 
 We provide you with a [GraphQL API](https://graphql.org) to e.g. fetch transactions or start new transfers.
