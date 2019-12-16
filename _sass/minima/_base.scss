@@ -245,11 +245,11 @@ table {
 
 
 /* inputs */
-// remove that ugly glow
 input {
   outline: none;
   border: 2px solid transparent;
   border-radius: 5px;
+  font-family: $base-font-family;
 }
 
 input:focus {
