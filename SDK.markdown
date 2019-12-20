@@ -200,7 +200,24 @@ try {
 }
 ```
 
-After obtaining a confirmed auth token with this method, you will have access to all banking APIs.
+After obtaining a confirmed access token with this method, you will have access to all banking APIs.
+
+If your OAuth2 client is using refresh tokens, you will also receive a confirmed refresh token when the push notification MFA flow completes successfully.
+When renewing your access token with such a refresh token, it will already be confirmed, allowing you to perform the MFA procedure only once for the lifetime of your refresh token:
+
+```typescript
+// initiate the push notification MFA flow
+const { refreshToken } = await client.auth.push.getConfirmedToken();
+
+// the received refreshToken is confirmed, and your SDK instance will be configured to use it for upcoming access token renewal requests
+console.log(refreshToken);
+
+// renew your access token using the regular method
+const { accessToken } = await client.auth.tokenManager.refresh();
+
+// your access token will be confirmed without having to go through the MFA flow again
+console.log(accessToken);
+```
 
 If you want to cancel a pending push notification confirmation, you can call the following method:
 

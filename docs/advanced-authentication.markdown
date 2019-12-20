@@ -122,7 +122,9 @@ curl "https://api.kontist.com/api/user/devices/4e310a55-1b1a-4efb-b9a5-fd04491bd
 
 ### Verify device challenge
 
-To verify device challenge you need to provide a signature of `stringToSign` received after challenge creation.
+To verify device challenge you need to provide a signature of `stringToSign` received after challenge creation. Performing this verification will grant you a confirmed access token giving you access to all banking APIs.
+
+If the OAuth2 client involved uses refresh tokens, you will also obtain a confirmed refresh token with the response. Such a refresh token can be used to renew confirmed access tokens. This will allow you to perform the device challenge verification procedure only once for the whole lifetime of your refresh token.
 
 ```shell
 curl "https://api.kontist.com/api/user/devices/4e310a55-1b1a-4efb-b9a5-fd04491bdd21/challenges/5f7c36e2-e0bf-4755-8376-ac6d0711192e/verify" \
@@ -137,10 +139,10 @@ curl "https://api.kontist.com/api/user/devices/4e310a55-1b1a-4efb-b9a5-fd04491bd
 > The above command returns JSON structured like this:
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODNjNTc4ZS01M2QwLTRhYmEtOTBiNC02MmRmZmFkNTE5NTMiLCJzY29wZSI6ImF1dGgiLCJjbmYiOnsia2lkIjoiMmExNjRlYzYtZTJkNC00OTI4LTk5NDItZDU5YWI2Yzc4ZDU5In0sImlhdCI6MTU2NzQwOTExNSwiZXhwIjoxNTY3NDEyNzE1fQ.m35NDpQMAB5DMebXUxEzWupP3i-iAwoyVy2sGF1zp_8"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODNjNTc4ZS01M2QwLTRhYmEtOTBiNC02MmRmZmFkNTE5NTMiLCJzY29wZSI6ImF1dGgiLCJjbmYiOnsia2lkIjoiMmExNjRlYzYtZTJkNC00OTI4LTk5NDItZDU5YWI2Yzc4ZDU5In0sImlhdCI6MTU2NzQwOTExNSwiZXhwIjoxNTY3NDEyNzE1fQ.m35NDpQMAB5DMebXUxEzWupP3i-iAwoyVy2sGF1zp_8",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMTIwMmUwZi0yOWE4LTRlNDgtODcyNi01OGFiMDAxNDBiNTgiLCJzY29wZSI6InJlZnJlc2ggYWNjb3VudHMgb2ZmbGluZSIsImNsaWVudF9pZCI6IjU4NjcwYmRhLWQxZDEtNGJlOC1hZGEyLTcwNjFkZWVhYjMxNyIsImNuZiI6eyJraWQiOiJlNTA3NTQ5NC1iNWM0LTRjYTEtYjE4MC01ZjNjNTBhNjA2OWMifSwiaWF0IjoxNTc2ODM2MDU5LCJleHAiOjE1NzY4NDMyNTl9.DydSAzxAFncGlWQMNZZp4q48EjAoz6FR6IboxTPx2j4"
 }
 ```
-
 
 #### HTTP Request
 
@@ -154,9 +156,10 @@ curl "https://api.kontist.com/api/user/devices/4e310a55-1b1a-4efb-b9a5-fd04491bd
 
 #### Response
 
-| Field         | Description                                                                                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------------------- |
-| token         | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication |
+| Field           | Description                                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------------------- |
+| token           | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication    |
+| refresh_token   | Refresh token with confirmation claim that can be used to renew confirmed access tokens                             |
 
 ### Setting up your own Multi-Factor Authentication flow
 

@@ -100,3 +100,26 @@ const token = await client.auth.device.verifyDeviceChallenge(
 ```
 
 After successful device challenge verification, SDK will automatically store recieved confirmed access token and you will have access to all banking APIs.
+
+If your OAuth2 client is using refresh tokens, you will also receive a confirmed refresh token when the device binding challenge verification procedure completes successfully.
+When renewing your access token with such a refresh token, it will already be confirmed, allowing you to perform the MFA procedure only once for the lifetime of your refresh token:
+
+```typescript
+// initiate the device challenge verification
+const { refreshToken } = await client.auth.device.verifyDeviceChallenge(
+  deviceId,
+  id, // ID of the device challenge
+  {
+    signature: "..." // The hex-encoded signature (ECDSA with SHA256) for the `stringToSign`
+  }
+);
+
+// the received refreshToken is confirmed, and your SDK instance will be configured to use it for upcoming access token renewal requests
+console.log(refreshToken);
+
+// renew your access token using the regular method
+const { accessToken } = await client.auth.tokenManager.refresh();
+
+// your access token will be confirmed without having to go through the MFA flow again
+console.log(accessToken);
+```
