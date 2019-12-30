@@ -476,6 +476,210 @@ if (!cancelResult.confirmationId) {
 }
 ```
 
+### Cards
+
+We provide various helpers to handle card flows and to retrieve card details
+
+#### Create card
+
+You can create a new card for a user like so:
+
+```typescript
+const card = await client.models.card.create({
+  type: CardType.VisaBusinessDebit
+});
+```
+
+#### Activate card
+
+The next step after creating a card is to activate it using its id and its verification token (the first 6 characters of the token displayed on the back of the card):
+
+```typescript
+const activatedCard = await client.models.card.activate({
+  id: "533660573ebd4b209a5668419530bb73",
+  verificationToken: "29AIAF"
+});
+```
+
+#### Set / Change PIN number
+
+Once a card has been activated, the next step is to set its PIN number (note: the same method can be used to change the card's PIN number at a later point in time):
+
+```typescript
+const confirmationId = await client.models.card.changePIN({
+  id: "533660573ebd4b209a5668419530bb73",
+  pin: "0246"
+});
+```
+
+This method will return a `confirmationId` that you must use along with the card id and the authorization token received on the user's phone to confirm the new PIN number:
+
+```typescript
+const status = await client.models.card.confirmChangePIN({
+  id: "533660573ebd4b209a5668419530bb73",
+  confirmationId: "1c66da59-8be1-4814-bf21-e34904ecd2ee",
+  authorizationToken: "544217"
+});
+```
+
+This method will return the status of the operation (`COMPLETED` when the change was performed successfully), a 403 error in case the wrong token was used or a 404 error if the card id is incorrect.
+
+#### Change card status
+
+If you want to block or cancel a user's card (for instance if the card was lost by the user), you can use the following method:
+
+```typescript
+const blockedCard = await client.models.card.changeStatus({
+  id: "533660573ebd4b209a5668419530bb73",
+  action: CardAction.Block
+});
+```
+
+Once a card has been blocked, it will become unusable until it is unblocked:
+
+```typescript
+const unblockedCard = await client.models.card.changeStatus({
+  id: "533660573ebd4b209a5668419530bb73",
+  action: CardAction.Unblock
+});
+```
+
+A card can also be "closed" (i.e. canceled). This is a destructive action and a card can't be restored afterwards:
+
+```typescript
+const canceledCard = await client.models.card.changeStatus({
+  id: "533660573ebd4b209a5668419530bb73",
+  action: CardAction.Close
+});
+```
+
+#### Update card settings
+
+Some card settings can be customized: contactless toggle and card limits. To change those, you can use the following method:
+
+```typescript
+const canceledCard = await client.models.card.updateSettings({
+  id: "533660573ebd4b209a5668419530bb73",
+  contactlessEnabled: true,
+  cardPresentLimits: {
+    daily: {
+      maxAmountCents: 450000,
+      maxTransactions: 15
+    },
+    monthly: {
+      maxAmountCents: 2500000,
+      maxTransactions: 465
+    }
+  },
+  cardNotPresentLimits: {
+    daily: {
+      maxAmountCents: 150000,
+      maxTransactions: 25
+    },
+    monthly: {
+      maxAmountCents: 1000000,
+      maxTransactions: 775
+    }
+  }
+});
+```
+
+Providing the card ID is mandatory, and all card settings (`contactlessEnabled`, `cardPresentLimits` and `cardNotPresentLimits`) are optional.
+
+
+#### Fetching existing cards and their details
+
+We provide several methods to fetch a user's existing cards. To get all cards for a user, you can use:
+
+```typescript
+const result = await client.models.card.fetch();
+```
+
+This method will return a `result` in the same format as other SDK fetch methods:
+
+```typescript
+{
+  items: [
+    {
+      id: "533660573ebd4b209a5668419530bb73",
+      status: "INACTIVE",
+      type: "VISA_BUSINESS_DEBIT",
+      holder: "SYLVAIN BOULADE",
+      formattedExpirationDate: "12/22",
+      maskedPan: "8134********7480",
+      pinSet: false,
+      settings: {
+        contactlessEnabled: true
+      }
+    }
+    // ...
+  ];
+}
+```
+
+You can also get one specific card details by id or type:
+
+```typescript
+const card = await client.models.card.get({
+  id: "533660573ebd4b209a5668419530bb73",
+  type: CardType.VisaBusinessDebit
+});
+```
+
+This will return the card details:
+
+```typescript
+{
+  id: "533660573ebd4b209a5668419530bb73",
+  status: "INACTIVE",
+  type: "VISA_BUSINESS_DEBIT",
+  holder: "SYLVAIN BOULADE",
+  formattedExpirationDate: "12/22",
+  maskedPan: "8134********7480",
+  pinSet: false,
+  settings: {
+    contactlessEnabled: true
+  }
+}
+```
+
+*Note:* both of the above methods will not return closed (i.e. canceled) cards details.
+
+These methods do not return the cards limits. In order to get them, you can use a separate method:
+
+```typescript
+const card = await client.models.card.getLimits({
+  id: "533660573ebd4b209a5668419530bb73",
+  type: CardType.VisaBusinessDebit
+});
+```
+
+This will return all of the existing limits for that card in the following format:
+```typescript
+{
+  cardPresentLimits: {
+    daily: {
+      maxAmountCents: 450000,
+      maxTransactions: 15
+    },
+    monthly: {
+      maxAmountCents: 2500000,
+      maxTransactions: 465
+    }
+  },
+  cardNotPresentLimits: {
+    daily: {
+      maxAmountCents: 150000,
+      maxTransactions: 25
+    },
+    monthly: {
+      maxAmountCents: 1000000,
+      maxTransactions: 775
+    }
+  }
+}
+```
+
 ### Plain GraphQL requests
 
 You can use the `rawQuery` method to send plain requests to the GraphQL endpoint like this:
