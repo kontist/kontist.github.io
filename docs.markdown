@@ -147,6 +147,7 @@ We will then take users to the authorization url, providing `code_challenge` and
 `https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w`
 
 The parameters are the same as for the standard Authorization Code flow, with these additional parameters:
+
 | Parameter              | Description                                                           |
 | ---------------------- | --------------------------------------------------------------------- |
 | code_challenge         | Code challenge generated from the Code Verifier                       |
