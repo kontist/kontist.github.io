@@ -447,7 +447,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>viewer</strong></td>
 <td valign="top"><a href="#user">User</a>!</td>
-<td></td>
+<td>
+
+The current user information
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -466,7 +470,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>cancelTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
-<td></td>
+<td>
+
+Cancel an existing Timed Order or Standing Order
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
@@ -481,12 +489,20 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>confirmCancelTransfer</strong></td>
 <td valign="top"><a href="#transfer">Transfer</a>!</td>
-<td></td>
+<td>
+
+Confirm a Standing Order cancelation
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">authorizationToken</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The confirmation token received by SMS on the user's phone
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">confirmationId</td>
@@ -501,7 +517,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>createClient</strong></td>
 <td valign="top"><a href="#client">Client</a>!</td>
-<td></td>
+<td>
+
+Create an OAuth2 client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">client</td>
@@ -511,7 +531,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>updateClient</strong></td>
 <td valign="top"><a href="#client">Client</a>!</td>
-<td></td>
+<td>
+
+Update an OAuth2 client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">client</td>
@@ -521,7 +545,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>deleteClient</strong></td>
 <td valign="top"><a href="#client">Client</a>!</td>
-<td></td>
+<td>
+
+Delete an OAuth2 client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
@@ -531,7 +559,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>createTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
-<td></td>
+<td>
+
+Create a transfer. The transfer's type will be determined based on the provided input
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">transfer</td>
@@ -541,12 +573,20 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>confirmTransfer</strong></td>
 <td valign="top"><a href="#transfer">Transfer</a>!</td>
-<td></td>
+<td>
+
+Confirm a transfer creation
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">authorizationToken</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The confirmation token received by SMS on the user's phone
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">confirmationId</td>
@@ -556,7 +596,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>createTransfers</strong></td>
 <td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
-<td></td>
+<td>
+
+Create multiple transfers at once. Only regular SEPA Transfers are supported
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">transfers</td>
@@ -566,6 +610,129 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>confirmTransfers</strong></td>
 <td valign="top"><a href="#batchtransfer">BatchTransfer</a>!</td>
+<td>
+
+Confirm the transfers creation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+The confirmation token received by SMS on the user's phone
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmationId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>whitelistCard</strong></td>
+<td valign="top"><a href="#whitelistcardresponse">WhitelistCardResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">fraudCaseId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmFraud</strong></td>
+<td valign="top"><a href="#confirmfraudresponse">ConfirmFraudResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">fraudCaseId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createCard</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#cardtype">CardType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>activateCard</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">verificationToken</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateCardSettings</strong></td>
+<td valign="top"><a href="#cardsettings">CardSettings</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">settings</td>
+<td valign="top"><a href="#cardsettingsinput">CardSettingsInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>changeCardStatus</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">action</td>
+<td valign="top"><a href="#cardaction">CardAction</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>changeCardPIN</strong></td>
+<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">pin</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmChangeCardPIN</strong></td>
+<td valign="top"><a href="#confirmationstatus">ConfirmationStatus</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -578,12 +745,47 @@ mutation {
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizeTransaction</strong></td>
+<td valign="top"><a href="#transaction">Transaction</a>!</td>
+<td>
+
+Categorize a transaction with an optional custom booking date for VAT or Tax categories
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">category</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">userSelectedBookingDate</td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
 </tbody>
 </table>
 
 ## Objects
 
 ### Account
+
+The bank account of the current user
 
 <table>
 <thead>
@@ -601,8 +803,18 @@ mutation {
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>cardHolderRepresentation</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>balance</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardHolderRepresentations</strong></td>
+<td valign="top">[<a href="#string">String</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -623,22 +835,38 @@ mutation {
 <tr>
 <td colspan="2" align="right" valign="top">first</td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+
+The number of items to return after the provided cursor up to 50
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">last</td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+
+The number of items to return before the provided cursor up to 50
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">after</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The cursor of the item to start from. Use in conjunction with 'first'
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">before</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The cursor of the item to start from. Use in conjunction with 'last'
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transaction</strong></td>
@@ -658,22 +886,38 @@ mutation {
 <tr>
 <td colspan="2" align="right" valign="top">first</td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+
+The number of items to return after the provided cursor up to 50
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">last</td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+
+The number of items to return before the provided cursor up to 50
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">after</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The cursor of the item to start from. Use in conjunction with 'first'
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">before</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The cursor of the item to start from. Use in conjunction with 'last'
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transfer</strong></td>
@@ -688,6 +932,30 @@ mutation {
 <tr>
 <td colspan="2" align="right" valign="top">type</td>
 <td valign="top"><a href="#transfertype">TransferType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transferSuggestions</strong></td>
+<td valign="top">[<a href="#transfersuggestion">TransferSuggestion</a>!]</td>
+<td>
+
+A list of iban/name combinations based on existing user's transactions, provided to assist users when creating new transfers
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cards</strong></td>
+<td valign="top">[<a href="#card">Card</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>card</strong></td>
+<td valign="top"><a href="#card">Card</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filter</td>
+<td valign="top"><a href="#cardfilter">CardFilter</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -723,6 +991,141 @@ mutation {
 </tbody>
 </table>
 
+### Card
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#cardstatus">CardStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#cardtype">CardType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>pinSet</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>holder</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>formattedExpirationDate</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>maskedPan</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>settings</strong></td>
+<td valign="top"><a href="#cardsettings">CardSettings</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardLimit
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>maxAmountCents</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>maxTransactions</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardLimits
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>daily</strong></td>
+<td valign="top"><a href="#cardlimit">CardLimit</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>monthly</strong></td>
+<td valign="top"><a href="#cardlimit">CardLimit</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardSettings
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimits">CardLimits</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimits">CardLimits</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ### Client
 
 <table>
@@ -743,21 +1146,62 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>redirectUri</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The URL to redirect to after authentication
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the OAuth2 client displayed when users log in
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>grantTypes</strong></td>
 <td valign="top">[<a href="#granttype">GrantType</a>!]</td>
-<td></td>
+<td>
+
+The grant types (i.e. ways to obtain access tokens) allowed for the client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>scopes</strong></td>
 <td valign="top">[<a href="#scopetype">ScopeType</a>!]</td>
+<td>
+
+The scopes the client has access to, limiting access to the corresponding parts of the API
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### ConfirmFraudResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>resolution</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -777,6 +1221,26 @@ mutation {
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>confirmationId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### ConfirmationStatus
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -873,17 +1337,29 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#sepatransferstatus">SepaTransferStatus</a>!</td>
-<td></td>
+<td>
+
+The status of the SEPA Transfer
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of the SEPA Transfer in cents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The purpose of the SEPA Transfer - 140 max characters
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
@@ -893,17 +1369,29 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the SEPA Transfer recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The IBAN of the SEPA Transfer recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The end to end ID of the SEPA Transfer
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -928,52 +1416,92 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#standingorderstatus">StandingOrderStatus</a>!</td>
-<td></td>
+<td>
+
+The status of the Standing Order
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The IBAN of the Standing Order payments recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the Standing Order payments recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The purpose of the Standing Order - 140 max characters
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of each Standing Order payment in cents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>executeAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td></td>
+<td>
+
+The date at which the first payment will be executed
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+
+The date at which the last payment will be executed
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The end to end ID of the Standing Order
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>reoccurrence</strong></td>
 <td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a>!</td>
-<td></td>
+<td>
+
+The reoccurrence type of the Standing Order payments
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>nextOccurrence</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+
+The date at which the next payment will be executed
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -1018,37 +1546,65 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>executeAt</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The date at which the payment will be executed
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#timedorderstatus">TimedOrderStatus</a>!</td>
-<td></td>
+<td>
+
+The status of the Timed Order
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The purpose of the Timed Order - 140 max characters
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The IBAN of the Timed Order recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the Timed Order recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The end to end ID of the Timed Order
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of the Timed Order in cents
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -1073,7 +1629,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of the transaction in cents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
@@ -1088,7 +1648,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>valutaDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+
+The date at which the transaction was processed and the amount deducted from the user's account
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
@@ -1108,7 +1672,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>bookingDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td></td>
+<td>
+
+The date at which the transaction was booked (created)
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>directDebitFees</strong></td>
@@ -1127,13 +1695,17 @@ mutation {
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#string">String</a></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+
+When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
@@ -1278,51 +1850,116 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the transfer recipient
+
+</td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+The IBAN of the transfer recipient
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount of the transfer in cents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#transferstatus">TransferStatus</a></td>
+<td>
+
+The status of the transfer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>executeAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+The date at which the payment will be executed for Timed Orders or Standing Orders
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+The date at which the last payment will be executed for Standing Orders
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The purpose of the transfer - 140 max characters
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The end to end ID of the transfer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
+<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
+<td>
+
+The reoccurrence type of the payments for Standing Orders
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>nextOccurrence</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+The date at which the next payment will be executed for Standing Orders
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### TransferSuggestion
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#transferstatus">TransferStatus</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>executeAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purpose</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
-<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>nextOccurrence</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -1433,12 +2070,20 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>identificationStatus</strong></td>
 <td valign="top"><a href="#identificationstatus">IdentificationStatus</a></td>
-<td></td>
+<td>
+
+The user's IDNow identification status
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>identificationLink</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The user's IDNow identification status
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>gender</strong></td>
@@ -1498,7 +2143,11 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>isUSPerson</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
+<td>
+
+Indicates whether the user pays taxes in the US
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>companyType</strong></td>
@@ -1523,17 +2172,29 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>businessPurpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+Business description provided by the user
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>economicSector</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The economic sector of the user's business
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>otherEconomicSector</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+Business economic sector provided by the user
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>vatNumber</strong></td>
@@ -1543,17 +2204,29 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>referralCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The user's referral code to use for promotional purposes
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
 <td valign="top">[<a href="#client">Client</a>!]!</td>
-<td></td>
+<td>
+
+The list of all OAuth2 clients for the current user
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>client</strong></td>
 <td valign="top"><a href="#client">Client</a></td>
-<td></td>
+<td>
+
+The details of an existing OAuth2 client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
@@ -1568,9 +2241,142 @@ mutation {
 </tbody>
 </table>
 
+### WhitelistCardResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>resolution</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>whitelisted_until</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ## Inputs
 
+### CardFilter
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#cardtype">CardType</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardLimitInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>maxAmountCents</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>maxTransactions</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardLimitsInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>daily</strong></td>
+<td valign="top"><a href="#cardlimitinput">CardLimitInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>monthly</strong></td>
+<td valign="top"><a href="#cardlimitinput">CardLimitInput</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardSettingsInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>cardPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
+<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ### CreateClientInput
+
+The available fields to create an OAuth2 client
 
 <table>
 <thead>
@@ -1584,33 +2390,55 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the OAuth2 client displayed when users log in
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>secret</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The OAuth2 client secret
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>redirectUri</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The URL to redirect to after authentication
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>grantTypes</strong></td>
 <td valign="top">[<a href="#granttype">GrantType</a>!]!</td>
-<td></td>
+<td>
+
+The grant types (i.e. ways to obtain access tokens) allowed for the client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>scopes</strong></td>
 <td valign="top">[<a href="#scopetype">ScopeType</a>!]!</td>
-<td></td>
+<td>
+
+The scopes the client has access to, limiting access to the corresponding parts of the API
+
+</td>
 </tr>
 </tbody>
 </table>
 
 ### CreateSepaTransferInput
 
+The available fields to create a SEPA Transfer
+
 <table>
 <thead>
 <tr>
@@ -1623,33 +2451,55 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the SEPA Transfer recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The IBAN of the SEPA Transfer recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of the SEPA Transfer in cents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The purpose of the SEPA Transfer - 140 max characters
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The end to end ID of the SEPA Transfer
+
+</td>
 </tr>
 </tbody>
 </table>
 
 ### CreateStandingOrderInput
 
+The available fields to create a Standing Order
+
 <table>
 <thead>
 <tr>
@@ -1662,48 +2512,82 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the Standing Order payments recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The IBAN of the Standing Order payments recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of each Standing Order payment in cents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>executeAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td></td>
+<td>
+
+The date at which the first payment will be executed
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+
+The date at which the last payment will be executed
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The purpose of the Standing Order - 140 max characters
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The end to end ID of the Standing Order
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>reoccurrence</strong></td>
 <td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a>!</td>
-<td></td>
+<td>
+
+The reoccurrence type of the Standing Order payments
+
+</td>
 </tr>
 </tbody>
 </table>
 
 ### CreateTimedOrderInput
 
+The available fields to create a Timed Order
+
 <table>
 <thead>
 <tr>
@@ -1716,38 +2600,64 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the Timed Order recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The IBAN of the Timed Order recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of the Timed Order in cents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>executeAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td></td>
+<td>
+
+The date at which the payment will be executed
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The purpose of the Timed Order - 140 max characters
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The end to end ID of the Timed Order
+
+</td>
 </tr>
 </tbody>
 </table>
 
 ### CreateTransferInput
 
+The available fields to create a transfer
+
 <table>
 <thead>
 <tr>
@@ -1760,42 +2670,74 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The name of the transfer recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The IBAN of the transfer recipient
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount of the transfer in cents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>executeAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+
+The date at which the payment will be executed for Timed Orders or Standing Orders
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+
+The date at which the last payment will be executed for Standing Orders
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>purpose</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The purpose of the transfer - 140 max characters
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The end to end ID of the transfer
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>reoccurrence</strong></td>
 <td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
-<td></td>
+<td>
+
+The reoccurrence type of the payments for Standing Orders
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -1821,6 +2763,8 @@ mutation {
 
 ### UpdateClientInput
 
+The available fields to update an OAuth2 client
+
 <table>
 <thead>
 <tr>
@@ -1833,32 +2777,56 @@ mutation {
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The name of the OAuth2 client displayed when users log in
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>secret</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The OAuth2 client secret
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>redirectUri</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+The URL to redirect to after authentication
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>grantTypes</strong></td>
 <td valign="top">[<a href="#granttype">GrantType</a>!]</td>
-<td></td>
+<td>
+
+The grant types (i.e. ways to obtain access tokens) allowed for the client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>scopes</strong></td>
 <td valign="top">[<a href="#scopetype">ScopeType</a>!]</td>
-<td></td>
+<td>
+
+The scopes the client has access to, limiting access to the corresponding parts of the API
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+The id of the OAuth2 client to update
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -1891,6 +2859,103 @@ mutation {
 </tr>
 <tr>
 <td valign="top"><strong>SUCCESSFUL</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardAction
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>CLOSE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BLOCK</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>UNBLOCK</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PROCESSING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACTIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BLOCKED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BLOCKED_BY_SOLARIS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACTIVATION_BLOCKED_BY_SOLARIS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CLOSED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CLOSED_BY_SOLARIS</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### CardType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>VIRTUAL_VISA_BUSINESS_DEBIT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VISA_BUSINESS_DEBIT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MASTERCARD_BUSINESS_DEBIT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VIRTUAL_MASTERCARD_BUSINESS_DEBIT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VIRTUAL_VISA_FREELANCE_DEBIT</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -3299,6 +4364,53 @@ mutation {
 </tbody>
 </table>
 
+### TransactionCategory
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PRIVATE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_0</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_REFUND</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_REFUND</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ### TransactionFeeStatus
 
 <table>
@@ -3369,6 +4481,14 @@ mutation {
 <th align="left">Description</th>
 </thead>
 <tbody>
+<tr>
+<td valign="top"><strong>CREDIT_PRESENTMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CASH_MANUAL</strong></td>
+<td></td>
+</tr>
 <tr>
 <td valign="top"><strong>ATM</strong></td>
 <td></td>
@@ -3571,6 +4691,10 @@ The `Boolean` scalar type represents `true` or `false`.
 ### DateTime
 
 The javascript `Date` as string. Type represents date and time as the ISO Date string.
+
+### Float
+
+The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
 
 ### ID
 
