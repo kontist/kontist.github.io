@@ -150,8 +150,8 @@ The parameters are the same as for the standard Authorization Code flow, with th
 
 | Parameter              | Description                                                           |
 | ---------------------- | --------------------------------------------------------------------- |
-| code_challenge         | Code challenge generated from the Code Verifier                       |
-| code_challenge_method  | Code challenge method, only "S256" is supported                       |
+| code_challenge         | Code challenge generated from the code verifier.                      |
+| code_challenge_method  | Code challenge method, only "S256" is supported.                      |
 
 After the user has accepted the access request, you will be able to obtain an access token with the code you received and the code verifier you used to generate the code challenge (without specifying the `client_secret`):
 
@@ -235,11 +235,11 @@ curl "https://api.kontist.com/api/user/mfa/challenges" \
 
 ##### Response
 
-| Field      | Description                                                           |
-| ---------- | --------------------------------------------------------------------- |
-| id         | ID of the challenge                                                   |
-| status     | Status of the challenge. When created, it will be "PENDING"           |
-| expiresAt  | Time at which the challenge will expire                               |
+| Field      | Description                                                                                    |
+| ---------- | ---------------------------------------------------------------------------------------------- |
+| id         | ID of the challenge.                                                                           |
+| status     | Status of the challenge. One of PENDING, VERIFIED, DENIED. When created, it will be "PENDING". |
+| expiresAt  | Time at which the challenge will expire.                                                       |
 
 
 #### Verifying a challenge
@@ -275,11 +275,11 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 
 ##### Response
 
-| Field      | Description                                 |
-| ---------- | ------------------------------------------- |
-| id         | ID of the challenge                         |
-| status     | Status of the challenge.                    |
-| expiresAt  | Time at which the challenge will expire     |
+| Field      | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| id         | ID of the challenge.                                         |
+| status     | Status of the challenge. One of PENDING, VERIFIED, DENIED.   |
+| expiresAt  | Time at which the challenge will expire.                     |
 
 
 #### Getting a confirmed token
@@ -308,10 +308,10 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 
 ##### Response
 
-| Field           | Description                                                                                                         |
-| --------------- | ------------------------------------------------------------------------------------------------------------------- |
-| token           | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication    |
-| refresh_token   | Refresh token with confirmation claim that can be used to renew confirmed access tokens                             |
+| Field           | Description                                                                                                          |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| token           | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication.    |
+| refresh_token   | Refresh token with confirmation claim that can be used to renew confirmed access tokens.                             |
 
 
 ### Scopes
