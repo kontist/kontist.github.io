@@ -751,6 +751,26 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>replaceCard</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reorderCard</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>categorizeTransaction</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td>
