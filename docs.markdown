@@ -571,6 +571,16 @@ Create a transfer. The transfer's type will be determined based on the provided 
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateTransfer</strong></td>
+<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transfer</td>
+<td valign="top"><a href="#updatetransferinput">UpdateTransferInput</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>confirmTransfer</strong></td>
 <td valign="top"><a href="#transfer">Transfer</a>!</td>
 <td>
@@ -663,7 +673,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>createCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
-<td></td>
+<td>
+
+Create a new card
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">type</td>
@@ -673,7 +687,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>activateCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
-<td></td>
+<td>
+
+Activate a card
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">verificationToken</td>
@@ -688,7 +706,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>updateCardSettings</strong></td>
 <td valign="top"><a href="#cardsettings">CardSettings</a>!</td>
-<td></td>
+<td>
+
+Update settings (e.g. limits)
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">settings</td>
@@ -703,7 +725,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>changeCardStatus</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
-<td></td>
+<td>
+
+Block or unblock or close a card
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
@@ -718,7 +744,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>changeCardPIN</strong></td>
 <td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
-<td></td>
+<td>
+
+Set a new PIN, needs to be confirmed
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">pin</td>
@@ -733,7 +763,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>confirmChangeCardPIN</strong></td>
 <td valign="top"><a href="#confirmationstatus">ConfirmationStatus</a>!</td>
-<td></td>
+<td>
+
+Confirm a PIN change request
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">authorizationToken</td>
@@ -753,7 +787,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>replaceCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
-<td></td>
+<td>
+
+Call when customer's card is lost or stolen
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
@@ -763,7 +801,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" valign="top"><strong>reorderCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
-<td></td>
+<td>
+
+Close and order new card. Call when customer's card is damaged
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
@@ -2845,6 +2887,85 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td>
 
 The id of the OAuth2 client to update
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### UpdateTransferInput
+
+The available fields to update a Standing Order
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+The ID of the Standing Order to update
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
+<td>
+
+The type of transfer to update, currently only Standing Orders are supported
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount of each Standing Order payment in cents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+The date at which the last payment will be executed
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The purpose of the Standing Order - 140 max characters, if not specified with the update, it will be set to null
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The end to end ID of the Standing Order, if not specified with the update, it will be set to null
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
+<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
+<td>
+
+The reoccurrence type of the payments for Standing Orders
 
 </td>
 </tr>
