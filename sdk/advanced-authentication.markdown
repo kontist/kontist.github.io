@@ -12,7 +12,6 @@ If you'd rather handle the authentication UI flow in your app, and when your OAu
 
 ```javascript
 const client = new Kontist.Client({
-  baseUrl: "https://staging-api.konto.io",
   clientId: 'YOUR_CLIENT_ID',
   scopes: ["users", "subscriptions", "transfers", "accounts"]
 });
