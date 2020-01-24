@@ -7,6 +7,104 @@ sidebar: true
 
 We provide you with a NPM package for Node.js and Browser environments. Please see our [GitHub page for details](https://github.com/kontist/sdk).
 
+## Getting started
+This is a very short step by step guide to help you getting started and fetch a few transactions with our API and SDK in Node.js. You can do much more with it, please refer to the documentation or [get in touch with us](mailto:developer@kontist.com).
+
+### Requirements
+Please have Node.js + NPM installed. This example is using plain JavaScript for simplicity, but you can use TypeScript as well.
+
+### Setup a new project
+Create a new folder `kontist-connect-example` and open it in your terminal.
+
+Init the project and add `kontist` as an dependency.
+```bash
+npm init -y
+npm install kontist --save
+```
+
+Create a new file `index.js`
+
+### Create a new client
+
+Add the following code to your `index.js`:
+
+```javascript
+const { Client } = require("kontist");
+
+const client = new Client({
+    clientId: "<client id>",
+    clientSecret: "<client secret>",
+    scopes: ["transactions"]
+});
+```
+
+You need to enter a `<client id>` and `<client secret>` here. Create your own client via the [Client Management](https://kontist.dev/client-management/) section.
+Click "Create Client" and enter a name and a secret. You will need to check the "Transactions" scope for this example. Enter some url like "https://example.com/" into the "Redirect URI" as we do not use it in this example.
+
+![Client Management](/assets/client-management.png){:class="img-responsive"}
+
+After you did create the client click on it in the overview in order to reveal its client id.
+
+
+### Login and fetch transactions
+Note: In this example you only want to access our own account. You can do this by using *your own* client and *your* username and password with the `fetchTokenFromCredentials` method. If you want to create an application that other users can use as well, then please follow the authentication section in the documentation. You need to implement the OAuth2 authorization code flow in that case.
+But for our own user this can be simplified by just using username and password like this:
+
+```javascript
+const username = "<your username>";
+const password = "<your password>";
+
+client.auth.tokenManager.fetchTokenFromCredentials({ username, password })
+    .then((tokenData) => {
+        console.log("Your unconfirmed access token is:", tokenData.accessToken);
+        console.log("Starting MFA...");
+        return client.auth.push.getConfirmedToken();
+    })
+    .then((confirmed) => {
+        console.log("Your confirmed access token is:", confirmed.accessToken);
+        console.log("Fetching latest transactions...");
+        return client.models.transaction.fetch();
+    })
+    .then((transactionData) => {
+        console.dir(transactionData.items);
+    })
+    .catch((err) => console.error(err));
+```
+
+Save the `index.js` and run the script via
+```bash
+node index.js
+```
+
+You should see this output:
+``` 
+Your unconfirmed access token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5eXkiLCJzY29wZSI6InRyYW5zYWN0aW9ucyIsImNsaWVudF9pZCI6Inh4eCIsImlhdCI6MTU3OTg4MDMxNCwiZXhwIjoxNTc5ODgzOTE0fQ.FBZZkGYSF1QCWhLXq7Y4oUDQ85AOx6qxT7wbf9BQ29k
+Starting MFA...
+```
+
+Now you need to take your smartphone with the Kontist app and confirm the login. After that the confirmed access token is shown and then a few transactions are fetched.
+
+
+```
+Your confirmed access token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5eXkiLCJzY29wZSI6InRyYW5zYWN0aW9ucyIsImNsaWVudF9pZCI6Inh4eCIsImNuZiI6eyJraWQiOiJ6enoifSwiaWF0IjoxNTc5ODgwMzQ3LCJleHAiOjE1Nzk4ODM5NDd9.dOavYfsqGpCu-wIUox8lQw_lo2yP8OA5QylQAKbeZn0
+Fetching latest transactions...
+[
+  {
+    id: 'a0c01510-d425-4193-8976-f6a3f82121e7',
+    amount: 100,
+    name: 'Test sender',
+    iban: 'DE40220500009007705534',
+    type: 'SEPA_CREDIT_TRANSFER',
+    bookingDate: '2019-05-28T23:00:00.000Z',
+    valutaDate: '2019-05-28T23:00:00.000Z',
+    // ...
+  },
+  // ...
+]
+```
+
+This was just a basic example. Please have a look at this documentation for more examples and things you [can do with this SDK](#using-the-sdk).
+
 ## Installation
 
 ### Node.js
