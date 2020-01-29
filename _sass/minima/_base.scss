@@ -96,16 +96,33 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
+  line-height: 1.1;
   font-weight: 500;
+  margin-top: $spacing-unit;
 }
 
-h2 {
-  margin-top: 30px;
+h1 {
   font-size: 36px;
   line-height: 1.1;
   font-weight: 800;
   color: #180B32;
+}
+
+h2 {
+  margin-top: $spacing-unit * 1.5;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #180B32;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
 }
 
 
