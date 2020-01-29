@@ -251,9 +251,12 @@
 .sidebar {
   position: -webkit-sticky;
   position: sticky;
-  top: 25px;
+  top: $spacing-unit / 2;;
   width: calc((100% - #{$content-width} - (#{$spacing-unit} * 2)) / 2);
   float: left;
+  height: 100vh;
+  overflow: auto;
+  padding-right: $spacing-unit / 2;
 
   a {
     color: $grey-color-dark;
