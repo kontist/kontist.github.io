@@ -254,7 +254,7 @@
   top: $spacing-unit / 2;;
   width: calc((100% - #{$content-width} - (#{$spacing-unit} * 2)) / 2);
   float: left;
-  height: 100vh;
+  height: calc(100vh - 30px);
   overflow: auto;
   padding-right: $spacing-unit / 2;
 
