@@ -19,7 +19,7 @@ Create a new folder `kontist-connect-example` and open it in your terminal.
 Init the project and add `kontist` as an dependency.
 ```bash
 npm init -y
-npm install kontist --save
+npm install kontist
 ```
 
 Create a new file `index.js`
@@ -47,7 +47,7 @@ After you did create the client click on it in the overview in order to reveal i
 
 
 ### Login and fetch transactions
-Note: In this example you only want to access our own account. You can do this by using *your own* client and *your* username and password with the `fetchTokenFromCredentials` method. If you want to create an application that other users can use as well, then please follow the authentication section in the documentation. You need to implement the OAuth2 authorization code flow in that case.
+Note: In this example you only want to access our own account. You can do this by using *your own* client and *your* username and password with the `fetchTokenFromCredentials` method. If you want to create an application that other users can use as well, then please follow the [authentication section](#authentication) in the documentation.
 But for our own user this can be simplified by just using username and password like this:
 
 ```javascript
@@ -108,7 +108,7 @@ This was just a basic example. Please have a look at this documentation for more
 ## Installation
 
 ### Node.js
-Please install the SDK via `npm install kontist --save`. Depending on your application type you can then import it with
+Please install the SDK via `npm install kontist`. Depending on your application type you can then import it with
 
 ```typescript
 import { Client } from "kontist";
@@ -117,7 +117,7 @@ import { Client } from "kontist";
 TypeScript users should add at least `"lib": ["es2018.asynciterable", "es6", "dom"]` to their `tsconfig.json`.
 
 ### Browser
-For your web application you can install the SDK via `npm install kontist --save` and then just load the bundle via
+For your web application you can install the SDK via `npm install kontist` and then just load the bundle via
 
 ```html
 <script src="node_modules/kontist/dist/bundle.js"></script>
