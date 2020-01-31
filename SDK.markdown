@@ -77,7 +77,7 @@ node index.js
 ```
 
 You should see this output:
-``` 
+```
 Your unconfirmed access token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5eXkiLCJzY29wZSI6InRyYW5zYWN0aW9ucyIsImNsaWVudF9pZCI6Inh4eCIsImlhdCI6MTU3OTg4MDMxNCwiZXhwIjoxNTc5ODgzOTE0fQ.FBZZkGYSF1QCWhLXq7Y4oUDQ85AOx6qxT7wbf9BQ29k
 Starting MFA...
 ```
@@ -589,6 +589,31 @@ if (!cancelResult.confirmationId) {
     smsToken
   );
 }
+```
+
+
+### Getting Transfer Suggestions
+
+It can be useful to present users with IBAN and name suggestions (based on previous transactions and transfer data) when they create a new transfers.
+For this, you can use:
+
+```typescript
+const suggestions = await client.models.transfer.suggestions();
+```
+
+`suggestions` will be an array of IBAN / Name suggestions:
+
+```javascript
+ [
+    {
+      name: "Example Suggestion 1",
+      iban: "DE18512428000000060367"
+    },
+    {
+      name: "Example Suggestion 2",
+      iban: "DE58112428000000060367"
+    }
+  ];
 ```
 
 ### Plain GraphQL requests
