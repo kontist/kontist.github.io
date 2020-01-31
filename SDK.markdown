@@ -591,6 +591,25 @@ if (!cancelResult.confirmationId) {
 }
 ```
 
+### Updating a Standing Order
+
+You can change several attributes of an existing standing order by using:
+
+```typescript
+const suggestions = await client.models.transfer.update({
+  amount: 4231,
+  type: TransferType.STANDING_ORDER,
+  e2eId: "E-0f4c88099b7e6b62e002f302ed490dbc",
+  id: "f4ff3af1d198e222bf5f2be5301827aa",
+  lastExecutionDate: null,
+  purpose: "Updated transfer purpose",
+  reoccurrence: StandingOrderReoccurenceType.Monthly,
+});
+```
+
+*Notes:*
+* Currently, only standing order can be updated, so you must specify that `type`.
+* While updating a standing order, any property that you do not specify will be set to `null` if applicable. This is why the `amount` property is mandatory.
 
 ### Getting Transfer Suggestions
 
