@@ -381,6 +381,20 @@ for await (const transaction of client.models.transaction.fetchAll()) {
 }
 ```
 
+### Categorize a transaction
+
+Transactions can be categorized using:
+
+```typescript
+const result = await client.models.transaction.categorize({
+	id: "08995f8f-1f87-42ab-80d2-6e73a3db40e8",
+  category: TransactionCategory.TaxPayment,
+  userSelectedBookingDate: "2019-10-06"
+});
+```
+
+*Note*: Only transactions of types `TaxPayment`, `VatPayment` , `TaxRefund`, `VatRefund` can have a `userSelectedBookingDate`, if you provide an invalid combination, your categorization request will be rejected.
+
 ### Subscribe to new transactions
 
 A 'Subscribtion' is a GraphQL concept allowing clients to listen to new events published by a GraphQL server.
