@@ -446,12 +446,17 @@ mutation {
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>viewer</strong></td>
-<td valign="top"><a href="#user">User</a>!</td>
+<td valign="top"><a href="#user">User</a></td>
 <td>
 
 The current user information
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#systemstatus">SystemStatus</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1458,116 +1463,6 @@ The end to end ID of the SEPA Transfer
 </tbody>
 </table>
 
-### StandingOrder
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#standingorderstatus">StandingOrderStatus</a>!</td>
-<td>
-
-The status of the Standing Order
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>iban</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The IBAN of the Standing Order payments recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>recipient</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The name of the Standing Order payments recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purpose</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The purpose of the Standing Order - 140 max characters
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td>
-
-The amount of each Standing Order payment in cents
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>executeAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td>
-
-The date at which the first payment will be executed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td>
-
-The date at which the last payment will be executed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the Standing Order
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
-<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a>!</td>
-<td>
-
-The reoccurrence type of the Standing Order payments
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>nextOccurrence</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td>
-
-The date at which the next payment will be executed
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ### Subscription
 
 <table>
@@ -1588,7 +1483,7 @@ The date at which the next payment will be executed
 </tbody>
 </table>
 
-### TimedOrder
+### SystemStatus
 
 <table>
 <thead>
@@ -1601,72 +1496,14 @@ The date at which the next payment will be executed
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#status">Status</a></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>executeAt</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The date at which the payment will be executed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#timedorderstatus">TimedOrderStatus</a>!</td>
-<td>
-
-The status of the Timed Order
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td colspan="2" valign="top"><strong>message</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td>
-
-The purpose of the Timed Order - 140 max characters
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>iban</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The IBAN of the Timed Order recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>recipient</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The name of the Timed Order recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the Timed Order
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td>
-
-The amount of the Timed Order in cents
-
-</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2552,164 +2389,6 @@ The purpose of the SEPA Transfer - 140 max characters
 <td>
 
 The end to end ID of the SEPA Transfer
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### CreateStandingOrderInput
-
-The available fields to create a Standing Order
-
-<table>
-<thead>
-<tr>
-<th colspan="2" align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>recipient</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The name of the Standing Order payments recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>iban</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The IBAN of the Standing Order payments recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td>
-
-The amount of each Standing Order payment in cents
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>executeAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td>
-
-The date at which the first payment will be executed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>lastExecutionDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td>
-
-The date at which the last payment will be executed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purpose</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The purpose of the Standing Order - 140 max characters
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the Standing Order
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>reoccurrence</strong></td>
-<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a>!</td>
-<td>
-
-The reoccurrence type of the Standing Order payments
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### CreateTimedOrderInput
-
-The available fields to create a Timed Order
-
-<table>
-<thead>
-<tr>
-<th colspan="2" align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>recipient</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The name of the Timed Order recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>iban</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-The IBAN of the Timed Order recipient
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td>
-
-The amount of the Timed Order in cents
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>executeAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td>
-
-The date at which the payment will be executed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purpose</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The purpose of the Timed Order - 140 max characters
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the Timed Order
 
 </td>
 </tr>
@@ -4439,7 +4118,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### StandingOrderStatus
+### Status
 
 <table>
 <thead>
@@ -4448,58 +4127,7 @@ The reoccurrence type of the payments for Standing Orders
 </thead>
 <tbody>
 <tr>
-<td valign="top"><strong>CREATED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>ACTIVE</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INACTIVE</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>CANCELED</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-### TimedOrderStatus
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>CREATED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>AUTHORIZATION_REQUIRED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>CONFIRMATION_REQUIRED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>SCHEDULED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>EXECUTED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>CANCELED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>FAILED</strong></td>
+<td valign="top"><strong>ERROR</strong></td>
 <td></td>
 </tr>
 </tbody>
