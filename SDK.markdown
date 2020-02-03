@@ -77,7 +77,7 @@ node index.js
 ```
 
 You should see this output:
-``` 
+```
 Your unconfirmed access token is: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5eXkiLCJzY29wZSI6InRyYW5zYWN0aW9ucyIsImNsaWVudF9pZCI6Inh4eCIsImlhdCI6MTU3OTg4MDMxNCwiZXhwIjoxNTc5ODgzOTE0fQ.FBZZkGYSF1QCWhLXq7Y4oUDQ85AOx6qxT7wbf9BQ29k
 Starting MFA...
 ```
@@ -381,6 +381,20 @@ for await (const transaction of client.models.transaction.fetchAll()) {
 }
 ```
 
+### Categorize a transaction
+
+Transactions can be categorized using:
+
+```typescript
+const result = await client.models.transaction.categorize({
+	id: "08995f8f-1f87-42ab-80d2-6e73a3db40e8",
+  category: TransactionCategory.TaxPayment,
+  userSelectedBookingDate: "2019-10-06"
+});
+```
+
+*Note*: Only transactions of types `TaxPayment`, `VatPayment` , `TaxRefund`, `VatRefund` can have a `userSelectedBookingDate`, if you provide an invalid combination, your categorization request will be rejected.
+
 ### Subscribe to new transactions
 
 A 'Subscribtion' is a GraphQL concept allowing clients to listen to new events published by a GraphQL server.
@@ -589,6 +603,50 @@ if (!cancelResult.confirmationId) {
     smsToken
   );
 }
+```
+
+### Updating a Standing Order
+
+You can change several attributes of an existing standing order by using:
+
+```typescript
+const suggestions = await client.models.transfer.update({
+  amount: 4231,
+  type: TransferType.STANDING_ORDER,
+  e2eId: "E-0f4c88099b7e6b62e002f302ed490dbc",
+  id: "f4ff3af1d198e222bf5f2be5301827aa",
+  lastExecutionDate: null,
+  purpose: "Updated transfer purpose",
+  reoccurrence: StandingOrderReoccurenceType.Monthly,
+});
+```
+
+*Notes:*
+* Currently, only standing order can be updated, so you must specify that `type`.
+* While updating a standing order, any property that you do not specify will be set to `null` if applicable. This is why the `amount` property is mandatory.
+
+### Getting Transfer Suggestions
+
+It can be useful to present users with IBAN and name suggestions (based on previous transactions and transfer data) when they create a new transfers.
+For this, you can use:
+
+```typescript
+const suggestions = await client.models.transfer.suggestions();
+```
+
+`suggestions` will be an array of IBAN / Name suggestions:
+
+```javascript
+ [
+    {
+      name: "Example Suggestion 1",
+      iban: "DE18512428000000060367"
+    },
+    {
+      name: "Example Suggestion 2",
+      iban: "DE58112428000000060367"
+    }
+  ];
 ```
 
 ### Plain GraphQL requests
