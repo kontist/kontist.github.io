@@ -690,6 +690,11 @@ Create a new card
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">cardHolderRepresentation</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>activateCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
 <td>
