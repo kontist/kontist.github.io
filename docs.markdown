@@ -144,7 +144,16 @@ const code_challenge = base64encode(sha256(code_verifier))
 
 We will then take users to the authorization url, providing `code_challenge` and `code_challenge_method`:
 
-`https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w`
+```
+https://api.kontist.com/api/oauth/authorize
+  ?scope=transactions
+  &response_type=code
+  &client_id=78b5c170-a600-4193-978c-e6cb3018dba9
+  &redirect_uri=https://your-application/callback
+  &state=OPAQUE_VALUE
+  &code_challenge_method=S256
+  &code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w
+```
 
 The parameters are the same as for the standard Authorization Code flow, with these additional parameters:
 
@@ -176,7 +185,17 @@ As you will not get refresh tokens when using the PKCE authorization method, you
 
 If a user has granted access with the PKCE authorization flow, the successful authorization will be saved to this user's session, and you will be able to obtain a new access token without prompting the user by specifying `prompt=none` when accessing the authorization url:
 
-`https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w&prompt=none`
+```
+https://api.kontist.com/api/oauth/authorize
+  ?scope=transactions
+  &response_type=code
+  &client_id=78b5c170-a600-4193-978c-e6cb3018dba9
+  &redirect_uri=https://your-application/callback
+  &state=OPAQUE_VALUE
+  &code_challenge_method=S256
+  &code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w
+  &prompt=none
+```
 
 The user will be redirected directly to your application with a new authorization code that you can use to request a new access token.
 
