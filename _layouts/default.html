@@ -9,19 +9,27 @@
 
     <main class="page-content" aria-label="Content">
 
-      {% if page.sidebar %}
-        <div class="sidebar">
-          {% include toc.html h_min=2 h_max=3 html=content %}
-        </div>
-      {% endif %}
-
       <div class="wrapper">
         {{ content }}
       </div>
+
+      {% if page.sidebar %}
+      <div class="sidebar"></div>
+      {% endif %}
+
     </main>
 
     {%- include footer.html -%}
 
+    <script src="{{ "/assets/js/tocbot.min.js" | relative_url }}"></script>
+    <script>
+      tocbot.init({
+        tocSelector: '.sidebar',
+        contentSelector: '.post-content',
+        headingSelector: 'h2, h3, h4',
+        hasInnerContainers: true,
+      });
+  </script>
   </body>
 
 </html>
