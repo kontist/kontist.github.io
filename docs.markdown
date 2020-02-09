@@ -452,7 +452,7 @@ mutation {
 <!-- START graphql-markdown -->
 
 
-## Query
+### Query
 <table>
 <thead>
 <tr>
@@ -480,7 +480,7 @@ The current user information
 </tbody>
 </table>
 
-## Mutation
+### Mutation
 <table>
 <thead>
 <tr>
@@ -872,9 +872,9 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
-## Objects
+### Objects
 
-### Account
+#### Account
 
 The bank account of the current user
 
@@ -1052,7 +1052,7 @@ A list of iban/name combinations based on existing user's transactions, provided
 </tbody>
 </table>
 
-### BatchTransfer
+#### BatchTransfer
 
 <table>
 <thead>
@@ -1082,7 +1082,7 @@ A list of iban/name combinations based on existing user's transactions, provided
 </tbody>
 </table>
 
-### Card
+#### Card
 
 <table>
 <thead>
@@ -1137,7 +1137,7 @@ A list of iban/name combinations based on existing user's transactions, provided
 </tbody>
 </table>
 
-### CardLimit
+#### CardLimit
 
 <table>
 <thead>
@@ -1162,7 +1162,7 @@ A list of iban/name combinations based on existing user's transactions, provided
 </tbody>
 </table>
 
-### CardLimits
+#### CardLimits
 
 <table>
 <thead>
@@ -1187,7 +1187,7 @@ A list of iban/name combinations based on existing user's transactions, provided
 </tbody>
 </table>
 
-### CardSettings
+#### CardSettings
 
 <table>
 <thead>
@@ -1217,7 +1217,7 @@ A list of iban/name combinations based on existing user's transactions, provided
 </tbody>
 </table>
 
-### Client
+#### Client
 
 <table>
 <thead>
@@ -1273,7 +1273,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-### ConfirmFraudResponse
+#### ConfirmFraudResponse
 
 <table>
 <thead>
@@ -1298,7 +1298,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-### ConfirmationRequest
+#### ConfirmationRequest
 
 <table>
 <thead>
@@ -1318,7 +1318,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-### ConfirmationStatus
+#### ConfirmationStatus
 
 <table>
 <thead>
@@ -1338,7 +1338,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-### DirectDebitFee
+#### DirectDebitFee
 
 <table>
 <thead>
@@ -1378,7 +1378,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-### PageInfo
+#### PageInfo
 
 <table>
 <thead>
@@ -1413,7 +1413,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-### SepaTransfer
+#### SepaTransfer
 
 <table>
 <thead>
@@ -1487,7 +1487,7 @@ The end to end ID of the SEPA Transfer
 </tbody>
 </table>
 
-### Subscription
+#### Subscription
 
 <table>
 <thead>
@@ -1507,7 +1507,7 @@ The end to end ID of the SEPA Transfer
 </tbody>
 </table>
 
-### SystemStatus
+#### SystemStatus
 
 <table>
 <thead>
@@ -1532,7 +1532,7 @@ The end to end ID of the SEPA Transfer
 </tbody>
 </table>
 
-### Transaction
+#### Transaction
 
 <table>
 <thead>
@@ -1668,7 +1668,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
-### TransactionFee
+#### TransactionFee
 
 <table>
 <thead>
@@ -1703,7 +1703,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
-### TransactionsConnection
+#### TransactionsConnection
 
 <table>
 <thead>
@@ -1728,7 +1728,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
-### TransactionsConnectionEdge
+#### TransactionsConnectionEdge
 
 <table>
 <thead>
@@ -1753,7 +1753,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
-### Transfer
+#### Transfer
 
 <table>
 <thead>
@@ -1863,7 +1863,7 @@ The date at which the next payment will be executed for Standing Orders
 </tbody>
 </table>
 
-### TransferSuggestion
+#### TransferSuggestion
 
 <table>
 <thead>
@@ -1888,7 +1888,7 @@ The date at which the next payment will be executed for Standing Orders
 </tbody>
 </table>
 
-### TransfersConnection
+#### TransfersConnection
 
 <table>
 <thead>
@@ -1913,7 +1913,7 @@ The date at which the next payment will be executed for Standing Orders
 </tbody>
 </table>
 
-### TransfersConnectionEdge
+#### TransfersConnectionEdge
 
 <table>
 <thead>
@@ -1938,7 +1938,7 @@ The date at which the next payment will be executed for Standing Orders
 </tbody>
 </table>
 
-### User
+#### User
 
 <table>
 <thead>
@@ -2164,7 +2164,7 @@ The details of an existing OAuth2 client
 </tbody>
 </table>
 
-### WhitelistCardResponse
+#### WhitelistCardResponse
 
 <table>
 <thead>
@@ -2194,9 +2194,9 @@ The details of an existing OAuth2 client
 </tbody>
 </table>
 
-## Inputs
+### Inputs
 
-### CardFilter
+#### CardFilter
 
 <table>
 <thead>
@@ -2220,7 +2220,7 @@ The details of an existing OAuth2 client
 </tbody>
 </table>
 
-### CardLimitInput
+#### CardLimitInput
 
 <table>
 <thead>
@@ -2244,7 +2244,7 @@ The details of an existing OAuth2 client
 </tbody>
 </table>
 
-### CardLimitsInput
+#### CardLimitsInput
 
 <table>
 <thead>
@@ -2268,7 +2268,7 @@ The details of an existing OAuth2 client
 </tbody>
 </table>
 
-### CardSettingsInput
+#### CardSettingsInput
 
 <table>
 <thead>
@@ -2297,7 +2297,7 @@ The details of an existing OAuth2 client
 </tbody>
 </table>
 
-### CreateClientInput
+#### CreateClientInput
 
 The available fields to create an OAuth2 client
 
@@ -2358,7 +2358,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-### CreateSepaTransferInput
+#### CreateSepaTransferInput
 
 The available fields to create a SEPA Transfer
 
@@ -2419,7 +2419,7 @@ The end to end ID of the SEPA Transfer
 </tbody>
 </table>
 
-### CreateTransferInput
+#### CreateTransferInput
 
 The available fields to create a transfer
 
@@ -2507,7 +2507,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### TransfersConnectionFilter
+#### TransfersConnectionFilter
 
 <table>
 <thead>
@@ -2526,7 +2526,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### UpdateClientInput
+#### UpdateClientInput
 
 The available fields to update an OAuth2 client
 
@@ -2596,7 +2596,7 @@ The id of the OAuth2 client to update
 </tbody>
 </table>
 
-### UpdateTransferInput
+#### UpdateTransferInput
 
 The available fields to update a Standing Order
 
@@ -2675,9 +2675,9 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-## Enums
+### Enums
 
-### BatchTransferStatus
+#### BatchTransferStatus
 
 <table>
 <thead>
@@ -2708,7 +2708,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### CardAction
+#### CardAction
 
 <table>
 <thead>
@@ -2731,7 +2731,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### CardStatus
+#### CardStatus
 
 <table>
 <thead>
@@ -2774,7 +2774,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### CardType
+#### CardType
 
 <table>
 <thead>
@@ -2805,7 +2805,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### CompanyType
+#### CompanyType
 
 <table>
 <thead>
@@ -2872,7 +2872,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### DocumentType
+#### DocumentType
 
 <table>
 <thead>
@@ -2891,7 +2891,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### Gender
+#### Gender
 
 <table>
 <thead>
@@ -2910,7 +2910,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### GrantType
+#### GrantType
 
 <table>
 <thead>
@@ -2937,7 +2937,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### IdentificationStatus
+#### IdentificationStatus
 
 <table>
 <thead>
@@ -2984,7 +2984,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### InvoiceStatus
+#### InvoiceStatus
 
 <table>
 <thead>
@@ -3011,7 +3011,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### Nationality
+#### Nationality
 
 <table>
 <thead>
@@ -4014,7 +4014,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### PaymentFrequency
+#### PaymentFrequency
 
 <table>
 <thead>
@@ -4041,7 +4041,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### ScopeType
+#### ScopeType
 
 <table>
 <thead>
@@ -4088,7 +4088,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### SepaTransferStatus
+#### SepaTransferStatus
 
 <table>
 <thead>
@@ -4115,7 +4115,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### StandingOrderReoccurenceType
+#### StandingOrderReoccurenceType
 
 <table>
 <thead>
@@ -4142,7 +4142,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### Status
+#### Status
 
 <table>
 <thead>
@@ -4157,7 +4157,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### TransactionCategory
+#### TransactionCategory
 
 <table>
 <thead>
@@ -4204,7 +4204,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### TransactionFeeStatus
+#### TransactionFeeStatus
 
 <table>
 <thead>
@@ -4235,7 +4235,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### TransactionFeeType
+#### TransactionFeeType
 
 <table>
 <thead>
@@ -4266,7 +4266,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### TransactionProjectionType
+#### TransactionProjectionType
 
 <table>
 <thead>
@@ -4393,7 +4393,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### TransferStatus
+#### TransferStatus
 
 <table>
 <thead>
@@ -4452,7 +4452,7 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-### TransferType
+#### TransferType
 
 <table>
 <thead>
@@ -4475,29 +4475,29 @@ The reoccurrence type of the payments for Standing Orders
 </tbody>
 </table>
 
-## Scalars
+### Scalars
 
-### Boolean
+#### Boolean
 
 The `Boolean` scalar type represents `true` or `false`.
 
-### DateTime
+#### DateTime
 
 The javascript `Date` as string. Type represents date and time as the ISO Date string.
 
-### Float
+#### Float
 
 The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
 
-### ID
+#### ID
 
 The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
 
-### Int
+#### Int
 
 The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
 
-### String
+#### String
 
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
 
