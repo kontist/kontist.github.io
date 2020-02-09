@@ -428,7 +428,7 @@ mutation {
 ```
 
 
-## GraphQL Models
+## Schema Reference
 
 <!-- START graphql-markdown -->
 
