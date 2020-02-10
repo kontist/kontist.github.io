@@ -23,6 +23,23 @@ In general, the process looks like this:
 2. The user is required to login and needs to accept your application's authorization request. The browser redirects back to your application with a `code` parameter.
 3. Your application can then exchange this `code` together with the `client_secret` into an `access_token` through a backend request to our API.
 
+<div class="mermaid">
+sequenceDiagram
+    participant Your App
+    participant Kontist API
+    participant User
+    
+    Note over Your App,User: Request via GET (Browser)
+    Your App->>Kontist API: Authorization Request
+    Kontist API->>User: Login mask
+    User->>Kontist API: Username, Password, MFA
+    Kontist API->>Your App: Code
+    
+    Note over Your App, Kontist API: Request via POST (Server)
+    Your App->>Kontist API: Code + Client Secret
+    Kontist API->>Your App: Access Token (+ Refresh Token)
+</div>
+
 Let us go through the process step by step. At first we need to send the user to a special url in the browser:
 
 `https://api.kontist.com/api/oauth/authorize?scope=offline&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE`
@@ -123,6 +140,23 @@ The standarad [Authorization Code](#authorization-code) flow uses client secrets
 
 For these environments, we can use the Proof Key for Code Exchange (PKCE) extension for the Authorization Code flow.
 
+<div class="mermaid">
+sequenceDiagram
+    participant Your App
+    participant Kontist API
+    participant User
+    
+    Note over Your App: Build verifier <br>and challenge
+    Your App->>Kontist API: Authorization Request (includes challenge)
+    Kontist API->>User: Login mask
+    User->>Kontist API: Username, Password, MFA
+    Kontist API->>Your App: Code
+    
+    Your App->>Kontist API: Code + verifier (POST Request)
+    Note over Kontist API: Validate challenge <br>with verifier
+    Kontist API->>Your App: Access Token
+</div>
+
 The PKCE-enhanced Authorization Code flow is very similar to the standard Authorization Code flow and uses a concept of Code Verifier which we will have to generate client side. This code verifier will be hashed and sent as a `code_challenge` parameter to the `/authorize` endpoint, and then sent in plain along with the authorization code when requesting the access token.
 
 To generate the code verifier, it is recommended to use the output of a random number generator.
@@ -215,10 +249,10 @@ To work around this issue, we can use the web message response type by following
 ```
 2. Create an iframe and set its source to the authorization url, specifying `response_mode=web_message`:
 ```javascript
-  const iframe = document.createElement("iframe");
-  iframe.style.display = "none";
-  document.body.appendChild(iframe);
-  iframe.src = "https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w&prompt=none&response_mode=web_message"
+const iframe = document.createElement("iframe");
+iframe.style.display = "none";
+document.body.appendChild(iframe);
+iframe.src = "https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w&prompt=none&response_mode=web_message"
 ```
 3. The server will then send a web message with the new authorization code that we can use to get a new access token
 
@@ -227,6 +261,28 @@ To work around this issue, we can use the web message response type by following
 To have access to Kontist API endpoints that require strong customer authentication, you need to pass Multi-Factor Authentication (MFA).
 
 We provide a simplified push notification MFA flow for users who have installed the Kontist Application and paired their device in it.
+
+<div class="mermaid">
+sequenceDiagram
+    participant Your App
+    participant Kontist API
+    participant User
+    
+    Your App->>Kontist API: Create Challenge
+    Kontist API->>Your App: Challenge ID
+    Kontist API->>+User: MFA Request
+
+    loop Poll
+      Your App->>Kontist API: Get challenge status
+      Kontist API->>Your App: PENDING
+    end
+
+    User->>-Kontist API: Confirm MFA
+    Kontist API->>Your App: VERIFIED
+
+    Your App->>Kontist API: Get Token
+    Kontist API->>Your App: Access Token
+</div>
 
 #### Creating a challenge
 
@@ -422,6 +478,22 @@ Result:
 ### Create a new transfer
 
 Creating transfers consist of two steps. First the transfer is created with `createTransfer` which will return the `confirmationId` of the new transfer. Then we send a SMS to the user that contains a code and we need to call `confirmTransfer`.
+
+
+<div class="mermaid">
+sequenceDiagram
+    participant Your App
+    participant Kontist API
+    participant User
+    
+    Your App->>Kontist API: createTransfer
+    Kontist API->>Your App: confirmationId
+    Kontist API->>User: SMS with code
+
+    User->>Your App: Code from SMS
+
+    Your App->>Kontist API: confirmTransfer (with confirmationId, code)
+</div>
 
 #### 1. Step - add a new transfer
 
