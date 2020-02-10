@@ -37,7 +37,7 @@ Adjust the parameters like this:
 | redirect_uri  | This is your application's callback url which is bound to your client id.                                            |
 | state         | Can be used to verify our response. You can put in anything here and we will send it back to your application later. |
 
-#### Response case 1: The user denied giving access to your application:
+*Response case 1: The user denied giving access to your application:*
 
 The browser is being redirected to your url with an error parameter attached.
 
@@ -45,7 +45,7 @@ The browser is being redirected to your url with an error parameter attached.
 
 Your application might then inform the user that you can not continue without granting access.
 
-#### Response case 2: The user accepted giving access to your application:
+*Response case 2: The user accepted giving access to your application:*
 
 The browser is being redirected to your url with a code parameter attached.
 
@@ -179,7 +179,7 @@ curl https://api.kontist.com/api/oauth/token \
 The above restriction does not apply if you are using a custom scheme for your application (and thus for your `redirect_uri`, e.g. `my-app://callback-uri`).
 
 
-### Renewing access tokens with PKCE
+### Refresh with PKCE
 
 As you will not get refresh tokens when using the PKCE authorization method, you can use an alternative method leveraging session cookies.
 
@@ -199,7 +199,7 @@ https://api.kontist.com/api/oauth/authorize
 
 The user will be redirected directly to your application with a new authorization code that you can use to request a new access token.
 
-#### Renewing access token with Web Message Response Mode
+### Web Message Response Mode
 
 While the above method will work for Single Page Applications (SPA), it has the downside of doing redirects, and SPA client application state will be lost.
 
