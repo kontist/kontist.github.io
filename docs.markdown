@@ -2004,7 +2004,7 @@ The user's IDNow identification status
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-The user's IDNow identification status
+The link to use for IDNow identification
 
 </td>
 </tr>
