@@ -430,7 +430,7 @@ mutation {
   createTransfer(
     transfer: { iban: "DE1234....", recipient: "Johnny Cash", amount: 1234 }
   ) {
-    id
+    confirmationId
   }
 }
 ```
