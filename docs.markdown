@@ -266,18 +266,22 @@ We provide a simplified push notification MFA flow for users who have installed 
 sequenceDiagram
     participant Your App
     participant Kontist API
-    participant User
+    participant Kontist App
     
     Your App->>Kontist API: Create Challenge
     Kontist API->>Your App: Challenge ID
-    Kontist API->>+User: MFA Request
+    Kontist API->>+Kontist App: MFA Request
 
     loop Poll
       Your App->>Kontist API: Get challenge status
       Kontist API->>Your App: PENDING
     end
 
-    User->>-Kontist API: Confirm MFA
+    Note over Kontist App: User clicks "confirm"
+
+    Kontist App->>-Kontist API: MFA Confirmation
+
+    Your App->>Kontist API: Get challenge status
     Kontist API->>Your App: VERIFIED
 
     Your App->>Kontist API: Get Token
