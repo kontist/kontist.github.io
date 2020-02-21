@@ -670,16 +670,16 @@ const suggestions = await client.models.transfer.suggestions();
 `suggestions` will be an array of IBAN / Name suggestions:
 
 ```javascript
- [
-    {
-      name: "Example Suggestion 1",
-      iban: "DE18512428000000060367"
-    },
-    {
-      name: "Example Suggestion 2",
-      iban: "DE58112428000000060367"
-    }
-  ];
+[
+  {
+    name: "Example Suggestion 1",
+    iban: "DE18512428000000060367"
+  },
+  {
+    name: "Example Suggestion 2",
+    iban: "DE58112428000000060367"
+  }
+]
 ```
 
 ### Plain GraphQL requests
