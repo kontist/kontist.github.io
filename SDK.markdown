@@ -381,6 +381,39 @@ for await (const transaction of client.models.transaction.fetchAll()) {
 }
 ```
 
+### Transactions search
+
+If you want to provide search functionality for your users' transactions, you can use:
+
+```typescript
+const result = await client.models.transaction.search(userInput);
+```
+
+`result` will have the same structure as the fetch method, returning only the transactions that match the user's input (up to 50 maximum):
+```typescript
+{
+  items: [
+    {
+      id: "08995f8f-1f87-42ab-80d2-6e73a3db40e8",
+      amount: 4711,
+      ...
+    }
+    // ...
+  ];
+}
+```
+
+Filtering will be done by looking at each word in the user's input, and look for matches for name (sender/receiver), iban, purpose (reference) and amount (when applicable) fields, and return only matching transactions.
+
+For example:
+```typescript
+const result = await client.models.transaction.search("DE123456 Paypal 42");
+```
+
+Will return all transactions which have iban containing "DE123456", or name containing "Paypal", or purpose containing "Paypal", or amount equal to 42€, or amount equal to -42€.
+
+*Note:* Under the hood, it just uses the `filter` argument of the fetch method with a predefined set of generic filters covering the most common use case.
+
 ### Categorize a transaction
 
 Transactions can be categorized using:
