@@ -672,7 +672,7 @@ Create a transfer. The transfer's type will be determined based on the provided 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>updateTransfer</strong></td>
-<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1941,6 +1941,24 @@ The date at which the next payment will be executed for Standing Orders
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The user selected category for the SEPA Transfer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2585,6 +2603,24 @@ The reoccurrence type of the payments for Standing Orders
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td>
+
+The user selected category for the SEPA Transfer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2992,7 +3028,7 @@ The id of the OAuth2 client to update
 
 #### UpdateTransferInput
 
-The available fields to update a Standing Order
+The available fields to update a transfer
 
 <table>
 <thead>
@@ -3008,7 +3044,7 @@ The available fields to update a Standing Order
 <td valign="top"><a href="#string">String</a>!</td>
 <td>
 
-The ID of the Standing Order to update
+The ID of the transfer to update
 
 </td>
 </tr>
@@ -3023,10 +3059,10 @@ The type of transfer to update, currently only Standing Orders are supported
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
+<td valign="top"><a href="#int">Int</a></td>
 <td>
 
-The amount of each Standing Order payment in cents
+The amount of the Standing Order payment in cents
 
 </td>
 </tr>
@@ -3063,6 +3099,24 @@ The end to end ID of the Standing Order, if not specified with the update, it wi
 <td>
 
 The reoccurrence type of the payments for Standing Orders
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td>
+
+The user selected category for the SEPA Transfer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
 
 </td>
 </tr>
