@@ -515,7 +515,7 @@ mutation {
 
 ```graphql
 mutation {
-  confirmTransfer(transferId: "1234", authorizationToken: "4567") {
+  confirmTransfer(confirmationId: "1234", authorizationToken: "4567") {
     id
     recipient
   }
