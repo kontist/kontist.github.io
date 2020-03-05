@@ -657,6 +657,20 @@ Delete an OAuth2 client
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateTaxYearSettings</strong></td>
+<td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
+<td>
+
+Update individual tax-related settings per year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">taxYearSettings</td>
+<td valign="top">[<a href="#taxyearsettinginput">TaxYearSettingInput</a>!]!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
 <td>
@@ -918,6 +932,20 @@ Close and order new card. Call when customer's card is damaged
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>setCardHolderRepresentation</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Set the card holder representation for the customer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">cardHolderRepresentation</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>categorizeTransaction</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td>
@@ -1105,6 +1133,15 @@ The cursor of the item to start from. Use in conjunction with 'last'
 <td colspan="2" align="right" valign="top">type</td>
 <td valign="top"><a href="#transfertype">TransferType</a>!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxYearSettings</strong></td>
+<td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
+<td>
+
+Individual tax-related settings per year
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transferSuggestions</strong></td>
@@ -1609,6 +1646,48 @@ The end to end ID of the SEPA Transfer
 <td colspan="2" valign="top"><strong>message</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
+</tr>
+</tbody>
+</table>
+
+#### TaxYearSetting
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Tax year the individual settings apply to
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxRate</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+
+Tax rate that should be applied in the corresponding year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>excluded</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Flag if the corresponding year should be excluded from the tax calculations completely
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -2618,6 +2697,47 @@ The user selected category for the SEPA Transfer
 <td>
 
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### TaxYearSettingInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Tax year the individual settings apply to
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxRate</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+
+Tax rate that should be applied in the corresponding year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>excluded</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Flag if the corresponding year should be excluded from the tax calculations completely
 
 </td>
 </tr>
