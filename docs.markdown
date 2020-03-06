@@ -4684,10 +4684,6 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </thead>
 <tbody>
 <tr>
-<td valign="top"><strong>CREATED</strong></td>
-<td></td>
-</tr>
-<tr>
 <td valign="top"><strong>AUTHORIZED</strong></td>
 <td></td>
 </tr>
@@ -4989,10 +4985,6 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </thead>
 <tbody>
 <tr>
-<td valign="top"><strong>CREATED</strong></td>
-<td></td>
-</tr>
-<tr>
 <td valign="top"><strong>AUTHORIZED</strong></td>
 <td></td>
 </tr>
@@ -5002,6 +4994,10 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>BOOKED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CREATED</strong></td>
 <td></td>
 </tr>
 <tr>
