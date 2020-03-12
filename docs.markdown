@@ -4789,6 +4789,14 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <td valign="top"><strong>VAT_REFUND</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>VAT_SAVING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_SAVING</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
