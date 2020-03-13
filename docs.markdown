@@ -2027,7 +2027,7 @@ The date at which the next payment will be executed for Standing Orders
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#string">String</a></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td>
 
 The user selected category for the SEPA Transfer
