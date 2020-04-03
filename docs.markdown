@@ -973,6 +973,15 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
+<td>
+
+Create Overdraft Application
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1166,6 +1175,15 @@ A list of iban/name combinations based on existing user's transactions, provided
 <td colspan="2" align="right" valign="top">filter</td>
 <td valign="top"><a href="#cardfilter">CardFilter</a></td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>overdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
+<td>
+
+Overdraft Application
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -1497,6 +1515,44 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td colspan="2" valign="top"><strong>invoiceStatus</strong></td>
 <td valign="top"><a href="#invoicestatus">InvoiceStatus</a>!</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+
+#### Overdraft
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#overdraftapplicationstatus">OverdraftApplicationStatus</a>!</td>
+<td>
+
+Overdraft status
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>limit</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+
+Available overdraft limit
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -4706,6 +4762,45 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
+#### OverdraftApplicationStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>CREATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INITIAL_SCORING_PENDING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACCOUNT_SNAPSHOT_PENDING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACCOUNT_SNAPSHOT_VERIFICATION_PENDING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OFFERED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REJECTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OVERDRAFT_CREATED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### PaymentFrequency
 
 <table>
@@ -4775,6 +4870,10 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>CLIENTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OVERDRAFT</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -5084,6 +5183,14 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>CARD_TRANSACTION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INTEREST_ACCRUED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CANCELLATION_INTEREST_ACCRUED</strong></td>
 <td></td>
 </tr>
 </tbody>
