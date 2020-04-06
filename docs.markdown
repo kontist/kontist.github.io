@@ -978,7 +978,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
 
-Create Overdraft Application
+Create Overdraft Application  - only available for Kontist Application
 
 </td>
 </tr>
@@ -1181,7 +1181,7 @@ A list of iban/name combinations based on existing user's transactions, provided
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
 
-Overdraft Application
+Overdraft Application - only available for Kontist Application
 
 </td>
 </tr>
@@ -1816,7 +1816,11 @@ The date at which the transaction was processed and the amount deducted from the
 <tr>
 <td colspan="2" valign="top"><strong>splits</strong></td>
 <td valign="top">[<a href="#transactionsplit">TransactionSplit</a>!]!</td>
-<td></td>
+<td>
+
+Metadata of separate pseudo-transactions created when splitting the parent transaction
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>bookingDate</strong></td>
@@ -1958,7 +1962,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 </tbody>
