@@ -755,6 +755,20 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateSubscriptionPlan</strong></td>
+<td valign="top"><a href="#updatesubscriptionplanresult">UpdateSubscriptionPlanResult</a>!</td>
+<td>
+
+Update user's subscription plan
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">newPlan</td>
+<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>whitelistCard</strong></td>
 <td valign="top"><a href="#whitelistcardresponse">WhitelistCardResponse</a>!</td>
 <td></td>
@@ -2216,6 +2230,46 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>cursor</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UpdateSubscriptionPlanResult
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>newPlan</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>previousPlans</strong></td>
+<td valign="top">[<a href="#purchasetype">PurchaseType</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasOrderedPhysicalCard</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateActiveAt</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasCanceledDowngrade</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -4827,6 +4881,37 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>NONE</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### PurchaseType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>BASIC_INITIAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BASIC</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PREMIUM</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CARD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LEXOFFICE</strong></td>
 <td></td>
 </tr>
 </tbody>
