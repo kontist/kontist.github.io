@@ -996,6 +996,16 @@ Create Overdraft Application  - only available for Kontist Application
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>dismissBanner</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#bannername">BannerName</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -1528,6 +1538,26 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>invoiceStatus</strong></td>
 <td valign="top"><a href="#invoicestatus">InvoiceStatus</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### MutationResult
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>success</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -3463,6 +3493,21 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </table>
 
 ### Enums
+
+#### BannerName
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>OVERDRAFT</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 #### BaseOperator
 
