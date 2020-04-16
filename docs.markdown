@@ -997,58 +997,6 @@ Create Overdraft Application  - only available for Kontist Application
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>createTransactionSplits</strong></td>
-<td valign="top"><a href="#transaction">Transaction</a>!</td>
-<td>
-
-Create transaction splits
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">splits</td>
-<td valign="top">[<a href="#createtransactionsplitsinput">CreateTransactionSplitsInput</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateTransactionSplits</strong></td>
-<td valign="top"><a href="#transaction">Transaction</a>!</td>
-<td>
-
-Update transaction splits
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">splits</td>
-<td valign="top">[<a href="#updatetransactionsplitsinput">UpdateTransactionSplitsInput</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteTransactionSplits</strong></td>
-<td valign="top"><a href="#transaction">Transaction</a>!</td>
-<td>
-
-Delete transaction splits
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>dismissBanner</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
@@ -2838,35 +2786,6 @@ The end to end ID of the SEPA Transfer
 </tbody>
 </table>
 
-#### CreateTransactionSplitsInput
-
-<table>
-<thead>
-<tr>
-<th colspan="2" align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
 #### CreateTransferInput
 
 The available fields to create a transfer
@@ -3472,40 +3391,6 @@ The scopes the client has access to, limiting access to the corresponding parts 
 The id of the OAuth2 client to update
 
 </td>
-</tr>
-</tbody>
-</table>
-
-#### UpdateTransactionSplitsInput
-
-<table>
-<thead>
-<tr>
-<th colspan="2" align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>
