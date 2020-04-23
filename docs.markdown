@@ -1220,6 +1220,15 @@ The cursor of the item to start from. Use in conjunction with 'last'
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>stats</strong></td>
+<td valign="top"><a href="#accountstats">AccountStats</a>!</td>
+<td>
+
+Different information about account balances, e.g. taxes, VAT, ...
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>taxYearSettings</strong></td>
 <td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
 <td>
@@ -1258,6 +1267,120 @@ A list of iban/name combinations based on existing user's transactions, provided
 <td>
 
 Overdraft Application - only available for Kontist Application
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### AccountStats
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>accountBalance</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount that is currently available on the bank account
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>yours</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount that can be spent after VAT and taxes calculation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>unknown</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount that is not categorized
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>main</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount that can be spent plus the amount from uknown
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatTotal</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount of VAT that is owed (current + last years)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatAmount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount of VAT that is owed in the current year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatMissing</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The difference between vatTotal and accountBalance, if vatTotal > accountBalance
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxTotal</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount of tax that is owed (current + last years)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxCurrentYearAmount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount of tax that is owed in the current year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxPastYearAmount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+
+The amount of tax that was owed last year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxMissing</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 
 </td>
 </tr>
