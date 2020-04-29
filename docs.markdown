@@ -591,7 +591,7 @@ Cancel an existing Timed Order or Standing Order
 <td valign="top"><a href="#transfer">Transfer</a>!</td>
 <td>
 
-Confirm a Standing Order cancelation
+Confirm a Standing Order cancellation
 
 </td>
 </tr>
@@ -993,6 +993,15 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <td>
 
 Create Overdraft Application  - only available for Kontist Application
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>activateOverdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
+<td>
+
+Activate Overdraft Application  - only available for Kontist Application
 
 </td>
 </tr>
@@ -2328,7 +2337,7 @@ The end to end ID of the transfer
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>reoccurrence</strong></td>
-<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
+<td valign="top"><a href="#standingorderreoccurrencetype">StandingOrderReoccurrenceType</a></td>
 <td>
 
 The reoccurrence type of the payments for Standing Orders
@@ -3068,7 +3077,7 @@ The end to end ID of the transfer
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>reoccurrence</strong></td>
-<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
+<td valign="top"><a href="#standingorderreoccurrencetype">StandingOrderReoccurrenceType</a></td>
 <td>
 
 The reoccurrence type of the payments for Standing Orders
@@ -3702,7 +3711,7 @@ The end to end ID of the Standing Order, if not specified with the update, it wi
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>reoccurrence</strong></td>
-<td valign="top"><a href="#standingorderreoccurencetype">StandingOrderReoccurenceType</a></td>
+<td valign="top"><a href="#standingorderreoccurrencetype">StandingOrderReoccurrenceType</a></td>
 <td>
 
 The reoccurrence type of the payments for Standing Orders
@@ -5274,7 +5283,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
-#### StandingOrderReoccurenceType
+#### StandingOrderReoccurrenceType
 
 <table>
 <thead>
