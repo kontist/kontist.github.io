@@ -53,6 +53,7 @@ Adjust the parameters like this:
 | client_id     | This is your client id you got from us. Do not include the secret here.                                              |
 | redirect_uri  | This is your application's callback url which is bound to your client id.                                            |
 | state         | Can be used to verify our response. You can put in anything here and we will send it back to your application later. |
+| skip_mfa         | Optional, defaults to false. If you skip the MFA process during login you need to do it later manually before you can access most parts of the API.|
 
 *Response case 1: The user denied giving access to your application:*
 
