@@ -837,6 +837,54 @@ Activate a card
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>addGooglePayCardToken</strong></td>
+<td valign="top"><a href="#googlepaycardtoken">GooglePayCardToken</a>!</td>
+<td>
+
+Adds Google Pay card token reference id for given wallet id
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">tokenRefId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">walletId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteGooglePayCardToken</strong></td>
+<td valign="top"><a href="#googlepaycardtoken">GooglePayCardToken</a>!</td>
+<td>
+
+Deletes Google Pay card token reference id for given wallet id
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">tokenRefId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">walletId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateCardSettings</strong></td>
 <td valign="top"><a href="#cardsettings">CardSettings</a>!</td>
 <td>
@@ -1478,6 +1526,11 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <td valign="top"><a href="#cardsettings">CardSettings</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>googlePayTokens</strong></td>
+<td valign="top">[<a href="#googlepaycardtoken">GooglePayCardToken</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -1722,6 +1775,31 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>invoiceStatus</strong></td>
 <td valign="top"><a href="#invoicestatus">InvoiceStatus</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### GooglePayCardToken
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>walletId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>tokenRefId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
