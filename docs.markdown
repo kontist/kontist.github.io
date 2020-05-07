@@ -756,20 +756,6 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>updateSubscriptionPlan</strong></td>
-<td valign="top"><a href="#updatesubscriptionplanresult">UpdateSubscriptionPlanResult</a>!</td>
-<td>
-
-Update user's subscription plan
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">newPlan</td>
-<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>whitelistCard</strong></td>
 <td valign="top"><a href="#whitelistcardresponse">WhitelistCardResponse</a>!</td>
 <td></td>
@@ -1107,6 +1093,34 @@ Delete transaction splits
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>subscribeToPlan</strong></td>
+<td valign="top"><a href="#usersubscription">UserSubscription</a>!</td>
+<td>
+
+Subscribe user to a plan
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateSubscriptionPlan</strong></td>
+<td valign="top"><a href="#updatesubscriptionplanresult">UpdateSubscriptionPlanResult</a>!</td>
+<td>
+
+Update user's subscription plan
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">newPlan</td>
+<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>dismissBanner</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
@@ -1148,6 +1162,11 @@ The bank account of the current user
 <tr>
 <td colspan="2" valign="top"><strong>balance</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>canCreateOverdraft</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1328,6 +1347,21 @@ Overdraft Application - only available for Kontist Application
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>wirecard</strong> ⚠️</td>
+<td valign="top"><a href="#wirecarddetails">WirecardDetails</a>!</td>
+<td>
+
+Wirecard details
+
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This data will be removed in an upcoming release. Do not use it for any new features.
+
+</blockquote>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -1441,6 +1475,61 @@ The amount of tax that was owed last year
 The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### AvailableStatements
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>months</strong></td>
+<td valign="top">[<a href="#int">Int</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### Banner
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#bannername">BannerName</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dismissedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isVisible</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1806,6 +1895,98 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### Icon
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>uri</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### IdentificationDetails
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>link</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The link to use for IDNow identification
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#identificationstatus">IdentificationStatus</a></td>
+<td>
+
+The user's IDNow identification status
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>attempts</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The number of identifications attempted by the user
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Money
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fullAmount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>discountPercentage</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### MutationResult
 
 <table>
@@ -1899,6 +2080,40 @@ Available overdraft limit
 </tbody>
 </table>
 
+#### ReferralDetails
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>code</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>link</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bonusAmount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Amount in euros granted to user and his referee
+
+</td>
+</tr>
+</tbody>
+</table>
+
 #### SepaTransfer
 
 <table>
@@ -1988,6 +2203,116 @@ The end to end ID of the SEPA Transfer
 <tr>
 <td colspan="2" valign="top"><strong>newTransaction</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### SubscriptionFeature
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>title</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>icon</strong></td>
+<td valign="top"><a href="#icon">Icon</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### SubscriptionFeatureGroup
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>title</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>icon</strong></td>
+<td valign="top"><a href="#icon">Icon</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>features</strong></td>
+<td valign="top">[<a href="#subscriptionfeature">SubscriptionFeature</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### SubscriptionPlan
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>subtitle</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fee</strong></td>
+<td valign="top"><a href="#money">Money</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>title</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>button</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>featuresToggleLabel</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>featureGroups</strong></td>
+<td valign="top">[<a href="#subscriptionfeaturegroup">SubscriptionFeatureGroup</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -2586,56 +2911,117 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td colspan="2" valign="top"><strong>createdAt</strong> ⚠️</td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>vatCutoffLine</strong></td>
+<td colspan="2" valign="top"><strong>vatCutoffLine</strong> ⚠️</td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>taxCutoffLine</strong></td>
+<td colspan="2" valign="top"><strong>taxCutoffLine</strong> ⚠️</td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>vatPaymentFrequency</strong></td>
+<td colspan="2" valign="top"><strong>vatPaymentFrequency</strong> ⚠️</td>
 <td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.vatPaymentFrequency"
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>taxPaymentFrequency</strong></td>
-<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
-<td></td>
+<td colspan="2" valign="top"><strong>taxPaymentFrequency</strong> ⚠️</td>
+<td valign="top"><a href="#taxpaymentfrequency">TaxPaymentFrequency</a></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.taxPaymentFrequency"
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>taxRate</strong></td>
+<td colspan="2" valign="top"><strong>taxRate</strong> ⚠️</td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.taxRate"
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td colspan="2" valign="top"><strong>vatRate</strong> ⚠️</td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.vatRate"
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>identificationStatus</strong></td>
+<td colspan="2" valign="top"><strong>identificationStatus</strong> ⚠️</td>
 <td valign="top"><a href="#identificationstatus">IdentificationStatus</a></td>
 <td>
 
 The user's IDNow identification status
 
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.identification.status"
+
+</blockquote>
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>identificationLink</strong></td>
+<td colspan="2" valign="top"><strong>identificationLink</strong> ⚠️</td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
 The link to use for IDNow identification
 
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.identification.link"
+
+</blockquote>
 </td>
 </tr>
 <tr>
@@ -2750,18 +3136,45 @@ Business economic sector provided by the user
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>vatNumber</strong></td>
+<td colspan="2" valign="top"><strong>vatNumber</strong> ⚠️</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.vatNumber"
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>referralCode</strong></td>
+<td colspan="2" valign="top"><strong>referralCode</strong> ⚠️</td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
 The user's referral code to use for promotional purposes
 
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.referral.code"
+
+</blockquote>
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>accountState</strong></td>
+<td valign="top"><a href="#accountstate">AccountState</a></td>
+<td>
+
+The current state of user's Kontist account based on his subscription plan
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessTradingName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
@@ -2789,6 +3202,304 @@ The details of an existing OAuth2 client
 <tr>
 <td colspan="2" valign="top"><strong>mainAccount</strong></td>
 <td valign="top"><a href="#account">Account</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>subscriptions</strong></td>
+<td valign="top">[<a href="#usersubscription">UserSubscription</a>!]!</td>
+<td>
+
+The plans a user has subscribed to
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>banners</strong></td>
+<td valign="top">[<a href="#banner">Banner</a>!]</td>
+<td>
+
+The state of banners in Kontist App for the user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>integrations</strong></td>
+<td valign="top">[<a href="#userintegration">UserIntegration</a>!]!</td>
+<td>
+
+Bookkeeping partners information for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>availablePlans</strong></td>
+<td valign="top">[<a href="#subscriptionplan">SubscriptionPlan</a>!]!</td>
+<td>
+
+Information about the plans a user can subscribe to
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxDetails</strong></td>
+<td valign="top"><a href="#usertaxdetails">UserTaxDetails</a>!</td>
+<td>
+
+Tax details for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>features</strong></td>
+<td valign="top">[<a href="#string">String</a>!]!</td>
+<td>
+
+Active user features
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>referral</strong></td>
+<td valign="top"><a href="#referraldetails">ReferralDetails</a>!</td>
+<td>
+
+Referral details for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>identification</strong></td>
+<td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
+<td>
+
+IDNow identification details for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>metadata</strong></td>
+<td valign="top"><a href="#usermetadata">UserMetadata</a>!</td>
+<td>
+
+User metadata. These fields are likely to get frequently updated or changed.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">os</td>
+<td valign="top"><a href="#useros">UserOS</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserIntegration
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#integrationtype">IntegrationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasAccount</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isConnected</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserMetadata
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>currentTermsAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>acceptedTermsVersion</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>availableStatements</strong></td>
+<td valign="top">[<a href="#availablestatements">AvailableStatements</a>!]</td>
+<td>
+
+List of months user can request a bank statement for
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isAccountClosed</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Is user's Kontist account closed
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardMigrationStatus</strong></td>
+<td valign="top"><a href="#cardmigrationstatus">CardMigrationStatus</a>!</td>
+<td>
+
+User status for VISA card migration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>currentTermsVersion</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>intercomDigest</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>directDebitMandateAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>marketingConsentAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>phoneNumberVerificationRequired</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>signupCompleted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserSubscription
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
+<td>
+
+The type of the plans a user has subscribed to
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>state</strong></td>
+<td valign="top"><a href="#purchasestate">PurchaseState</a>!</td>
+<td>
+
+The state of the subscription
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### UserTaxDetails
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>adjustAdvancePayments</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastTaxPaymentDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastVatPaymentDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatPaymentFrequency</strong></td>
+<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxPaymentFrequency</strong> ⚠️</td>
+<td valign="top"><a href="#taxpaymentfrequency">TaxPaymentFrequency</a></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release, do not rely on it for any new code
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxRate</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>needsToProvideTaxIdentification</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -2819,6 +3530,41 @@ The details of an existing OAuth2 client
 <tr>
 <td colspan="2" valign="top"><strong>whitelisted_until</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### WirecardDetails
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>cardStatus</strong></td>
+<td valign="top"><a href="#wirecardcardstatus">WirecardCardStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>directDebitMandateAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasAccount</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>plasticCardOrderedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -3820,6 +4566,41 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 
 ### Enums
 
+#### AccountState
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>FREE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TRIAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PREMIUM</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BLOCKED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FREE_OLD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PREMIUM_OLD</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### BannerName
 
 <table>
@@ -3830,6 +4611,14 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tbody>
 <tr>
 <td valign="top"><strong>OVERDRAFT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BOOKKEEPING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FRIEND_REFERRAL</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -3903,6 +4692,41 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>UNBLOCK</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CardMigrationStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REQUESTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REQUESTED_AND_LOCKED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REQUESTED_AND_CLOSED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>COMPLETED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NOT_REQUIRED</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -4156,6 +4980,29 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>CANCELED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### IntegrationType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>LEXOFFICE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DEBITOOR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FASTBILL</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -5257,6 +6104,25 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
+#### PurchaseState
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PROCESSED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PENDING</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### PurchaseType
 
 <table>
@@ -5336,6 +6202,10 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <td valign="top"><strong>OVERDRAFT</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>BANNERS</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5399,6 +6269,21 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tbody>
 <tr>
 <td valign="top"><strong>ERROR</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TaxPaymentFrequency
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>QUARTERLY</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -5733,6 +6618,48 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>TIMED_ORDER</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserOS
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>IOS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ANDROID</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### WirecardCardStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_ORDERED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ORDERED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ISSUED</strong></td>
 <td></td>
 </tr>
 </tbody>
