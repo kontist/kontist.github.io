@@ -1102,6 +1102,11 @@ Subscribe user to a plan
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">type</td>
 <td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
 <td></td>
@@ -2042,6 +2047,15 @@ Available overdraft limit
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td>
+
+Overdraft request date
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2579,7 +2593,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -3239,6 +3253,11 @@ Bookkeeping partners information for user
 Information about the plans a user can subscribe to
 
 </td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>taxDetails</strong></td>
