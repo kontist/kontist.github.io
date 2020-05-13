@@ -1045,6 +1045,25 @@ Activate Overdraft Application  - only available for Kontist Application
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateOverdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
+<td>
+
+Updates overdraft application timestamps for rejected and offered overdraft screens - only available for Kontist Application
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">offeredScreenShown</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">rejectionScreenShown</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createTransactionSplits</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td>
@@ -2057,6 +2076,24 @@ Available overdraft limit
 <td>
 
 Overdraft request date
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>offeredScreenShown</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Indicates if offered screen for overdraft was shown
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>rejectionScreenShown</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Indicates if rejection screen for overdraft was shown
 
 </td>
 </tr>
