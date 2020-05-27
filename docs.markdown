@@ -1158,6 +1158,25 @@ Update user's subscription plan
 <td valign="top"><a href="#bannername">BannerName</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateUserNotifications</strong></td>
+<td valign="top">[<a href="#notification">Notification</a>!]!</td>
+<td>
+
+Update the push-notifications a user should receive
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">active</td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#notificationtype">NotificationType</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2035,6 +2054,31 @@ The number of identifications attempted by the user
 </tbody>
 </table>
 
+#### Notification
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#notificationtype">NotificationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>active</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### Overdraft
 
 <table>
@@ -2492,6 +2536,16 @@ The date at which the transaction was processed and the amount deducted from the
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>mandateNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>merchantCountryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>merchantCategoryCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
@@ -3350,6 +3404,15 @@ User metadata. These fields are likely to get frequently updated or changed.
 <td valign="top"><a href="#useros">UserOS</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>notifications</strong></td>
+<td valign="top">[<a href="#notification">Notification</a>!]!</td>
+<td>
+
+All push-notification types and their state
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3550,6 +3613,11 @@ This field will be removed in an upcoming release, do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>vatRate</strong></td>
 <td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -6093,6 +6161,41 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>ZW</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### NotificationType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>STATEMENTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PRODUCT_INFO</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RECEIPT_SCANNING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ALL</strong></td>
 <td></td>
 </tr>
 </tbody>
