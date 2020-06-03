@@ -1159,6 +1159,57 @@ Update user's subscription plan
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>connectIntegration</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Connect user to a bookkeeping partner
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#integrationtype">IntegrationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationData</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Authorization data sent by the bookkeeping partner to allow a user to connect to it
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateUserSignupInformation</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Update user signup information
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#userupdateinput">UserUpdateInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createUser</strong></td>
+<td valign="top"><a href="#publicmutationresult">PublicMutationResult</a>!</td>
+<td>
+
+Create a new user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createuserinput">CreateUserInput</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateUserNotifications</strong></td>
 <td valign="top">[<a href="#notification">Notification</a>!]!</td>
 <td>
@@ -2179,6 +2230,26 @@ Indicates if rejection screen for overdraft was shown
 </tbody>
 </table>
 
+#### PublicMutationResult
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>success</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### ReferralDetails
 
 <table>
@@ -2206,7 +2277,7 @@ Indicates if rejection screen for overdraft was shown
 <td valign="top"><a href="#int">Int</a>!</td>
 <td>
 
-Amount in euros granted to user and his referee
+Amount in euros granted to user and their referee
 
 </td>
 </tr>
@@ -3044,18 +3115,6 @@ This field will be removed in an upcoming release
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>taxCutoffLine</strong> ⚠️</td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-This field will be removed in an upcoming release
-
-</blockquote>
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>vatPaymentFrequency</strong> ⚠️</td>
 <td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
 <td>
@@ -3400,8 +3459,8 @@ User metadata. These fields are likely to get frequently updated or changed.
 </td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">os</td>
-<td valign="top"><a href="#useros">UserOS</a></td>
+<td colspan="2" align="right" valign="top">platform</td>
+<td valign="top"><a href="#platform">Platform</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3600,7 +3659,7 @@ The state of the subscription
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-This field will be removed in an upcoming release, do not rely on it for any new code
+This field will be removed in an upcoming release. Do not rely on it for any new features
 
 </blockquote>
 </td>
@@ -3699,6 +3758,34 @@ This field will be removed in an upcoming release, do not rely on it for any new
 </table>
 
 ### Inputs
+
+#### AttributionData
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>platform</strong></td>
+<td valign="top"><a href="#platform">Platform</a></td>
+<td>
+
+Platform used for signup
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>trackingId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 #### CardFilter
 
@@ -4054,6 +4141,49 @@ The user selected category for the SEPA Transfer
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### CreateUserInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>email</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+User's email. This will be used as their username.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>password</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>language</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>attribution</strong></td>
+<td valign="top"><a href="#attributiondata">AttributionData</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>marketingConsentAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -4688,6 +4818,192 @@ The user selected category for the SEPA Transfer
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### UserUpdateInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>birthDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>firstName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="#nationality">Nationality</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>nationality</strong></td>
+<td valign="top"><a href="#nationality">Nationality</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>street</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>birthPlace</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>untrustedPhoneNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Sets a mobile number for the user to be verified later
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatPaymentFrequency</strong></td>
+<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>language</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isUSPerson</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates whether the user pays taxes in the US
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>acceptedTermsVersion</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The version of terms user has accepted
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessPurpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>economicSector</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>otherEconomicSector</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessTradingName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>adjustAdvancePayments</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>companyType</strong></td>
+<td valign="top"><a href="#companytype">CompanyType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>directDebitMandateAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates user has accepted Kontist direct debit mandate
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>ownEconomicInterestConfirmed</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates user has confirmed he is opening their account in their name, for the use of their business
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>nonConsumerConfirmed</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates user has confirmed he is acting as a business and not a consumer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>marketingConsentAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates user has accepted to receive Kontist marketing communication
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>wirecardDirectDebitMandateAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates user has accepted Wirecard direct debit mandate
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>wirecardCardType</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -6267,6 +6583,29 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
+#### Platform
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>IOS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ANDROID</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WEB</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### PurchaseState
 
 <table>
@@ -6781,25 +7120,6 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td valign="top"><strong>TIMED_ORDER</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### UserOS
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>IOS</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>ANDROID</strong></td>
 <td></td>
 </tr>
 </tbody>
