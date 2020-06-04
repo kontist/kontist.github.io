@@ -6708,6 +6708,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><strong>BANNERS</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>SIGNUP</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
