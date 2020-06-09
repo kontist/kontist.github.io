@@ -2611,6 +2611,11 @@ The date at which the transaction was processed and the amount deducted from the
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>merchantCountryCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
