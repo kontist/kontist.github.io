@@ -1557,11 +1557,11 @@ The amount of tax that is owed in the current year
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>taxPastYearAmount</strong></td>
+<td colspan="2" valign="top"><strong>taxPastYearsAmount</strong></td>
 <td valign="top"><a href="#int">Int</a></td>
 <td>
 
-The amount of tax that was owed last year
+The amount of tax that was owed for all past years combined
 
 </td>
 </tr>
@@ -2674,6 +2674,20 @@ The date at which the transaction was booked (created)
 <td>
 
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>predictedCategory</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>predictedUserSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+Date predicted for tax/vat payment/refund predicted category
 
 </td>
 </tr>
