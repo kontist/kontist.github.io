@@ -999,11 +999,45 @@ Set the card holder representation for the customer
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>categorizeTransaction</strong></td>
+<td colspan="2" valign="top"><strong>categorizeTransaction</strong> ⚠️</td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td>
 
-Categorize a transaction with an optional custom booking date for VAT or Tax categories
+DEPRECATED use `updateTransaction()` instead - Categorize a transaction with an optional custom booking date for VAT or Tax categories
+
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This mutation will be removed in an upcoming release, please use `updateTransaction` mutation instead
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">category</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">userSelectedBookingDate</td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateTransaction</strong></td>
+<td valign="top"><a href="#transaction">Transaction</a>!</td>
+<td>
+
+Categorize a transaction with an optional custom booking date for VAT or Tax categories, and add a personal note
 
 </td>
 </tr>
@@ -1023,6 +1057,15 @@ Categorize a transaction with an optional custom booking date for VAT or Tax cat
 <td>
 
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">personalNote</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The personal note of the transaction - 140 max characters
 
 </td>
 </tr>
@@ -2678,6 +2721,11 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>personalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>predictedCategory</strong></td>
 <td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
@@ -2926,6 +2974,15 @@ The date at which the last payment will be executed for Standing Orders
 <td>
 
 The purpose of the transfer - 140 max characters
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>personalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The personal note of the transfer - 140 max characters
 
 </td>
 </tr>
@@ -4018,6 +4075,15 @@ The purpose of the SEPA Transfer - 140 max characters
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>personalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The personal note of the SEPA Transfer - 140 max characters
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>e2eId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
@@ -4122,6 +4188,15 @@ The date at which the last payment will be executed for Standing Orders
 <td>
 
 The purpose of the transfer - 140 max characters
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>personalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The personal note of the transfer - 140 max characters
 
 </td>
 </tr>
@@ -4799,6 +4874,15 @@ The date at which the last payment will be executed
 <td>
 
 The purpose of the Standing Order - 140 max characters, if not specified with the update, it will be set to null
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>personalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The personal note of the transfer - 140 max characters
 
 </td>
 </tr>
