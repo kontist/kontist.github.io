@@ -3462,9 +3462,14 @@ The plans a user has subscribed to
 <td valign="top">[<a href="#banner">Banner</a>!]</td>
 <td>
 
-The state of banners in Kontist App for the user
+The state of banners in mobile or web app for the user
 
 </td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">isWebapp</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>integrations</strong></td>
@@ -5166,6 +5171,10 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>FRIEND_REFERRAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PRIMARY_WEBAPP</strong></td>
 <td></td>
 </tr>
 </tbody>
