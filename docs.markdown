@@ -6928,7 +6928,15 @@ Indicates user has accepted Wirecard direct debit mandate
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>VAT_5</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>VAT_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_16</strong></td>
 <td></td>
 </tr>
 <tr>
