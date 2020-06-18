@@ -3421,6 +3421,11 @@ The current state of user's Kontist account based on his subscription plan
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>couponCodeOffer</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
 <td valign="top">[<a href="#client">Client</a>!]!</td>
 <td>
