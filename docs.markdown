@@ -2011,6 +2011,36 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### Discount
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>subtitle</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### GooglePayCardToken
 
 <table>
@@ -3562,6 +3592,15 @@ All push-notification types and their state
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>premiumSubscriptionDiscount</strong></td>
+<td valign="top"><a href="#discount">Discount</a>!</td>
+<td>
+
+Premium subscription discount for user
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3672,6 +3711,11 @@ User status for VISA card migration
 <tr>
 <td colspan="2" valign="top"><strong>signupCompleted</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizationScreenShown</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -5120,6 +5164,11 @@ Indicates user has accepted Wirecard direct debit mandate
 <tr>
 <td colspan="2" valign="top"><strong>wirecardCardType</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizationScreenShown</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 </tbody>
