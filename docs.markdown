@@ -1070,6 +1070,58 @@ The personal note of the transaction - 140 max characters
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createTransactionAsset</strong></td>
+<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
+<td>
+
+Create an TransactionAsset and obtain an upload config
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>finaliseTransactionAssetUpload</strong></td>
+<td valign="top"><a href="#transactionasset">TransactionAsset</a>!</td>
+<td>
+
+Confirm and validate an TransactionAsset upload as completed
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteTransactionAsset</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Remove an TransactionAsset from the Transaction and storage
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
@@ -1301,11 +1353,6 @@ The bank account of the current user
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>balance</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>canCreateOverdraft</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
@@ -1502,6 +1549,11 @@ This data will be removed in an upcoming release. Do not use it for any new feat
 
 </blockquote>
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>balance</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1966,6 +2018,36 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### CreateAssetResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>assetId</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>formData</strong></td>
+<td valign="top">[<a href="#formdatapair">FormDataPair</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DirectDebitFee
 
 <table>
@@ -2036,6 +2118,31 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### FormDataPair
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>key</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -2713,6 +2820,15 @@ Metadata of separate pseudo-transactions created when splitting the parent trans
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>assets</strong></td>
+<td valign="top">[<a href="#transactionasset">TransactionAsset</a>!]!</td>
+<td>
+
+List of uploaded Asset files for this transaction
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>bookingDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td>
@@ -2802,6 +2918,65 @@ Date predicted for tax/vat payment/refund predicted category
 <tr>
 <td colspan="2" valign="top"><strong>originalAmount</strong></td>
 <td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>asset</strong></td>
+<td valign="top"><a href="#transactionasset">TransactionAsset</a></td>
+<td>
+
+View a single TransactionAsset for a transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TransactionAsset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>filetype</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>path</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>thumbnail</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fullsize</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
