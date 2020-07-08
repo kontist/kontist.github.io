@@ -1094,7 +1094,7 @@ Create an TransactionAsset and obtain an upload config
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>finaliseTransactionAssetUpload</strong></td>
+<td colspan="2" valign="top"><strong>finalizeTransactionAssetUpload</strong></td>
 <td valign="top"><a href="#transactionasset">TransactionAsset</a>!</td>
 <td>
 
@@ -1237,6 +1237,11 @@ Subscribe user to a plan
 Update user's subscription plan
 
 </td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">newPlan</td>
@@ -3349,6 +3354,11 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>hasCanceledDowngrade</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>couponCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
