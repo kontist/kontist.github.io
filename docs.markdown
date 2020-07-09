@@ -1090,7 +1090,7 @@ Create an TransactionAsset and obtain an upload config
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1104,7 +1104,7 @@ Confirm and validate an TransactionAsset upload as completed
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">assetId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1118,7 +1118,7 @@ Remove an TransactionAsset from the Transaction and storage
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">assetId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2956,7 +2956,7 @@ View a single TransactionAsset for a transaction
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
