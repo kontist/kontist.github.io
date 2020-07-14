@@ -5356,6 +5356,46 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>profession</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasTaxAdvisor</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>accountingTool</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasSecondBusinessAccount</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>maximumCashTransactionsPercentage</strong></td>
+<td valign="top"><a href="#maximumcashtransactionspercentage">MaximumCashTransactionsPercentage</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasEmployees</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>internationalCustomers</strong></td>
+<td valign="top"><a href="#internationalcustomers">InternationalCustomers</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasPermanentExtension</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5807,6 +5847,29 @@ Indicates user has accepted Wirecard direct debit mandate
 </tbody>
 </table>
 
+#### InternationalCustomers
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NONE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EU</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WORLDWIDE</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### InvoiceStatus
 
 <table>
@@ -5829,6 +5892,29 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>PENDING</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### MaximumCashTransactionsPercentage
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NULL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TEN</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>HUNDRED</strong></td>
 <td></td>
 </tr>
 </tbody>
