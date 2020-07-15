@@ -4522,6 +4522,15 @@ User's email. This will be used as their username.
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>terms</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+User has accepted latest Kontist terms when signing up
+
+</td>
+</tr>
 </tbody>
 </table>
 
