@@ -3548,9 +3548,16 @@ Indicates whether the user pays taxes in the US
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>companyType</strong></td>
+<td colspan="2" valign="top"><strong>companyType</strong> ⚠️</td>
 <td valign="top"><a href="#companytype">CompanyType</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release. You should now rely on "isSelfEmployed" instead.
+
+</blockquote>
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>publicId</strong></td>
@@ -3643,6 +3650,11 @@ The current state of user's Kontist account based on his subscription plan
 Coupon code assigned to the user that can be redeemed during subscription update
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isSelfEmployed</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
@@ -5308,6 +5320,11 @@ The version of terms user has accepted
 <tr>
 <td colspan="2" valign="top"><strong>companyType</strong></td>
 <td valign="top"><a href="#companytype">CompanyType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isSelfEmployed</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
