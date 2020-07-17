@@ -2435,6 +2435,46 @@ Indicates if rejection screen for overdraft was shown
 </tbody>
 </table>
 
+#### RecurlyAccount
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>recurlyAccountId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>balance</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>pastDue</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>pastDueSince</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>accountManagementUrl</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### ReferralDetails
 
 <table>
@@ -3786,6 +3826,15 @@ User metadata. These fields are likely to get frequently updated or changed.
 <td>
 
 All push-notification types and their state
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recurlyAccount</strong></td>
+<td valign="top"><a href="#recurlyaccount">RecurlyAccount</a></td>
+<td>
+
+The user's associated Recurly Account
 
 </td>
 </tr>
@@ -5385,11 +5434,6 @@ Indicates user has accepted Wirecard direct debit mandate
 <tr>
 <td colspan="2" valign="top"><strong>profession</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>hasTaxAdvisor</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
