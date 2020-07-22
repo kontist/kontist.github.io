@@ -5461,11 +5461,6 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><a href="#internationalcustomers">InternationalCustomers</a></td>
 <td></td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>hasPermanentExtension</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
