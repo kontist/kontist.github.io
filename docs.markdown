@@ -5461,6 +5461,16 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><a href="#internationalcustomers">InternationalCustomers</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>permanentExtensionStatus</strong></td>
+<td valign="top"><a href="#permanentextensionstatus">PermanentExtensionStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxAdvisoryTermsVersionAccepted</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -7084,6 +7094,29 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>NONE</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### PermanentExtensionStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>DOES_HAVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DOES_NOT_HAVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DOES_NOT_KNOW</strong></td>
 <td></td>
 </tr>
 </tbody>
