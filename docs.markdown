@@ -7192,6 +7192,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><strong>LEXOFFICE</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>KONTAX</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
