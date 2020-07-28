@@ -3964,6 +3964,11 @@ User status for VISA card migration
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxAdvisoryTermsVersionAccepted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
