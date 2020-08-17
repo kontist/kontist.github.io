@@ -7490,6 +7490,30 @@ Indicates user has accepted Wirecard direct debit mandate
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>CASH_ATM_REVERSAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CASH_MANUAL_REVERSAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PURCHASE_REVERSAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OCT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FORCE_POST_TRANSACTION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DEBIT_PRESENTMENT</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>ATM</strong></td>
 <td></td>
 </tr>
