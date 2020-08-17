@@ -7017,6 +7017,22 @@ Indicates user has accepted Wirecard direct debit mandate
 </thead>
 <tbody>
 <tr>
+<td valign="top"><strong>CARD_TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOMING_TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DIRECT_DEBIT_TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ATM_WITHDRAWAL_TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>TRANSACTIONS</strong></td>
 <td></td>
 </tr>
