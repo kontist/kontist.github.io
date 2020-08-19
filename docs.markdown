@@ -5482,6 +5482,21 @@ Indicates user has accepted Wirecard direct debit mandate
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>subjectToAccounting</strong></td>
+<td valign="top"><a href="#threestateanswer">ThreeStateAnswer</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>workingInEcommerce</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasMoreThanOneBusiness</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>idnowReminderType</strong></td>
 <td valign="top"><a href="#idnowremindertype">IdnowReminderType</a></td>
 <td></td>
@@ -7388,6 +7403,29 @@ Indicates user has accepted Wirecard direct debit mandate
 <tbody>
 <tr>
 <td valign="top"><strong>QUARTERLY</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ThreeStateAnswer
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>YES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NOT_SURE</strong></td>
 <td></td>
 </tr>
 </tbody>
