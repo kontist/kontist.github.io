@@ -5481,6 +5481,16 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>idnowReminderType</strong></td>
+<td valign="top"><a href="#idnowremindertype">IdnowReminderType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>idnowReminderTime</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5904,6 +5914,25 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>CANCELED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### IdnowReminderType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>EMAIL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SMS</strong></td>
 <td></td>
 </tr>
 </tbody>
