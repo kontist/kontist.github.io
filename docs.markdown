@@ -765,28 +765,8 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">fraudCaseId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>confirmFraud</strong></td>
 <td valign="top"><a href="#confirmfraudresponse">ConfirmFraudResponse</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">fraudCaseId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1365,6 +1345,11 @@ The bank account of the current user
 <tr>
 <td colspan="2" valign="top"><strong>cardHolderRepresentations</strong></td>
 <td valign="top">[<a href="#string">String</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasPendingCardFraudCase</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1977,7 +1962,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>resolution</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#caseresolution">CaseResolution</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -4096,11 +4081,11 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>resolution</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#caseresolution">CaseResolution</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>whitelisted_until</strong></td>
+<td colspan="2" valign="top"><strong>whitelistedUntil</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -5755,6 +5740,37 @@ Indicates user has accepted Wirecard direct debit mandate
 </tbody>
 </table>
 
+#### CaseResolution
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PENDING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CONFIRMED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WHITELISTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TIMED_OUT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TIMEOUT</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### CompanyType
 
 <table>
@@ -7323,6 +7339,10 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>SIGNUP</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CARD_FRAUD</strong></td>
 <td></td>
 </tr>
 </tbody>
