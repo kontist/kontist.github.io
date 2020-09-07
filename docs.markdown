@@ -5555,6 +5555,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><strong>PRIMARY_WEBAPP</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>TAX_SERVICE</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
