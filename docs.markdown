@@ -1262,6 +1262,15 @@ Authorization data sent by the bookkeeping partner to allow a user to connect to
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>requestIdentification</strong></td>
+<td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
+<td>
+
+Create a new identification if applicable
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateUserSignupInformation</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
@@ -7284,6 +7293,10 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>KONTAX</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>KONTAX_PENDING</strong></td>
 <td></td>
 </tr>
 </tbody>
