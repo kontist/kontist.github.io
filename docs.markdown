@@ -7168,6 +7168,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><strong>OVERDRAFT_CREATED</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EXPIRED</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
