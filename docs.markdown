@@ -2120,6 +2120,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>couponIsValid</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>subtitle</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -3850,6 +3855,11 @@ The user's associated Recurly Account
 Premium subscription discount for user
 
 </td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
