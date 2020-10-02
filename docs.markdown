@@ -7773,6 +7773,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><strong>CANCELLATION_INTEREST_ACCRUED</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>COMMISSION_OVERDRAFT</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
