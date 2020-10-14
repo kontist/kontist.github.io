@@ -2912,6 +2912,11 @@ The date at which the transaction was booked (created)
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>categorizationType</strong></td>
+<td valign="top"><a href="#categorizationtype">CategorizationType</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td>
@@ -5799,6 +5804,33 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>TIMEOUT</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CategorizationType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>MANUAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>AUTOMATIC</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RECATEGORIZED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>KONTAX</strong></td>
 <td></td>
 </tr>
 </tbody>
