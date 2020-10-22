@@ -1327,6 +1327,21 @@ Update the push-notifications a user should receive
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createReview</strong></td>
+<td valign="top"><a href="#createreviewresponse">CreateReviewResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">platform</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">triggerName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -1346,6 +1361,11 @@ The bank account of the current user
 </tr>
 </thead>
 <tbody>
+<tr>
+<td colspan="2" valign="top"><strong>publicId</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
@@ -2052,6 +2072,26 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>formData</strong></td>
 <td valign="top">[<a href="#formdatapair">FormDataPair</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CreateReviewResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
