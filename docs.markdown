@@ -1334,12 +1334,27 @@ Update the push-notifications a user should receive
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">platform</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#reviewtriggerplatform">ReviewTriggerPlatform</a>!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">triggerName</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#reviewtriggername">ReviewTriggerName</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateReview</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">status</td>
+<td valign="top"><a href="#userreviewstatus">UserReviewStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">reviewId</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -7398,6 +7413,68 @@ Indicates user has accepted Wirecard direct debit mandate
 </tbody>
 </table>
 
+#### ReviewTriggerName
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>GOOGLEPAY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OVERDRAFT_OFFERED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VIRTUAL_CARD_ACTIVATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PHYSICAL_CARD_ACTIVATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OUTGOING_TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RECEIPTS_SCANNED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BATCH_TRANSFERS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SETTINGS_BUTTON_CLICKED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ReviewTriggerPlatform
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>MOBILE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WEBAPP</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### ScopeType
 
 <table>
@@ -7929,6 +8006,41 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>TIMED_ORDER</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserReviewStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>REVIEWED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>POSITIVE_REMINDER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>POSITIVE_PENDING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NEGATIVE_PENDING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NEGATIVE_REMINDER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FEEDBACK</strong></td>
 <td></td>
 </tr>
 </tbody>
