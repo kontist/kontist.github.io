@@ -5878,6 +5878,22 @@ Indicates user has accepted Wirecard direct debit mandate
 </thead>
 <tbody>
 <tr>
+<td valign="top"><strong>AUTOMATIC_KONTIST_ML</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BOOKKEEPING_PARTNER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>USER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>KONTAX</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>MANUAL</strong></td>
 <td></td>
 </tr>
@@ -5887,10 +5903,6 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>RECATEGORIZED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>KONTAX</strong></td>
 <td></td>
 </tr>
 </tbody>
