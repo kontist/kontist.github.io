@@ -1357,6 +1357,15 @@ Update the push-notifications a user should receive
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>clearPreselectedPlan</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Clear preselected plan
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3037,6 +3046,16 @@ Date predicted for tax/vat payment/refund predicted category
 <tr>
 <td colspan="2" valign="top"><strong>originalAmount</strong></td>
 <td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>elsterCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>elsterCodeTranslation</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -7945,6 +7964,10 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>COMMISSION_OVERDRAFT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CHARGE</strong></td>
 <td></td>
 </tr>
 </tbody>
