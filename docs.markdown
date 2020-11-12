@@ -573,6 +573,58 @@ The current user information
 </thead>
 <tbody>
 <tr>
+<td colspan="2" valign="top"><strong>createTransactionAsset</strong></td>
+<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
+<td>
+
+Create an TransactionAsset and obtain an upload config
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>finalizeTransactionAssetUpload</strong></td>
+<td valign="top"><a href="#transactionasset">TransactionAsset</a>!</td>
+<td>
+
+Confirm and validate an TransactionAsset upload as completed
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteTransactionAsset</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Remove an TransactionAsset from the Transaction and storage
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>cancelTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td>
@@ -1048,58 +1100,6 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 The personal note of the transaction - 140 max characters
 
 </td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createTransactionAsset</strong></td>
-<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
-<td>
-
-Create an TransactionAsset and obtain an upload config
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">filetype</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">name</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>finalizeTransactionAssetUpload</strong></td>
-<td valign="top"><a href="#transactionasset">TransactionAsset</a>!</td>
-<td>
-
-Confirm and validate an TransactionAsset upload as completed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">assetId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteTransactionAsset</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Remove an TransactionAsset from the Transaction and storage
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">assetId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
