@@ -7452,6 +7452,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>KONTAX_SB</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>KONTAX_PENDING</strong></td>
 <td></td>
 </tr>
