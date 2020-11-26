@@ -1366,6 +1366,15 @@ Clear preselected plan
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>assignKontaxCouponCodeToDeclinedUser</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Assign a secret coupon code to the user who is rejected from kontax onboarding
+
+</td>
+</tr>
 </tbody>
 </table>
 
