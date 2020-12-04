@@ -558,6 +558,15 @@ The current user information
 <td valign="top"><a href="#systemstatus">SystemStatus</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>genericFeatures</strong></td>
+<td valign="top">[<a href="#genericfeature">GenericFeature</a>!]!</td>
+<td>
+
+Get all released generic features, that are needed before user creation
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2235,6 +2244,26 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### GenericFeature
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### GooglePayCardToken
 
 <table>
@@ -2587,6 +2616,11 @@ Indicates if rejection screen for overdraft was shown
 Amount in euros granted to user and their referee
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>copy</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
