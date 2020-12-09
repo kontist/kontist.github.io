@@ -3619,7 +3619,7 @@ This field will be removed in an upcoming release and should now be queried from
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>vatRate</strong> ⚠️</td>
-<td valign="top"><a href="#int">Int</a></td>
+<td valign="top"><a href="#uservatrate">UserVatRate</a></td>
 <td>
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
@@ -4197,7 +4197,7 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>vatRate</strong></td>
-<td valign="top"><a href="#int">Int</a></td>
+<td valign="top"><a href="#uservatrate">UserVatRate</a></td>
 <td></td>
 </tr>
 <tr>
@@ -8132,6 +8132,25 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>FEEDBACK</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserVatRate
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>VAT_0</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_19</strong></td>
 <td></td>
 </tr>
 </tbody>
