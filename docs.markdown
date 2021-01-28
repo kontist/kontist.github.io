@@ -2807,11 +2807,6 @@ The end to end ID of the SEPA Transfer
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>pricingTitle</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
