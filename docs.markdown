@@ -7956,6 +7956,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><strong>TAX_SAVING</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>REVERSE_CHARGE</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
