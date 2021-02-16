@@ -4305,6 +4305,11 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>deTaxId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>vatNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -4312,6 +4317,11 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>needsToProvideTaxIdentification</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>permanentExtensionStatus</strong></td>
+<td valign="top"><a href="#permanentextensionstatus">PermanentExtensionStatus</a></td>
 <td></td>
 </tr>
 </tbody>
