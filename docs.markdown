@@ -1271,6 +1271,20 @@ Authorization data sent by the bookkeeping partner to allow a user to connect to
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateUserTaxDetails</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Update user's tax details
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#usertaxdetailsinput">UserTaxDetailsInput</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestIdentification</strong></td>
 <td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
 <td>
@@ -1392,6 +1406,16 @@ Assign a secret coupon code to the user who is rejected from kontax onboarding
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#invoicesettingsinput">InvoiceSettingsInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateInvoiceCustomer</strong></td>
+<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#invoicecustomerinput">InvoiceCustomerInput</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -2357,6 +2381,66 @@ The user's IDNow identification status
 The number of identifications attempted by the user
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### InvoiceCustomerOutput
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>email</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>streetLine</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -4087,6 +4171,15 @@ Premium subscription discount for user
 <td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
+<td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
+<td>
+
+The list of all customers of the current user
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -4850,6 +4943,65 @@ User has accepted latest Kontist terms when signing up
 </tbody>
 </table>
 
+#### InvoiceCustomerInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>email</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>streetLine</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### InvoiceSettingsInput
 
 <table>
@@ -5567,6 +5719,45 @@ The user selected category for the SEPA Transfer
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### UserTaxDetailsInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>deTaxId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatPaymentFrequency</strong></td>
+<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>permanentExtensionStatus</strong></td>
+<td valign="top"><a href="#permanentextensionstatus">PermanentExtensionStatus</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
