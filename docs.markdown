@@ -3743,18 +3743,6 @@ This field will be removed in an upcoming release
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>vatCutoffLine</strong> ⚠️</td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-This field will be removed in an upcoming release
-
-</blockquote>
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>vatPaymentFrequency</strong> ⚠️</td>
 <td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
 <td>
