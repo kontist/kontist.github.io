@@ -3403,6 +3403,11 @@ View a single TransactionAsset for a transaction
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizationType</strong></td>
+<td valign="top"><a href="#categorizationtype">CategorizationType</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
