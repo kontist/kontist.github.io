@@ -1409,6 +1409,20 @@ Assign a secret coupon code to the user who is rejected from kontax onboarding
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>signPOA</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Allow user to sign Power of Attorney
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateInvoiceCustomer</strong></td>
 <td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!</td>
 <td></td>
@@ -4163,6 +4177,15 @@ Premium subscription discount for user
 <td colspan="2" valign="top"><strong>invoiceSettings</strong></td>
 <td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a></td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>poaUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Retrieves signed POA PDF for user.
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
