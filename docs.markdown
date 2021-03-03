@@ -1409,6 +1409,29 @@ Assign a secret coupon code to the user who is rejected from kontax onboarding
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createInvoiceLogo</strong></td>
+<td valign="top"><a href="#createinvoicelogoresponse">CreateInvoiceLogoResponse</a>!</td>
+<td>
+
+The logo a user can add to his invoice. The path to it is stored in invoiceSettings
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteInvoiceLogo</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Deletes the logo of a user's most recent settings entry
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>signPOA</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
@@ -2167,6 +2190,31 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### CreateInvoiceLogoResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>formData</strong></td>
+<td valign="top">[<a href="#invoicelogoformdatapair">InvoiceLogoFormDataPair</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### CreateReviewResponse
 
 <table>
@@ -2459,6 +2507,31 @@ The number of identifications attempted by the user
 </tbody>
 </table>
 
+#### InvoiceLogoFormDataPair
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>key</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### InvoiceSettingsOutput
 
 <table>
@@ -2471,6 +2544,11 @@ The number of identifications attempted by the user
 </tr>
 </thead>
 <tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 <tr>
 <td colspan="2" valign="top"><strong>senderName</strong></td>
 <td valign="top"><a href="#string">String</a></td>
@@ -2510,6 +2588,15 @@ The number of identifications attempted by the user
 <td colspan="2" valign="top"><strong>phoneNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>logoUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+If a user's setting has a logoPath, we calculate a url to the thumbnail from it
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>dueDateDefaultOffset</strong></td>
