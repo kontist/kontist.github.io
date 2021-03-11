@@ -1441,6 +1441,11 @@ Allow user to sign Power of Attorney
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">dependents</td>
+<td valign="top">[<a href="#userdependentinput">UserDependentInput</a>!]</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">signature</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
@@ -5331,6 +5336,11 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>assets_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>bookingDate_eq</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -5512,6 +5522,11 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <tr>
 <td colspan="2" valign="top"><strong>valutaDate_lte</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assets_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
@@ -5822,6 +5837,40 @@ The user selected category for the SEPA Transfer
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### UserDependentInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>firstName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>birthDate</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
