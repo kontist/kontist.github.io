@@ -4105,6 +4105,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>taxServiceOnboardingCompletedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>poaSignedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -5869,7 +5874,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>type</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#userdependenttype">UserDependentType</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -8631,6 +8636,25 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>TIMED_ORDER</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserDependentType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PARTNER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CHILD</strong></td>
 <td></td>
 </tr>
 </tbody>
