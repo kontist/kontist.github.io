@@ -2927,27 +2927,17 @@ Indicates if rejection screen for overdraft was shown
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>encryptedPrimaryAccountNumber</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>activationData</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>primaryAccountNumberPrefix</strong></td>
+<td colspan="2" valign="top"><strong>encryptedPassData</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>networkName</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>name</strong></td>
+<td colspan="2" valign="top"><strong>ephemeralPublicKey</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
