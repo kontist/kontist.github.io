@@ -893,6 +893,30 @@ Adds Google Pay card token reference id for given wallet id
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>cardPushProvisioning</strong></td>
+<td valign="top"><a href="#pushprovisioningoutput">PushProvisioningOutput</a>!</td>
+<td>
+
+Adds card to given wallet
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">android</td>
+<td valign="top"><a href="#pushprovisioningandroidinput">PushProvisioningAndroidInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">ios</td>
+<td valign="top"><a href="#pushprovisioningiosinput">PushProvisioningIosInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">cardId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>deleteGooglePayCardToken</strong></td>
 <td valign="top"><a href="#googlepaycardtoken">GooglePayCardToken</a>!</td>
 <td>
@@ -2885,6 +2909,51 @@ Indicates if rejection screen for overdraft was shown
 </tbody>
 </table>
 
+#### PushProvisioningOutput
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>walletPayload</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>encryptedPrimaryAccountNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>activationData</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>primaryAccountNumberPrefix</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>networkName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### RecurlyAccount
 
 <table>
@@ -4366,6 +4435,51 @@ The list of all customers of the current user
 </tbody>
 </table>
 
+#### UserDependent
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#userdependenttype">UserDependentType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>firstName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>birthDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deTaxId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### UserIntegration
 
 <table>
@@ -4598,6 +4712,11 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>permanentExtensionStatus</strong></td>
 <td valign="top"><a href="#permanentextensionstatus">PermanentExtensionStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dependents</strong></td>
+<td valign="top">[<a href="#userdependent">UserDependent</a>!]</td>
 <td></td>
 </tr>
 </tbody>
@@ -5126,6 +5245,30 @@ User has accepted latest Kontist terms when signing up
 </tbody>
 </table>
 
+#### DependentsTaxIds
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deTaxId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### InvoiceCustomerInput
 
 <table>
@@ -5308,6 +5451,79 @@ Number of days which get added to today's date to create a default value for due
 <td colspan="2" valign="top"><strong>vatNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
+</tr>
+</tbody>
+</table>
+
+#### PushProvisioningAndroidInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>deviceId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Stable identifier for a physical Android device Google refers to this atribute as a Stable hardware ID in their SDK documentation the method getStableHardwareId describes how you can retrieve this value.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>walletAccountId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Unique 24-byte identifier for each instance of a [Android user, Google account] pair wallet. ID is computed as a keyed hash of the Android user ID and the Google account ID. The key to this hash lives on Google servers, meaning the wallet ID is created during user setup as an RPC.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### PushProvisioningIosInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>nonce</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+A one-time-use nonce in Base64 encoded format provided by Apple
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>nonceSignature</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Nonce signature in Base64 encoded format provided by Apple
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>certificates</strong></td>
+<td valign="top">[<a href="#string">String</a>!]</td>
+<td>
+
+An array of leaf and sub-CA certificates in Base64 encoded format provided by Apple. Each object contains a DER encoded X.509 certificate, with the leaf first and followed by sub-CA
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -6043,6 +6259,11 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>permanentExtensionStatus</strong></td>
 <td valign="top"><a href="#permanentextensionstatus">PermanentExtensionStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dependentsTaxIds</strong></td>
+<td valign="top">[<a href="#dependentstaxids">DependentsTaxIds</a>!]</td>
 <td></td>
 </tr>
 </tbody>
