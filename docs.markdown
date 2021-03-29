@@ -8975,6 +8975,10 @@ Indicates user has accepted Wirecard direct debit mandate
 <td valign="top"><strong>CHARGE</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>DEPOSIT_FEE</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
