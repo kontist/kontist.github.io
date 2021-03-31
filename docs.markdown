@@ -6272,6 +6272,16 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </thead>
 <tbody>
 <tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deTaxId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>firstName</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
