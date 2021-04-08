@@ -1494,6 +1494,20 @@ Allow user to sign Power of Attorney
 <td valign="top"><a href="#invoiceinput">InvoiceInput</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertProducts</strong></td>
+<td valign="top">[<a href="#product">Product</a>!]!</td>
+<td>
+
+Create or update user products that can be linked to the user's invoice(s)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top">[<a href="#userproductinput">UserProductInput</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -1714,21 +1728,6 @@ A list of iban/name combinations based on existing user's transactions, provided
 
 Overdraft Application - only available for Kontist Application
 
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>wirecard</strong> ⚠️</td>
-<td valign="top"><a href="#wirecarddetails">WirecardDetails</a>!</td>
-<td>
-
-Wirecard details
-
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-This data will be removed in an upcoming release. Do not use it for any new features.
-
-</blockquote>
 </td>
 </tr>
 <tr>
@@ -2510,7 +2509,7 @@ The number of identifications attempted by the user
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>products</strong></td>
-<td valign="top">[<a href="#invoiceproductoutput">InvoiceProductOutput</a>!]</td>
+<td valign="top">[<a href="#invoiceproduct">InvoiceProduct</a>!]</td>
 <td>
 
 A list of products from the invoice
@@ -2655,7 +2654,7 @@ A list of products from the invoice
 </tbody>
 </table>
 
-#### InvoiceProductOutput
+#### InvoiceProduct
 
 <table>
 <thead>
@@ -2669,7 +2668,7 @@ A list of products from the invoice
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2958,6 +2957,41 @@ Indicates if rejection screen for overdraft was shown
 <tr>
 <td colspan="2" valign="top"><strong>hasPreviousPage</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### Product
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>price</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vat</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -4625,15 +4659,6 @@ Is user's Kontist account closed
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>cardMigrationStatus</strong></td>
-<td valign="top"><a href="#cardmigrationstatus">CardMigrationStatus</a>!</td>
-<td>
-
-User status for VISA card migration
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>currentTermsVersion</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
@@ -4821,41 +4846,6 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>whitelistedUntil</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### WirecardDetails
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>cardStatus</strong></td>
-<td valign="top"><a href="#wirecardcardstatus">WirecardCardStatus</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>directDebitMandateAccepted</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>hasAccount</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>plasticCardOrderedAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -6319,6 +6309,40 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
+#### UserProductInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>price</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vat</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### UserTaxDetailsInput
 
 <table>
@@ -6543,20 +6567,6 @@ Indicates user has accepted to receive Kontist marketing communication
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>wirecardDirectDebitMandateAccepted</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td>
-
-Indicates user has accepted Wirecard direct debit mandate
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>wirecardCardType</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>categorizationScreenShown</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
@@ -6765,41 +6775,6 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>UNBLOCK</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### CardMigrationStatus
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>REQUIRED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>REQUESTED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>REQUESTED_AND_LOCKED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>REQUESTED_AND_CLOSED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>COMPLETED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>NOT_REQUIRED</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -9157,29 +9132,6 @@ Indicates user has accepted Wirecard direct debit mandate
 </tr>
 <tr>
 <td valign="top"><strong>VAT_19</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### WirecardCardStatus
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>NOT_ORDERED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>ORDERED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>ISSUED</strong></td>
 <td></td>
 </tr>
 </tbody>
