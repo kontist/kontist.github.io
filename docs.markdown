@@ -2509,7 +2509,7 @@ The number of identifications attempted by the user
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>products</strong></td>
-<td valign="top">[<a href="#invoiceproduct">InvoiceProduct</a>!]</td>
+<td valign="top">[<a href="#invoiceproductoutput">InvoiceProductOutput</a>!]</td>
 <td>
 
 A list of products from the invoice
@@ -2651,10 +2651,15 @@ A list of products from the invoice
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>products</strong></td>
+<td valign="top">[<a href="#invoiceproductoutput">InvoiceProductOutput</a>!]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
-#### InvoiceProduct
+#### InvoiceProductOutput
 
 <table>
 <thead>
@@ -2668,7 +2673,7 @@ A list of products from the invoice
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -5446,6 +5451,50 @@ User has accepted latest Kontist terms when signing up
 <tr>
 <td colspan="2" valign="top"><strong>note</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>products</strong></td>
+<td valign="top">[<a href="#invoiceproductinput">InvoiceProductInput</a>!]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### InvoiceProductInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>price</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vat</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>quantity</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 </tbody>
