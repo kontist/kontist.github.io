@@ -2278,6 +2278,56 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### DashboardInvoice
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#invoicestatustype">InvoiceStatusType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceNumber</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dueDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>paidAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DirectDebitFee
 
 <table>
@@ -2659,7 +2709,7 @@ A list of products from the invoice
 </tbody>
 </table>
 
-#### InvoiceProductOutput
+#### InvoicePageInfo
 
 <table>
 <thead>
@@ -2672,10 +2722,35 @@ A list of products from the invoice
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a></td>
+<td colspan="2" valign="top"><strong>hasNextPage</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasPreviousPage</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>currentPage</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### InvoiceProductOutput
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
 <td valign="top"><a href="#string">String</a></td>
@@ -2694,6 +2769,11 @@ A list of products from the invoice
 <tr>
 <td colspan="2" valign="top"><strong>quantity</strong></td>
 <td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -2787,6 +2867,31 @@ Number of days which get added to today's date to create a default value for due
 <tr>
 <td colspan="2" valign="top"><strong>vatNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### InvoicingDashboardData
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>pageInfo</strong></td>
+<td valign="top"><a href="#invoicepageinfo">InvoicePageInfo</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>data</strong></td>
+<td valign="top">[<a href="#dashboardinvoice">DashboardInvoice</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -4545,6 +4650,16 @@ The list of all customers of the current user
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoices</strong></td>
+<td valign="top"><a href="#invoicingdashboarddata">InvoicingDashboardData</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">pageNumber</td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5473,11 +5588,6 @@ User has accepted latest Kontist terms when signing up
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -5495,6 +5605,11 @@ User has accepted latest Kontist terms when signing up
 <tr>
 <td colspan="2" valign="top"><strong>quantity</strong></td>
 <td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -6370,11 +6485,6 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -6386,6 +6496,11 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>vat</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
@@ -7239,6 +7354,33 @@ Indicates user has accepted to receive Kontist marketing communication
 </tr>
 <tr>
 <td valign="top"><strong>PENDING</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### InvoiceStatusType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>DRAFT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CREATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PAID</strong></td>
 <td></td>
 </tr>
 </tbody>
