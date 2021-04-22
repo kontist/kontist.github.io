@@ -2558,6 +2558,11 @@ The number of identifications attempted by the user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>transactionId</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>products</strong></td>
 <td valign="top">[<a href="#invoiceproductoutput">InvoiceProductOutput</a>!]</td>
 <td>
@@ -9173,6 +9178,10 @@ Indicates user has accepted to receive Kontist marketing communication
 </tr>
 <tr>
 <td valign="top"><strong>DEPOSIT_FEE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VERIFICATION_CODE</strong></td>
 <td></td>
 </tr>
 </tbody>
