@@ -4452,6 +4452,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>poaExportedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>invoicePdf</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
@@ -4657,7 +4662,7 @@ The list of all customers of the current user
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">pageNumber</td>
-<td valign="top"><a href="#float">Float</a>!</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
