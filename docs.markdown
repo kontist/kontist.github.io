@@ -831,6 +831,41 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>authorizeChangeRequest</strong></td>
+<td valign="top"><a href="#authorizechangerequestrespone">AuthorizeChangeRequestRespone</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">changeRequestId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmChangeRequest</strong></td>
+<td valign="top"><a href="#confirmchangerequestrespone">ConfirmChangeRequestRespone</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">changeRequestId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
 <td>
@@ -1558,6 +1593,11 @@ The bank account of the current user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>pendingTransactionVerification</strong></td>
+<td valign="top"><a href="#pendingtransactionverification">PendingTransactionVerification</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>transfers</strong></td>
 <td valign="top"><a href="#transfersconnection">TransfersConnection</a>!</td>
 <td></td>
@@ -1857,6 +1897,26 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 </tbody>
 </table>
 
+#### AuthorizeChangeRequestRespone
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>stringToSign</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### AvailableStatements
 
 <table>
@@ -2134,6 +2194,26 @@ The grant types (i.e. ways to obtain access tokens) allowed for the client
 The scopes the client has access to, limiting access to the corresponding parts of the API
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### ConfirmChangeRequestRespone
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>success</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3073,6 +3153,66 @@ Indicates if rejection screen for overdraft was shown
 <td colspan="2" valign="top"><strong>hasPreviousPage</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+
+#### PendingTransactionVerification
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Transaction merchant name
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Transaction amount
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expiresAt</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+When verification gets expired
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declineChangeRequestId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Change request id to decline verification
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>authenticateChangeRequestId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Change request id to authenticate verification
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -8771,6 +8911,10 @@ Indicates user has accepted to receive Kontist marketing communication
 </tr>
 <tr>
 <td valign="top"><strong>CARD_FRAUD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CHANGE_REQUEST</strong></td>
 <td></td>
 </tr>
 </tbody>
