@@ -1486,7 +1486,7 @@ The logo a user can add to his invoice. The path to it is stored in invoiceSetti
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
 
-Deletes the logo of a user's most recent settings entry
+Deletes the logo of a user's settings entry
 
 </td>
 </tr>
@@ -2031,6 +2031,11 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>pinSet</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>addedToApplePay</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
@@ -2940,7 +2945,7 @@ Number of days which get added to today's date to create a default value for due
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>numberSeriesStart</strong></td>
+<td colspan="2" valign="top"><strong>nextInvoiceNumber</strong></td>
 <td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
@@ -5826,7 +5831,7 @@ Number of days which get added to today's date to create a default value for due
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>numberSeriesStart</strong></td>
+<td colspan="2" valign="top"><strong>nextInvoiceNumber</strong></td>
 <td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
