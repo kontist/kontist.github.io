@@ -1578,6 +1578,11 @@ The bank account of the current user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>bic</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>canCreateOverdraft</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
@@ -1773,11 +1778,6 @@ Overdraft Application - only available for Kontist Application
 <tr>
 <td colspan="2" valign="top"><strong>balance</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bic</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
