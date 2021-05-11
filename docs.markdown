@@ -2363,6 +2363,61 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### Customer
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>streetLine</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DashboardInvoice
 
 <table>
@@ -2643,6 +2698,36 @@ The number of identifications attempted by the user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>invoiceSettingsId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>customer</strong></td>
+<td valign="top"><a href="#customer">Customer</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceNumber</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dueDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>note</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>transactionId</strong></td>
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
@@ -2769,6 +2854,11 @@ A list of products from the invoice
 <tr>
 <td colspan="2" valign="top"><strong>customerId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>customer</strong></td>
+<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3982,6 +4072,11 @@ View a single TransactionAsset for a transaction
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>uuid</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
@@ -4617,6 +4712,16 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>invoice</strong></td>
+<td valign="top"><a href="#invoice">Invoice</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
 <td valign="top">[<a href="#client">Client</a>!]!</td>
 <td>
@@ -4787,25 +4892,6 @@ Retrieves signed POA PDF for user.
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
-<td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
-<td>
-
-The list of all customers of the current user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoice</strong></td>
-<td valign="top"><a href="#invoice">Invoice</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>invoices</strong></td>
 <td valign="top"><a href="#invoicingdashboarddata">InvoicingDashboardData</a>!</td>
 <td></td>
@@ -4814,6 +4900,15 @@ The list of all customers of the current user
 <td colspan="2" align="right" valign="top">pageNumber</td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
+<td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
+<td>
+
+The list of all customers of the current user
+
+</td>
 </tr>
 </tbody>
 </table>
