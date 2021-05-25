@@ -1790,6 +1790,26 @@ Overdraft Application - only available for Kontist Application
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarations</strong></td>
+<td valign="top">[<a href="#declaration">Declaration</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#declarationtype">DeclarationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarationPdfUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2523,6 +2543,41 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### Declaration
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>period</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -4724,6 +4779,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <tr>
 <td colspan="2" align="right" valign="top">invoiceId</td>
 <td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatDeclarationBannerDismissedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 <tr>
@@ -7133,6 +7193,10 @@ Indicates user has accepted to receive Kontist marketing communication
 <td valign="top"><strong>TAX_SERVICE</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>VAT_DECLARATION</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -7339,15 +7403,7 @@ Indicates user has accepted to receive Kontist marketing communication
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>MANUAL</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>AUTOMATIC</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>RECATEGORIZED</strong></td>
+<td valign="top"><strong>INVOICING</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -7415,6 +7471,21 @@ Indicates user has accepted to receive Kontist marketing communication
 </tr>
 <tr>
 <td valign="top"><strong>UG</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DeclarationType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>UStVA</strong></td>
 <td></td>
 </tr>
 </tbody>
