@@ -607,7 +607,7 @@ Create a transaction Asset and obtain an upload config
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>finalizeTransactionAssetUpload</strong></td>
-<td valign="top"><a href="#asset">Asset</a>!</td>
+<td valign="top"><a href="#transactionasset">TransactionAsset</a>!</td>
 <td>
 
 Confirm and validate an Asset upload as completed
@@ -1923,56 +1923,6 @@ The amount of tax that was owed for all past years combined
 The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 
 </td>
-</tr>
-</tbody>
-</table>
-
-#### Asset
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>name</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>filetype</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>assetableId</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>path</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>thumbnail</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>fullsize</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -3953,7 +3903,7 @@ Metadata of separate pseudo-transactions created when splitting the parent trans
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>assets</strong></td>
-<td valign="top">[<a href="#asset">Asset</a>!]!</td>
+<td valign="top">[<a href="#transactionasset">TransactionAsset</a>!]!</td>
 <td>
 
 List of uploaded Asset files for this transaction
@@ -4074,7 +4024,7 @@ Date predicted for tax/vat payment/refund predicted category
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>asset</strong></td>
-<td valign="top"><a href="#asset">Asset</a></td>
+<td valign="top"><a href="#transactionasset">TransactionAsset</a></td>
 <td>
 
 View a single Asset for a transaction
@@ -4084,6 +4034,56 @@ View a single Asset for a transaction
 <tr>
 <td colspan="2" align="right" valign="top">assetId</td>
 <td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TransactionAsset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>filetype</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetableId</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>path</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>thumbnail</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fullsize</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
