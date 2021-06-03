@@ -8974,6 +8974,10 @@ Indicates user has accepted to receive Kontist marketing communication
 <td valign="top"><strong>KONTAX_PENDING</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>ACCOUNTING</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
