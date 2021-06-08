@@ -591,6 +591,11 @@ Create a transaction Asset and obtain an upload config
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">assetableType</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">filetype</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
@@ -1553,6 +1558,25 @@ Create or update user products that can be linked to the user's invoice(s)
 <td valign="top">[<a href="#userproductinput">UserProductInput</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitDeclaration</strong></td>
+<td valign="top"><a href="#declaration">Declaration</a>!</td>
+<td>
+
+Submits UStVA declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -1923,6 +1947,56 @@ The amount of tax that was owed for all past years combined
 The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### Asset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>filetype</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetableId</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>path</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>thumbnail</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fullsize</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2412,6 +2486,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>email</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
@@ -2907,11 +2986,6 @@ A list of products from the invoice
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>invoiceSettingsId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -2922,18 +2996,8 @@ A list of products from the invoice
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>customer</strong></td>
-<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoiceNumber</strong></td>
-<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2944,6 +3008,21 @@ A list of products from the invoice
 <tr>
 <td colspan="2" valign="top"><strong>note</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>customer</strong></td>
+<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceNumber</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3037,11 +3116,6 @@ A list of products from the invoice
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>senderName</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -3082,15 +3156,6 @@ A list of products from the invoice
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>logoUrl</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-If a user's setting has a logoPath, we calculate a url to the thumbnail from it
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>dueDateDefaultOffset</strong></td>
 <td valign="top"><a href="#float">Float</a></td>
 <td>
@@ -3113,6 +3178,20 @@ Number of days which get added to today's date to create a default value for due
 <td colspan="2" valign="top"><strong>vatNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>logoUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+If a user's setting has a logoPath, we calculate a url to the thumbnail from it
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -3614,6 +3693,15 @@ The IBAN of the SEPA Transfer recipient
 <td>
 
 The end to end ID of the SEPA Transfer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assets</strong></td>
+<td valign="top">[<a href="#asset">Asset</a>!]!</td>
+<td>
+
+List of uploaded Asset files for this transfer
 
 </td>
 </tr>
@@ -4237,6 +4325,11 @@ View a single Asset for a transaction
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>uuid</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>recipient</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td>
@@ -4341,6 +4434,15 @@ The date at which the next payment will be executed for Standing Orders
 <td>
 
 The user selected category for the SEPA Transfer
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assets</strong></td>
+<td valign="top">[<a href="#asset">Asset</a>!]</td>
+<td>
+
+List of uploaded Asset files for this transfer
 
 </td>
 </tr>
@@ -5859,11 +5961,6 @@ User has accepted latest Kontist terms when signing up
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>invoiceSettingsId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -5875,12 +5972,7 @@ User has accepted latest Kontist terms when signing up
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoiceNumber</strong></td>
-<td valign="top"><a href="#float">Float</a></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -5890,6 +5982,11 @@ User has accepted latest Kontist terms when signing up
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>note</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
