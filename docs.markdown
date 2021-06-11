@@ -2495,17 +2495,43 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>streetLine</strong></td>
+<td colspan="2" valign="top"><strong>streetLine</strong> ⚠️</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+The streetLine field is being replaced by the address field
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td colspan="2" valign="top"><strong>postCode</strong> ⚠️</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+The postCode field is being replaced by the address field
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>city</strong></td>
+<td colspan="2" valign="top"><strong>city</strong> ⚠️</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+The city field is being replaced by the address field
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>address</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
@@ -2562,6 +2588,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>paidAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionId</strong></td>
+<td valign="top"><a href="#id">ID</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2902,7 +2933,7 @@ A list of products from the invoice
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2916,17 +2947,43 @@ A list of products from the invoice
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>streetLine</strong></td>
+<td colspan="2" valign="top"><strong>streetLine</strong> ⚠️</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+The streetLine field is being replaced by the address field
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td colspan="2" valign="top"><strong>postCode</strong> ⚠️</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+The postCode field is being replaced by the address field
+
+</blockquote>
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>city</strong></td>
+<td colspan="2" valign="top"><strong>city</strong> ⚠️</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+The city field is being replaced by the address field
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>address</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
@@ -5928,6 +5985,11 @@ User has accepted latest Kontist terms when signing up
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>address</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
