@@ -1559,6 +1559,35 @@ Create or update user products that can be linked to the user's invoice(s)
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>categorizeTransactionForDeclaration</strong></td>
+<td valign="top"><a href="#categorizetransactionfordeclarationresponse">CategorizeTransactionForDeclarationResponse</a>!</td>
+<td>
+
+Categorize transaction for VAT declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">elsterCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">category</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">date</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>submitDeclaration</strong></td>
 <td valign="top"><a href="#declaration">Declaration</a>!</td>
 <td>
@@ -2246,6 +2275,36 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <tr>
 <td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
 <td valign="top"><a href="#cardlimits">CardLimits</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CategorizeTransactionForDeclarationResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>elsterCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>date</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -7563,6 +7622,10 @@ Indicates user has accepted to receive Kontist marketing communication
 </tr>
 <tr>
 <td valign="top"><strong>INVOICING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>USER_OVERWRITE</strong></td>
 <td></td>
 </tr>
 </tbody>
