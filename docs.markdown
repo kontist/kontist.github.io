@@ -9740,6 +9740,22 @@ Indicates user has accepted to receive Kontist marketing communication
 <td valign="top"><strong>VERIFICATION_CODE</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>CANCELLATION_CARD_TRANSACTION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CANCELLATION_CHARGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INTRA_CUSTOMER_TRANSFER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>Target2CreditTransfer</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
