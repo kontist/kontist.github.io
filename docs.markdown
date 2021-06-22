@@ -1651,6 +1651,11 @@ The bank account of the current user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>availableBalance</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>bic</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
