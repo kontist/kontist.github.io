@@ -1608,7 +1608,7 @@ Submits UStVA declaration
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1876,6 +1876,21 @@ Overdraft Application - only available for Kontist Application
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarationStats</strong></td>
+<td valign="top"><a href="#declarationstats">DeclarationStats</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -2493,6 +2508,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td valign="top">[<a href="#formdatapair">FormDataPair</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2567,42 +2587,6 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td colspan="2" valign="top"><strong>email</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>streetLine</strong> ⚠️</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-The streetLine field is being replaced by the address field
-
-</blockquote>
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>postCode</strong> ⚠️</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-The postCode field is being replaced by the address field
-
-</blockquote>
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>city</strong> ⚠️</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-The city field is being replaced by the address field
-
-</blockquote>
-</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>address</strong></td>
@@ -2717,6 +2701,36 @@ The city field is being replaced by the address field
 </tbody>
 </table>
 
+#### DeclarationStats
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>elsterGroups</strong></td>
+<td valign="top">[<a href="#elstergroup">ElsterGroup</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>uncategorized</strong></td>
+<td valign="top">[<a href="#transactionforaccountingview">TransactionForAccountingView</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DirectDebitFee
 
 <table>
@@ -2792,6 +2806,36 @@ The city field is being replaced by the address field
 <tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ElsterGroup
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>elsterCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>elsterCodeTranslation</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactions</strong></td>
+<td valign="top">[<a href="#transactionforaccountingview">TransactionForAccountingView</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -3019,42 +3063,6 @@ A list of products from the invoice
 <td colspan="2" valign="top"><strong>email</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>streetLine</strong> ⚠️</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-The streetLine field is being replaced by the address field
-
-</blockquote>
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>postCode</strong> ⚠️</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-The postCode field is being replaced by the address field
-
-</blockquote>
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>city</strong> ⚠️</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-The city field is being replaced by the address field
-
-</blockquote>
-</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>address</strong></td>
@@ -4338,6 +4346,76 @@ View a single Asset for a transaction
 <tr>
 <td colspan="2" valign="top"><strong>usedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TransactionForAccountingView
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>valutaDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>selectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>elsterCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatAmount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isSplit</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -6044,21 +6122,6 @@ User has accepted latest Kontist terms when signing up
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>email</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>streetLine</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>postCode</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>city</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
