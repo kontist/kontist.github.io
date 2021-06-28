@@ -1104,40 +1104,6 @@ Set the card holder representation for the customer
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>categorizeTransaction</strong> ⚠️</td>
-<td valign="top"><a href="#transaction">Transaction</a>!</td>
-<td>
-
-DEPRECATED use `updateTransaction()` instead - Categorize a transaction with an optional custom booking date for VAT or Tax categories
-
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-This mutation will be removed in an upcoming release, please use `updateTransaction` mutation instead
-
-</blockquote>
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">category</td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">userSelectedBookingDate</td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td>
-
-When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>updateTransaction</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td>
