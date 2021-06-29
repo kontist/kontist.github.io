@@ -2664,6 +2664,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>uploadedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
