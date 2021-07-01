@@ -1564,6 +1564,11 @@ Categorize transaction for VAT declaration
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">isSplit</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>submitDeclaration</strong></td>
 <td valign="top"><a href="#declaration">Declaration</a>!</td>
 <td>
