@@ -9820,6 +9820,30 @@ Indicates user has accepted to receive Kontist marketing communication
 <td valign="top"><strong>Target2CreditTransfer</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>CorrectionCardTransaction</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RebookedSEPADirectDebitCoreReturn</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RebookedSEPACreditTransferReturn</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ChargeRecallRequest</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CorrectionSEPACreditTransfer</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>InterestExcessDeposit</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
