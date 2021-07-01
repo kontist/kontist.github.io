@@ -5064,11 +5064,6 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">invoiceId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>invoiceAsset</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
