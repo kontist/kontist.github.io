@@ -4871,6 +4871,15 @@ This field will be removed in an upcoming release and should now be queried from
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>screeningStatus</strong></td>
+<td valign="top"><a href="#screeningstatus">ScreeningStatus</a></td>
+<td>
+
+The user's Solaris screening status
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>gender</strong></td>
 <td valign="top"><a href="#gender">Gender</a></td>
 <td></td>
@@ -9391,6 +9400,33 @@ Indicates user has accepted to receive Kontist marketing communication
 </tr>
 <tr>
 <td valign="top"><strong>CHANGE_REQUEST</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ScreeningStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_SCREENED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>POTENTIAL_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SCREENED_ACCEPTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SCREENED_DECLINED</strong></td>
 <td></td>
 </tr>
 </tbody>
