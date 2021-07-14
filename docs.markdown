@@ -639,6 +639,34 @@ Remove an Asset from the Transaction and storage
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>finalizeAssetUpload</strong></td>
+<td valign="top"><a href="#asset">Asset</a>!</td>
+<td>
+
+Confirm and validate an Asset upload as completed
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteAsset</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Remove an Asset from the db and storage
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>cancelTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td>
@@ -4226,8 +4254,31 @@ Date predicted for tax/vat payment/refund predicted category
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>transactionAssets</strong></td>
+<td valign="top">[<a href="#asset">Asset</a>!]!</td>
+<td>
+
+List Assets for a transaction
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>asset</strong></td>
 <td valign="top"><a href="#transactionasset">TransactionAsset</a></td>
+<td>
+
+View a single Asset for a transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionAsset</strong></td>
+<td valign="top"><a href="#asset">Asset</a></td>
 <td>
 
 View a single Asset for a transaction
