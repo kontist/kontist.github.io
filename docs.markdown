@@ -2833,6 +2833,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>elsterCodeTranslation</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
