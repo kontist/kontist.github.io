@@ -7472,6 +7472,15 @@ Indicates user has accepted to receive Kontist marketing communication
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>accountingOnboardingStarted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates if user started upgrading to accounting plan
+
+</td>
+</tr>
 </tbody>
 </table>
 
