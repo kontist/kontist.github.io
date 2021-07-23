@@ -9954,6 +9954,18 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>InterestExcessDeposit</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>InterestOverdraft</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>InterestOverdraftExceeded</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ReimbursementCustomer</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
