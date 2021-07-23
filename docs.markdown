@@ -7481,6 +7481,15 @@ Indicates if user started upgrading to accounting plan
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxServiceOnboardingStarted</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td>
+
+Indicates if user started upgrading to Kontax plan
+
+</td>
+</tr>
 </tbody>
 </table>
 
