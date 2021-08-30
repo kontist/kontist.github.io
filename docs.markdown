@@ -1132,6 +1132,25 @@ Set the card holder representation for the customer
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>virtualCardDetails</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Returns encrypted card details for virtual card
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">args</td>
+<td valign="top"><a href="#virtualcarddetailsargs">VirtualCardDetailsArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateTransaction</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td>
@@ -1790,6 +1809,21 @@ The cursor of the item to start from. Use in conjunction with 'first'
 The cursor of the item to start from. Use in conjunction with 'last'
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionsCSV</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">to</td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">from</td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transfer</strong></td>
@@ -6405,6 +6439,59 @@ Number of days which get added to today's date to create a default value for due
 </tbody>
 </table>
 
+#### JWE
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>alg</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>enc</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### JWK
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>kty</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>n</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### PushProvisioningAndroidInput
 
 <table>
@@ -7529,6 +7616,40 @@ Indicates if user started upgrading to accounting plan
 Indicates if user started upgrading to Kontax plan
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### VirtualCardDetailsArgs
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>signature</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deviceId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>jwk</strong></td>
+<td valign="top"><a href="#jwk">JWK</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>jwe</strong></td>
+<td valign="top"><a href="#jwe">JWE</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
