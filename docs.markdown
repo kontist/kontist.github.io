@@ -4309,7 +4309,7 @@ Date predicted for tax/vat payment/refund predicted category
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>canBeRecategorized</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 <tr>
