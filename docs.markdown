@@ -4853,6 +4853,41 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
+#### UnfinishedTransfer
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recipient</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### UpdateSubscriptionPlanResult
 
 <table>
@@ -5359,6 +5394,11 @@ User metadata. These fields are likely to get frequently updated or changed.
 <tr>
 <td colspan="2" align="right" valign="top">platform</td>
 <td valign="top"><a href="#platform">Platform</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>unfinishedTransfers</strong></td>
+<td valign="top">[<a href="#unfinishedtransfer">UnfinishedTransfer</a>!]!</td>
 <td></td>
 </tr>
 <tr>
