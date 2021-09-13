@@ -4042,6 +4042,36 @@ List of uploaded Asset files for this transfer
 <td valign="top">[<a href="#subscriptionfeaturegroup">SubscriptionFeatureGroup</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>code</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### SubscriptionPlansResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>plans</strong></td>
+<td valign="top">[<a href="#subscriptionplan">SubscriptionPlan</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>couponCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5308,6 +5338,20 @@ The details of an existing OAuth2 client
 The plans a user has subscribed to
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>subscriptionPlans</strong></td>
+<td valign="top"><a href="#subscriptionplansresponse">SubscriptionPlansResponse</a>!</td>
+<td>
+
+The available subscription plans
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>banners</strong></td>
