@@ -2372,7 +2372,7 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#string">String</a></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
 </tr>
 <tr>
