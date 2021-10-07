@@ -4042,11 +4042,6 @@ List of uploaded Asset files for this transfer
 <td valign="top">[<a href="#subscriptionfeaturegroup">SubscriptionFeatureGroup</a>!]!</td>
 <td></td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>code</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
