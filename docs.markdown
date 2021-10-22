@@ -10293,6 +10293,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>TIMED_ORDER</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>VIRTUAL_BOOKING</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
