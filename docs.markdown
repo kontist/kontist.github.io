@@ -1601,11 +1601,6 @@ Categorize transaction for VAT declaration
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">elsterCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" align="right" valign="top">category</td>
 <td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
@@ -2366,11 +2361,6 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>elsterCode</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
 <td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
@@ -2401,22 +2391,12 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>elsterCode</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>categoryCodeTranslation</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>elsterCodeTranslation</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -2813,11 +2793,6 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>categoryGroups</strong></td>
-<td valign="top">[<a href="#categorygroup">CategoryGroup</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>elsterGroups</strong></td>
 <td valign="top">[<a href="#categorygroup">CategoryGroup</a>!]!</td>
 <td></td>
 </tr>
@@ -4338,17 +4313,7 @@ Date predicted for tax/vat payment/refund predicted category
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>elsterCode</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>categoryCodeTranslation</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>elsterCodeTranslation</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
@@ -4531,11 +4496,6 @@ View a single Asset for a transaction
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>categoryCode</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>elsterCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
