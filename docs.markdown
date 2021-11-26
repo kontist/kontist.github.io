@@ -1426,6 +1426,21 @@ Update user signup information
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createUserEmailAlias</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">hash</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">alias</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createUser</strong></td>
 <td valign="top"><a href="#publicmutationresult">PublicMutationResult</a>!</td>
 <td>
