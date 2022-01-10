@@ -10066,11 +10066,19 @@ Indicates if user started upgrading to Kontax plan
 </thead>
 <tbody>
 <tr>
-<td valign="top"><strong>CREDIT_PRESENTMENT</strong></td>
+<td valign="top"><strong>CARD_USAGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ATM</strong></td>
 <td></td>
 </tr>
 <tr>
 <td valign="top"><strong>CASH_MANUAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CREDIT_PRESENTMENT</strong></td>
 <td></td>
 </tr>
 <tr>
@@ -10102,15 +10110,7 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>ATM</strong></td>
-<td></td>
-</tr>
-<tr>
 <td valign="top"><strong>CANCEL_MANUAL_LOAD</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>CARD_USAGE</strong></td>
 <td></td>
 </tr>
 <tr>
