@@ -10285,6 +10285,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>ReimbursementCustomer</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EXTERNAL_TRANSACTION</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
