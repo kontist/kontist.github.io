@@ -1690,6 +1690,53 @@ Submits UStVA declaration
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateTaxNumber</strong></td>
+<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
+<td>
+
+Updates user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatetaxnumberinput">UpdateTaxNumberInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createTaxNumber</strong></td>
+<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
+<td>
+
+Create user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createtaxnumberinput">CreateTaxNumberInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteTaxNumber</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Delete user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -4171,6 +4218,48 @@ List of uploaded Asset files for this transfer
 </tbody>
 </table>
 
+#### TaxNumber
+
+Tax numbers of users
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#taxnumbertype">TaxNumberType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>modificationDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### TaxYearSetting
 
 <table>
@@ -5575,6 +5664,15 @@ The list of all customers of the current user
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumbers</strong></td>
+<td valign="top">[<a href="#taxnumber">TaxNumber</a>!]!</td>
+<td>
+
+User's tax numbers
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6154,6 +6252,40 @@ The personal note of the SEPA Transfer - 140 max characters
 The end to end ID of the SEPA Transfer
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### CreateTaxNumberInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#taxnumbertype">TaxNumberType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>modificationDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -7238,6 +7370,40 @@ The scopes the client has access to, limiting access to the corresponding parts 
 The id of the OAuth2 client to update
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### UpdateTaxNumberInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#taxnumbertype">TaxNumberType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>modificationDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -9885,6 +10051,25 @@ Indicates if user started upgrading to Kontax plan
 <tbody>
 <tr>
 <td valign="top"><strong>ERROR</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TaxNumberType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PERSONAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BUSINESS</strong></td>
 <td></td>
 </tr>
 </tbody>
