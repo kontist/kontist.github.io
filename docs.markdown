@@ -9713,6 +9713,10 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>NONE_QUARTERLY</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>YEARLY</strong></td>
 <td></td>
 </tr>
