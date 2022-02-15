@@ -4373,6 +4373,11 @@ The date at which the transaction was processed and the amount deducted from the
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>receiptName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>fees</strong></td>
 <td valign="top">[<a href="#transactionfee">TransactionFee</a>!]!</td>
 <td></td>
