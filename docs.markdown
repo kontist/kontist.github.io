@@ -8380,6 +8380,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>INVOICE</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EXPENSE</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
