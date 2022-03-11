@@ -4257,6 +4257,11 @@ Tax numbers of users
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>isMainBusinessTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -6302,6 +6307,11 @@ The end to end ID of the SEPA Transfer
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>isMainBusinessTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -7418,6 +7428,11 @@ The id of the OAuth2 client to update
 <tr>
 <td colspan="2" valign="top"><strong>modificationDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isMainBusinessTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
