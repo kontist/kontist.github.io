@@ -6041,6 +6041,11 @@ Platform used for signup
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>irclickid</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -6491,6 +6496,11 @@ User's email. This will be used as their username.
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>attribution</strong></td>
+<td valign="top"><a href="#attributiondata">AttributionData</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>impactAttribution</strong></td>
 <td valign="top"><a href="#attributiondata">AttributionData</a></td>
 <td></td>
 </tr>
