@@ -3566,17 +3566,38 @@ If a user's setting has a logoPath, we calculate a url to the thumbnail from it
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td>
+
+The amount the user pays
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>discountAmount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount the user saves
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>fullAmount</strong></td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+
+The amount plus discount amount
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>discountPercentage</strong></td>
 <td valign="top"><a href="#int">Int</a></td>
-<td></td>
+<td>
+
+The amount the user saves in percentage
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -4188,6 +4209,11 @@ List of uploaded Asset files for this transfer
 <tr>
 <td colspan="2" valign="top"><strong>couponCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>couponValidFor</strong></td>
+<td valign="top">[<a href="#purchasetype">PurchaseType</a>!]</td>
 <td></td>
 </tr>
 </tbody>
