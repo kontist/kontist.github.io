@@ -2726,7 +2726,12 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>error</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -4536,6 +4541,11 @@ Date predicted for tax/vat payment/refund predicted category
 <tr>
 <td colspan="2" valign="top"><strong>canBeRecategorized</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>verified</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
