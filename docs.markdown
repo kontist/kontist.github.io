@@ -1737,6 +1737,20 @@ Delete user's taxNumber
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createBusinessAddress</strong></td>
+<td valign="top"><a href="#businessaddress">BusinessAddress</a>!</td>
+<td>
+
+Creates an user's business address
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createbusinessaddressinput">CreateBusinessAddressInput</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2296,6 +2310,48 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <tr>
 <td colspan="2" valign="top"><strong>transfers</strong></td>
 <td valign="top">[<a href="#sepatransfer">SepaTransfer</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BusinessAddress
+
+Business Address of a Kontax User
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>street</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>movingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -5719,6 +5775,24 @@ User's tax numbers
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAddresses</strong></td>
+<td valign="top">[<a href="#businessaddress">BusinessAddress</a>!]!</td>
+<td>
+
+User's business addresses
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastBusinessAddress</strong></td>
+<td valign="top"><a href="#businessaddress">BusinessAddress</a>!</td>
+<td>
+
+User's last business address before a specific date
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6181,6 +6255,40 @@ Platform used for signup
 <tr>
 <td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CreateBusinessAddressInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>street</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>movingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 </tbody>
