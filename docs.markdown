@@ -5550,6 +5550,16 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>hasBusinessTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasBusinessTaxNumberUpdatedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
 <td valign="top">[<a href="#client">Client</a>!]!</td>
 <td>
@@ -6074,6 +6084,11 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>permanentExtensionStatus</strong></td>
 <td valign="top"><a href="#permanentextensionstatus">PermanentExtensionStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasBusinessTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
@@ -7834,6 +7849,11 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>vatNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasBusinessTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
