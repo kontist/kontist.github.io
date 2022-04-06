@@ -8550,6 +8550,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>USt</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>GewSt</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
