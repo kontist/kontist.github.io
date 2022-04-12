@@ -629,7 +629,7 @@ Confirm and validate an Asset upload as completed
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
 
-Remove an Asset from the Transaction and storage
+Remove an Asset from the Transaction
 
 </td>
 </tr>
@@ -657,7 +657,7 @@ Confirm and validate an Asset upload as completed
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
 
-Remove an Asset from the db and storage
+Remove an Asset
 
 </td>
 </tr>
@@ -4340,7 +4340,7 @@ Tax numbers of users
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>modificationDate</strong></td>
+<td colspan="2" valign="top"><strong>validFrom</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
@@ -6467,7 +6467,7 @@ The end to end ID of the SEPA Transfer
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>modificationDate</strong></td>
+<td colspan="2" valign="top"><strong>validFrom</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
@@ -7595,7 +7595,7 @@ The id of the OAuth2 client to update
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>modificationDate</strong></td>
+<td colspan="2" valign="top"><strong>validFrom</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
