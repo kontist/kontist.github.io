@@ -2354,6 +2354,11 @@ Business Address of a Kontax User
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>isSameAsPrivateAddress</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
