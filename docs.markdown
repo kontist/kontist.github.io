@@ -1921,6 +1921,21 @@ Creates an user's business address
 <td valign="top"><a href="#createbusinessaddressinput">CreateBusinessAddressInput</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>startQuestionnaire</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -4133,6 +4148,41 @@ Change request id to authenticate verification
 </tbody>
 </table>
 
+#### Questionnaire
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>startedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>completedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### RecurlyAccount
 
 <table>
@@ -5982,6 +6032,21 @@ User's business addresses
 User's last business address before a specific date
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>questionnaire</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -10618,6 +10683,21 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>ACCOUNTING</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionnaireType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>START_OF_THE_YEAR</strong></td>
 <td></td>
 </tr>
 </tbody>
