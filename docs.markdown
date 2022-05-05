@@ -1794,6 +1794,21 @@ Allow user to sign Power of Attorney
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>matchEmailDocumentToTransaction</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">emailDocumentId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>upsertProducts</strong></td>
 <td valign="top">[<a href="#product">Product</a>!]!</td>
 <td>
@@ -1934,6 +1949,41 @@ Creates an user's business address
 <tr>
 <td colspan="2" align="right" valign="top">type</td>
 <td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitQuestionnaireAnswer</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">value</td>
+<td valign="top"><a href="#json">JSON</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postponeQuestionnaireAnswer</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -2395,6 +2445,36 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 </tbody>
 </table>
 
+#### AssetData
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fullsize</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>filetype</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### AuthorizeChangeRequestRespone
 
 <table>
@@ -2542,6 +2622,46 @@ Business Address of a Kontax User
 <tr>
 <td colspan="2" valign="top"><strong>isSameAsPrivateAddress</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BusinessAsset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>businessAssetableId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAssetableType</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetClass</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purchaseDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -3283,6 +3403,91 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### EmailDocument
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionId</strong></td>
+<td valign="top"><a href="#id">ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>currency</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>date</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>matchStatus</strong></td>
+<td valign="top"><a href="#documentmatchstatus">DocumentMatchStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>filename</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>matches</strong></td>
+<td valign="top">[<a href="#transaction">Transaction</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionMatches</strong></td>
+<td valign="top">[<a href="#kontaxtransaction">KontaxTransaction</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### FormDataPair
 
 <table>
@@ -3802,6 +4007,186 @@ If a user's setting has a logoPath, we calculate a url to the thumbnail from it
 </tbody>
 </table>
 
+#### KontaxTransaction
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>valutaDate</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>verified</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>merchantCategoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>foreignCurrency</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>escalated</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>escalationNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>internalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessTypeComment</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>personalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceRequestedAt</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>email</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>firstName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCodeMeta</strong></td>
+<td valign="top"><a href="#valuemeta">ValueMeta</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCodeMeta</strong></td>
+<td valign="top"><a href="#valuemeta">ValueMeta</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRateMeta</strong></td>
+<td valign="top"><a href="#valuemeta">ValueMeta</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reverseCharge</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assets</strong></td>
+<td valign="top">[<a href="#assetdata">AssetData</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasIntegrationDocument</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>splits</strong></td>
+<td valign="top">[<a href="#split">Split</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isSplitCategorized</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatYearPaymentFrequency</strong></td>
+<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAssets</strong></td>
+<td valign="top">[<a href="#businessasset">BusinessAsset</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>source</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### Money
 
 <table>
@@ -4161,6 +4546,11 @@ Change request id to authenticate verification
 </thead>
 <tbody>
 <tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>type</strong></td>
 <td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
 <td></td>
@@ -4341,6 +4731,56 @@ The end to end ID of the SEPA Transfer
 List of uploaded Asset files for this transfer
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### Split
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>uuid</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizationType</strong></td>
+<td valign="top"><a href="#categorizationtype">CategorizationType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -4653,6 +5093,11 @@ The amount of the transaction in cents
 <tr>
 <td colspan="2" valign="top"><strong>iban</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -5998,6 +6443,31 @@ Retrieves signed POA PDF for user.
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>emailDocuments</strong></td>
+<td valign="top">[<a href="#emaildocument">EmailDocument</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filterByUnmatched</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">uploadSources</td>
+<td valign="top">[<a href="#documentuploadsource">DocumentUploadSource</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>emailDocument</strong></td>
+<td valign="top"><a href="#emaildocument">EmailDocument</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
 <td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
 <td>
@@ -6339,6 +6809,41 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>dependents</strong></td>
 <td valign="top">[<a href="#userdependent">UserDependent</a>!]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ValueMeta
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>label</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizationType</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>suggestionSource</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -9093,6 +9598,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>USER_OVERWRITE</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>SCRIPT</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -9190,6 +9699,49 @@ Indicates if user started upgrading to Kontax plan
 </tbody>
 </table>
 
+#### DocumentMatchStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>TOO_MANY_MATCHES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO_MATCHES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LATER_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ALREADY_HAS_ASSET</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OTHER_PROVIDER_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WRONG_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MANUAL_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MANUAL_MATCH_USER</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DocumentType
 
 <table>
@@ -9208,6 +9760,29 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EXPENSE</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DocumentUploadSource
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>EMAIL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BACKOFFICE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EMAIL_FETCH</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -11606,6 +12181,10 @@ The `ID` scalar type represents a unique identifier, often used to refetch an ob
 #### Int
 
 The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
+
+#### JSON
+
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
 #### String
 
