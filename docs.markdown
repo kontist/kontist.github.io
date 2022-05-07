@@ -4570,6 +4570,51 @@ Change request id to authenticate verification
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>nextQuestion</strong></td>
+<td valign="top"><a href="#questionnairequestion">QuestionnaireQuestion</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">includePostponed</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionnaireQuestion
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>topic</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>inputConfig</strong></td>
+<td valign="top"><a href="#jsonobject">JSONObject</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postponable</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -12185,6 +12230,10 @@ The `Int` scalar type represents non-fractional signed whole numeric values. Int
 #### JSON
 
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+#### JSONObject
+
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
 #### String
 
