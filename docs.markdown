@@ -3477,8 +3477,12 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>matches</strong></td>
-<td valign="top">[<a href="#transaction">Transaction</a>!]!</td>
-<td></td>
+<td valign="top">[<a href="#transaction">Transaction</a>!]</td>
+<td>
+
+Returns an array of transactions which potential match with an email document. Note that just a subset of transaction fields gets returned
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transactionMatches</strong></td>
