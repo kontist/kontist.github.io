@@ -2445,36 +2445,6 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 </tbody>
 </table>
 
-#### AssetData
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>fullsize</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>filetype</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
 #### AuthorizeChangeRequestRespone
 
 <table>
@@ -2617,51 +2587,6 @@ Business Address of a Kontax User
 <tr>
 <td colspan="2" valign="top"><strong>movingDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>isSameAsPrivateAddress</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### BusinessAsset
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>businessAssetableId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>businessAssetableType</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>assetClass</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purchaseDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#float">Float</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -3484,11 +3409,6 @@ Returns an array of transactions which potential match with an email document. N
 
 </td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>transactionMatches</strong></td>
-<td valign="top">[<a href="#kontaxtransaction">KontaxTransaction</a>!]!</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
@@ -4006,186 +3926,6 @@ If a user's setting has a logoPath, we calculate a url to the thumbnail from it
 <tr>
 <td colspan="2" valign="top"><strong>data</strong></td>
 <td valign="top">[<a href="#dashboardinvoice">DashboardInvoice</a>!]!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### KontaxTransaction
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#float">Float</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>valutaDate</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>verified</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>name</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>iban</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>description</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>merchantCategoryCode</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>foreignCurrency</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>escalated</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>escalationNote</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>internalNote</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>businessTypeComment</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>personalNote</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoiceRequestedAt</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>email</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>firstName</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>lastName</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>categoryCode</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>categoryCodeMeta</strong></td>
-<td valign="top"><a href="#valuemeta">ValueMeta</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>vatCategoryCodeMeta</strong></td>
-<td valign="top"><a href="#valuemeta">ValueMeta</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>vatRate</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>vatRateMeta</strong></td>
-<td valign="top"><a href="#valuemeta">ValueMeta</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>reverseCharge</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>assets</strong></td>
-<td valign="top">[<a href="#assetdata">AssetData</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>hasIntegrationDocument</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>splits</strong></td>
-<td valign="top">[<a href="#split">Split</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>isSplitCategorized</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>vatYearPaymentFrequency</strong></td>
-<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>businessAssets</strong></td>
-<td valign="top">[<a href="#businessasset">BusinessAsset</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>source</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>purpose</strong></td>
-<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -4780,56 +4520,6 @@ The end to end ID of the SEPA Transfer
 List of uploaded Asset files for this transfer
 
 </td>
-</tr>
-</tbody>
-</table>
-
-#### Split
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>uuid</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>categorizationType</strong></td>
-<td valign="top"><a href="#categorizationtype">CategorizationType</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>categoryCode</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -6858,41 +6548,6 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>dependents</strong></td>
 <td valign="top">[<a href="#userdependent">UserDependent</a>!]</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### ValueMeta
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>label</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>description</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>categorizationType</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>suggestionSource</strong></td>
-<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
