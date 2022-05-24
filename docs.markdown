@@ -5984,6 +5984,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>receiptMatchingIntroDismissedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
 <td valign="top">[<a href="#client">Client</a>!]!</td>
 <td>
@@ -9097,6 +9102,10 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>VAT_DECLARATION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RECEIPT_MATCHING</strong></td>
 <td></td>
 </tr>
 </tbody>
