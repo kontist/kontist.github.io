@@ -9508,6 +9508,14 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>EMAIL_FETCH</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>WEB</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MOBILE</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
