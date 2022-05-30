@@ -2599,6 +2599,11 @@ Business Address of a Kontax User
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>deletedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -11004,6 +11009,22 @@ Indicates if user started upgrading to Kontax plan
 <tbody>
 <tr>
 <td valign="top"><strong>START_OF_THE_YEAR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_BASIC_DATA</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_CAR_USAGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_TRAVEL_EXPENSES</strong></td>
 <td></td>
 </tr>
 </tbody>
