@@ -9249,6 +9249,10 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>VISA_BUSINESS_DEBIT_2</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>MASTERCARD_BUSINESS_DEBIT</strong></td>
 <td></td>
 </tr>
