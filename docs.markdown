@@ -4773,6 +4773,11 @@ Tax numbers of users
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>deletedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -8408,11 +8413,6 @@ The id of the OAuth2 client to update
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>taxNumber</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>type</strong></td>
 <td valign="top"><a href="#taxnumbertype">TaxNumberType</a>!</td>
 <td></td>
@@ -8430,6 +8430,11 @@ The id of the OAuth2 client to update
 <tr>
 <td colspan="2" valign="top"><strong>isMainBusinessTaxNumber</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumber</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
