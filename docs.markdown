@@ -1996,6 +1996,16 @@ Creates an user's business address
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>resetLastQuestionnaireAnswer</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
