@@ -1559,6 +1559,15 @@ Document's name
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">metadata</td>
+<td valign="top"><a href="#updatedocumentmetadata">UpdateDocumentMetadata</a></td>
+<td>
+
+Document's metadata
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>deleteDocument</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
@@ -3350,6 +3359,61 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>metadata</strong></td>
+<td valign="top"><a href="#documentmetadata">DocumentMetadata</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DocumentCategory
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>folderName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DocumentMetadata
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#documentcategory">DocumentCategory</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -4371,7 +4435,7 @@ Change request id to authenticate verification
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>topic</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -6117,6 +6181,20 @@ Active user features
 <tr>
 <td colspan="2" valign="top"><strong>documents</strong></td>
 <td valign="top">[<a href="#document">Document</a>!]!</td>
+<td>
+
+User's documents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">documentCategoryId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentCategories</strong></td>
+<td valign="top">[<a href="#documentcategory">DocumentCategory</a>!]!</td>
 <td>
 
 User's documents
@@ -8405,6 +8483,29 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td>
 
 The id of the OAuth2 client to update
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### UpdateDocumentMetadata
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>documentCategoryId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Document's category Id
 
 </td>
 </tr>
