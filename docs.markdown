@@ -2015,6 +2015,26 @@ Creates an user's business address
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createQuestionnaireDocumentAsset</strong></td>
+<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireDocumentId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -4418,6 +4438,11 @@ Change request id to authenticate verification
 <td valign="top"><a href="#questionnaireanswer">QuestionnaireAnswer</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>documents</strong></td>
+<td valign="top">[<a href="#questionnairedocument">QuestionnaireDocument</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -4456,6 +4481,51 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>updatedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionnaireDocument
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#questionnairedocumenttype">QuestionnaireDocumentType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>inputs</strong></td>
+<td valign="top"><a href="#json">JSON</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updatedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assets</strong></td>
+<td valign="top">[<a href="#asset">Asset</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -11159,6 +11229,49 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>ACCOUNTING</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionnaireDocumentType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>EOY_CAR_USAGE_PURCHASE_CONTRACT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_CAR_USAGE_PRIVATELY_PAID_CAR_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_CAR_USAGE_LOGBOOK</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_CAR_USAGE_TRAVELED_KM_WITH_PRIVATE_CAR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_CAR_USAGE_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_TRAVEL_EXPENSES_BUSINESS_TRIPS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_TRAVEL_EXPENSES_TRAVELED_KM_WITH_PRIVATE_CAR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_TRAVEL_EXPENSES_OTHER</strong></td>
 <td></td>
 </tr>
 </tbody>
