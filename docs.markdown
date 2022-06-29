@@ -2035,6 +2035,16 @@ Creates an user's business address
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteQuestionnaireDocument</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireDocumentId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -6583,6 +6593,26 @@ User's last business address before a specific date
 <tr>
 <td colspan="2" valign="top"><strong>acceptedTermsVersion</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastTermsVersionAcceptedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastTermsVersionRejectedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>newTermsDeadlineDate</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastTermsVersionSkippedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 <tr>
@@ -11260,6 +11290,34 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_CAR_USAGE_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_RENT_OR_INTEREST</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_PHONE_OR_INTERNET</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_ELECTRICITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_HEATING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_UTILITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_UTILITY_AFTER_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_OTHER</strong></td>
 <td></td>
 </tr>
 <tr>
