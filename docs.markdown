@@ -2016,6 +2016,21 @@ Creates an user's business address
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>upsertQuestionnaireDocument</strong></td>
+<td valign="top"><a href="#questionnairedocument">QuestionnaireDocument</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#questionnairedocumentinput">QuestionnaireDocumentInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createQuestionnaireDocumentAsset</strong></td>
 <td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
 <td></td>
@@ -4491,6 +4506,11 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>updatedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentsStatus</strong></td>
+<td valign="top"><a href="#questionnaireanswerdocumentsstatus">QuestionnaireAnswerDocumentsStatus</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -8111,6 +8131,35 @@ An array of leaf and sub-CA certificates in Base64 encoded format provided by Ap
 </tbody>
 </table>
 
+#### QuestionnaireDocumentInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#questionnairedocumenttype">QuestionnaireDocumentType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>inputs</strong></td>
+<td valign="top"><a href="#jsonobject">JSONObject</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### TaxYearSettingInput
 
 <table>
@@ -11259,6 +11308,33 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>ACCOUNTING</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionnaireAnswerDocumentsStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PENDING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DELETED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>UPLOADED</strong></td>
 <td></td>
 </tr>
 </tbody>
