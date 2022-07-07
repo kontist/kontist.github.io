@@ -761,6 +761,11 @@ Create a transaction Asset and obtain an upload config
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">uploadPlatform</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">assetableType</td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -4461,6 +4466,11 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>lastAnswer</strong></td>
 <td valign="top"><a href="#questionnaireanswer">QuestionnaireAnswer</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#questionnairestatus">QuestionnaireStatus</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -11406,6 +11416,29 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_TRAVEL_EXPENSES_OTHER</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionnaireStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>STARTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>COMPLETED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DOCUMENTS_UPLOADED</strong></td>
 <td></td>
 </tr>
 </tbody>
