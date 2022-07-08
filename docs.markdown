@@ -762,7 +762,7 @@ Create a transaction Asset and obtain an upload config
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">uploadPlatform</td>
-<td valign="top"><a href="#string">String</a></td>
+<td valign="top"><a href="#requestplatform">RequestPlatform</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4454,6 +4454,11 @@ Change request id to authenticate verification
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#questionnairestatus">QuestionnaireStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>nextQuestion</strong></td>
 <td valign="top"><a href="#questionnairequestion">QuestionnaireQuestion</a></td>
 <td></td>
@@ -4466,11 +4471,6 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>lastAnswer</strong></td>
 <td valign="top"><a href="#questionnaireanswer">QuestionnaireAnswer</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#questionnairestatus">QuestionnaireStatus</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -11470,6 +11470,49 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_TRAVEL_EXPENSES</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### RequestPlatform
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>MOBILE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WEB</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>GIOVANNI</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BACKOFFICE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EMAIL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INVOICING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BACKEND</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NATIVE_SHARE</strong></td>
 <td></td>
 </tr>
 </tbody>
