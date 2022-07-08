@@ -11472,6 +11472,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>EOY_TRAVEL_EXPENSES</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
