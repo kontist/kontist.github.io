@@ -2065,16 +2065,6 @@ Creates an user's business address
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>finalizeTaxCase</strong></td>
-<td valign="top"><a href="#taxcase">TaxCase</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">taxCaseId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
@@ -11468,6 +11458,10 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_TRAVEL_EXPENSES_BUSINESS_TRIPS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_TRAVEL_EXPENSES_TRAVELED_KM_WITH_PRIVATE_CAR</strong></td>
 <td></td>
 </tr>
 <tr>
