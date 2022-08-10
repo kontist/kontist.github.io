@@ -2206,6 +2206,11 @@ The cursor of the item to start from. Use in conjunction with 'last'
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">preset</td>
+<td valign="top"><a href="#filterpresetinput">FilterPresetInput</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">filter</td>
 <td valign="top"><a href="#transactionfilter">TransactionFilter</a></td>
 <td></td>
@@ -2245,6 +2250,11 @@ The cursor of the item to start from. Use in conjunction with 'first'
 The cursor of the item to start from. Use in conjunction with 'last'
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionFilterPresets</strong></td>
+<td valign="top">[<a href="#filterpreset">FilterPreset</a>!]!</td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transactionsCSV</strong></td>
@@ -3606,6 +3616,26 @@ Returns an array of transactions which potential match with an email document. N
 </tbody>
 </table>
 
+#### GenericFilterPreset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### GooglePayCardToken
 
 <table>
@@ -4075,6 +4105,31 @@ If a user's setting has a logoPath, we calculate a url to the thumbnail from it
 <tr>
 <td colspan="2" valign="top"><strong>data</strong></td>
 <td valign="top">[<a href="#dashboardinvoice">DashboardInvoice</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### MissingTaxAssetsFilterPreset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -6273,6 +6328,16 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>hasPersonalTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasPersonalTaxNumberUpdatedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>receiptMatchingIntroDismissedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -7860,6 +7925,30 @@ User has accepted latest Kontist terms when signing up
 </tbody>
 </table>
 
+#### FilterPresetInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### InvoiceCustomerInput
 
 <table>
@@ -9055,12 +9144,22 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>personalTaxNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>vatNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>hasBusinessTaxNumber</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasPersonalTaxNumber</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
@@ -12494,5 +12593,28 @@ The `String` scalar type represents textual data, represented as UTF-8 character
 
 A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 
+
+### Interfaces
+
+
+#### FilterPreset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 <!-- END graphql-markdown -->
