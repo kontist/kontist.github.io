@@ -6086,11 +6086,44 @@ This field will be removed in an upcoming release and should now be queried from
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>screeningStatus</strong></td>
+<td colspan="2" valign="top"><strong>screeningStatus</strong> ⚠️</td>
 <td valign="top"><a href="#screeningstatus">ScreeningStatus</a></td>
 <td>
 
 The user's Solaris screening status
+
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "screeningProgress"
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>screeningProgress</strong></td>
+<td valign="top"><a href="#screeningprogress">ScreeningProgress</a></td>
+<td>
+
+The user's Solaris screening progress
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>riskClassificationStatus</strong></td>
+<td valign="top"><a href="#riskclassificationstatus">RiskClassificationStatus</a></td>
+<td>
+
+The user's Solaris risk clarification status
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>customerVettingStatus</strong></td>
+<td valign="top"><a href="#customervettingstatus">CustomerVettingStatus</a></td>
+<td>
+
+The user's Solaris customer vetting status
 
 </td>
 </tr>
@@ -9883,6 +9916,53 @@ Indicates if user started upgrading to Kontax plan
 </tbody>
 </table>
 
+#### CustomerVettingStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_VETTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>POTENTIAL_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INFORMATION_REQUESTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INFORMATION_RECEIVED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RISK_ACCEPTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RISK_REJECTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CUSTOMER_UNRESPONSIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VETTING_NOT_REQUIRED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DeclarationType
 
 <table>
@@ -11739,6 +11819,53 @@ Indicates if user started upgrading to Kontax plan
 </tbody>
 </table>
 
+#### RiskClassificationStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_SCORED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>POTENTIAL_RISK</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NORMAL_RISK</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INFORMATION_REQUESTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INFORMATION_RECEIVED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RISK_ACCEPTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RISK_REJECTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CUSTOMER_UNRESPONSIVE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SCORING_NOT_REQUIRED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### ScopeType
 
 <table>
@@ -11801,6 +11928,33 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>CHANGE_REQUEST</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ScreeningProgress
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_SCREENED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>POTENTIAL_MATCH</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SCREENED_ACCEPTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SCREENED_DECLINED</strong></td>
 <td></td>
 </tr>
 </tbody>
