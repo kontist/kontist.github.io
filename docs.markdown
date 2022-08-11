@@ -6967,6 +6967,11 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>personalTaxNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>deTaxId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
