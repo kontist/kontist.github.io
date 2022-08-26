@@ -4676,6 +4676,36 @@ Change request id to authenticate verification
 </tbody>
 </table>
 
+#### QuestionnaireTask
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#questionnairetaskstatus">QuestionnaireTaskStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### RecurlyAccount
 
 <table>
@@ -6671,6 +6701,11 @@ User's last business address before a specific date
 <tr>
 <td colspan="2" align="right" valign="top">type</td>
 <td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>questionnaireTasks</strong></td>
+<td valign="top">[<a href="#questionnairetask">QuestionnaireTask</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -11679,6 +11714,33 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>DOCUMENTS_UPLOADED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionnaireTaskStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>TO_DO</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>IN_PROGRESS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>IN_REVIEW</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>COMPLETED</strong></td>
 <td></td>
 </tr>
 </tbody>
