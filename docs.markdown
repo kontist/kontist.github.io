@@ -1636,6 +1636,16 @@ Update user signup information
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>userConfirmation</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmation</td>
+<td valign="top"><a href="#userconfirmation">UserConfirmation</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createUser</strong></td>
 <td valign="top"><a href="#publicmutationresult">PublicMutationResult</a>!</td>
 <td>
@@ -2023,6 +2033,16 @@ Creates an user's business address
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>resetLastQuestionnaireAnswer</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitBookkeepingQuestionnaire</strong></td>
 <td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
 <td></td>
 </tr>
@@ -12637,6 +12657,21 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>TIMED_ORDER</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserConfirmation
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>BOOKKEEPING_DOCUMENTS_UPLOADED</strong></td>
 <td></td>
 </tr>
 </tbody>
