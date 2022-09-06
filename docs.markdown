@@ -416,7 +416,7 @@ To ensure our API is available to all of our users, we do apply some limits. Dep
 | --------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Requests           | <100 per minute    |
 | Query size   | <10,000 characters |
-| Query complexity   | limited, i.e. <500+ different fields |
+| Query complexity   | limited, i.e. <500 different fields |
 | Errors   | <= 3 errors are returned |
 
 
