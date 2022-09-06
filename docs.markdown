@@ -409,6 +409,16 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 During login, we do create a browser-based session and store which clients and scopes already have been authenticated by the user. So next time the user wants to access the application we do not require the user to enter his credentials again.
 This session is automatically destroyed once the browser is closed. If you want to explicitly logout the user you can redirect him to the `/oauth/logout` endpoint. This should be done inside the browser context and in a hidden iframe.
 
+### Limits
+To ensure our API is available to all of our users, we do apply some limits. Depending from the situation, the actual limits may vary. Please make sure to stay below the following values to be on the safe side.
+
+Requests: <100 per minute
+Maximal query size: 10,000 characters
+Query complexity must be limited, i.e. fetching 1000+ different fields in the GraphQL query is too much.
+
+The number of errors we return is limited to 3.
+
+
 ### Advanced Topics
 Some clients might use device binding with certificates as MFA or make use of other OAuth2 grant types. This depends on the environment where this application will run. Please see our [advanced topics](/docs/advanced-authentication) on authentication.
 
