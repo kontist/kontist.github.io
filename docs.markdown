@@ -410,10 +410,10 @@ During login, we do create a browser-based session and store which clients and s
 This session is automatically destroyed once the browser is closed. If you want to explicitly logout the user you can redirect him to the `/oauth/logout` endpoint. This should be done inside the browser context and in a hidden iframe.
 
 ### Limits
-To ensure our API is available to all of our users, we do apply some limits. Depending on the situation, the actual limits may vary. Please make sure to stay below the following values to be on the safe side.
+To ensure our API is available to all of our users, we do apply some limits. Depending on the situation, the actual limits may vary. Please make sure to stay below the following values to be on the safe side. For single requests these values might be exceeded.
 
 Requests: <100 per minute
-Maximal query size: 10,000 characters
+Query size: <10,000 characters
 Query complexity must be limited, i.e. fetching 1000+ different fields in the GraphQL query is too much.
 
 The number of errors we return is limited to 3.
