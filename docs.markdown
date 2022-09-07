@@ -3602,6 +3602,36 @@ Returns an array of transactions which potential match with an email document. N
 </tbody>
 </table>
 
+#### FibuFinalCheckDocumentTask
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#fibufinalchecktasktype">FibuFinalCheckTaskType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#fibufinalchecktaskstatus">FibuFinalCheckTaskStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentTypes</strong></td>
+<td valign="top">[<a href="#externalbookkeepingdocumenttype">ExternalBookkeepingDocumentType</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### FormDataPair
 
 <table>
@@ -3642,6 +3672,31 @@ Returns an array of transactions which potential match with an email document. N
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### GenericFibuFinalCheckTask
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#fibufinalchecktasktype">FibuFinalCheckTaskType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#fibufinalchecktaskstatus">FibuFinalCheckTaskStatus</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -6747,6 +6802,16 @@ User's last business address before a specific date
 <tr>
 <td colspan="2" valign="top"><strong>taxCase</strong></td>
 <td valign="top"><a href="#taxcase">TaxCase</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fibuFinalCheckTasks</strong></td>
+<td valign="top">[<a href="#fibufinalchecktask">FibuFinalCheckTask</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -10163,6 +10228,67 @@ Indicates if user started upgrading to Kontax plan
 </tbody>
 </table>
 
+#### ExternalBookkeepingDocumentType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>ADVISOR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TOOL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MANUAL</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### FibuFinalCheckTaskStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>TODO</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>COMPLETED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### FibuFinalCheckTaskType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>TAX_RECEIPTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EXTERNAL_BOOKKEEPING_DOCUMENTS</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### Gender
 
 <table>
@@ -12872,6 +12998,26 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 
 ### Interfaces
 
+
+#### FibuFinalCheckTask
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#fibufinalchecktasktype">FibuFinalCheckTaskType</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 #### FilterPreset
 
