@@ -1646,6 +1646,11 @@ Update user signup information
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createUser</strong></td>
 <td valign="top"><a href="#publicmutationresult">PublicMutationResult</a>!</td>
 <td>
@@ -6482,6 +6487,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>missingBusinessTaxNumberNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>hasPersonalTaxNumber</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
@@ -6489,6 +6499,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <tr>
 <td colspan="2" valign="top"><strong>hasPersonalTaxNumberUpdatedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>missingPersonalTaxNumberNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -7130,6 +7145,16 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>hasBusinessTaxNumber</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>missingBusinessTaxNumberNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>missingPersonalTaxNumberNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -9335,6 +9360,16 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>hasPersonalTaxNumber</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>missingBusinessTaxNumberNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>missingPersonalTaxNumberNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -12798,6 +12833,10 @@ Indicates if user started upgrading to Kontax plan
 <tbody>
 <tr>
 <td valign="top"><strong>BOOKKEEPING_DOCUMENTS_UPLOADED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_DECLARATION_NOT_NEEDED</strong></td>
 <td></td>
 </tr>
 </tbody>
