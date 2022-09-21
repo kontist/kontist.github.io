@@ -2379,15 +2379,6 @@ Overdraft Application - only available for Kontist Application
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>solarisBalance</strong></td>
-<td valign="top"><a href="#solarisaccountbalance">SolarisAccountBalance</a>!</td>
-<td>
-
-Retrieve account balance from Solaris
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>declarations</strong></td>
 <td valign="top">[<a href="#declaration">Declaration</a>!]!</td>
 <td></td>
@@ -2420,36 +2411,6 @@ Retrieve account balance from Solaris
 <tr>
 <td colspan="2" align="right" valign="top">period</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### AccountBalance
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>value</strong></td>
-<td valign="top"><a href="#float">Float</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>currency</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>unit</strong></td>
-<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -4915,41 +4876,6 @@ Amount in euros granted to user and their referee
 </tbody>
 </table>
 
-#### SeizureProtection
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>currentBlockedAmount</strong></td>
-<td valign="top"><a href="#accountbalance">AccountBalance</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>protectedAmount</strong></td>
-<td valign="top"><a href="#accountbalance">AccountBalance</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>protectedAmountExpiring</strong></td>
-<td valign="top"><a href="#accountbalance">AccountBalance</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>protectedAmountExpiringDate</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
 #### SepaTransfer
 
 <table>
@@ -5029,36 +4955,6 @@ The end to end ID of the SEPA Transfer
 List of uploaded Asset files for this transfer
 
 </td>
-</tr>
-</tbody>
-</table>
-
-#### SolarisAccountBalance
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>balance</strong></td>
-<td valign="top"><a href="#accountbalance">AccountBalance</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>availableBalance</strong></td>
-<td valign="top"><a href="#accountbalance">AccountBalance</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>seizureProtection</strong></td>
-<td valign="top"><a href="#seizureprotection">SeizureProtection</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -5290,11 +5186,6 @@ List of uploaded Asset files for this transfer
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#taxcasestatus">TaxCaseStatus</a>!</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
@@ -5425,7 +5316,7 @@ The amount of the transaction in cents
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
-<td valign="top"><a href="#string">String</a></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -12424,29 +12315,6 @@ Indicates if user started upgrading to Kontax plan
 <tbody>
 <tr>
 <td valign="top"><strong>ERROR</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### TaxCaseStatus
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>NOT_STARTED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>IN_PROGRESS</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DONE</strong></td>
 <td></td>
 </tr>
 </tbody>
