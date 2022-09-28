@@ -6750,6 +6750,11 @@ User's documents
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">categoryNames</td>
+<td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>referral</strong></td>
 <td valign="top"><a href="#referraldetails">ReferralDetails</a>!</td>
 <td>
