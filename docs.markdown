@@ -3646,7 +3646,7 @@ Returns an array of transactions which potential match with an email document. N
 </tbody>
 </table>
 
-#### FibuFinalCheckDocumentTask
+#### FibuFinalCheckTask
 
 <table>
 <thead>
@@ -3659,18 +3659,13 @@ Returns an array of transactions which potential match with an email document. N
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>type</strong></td>
-<td valign="top"><a href="#fibufinalchecktasktype">FibuFinalCheckTaskType</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#fibufinalchecktaskstatus">FibuFinalCheckTaskStatus</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>documentTypes</strong></td>
-<td valign="top">[<a href="#externalbookkeepingdocumenttype">ExternalBookkeepingDocumentType</a>!]!</td>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#fibufinalchecktasktype">FibuFinalCheckTaskType</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -3716,31 +3711,6 @@ Returns an array of transactions which potential match with an email document. N
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### GenericFibuFinalCheckTask
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>type</strong></td>
-<td valign="top"><a href="#fibufinalchecktasktype">FibuFinalCheckTaskType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#fibufinalchecktaskstatus">FibuFinalCheckTaskStatus</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -5283,11 +5253,6 @@ List of uploaded Asset files for this transfer
 <tr>
 <td colspan="2" valign="top"><strong>finalizedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>assignee</strong></td>
-<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -10377,29 +10342,6 @@ Indicates if user started upgrading to Kontax plan
 </tbody>
 </table>
 
-#### ExternalBookkeepingDocumentType
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>ADVISOR</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>TOOL</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>MANUAL</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
 #### FibuFinalCheckTaskStatus
 
 <table>
@@ -10432,7 +10374,15 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>EXTERNAL_BOOKKEEPING_DOCUMENTS</strong></td>
+<td valign="top"><strong>UPLOAD_ADVISOR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>UPLOAD_TOOL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>UPLOAD_MANUAL</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -12640,6 +12590,14 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>CARD_REPLACEMENT</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>KONTIST_TRANSACTION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FREE_KONTIST_TRANSACTION</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -12969,11 +12927,19 @@ Indicates if user started upgrading to Kontax plan
 </thead>
 <tbody>
 <tr>
-<td valign="top"><strong>BOOKKEEPING_DOCUMENTS_UPLOADED</strong></td>
+<td valign="top"><strong>TAX_DECLARATION_NOT_NEEDED</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>TAX_DECLARATION_NOT_NEEDED</strong></td>
+<td valign="top"><strong>TOOLS_DOCUMENTS_UPLOADED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ADVISOR_DOCUMENTS_UPLOADED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MANUAL_DOCUMENTS_UPLOADED</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -13174,26 +13140,6 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 
 ### Interfaces
 
-
-#### FibuFinalCheckTask
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>type</strong></td>
-<td valign="top"><a href="#fibufinalchecktasktype">FibuFinalCheckTaskType</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 
 #### FilterPreset
 
