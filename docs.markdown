@@ -3505,6 +3505,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>downloadUrl</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>metadata</strong></td>
 <td valign="top"><a href="#documentmetadata">DocumentMetadata</a></td>
 <td></td>
