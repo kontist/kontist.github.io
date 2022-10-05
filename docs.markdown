@@ -6237,18 +6237,6 @@ This field will be removed in an upcoming release and should now be queried from
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>taxRate</strong> ⚠️</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td>
-<p>⚠️ <strong>DEPRECATED</strong></p>
-<blockquote>
-
-This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.taxRate"
-
-</blockquote>
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>vatRate</strong> ⚠️</td>
 <td valign="top"><a href="#uservatrate">UserVatRate</a></td>
 <td>
@@ -6256,6 +6244,18 @@ This field will be removed in an upcoming release and should now be queried from
 <blockquote>
 
 This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.vatRate"
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxRate</strong> ⚠️</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+This field will be removed in an upcoming release and should now be queried from "viewer.taxDetails.taxRate"
 
 </blockquote>
 </td>
@@ -6706,8 +6706,13 @@ User's documents
 </td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">documentCategoryId</td>
-<td valign="top"><a href="#string">String</a></td>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">categoryIds</td>
+<td valign="top">[<a href="#string">String</a>!]</td>
 <td></td>
 </tr>
 <tr>
