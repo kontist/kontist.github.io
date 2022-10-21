@@ -5268,6 +5268,31 @@ List of uploaded Asset files for this transfer
 </tbody>
 </table>
 
+#### TaxDeclaration
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#taxdeclarationstatus">TaxDeclarationStatus</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### TaxNumber
 
 Tax numbers of users
@@ -6916,6 +6941,46 @@ User's last business address before a specific date
 <tr>
 <td colspan="2" valign="top"><strong>fibuFinalCheckTasks</strong></td>
 <td valign="top">[<a href="#fibufinalchecktask">FibuFinalCheckTask</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>euerDeclaration</strong></td>
+<td valign="top"><a href="#taxdeclaration">TaxDeclaration</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>incomeTaxDeclaration</strong></td>
+<td valign="top"><a href="#taxdeclaration">TaxDeclaration</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>tradeTaxDeclaration</strong></td>
+<td valign="top"><a href="#taxdeclaration">TaxDeclaration</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatAnnualDeclaration</strong></td>
+<td valign="top"><a href="#taxdeclaration">TaxDeclaration</a></td>
 <td></td>
 </tr>
 <tr>
@@ -12412,6 +12477,41 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>DONE</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TaxDeclarationStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_RELEVANT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OPEN</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PROCESSING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TO_DO</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>COMPLETED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DECLINED</strong></td>
 <td></td>
 </tr>
 </tbody>
