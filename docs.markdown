@@ -561,116 +561,6 @@ mutation {
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>bankTaxAccount</strong></td>
-<td valign="top"><a href="#banktaxaccount">bankTaxAccount</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankTaxAccounts</strong></td>
-<td valign="top">[<a href="#banktaxaccount">bankTaxAccount</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">offset</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">limit</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">userId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankTaxTransaction</strong></td>
-<td valign="top"><a href="#banktaxtransaction">bankTaxTransaction</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">accountId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankTaxTransactions</strong></td>
-<td valign="top">[<a href="#banktaxtransaction">bankTaxTransaction</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">accountId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">externalTransactionId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">bookingDate</td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">valueDate</td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">amount</td>
-<td valign="top"><a href="#float">Float</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">creditorName</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">debtorName</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">debtorIban</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">status</td>
-<td valign="top"><a href="#banktaxtransactionstatus">bankTaxTransactionStatus</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">sortField</td>
-<td valign="top"><a href="#banktaxtransactionsortfield">bankTaxTransactionSortField</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">sortOrder</td>
-<td valign="top"><a href="#banktaxtransactionsortorder">bankTaxTransactionSortOrder</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>viewer</strong></td>
 <td valign="top"><a href="#user">User</a></td>
 <td>
@@ -735,31 +625,6 @@ Get all released generic features, that are needed before user creation
 <tr>
 <td colspan="2" align="right" valign="top">requisitionId</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankTaxAddAccount</strong></td>
-<td valign="top"><a href="#banktaxaccount">bankTaxAccount</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">newAccountData</td>
-<td valign="top"><a href="#banktaxcreateaccountdto">bankTaxCreateAccountDto</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankTaxRemoveAccount</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankTaxImportAccountTransactions</strong></td>
-<td valign="top">[<a href="#banktaxtransaction">bankTaxTransaction</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -5051,11 +4916,6 @@ List of uploaded Asset files for this transfer
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>bankTaxAccountAdded</strong></td>
-<td valign="top"><a href="#banktaxaccount">bankTaxAccount</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>newTransaction</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td></td>
@@ -7564,145 +7424,6 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 </tbody>
 </table>
 
-#### bankTaxAccount
-
-account
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>externalAccountId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>iban</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>userId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createdAt</strong></td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updatedAt</strong></td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### bankTaxTransaction
-
-transaction
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>accountId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>externalTransactionId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bookingDate</strong></td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>valueDate</strong></td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#float">Float</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>currency</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>creditorName</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>debtorName</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>debtorIban</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>remittanceInformationUnstructured</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#banktaxtransactionstatus">bankTaxTransactionStatus</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createdAt</strong></td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updatedAt</strong></td>
-<td valign="top"><a href="#banktaxdatetime">bankTaxDateTime</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
 ### Inputs
 
 #### AttributionData
@@ -9843,40 +9564,6 @@ Indicates if user started upgrading to Kontax plan
 <tr>
 <td colspan="2" valign="top"><strong>jwe</strong></td>
 <td valign="top"><a href="#jwe">JWE</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### bankTaxCreateAccountDto
-
-<table>
-<thead>
-<tr>
-<th colspan="2" align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>externalAccountId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bankId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>iban</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>userId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -13128,87 +12815,6 @@ Indicates if user started upgrading to Kontax plan
 </tbody>
 </table>
 
-#### bankTaxTransactionSortField
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>AMOUNT</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>BOOKING_DATE</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>CREATED_BY</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DEBTOR_IBAN</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DEBTOR_NAME</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>ID</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>STATUS</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>VALUE_DATE</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### bankTaxTransactionSortOrder
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>ASC</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DESC</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### bankTaxTransactionStatus
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>BOOKED</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>PENDING</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
 ### Scalars
 
 #### Boolean
@@ -13242,10 +12848,6 @@ The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](
 #### String
 
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
-
-#### bankTaxDateTime
-
-A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 
 
 ### Interfaces
