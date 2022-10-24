@@ -5290,6 +5290,11 @@ List of uploaded Asset files for this transfer
 <td valign="top"><a href="#taxdeclarationstatus">TaxDeclarationStatus</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>statusUpdatedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
