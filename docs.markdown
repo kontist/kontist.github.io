@@ -5336,6 +5336,16 @@ List of uploaded Asset files for this transfer
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>declarationType</strong></td>
+<td valign="top"><a href="#taxdeclarationtype">TaxDeclarationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#taxdeclarationstatus">TaxDeclarationStatus</a>!</td>
 <td></td>
@@ -5343,6 +5353,76 @@ List of uploaded Asset files for this transfer
 <tr>
 <td colspan="2" valign="top"><strong>statusUpdatedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarationApproval</strong></td>
+<td valign="top"><a href="#declarationapproval">DeclarationApproval</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>previewForms</strong></td>
+<td valign="top"><a href="#taxdeclarationsaveddraftinfo">TaxDeclarationSavedDraftInfo</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TaxDeclarationExternalAsset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>filetype</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TaxDeclarationSavedDraftInfo
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>pdfUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdBy</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>externalAssets</strong></td>
+<td valign="top">[<a href="#taxdeclarationexternalasset">TaxDeclarationExternalAsset</a>!]</td>
 <td></td>
 </tr>
 </tbody>
