@@ -10322,6 +10322,10 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>SUGGESTED_BY_ML</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>BOOKKEEPING_PARTNER</strong></td>
 <td></td>
 </tr>
