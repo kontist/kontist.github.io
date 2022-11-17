@@ -5360,6 +5360,11 @@ List of uploaded Asset files for this transfer
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>taxOfficeDeadline</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>finalizedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -12755,19 +12760,71 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>PROCESSING</strong></td>
+<td valign="top"><strong>IN_PROGRESS_DATA</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>TO_DO</strong></td>
+<td valign="top"><strong>CONSULTATION_DATA</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>COMPLETED</strong></td>
+<td valign="top"><strong>COMPLETED_BY_DATA</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>DECLINED</strong></td>
+<td valign="top"><strong>IN_PROGRESS_OPS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>COMPLETED_BY_OPS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>IN_PROGRESS_TAX_CONSULTANT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>APPROVED_BY_TAX_CONSULTANT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OBJECTED_BY_TAX_CONSULTANT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WAITING_FOR_USER_APPROVAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>APPROVED_BY_USER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OBJECTED_BY_USER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SUBMITTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OBJECTED_BY_FINANZAMT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RECEIVED_TAX_BILL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CLOSED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>APPEAL_PROCESS_STARTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>APPEAL_PROCESS_COMPLETED</strong></td>
 <td></td>
 </tr>
 </tbody>
