@@ -3405,7 +3405,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>delaySubmission</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
@@ -8166,7 +8166,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>delaySubmission</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 </tbody>
