@@ -5424,6 +5424,11 @@ List of uploaded Asset files for this transfer
 <td valign="top"><a href="#taxdeclarationsaveddraftinfo">TaxDeclarationSavedDraftInfo</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>finalForms</strong></td>
+<td valign="top"><a href="#taxdeclarationsubmissioninfo">TaxDeclarationSubmissionInfo</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5476,6 +5481,41 @@ List of uploaded Asset files for this transfer
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>externalAssets</strong></td>
+<td valign="top">[<a href="#taxdeclarationexternalasset">TaxDeclarationExternalAsset</a>!]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TaxDeclarationSubmissionInfo
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>pdfUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submissionAgent</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submissionDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
