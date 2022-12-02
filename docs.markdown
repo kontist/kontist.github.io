@@ -7174,7 +7174,7 @@ User's last business address before a specific date
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>fibuFinalCheckTasks</strong></td>
-<td valign="top">[<a href="#fibufinalchecktask">FibuFinalCheckTask</a>!]!</td>
+<td valign="top">[<a href="#fibufinalchecktask">FibuFinalCheckTask</a>!]</td>
 <td></td>
 </tr>
 <tr>
