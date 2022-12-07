@@ -5454,6 +5454,11 @@ List of uploaded Asset files for this transfer
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5824,6 +5829,11 @@ Date predicted for tax/vat payment/refund predicted category
 <tr>
 <td colspan="2" valign="top"><strong>categoryCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>actionReason</strong></td>
+<td valign="top"><a href="#actionreason">ActionReason</a></td>
 <td></td>
 </tr>
 <tr>
@@ -10211,6 +10221,61 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>PREMIUM_OLD</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ActionReason
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SMALL_BUSINESS_MISSING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WRONG_TAXRATE_ANCILLARY_SERVICE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MISSING_TAX_EXEMPT_SALES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO_REDUCED_TAX</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REVERSE_CHARGE_MISSING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OBLIGED_TAXES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOMING_AMOUNT_WRONG</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INVALID_RECEIPT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO_HOSPITALITY_RECEIPT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OUTGOING_AMOUNT_WRONG</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REVERSE_CHARGE_INFORMATION</strong></td>
 <td></td>
 </tr>
 </tbody>
