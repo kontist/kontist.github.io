@@ -12384,6 +12384,10 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>EOY_OFFICE_USAGE_FLOOR_PLAN</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>EOY_OFFICE_USAGE_OTHER</strong></td>
 <td></td>
 </tr>
@@ -13342,6 +13346,10 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>INTRA_CUSTOMER_TRANSFER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SEPAInstantCreditTransfer</strong></td>
 <td></td>
 </tr>
 <tr>
