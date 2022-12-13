@@ -4828,6 +4828,11 @@ Change request id to authenticate verification
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>isLastYearSuggestion</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createdAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
