@@ -2140,6 +2140,20 @@ Send Lead data to designated Zap to redirect lead to Agreas
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createConsentForDeviceMonitoring</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Records consent from the given person to collect device fingerprints on their registered device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">eventType</td>
+<td valign="top"><a href="#deviceconsenteventtype">DeviceConsentEventType</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -10686,6 +10700,25 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>GewSt</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DeviceConsentEventType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>APPROVED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REJECTED</strong></td>
 <td></td>
 </tr>
 </tbody>
