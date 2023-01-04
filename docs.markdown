@@ -9211,6 +9211,16 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>category_eq</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category_in</strong></td>
+<td valign="top">[<a href="#transactioncategory">TransactionCategory</a>!]</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>purpose_eq</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -9402,6 +9412,16 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <tr>
 <td colspan="2" valign="top"><strong>name_in</strong></td>
 <td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category_eq</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category_in</strong></td>
+<td valign="top">[<a href="#transactioncategory">TransactionCategory</a>!]</td>
 <td></td>
 </tr>
 <tr>
