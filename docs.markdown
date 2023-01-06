@@ -4901,6 +4901,16 @@ Change request id to authenticate verification
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>suggestLastYearAnswer</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastYearAnswer</strong></td>
+<td valign="top"><a href="#questionnaireanswer">QuestionnaireAnswer</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -5505,6 +5515,11 @@ List of uploaded Asset files for this transfer
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updatedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
