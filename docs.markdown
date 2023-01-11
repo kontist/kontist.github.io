@@ -11027,10 +11027,6 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>DEBITOOR</strong></td>
-<td></td>
-</tr>
-<tr>
 <td valign="top"><strong>FASTBILL</strong></td>
 <td></td>
 </tr>
