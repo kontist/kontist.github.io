@@ -1114,7 +1114,7 @@ Activate a card
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">verificationToken</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
