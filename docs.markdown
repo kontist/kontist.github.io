@@ -1276,6 +1276,25 @@ Confirm a PIN change request
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>changeCardPINEncrypted</strong></td>
+<td valign="top"><a href="#card">Card</a>!</td>
+<td>
+
+Encrypted card PIN change
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#changecardpinencryptedinput">ChangeCardPINEncryptedInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>replaceCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
 <td>
@@ -2876,6 +2895,11 @@ Business Address of a Kontax User
 <td valign="top">[<a href="#googlepaycardtoken">GooglePayCardToken</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>pinKey</strong></td>
+<td valign="top"><a href="#cardpinkey">CardPINKey</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2924,6 +2948,51 @@ Business Address of a Kontax User
 <tr>
 <td colspan="2" valign="top"><strong>monthly</strong></td>
 <td valign="top"><a href="#cardlimit">CardLimit</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CardPINKey
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>kid</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>kty</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>use</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>alg</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>n</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -8122,6 +8191,40 @@ Platform used for signup
 <tr>
 <td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ChangeCardPINEncryptedInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>encryptedPin</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>keyId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deviceId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>signature</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
