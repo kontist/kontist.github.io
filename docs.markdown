@@ -4980,6 +4980,11 @@ Change request id to authenticate verification
 <td valign="top"><a href="#questionnaireanswer">QuestionnaireAnswer</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>previousQuestionsAnswers</strong></td>
+<td valign="top">[<a href="#questionnaireanswer">QuestionnaireAnswer</a>!]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -6960,6 +6965,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <tr>
 <td colspan="2" valign="top"><strong>receiptMatchingIntroDismissedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>workAsHandyman</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
@@ -10243,6 +10253,11 @@ Indicates user has accepted to receive Kontist marketing communication
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>workAsHandyman</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>hasMoreThanOneBusiness</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
@@ -12571,6 +12586,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>EOY_TRAVEL_EXPENSES_OTHER</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_PROOF_OF_DISABILITY</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -12658,6 +12677,10 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_BOOKKEEPING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA</strong></td>
 <td></td>
 </tr>
 </tbody>
