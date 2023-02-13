@@ -2173,6 +2173,25 @@ Records consent from the given person to collect device fingerprints on their re
 <td valign="top"><a href="#deviceconsenteventtype">DeviceConsentEventType</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateConsentForDeviceMonitoring</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a></td>
+<td>
+
+Records change of consent to collect device fingerprints on their registered device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">eventType</td>
+<td valign="top"><a href="#deviceconsenteventtype">DeviceConsentEventType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceConsentId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
