@@ -2192,6 +2192,20 @@ Records change of consent to collect device fingerprints on their registered dev
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createActivityForDeviceMonitoring</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Creates user activity for device monitoring
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">activityType</td>
+<td valign="top"><a href="#deviceactivitytype">DeviceActivityType</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2886,6 +2900,11 @@ Business Address of a Kontax User
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>addedToApplePay</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>newCardOrdered</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
@@ -10877,6 +10896,29 @@ Indicates if user started upgrading to Kontax plan
 </tbody>
 </table>
 
+#### DeviceActivityType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>APP_START</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PASSWORD_RESET</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CONSENT_PROVIDED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DeviceConsentEventType
 
 <table>
@@ -12700,6 +12742,34 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_PARTNER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_RENTING_LEASING</strong></td>
 <td></td>
 </tr>
 </tbody>
