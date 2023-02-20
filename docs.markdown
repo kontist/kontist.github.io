@@ -1295,6 +1295,25 @@ Encrypted card PIN change
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>changeCardPINWithChangeRequest</strong></td>
+<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td>
+
+Encrypted card PIN change with Change Request
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#changecardpinwithchangerequestinput">ChangeCardPINWithChangeRequestInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>replaceCard</strong></td>
 <td valign="top"><a href="#card">Card</a>!</td>
 <td>
@@ -4840,7 +4859,7 @@ Change request id to authenticate verification
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>startedAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 <tr>
@@ -7319,6 +7338,16 @@ User's last business address before a specific date
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>questionnaires</strong></td>
+<td valign="top">[<a href="#questionnaire">Questionnaire</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>questionnaireTasks</strong></td>
 <td valign="top">[<a href="#questionnairetask">QuestionnaireTask</a>!]!</td>
 <td></td>
@@ -8272,6 +8301,30 @@ Platform used for signup
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>signature</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ChangeCardPINWithChangeRequestInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>encryptedPin</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>keyId</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -12662,6 +12715,10 @@ Indicates if user started upgrading to Kontax plan
 <th align="left">Description</th>
 </thead>
 <tbody>
+<tr>
+<td valign="top"><strong>NOT_STARTED</strong></td>
+<td></td>
+</tr>
 <tr>
 <td valign="top"><strong>STARTED</strong></td>
 <td></td>
