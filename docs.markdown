@@ -3073,6 +3073,11 @@ Business Address of a Kontax User
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>cardSpendingLimits</strong></td>
+<td valign="top"><a href="#cardspendinglimits">CardSpendingLimits</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>cardPresentLimits</strong></td>
 <td valign="top"><a href="#cardlimits">CardLimits</a></td>
 <td></td>
@@ -3080,6 +3085,31 @@ Business Address of a Kontax User
 <tr>
 <td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
 <td valign="top"><a href="#cardlimits">CardLimits</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CardSpendingLimits
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>atm</strong></td>
+<td valign="top"><a href="#cardlimits">CardLimits</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purchase</strong></td>
+<td valign="top"><a href="#cardlimits">CardLimits</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -5040,6 +5070,11 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>previousQuestionsAnswers</strong></td>
 <td valign="top">[<a href="#questionnaireanswer">QuestionnaireAnswer</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>defaultAnswer</strong></td>
+<td valign="top"><a href="#json">JSON</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -7457,6 +7492,16 @@ User's last business address before a specific date
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>marriageStartDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>marriageEndDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -8209,12 +8254,12 @@ Platform used for signup
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>maxAmountCents</strong></td>
-<td valign="top"><a href="#float">Float</a>!</td>
+<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>maxTransactions</strong></td>
-<td valign="top"><a href="#float">Float</a>!</td>
+<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -8233,12 +8278,12 @@ Platform used for signup
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>daily</strong></td>
-<td valign="top"><a href="#cardlimitinput">CardLimitInput</a>!</td>
+<td valign="top"><a href="#cardlimitinput">CardLimitInput</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>monthly</strong></td>
-<td valign="top"><a href="#cardlimitinput">CardLimitInput</a>!</td>
+<td valign="top"><a href="#cardlimitinput">CardLimitInput</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -8268,6 +8313,16 @@ Platform used for signup
 <tr>
 <td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purchaseLimits</strong></td>
+<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>atmLimits</strong></td>
+<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -9996,6 +10051,16 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>birthDate</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>marriageStartDate</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>marriageEndDate</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
