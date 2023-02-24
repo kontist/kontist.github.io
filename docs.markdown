@@ -3077,16 +3077,6 @@ Business Address of a Kontax User
 <td valign="top"><a href="#cardspendinglimits">CardSpendingLimits</a></td>
 <td></td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>cardPresentLimits</strong></td>
-<td valign="top"><a href="#cardlimits">CardLimits</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
-<td valign="top"><a href="#cardlimits">CardLimits</a></td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
@@ -8300,16 +8290,6 @@ Platform used for signup
 </tr>
 </thead>
 <tbody>
-<tr>
-<td colspan="2" valign="top"><strong>cardPresentLimits</strong></td>
-<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>cardNotPresentLimits</strong></td>
-<td valign="top"><a href="#cardlimitsinput">CardLimitsInput</a></td>
-<td></td>
-</tr>
 <tr>
 <td colspan="2" valign="top"><strong>contactlessEnabled</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
