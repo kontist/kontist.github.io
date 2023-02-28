@@ -2084,6 +2084,11 @@ Creates an user's business address
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">year</td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
@@ -4937,6 +4942,11 @@ Change request id to authenticate verification
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>context</strong></td>
+<td valign="top"><a href="#json">JSON</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>startedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -7409,6 +7419,11 @@ User's last business address before a specific date
 <tr>
 <td colspan="2" valign="top"><strong>questionnaire</strong></td>
 <td valign="top"><a href="#questionnaire">Questionnaire</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a></td>
 <td></td>
 </tr>
 <tr>
