@@ -1051,7 +1051,7 @@ The confirmation token received by SMS on the user's phone
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>authorizeChangeRequest</strong></td>
-<td valign="top"><a href="#authorizechangerequestrespone">AuthorizeChangeRequestRespone</a>!</td>
+<td valign="top"><a href="#authorizechangerequestresponse">AuthorizeChangeRequestResponse</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1066,7 +1066,7 @@ The confirmation token received by SMS on the user's phone
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>confirmChangeRequest</strong></td>
-<td valign="top"><a href="#confirmchangerequestrespone">ConfirmChangeRequestRespone</a>!</td>
+<td valign="top"><a href="#confirmchangerequestresponse">ConfirmChangeRequestResponse</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1147,11 +1147,41 @@ Adds Google Pay card token reference id for given wallet id
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>cardPushProvisioning</strong></td>
+<td colspan="2" valign="top"><strong>cardPushProvisioning</strong> ⚠️</td>
 <td valign="top"><a href="#pushprovisioningoutput">PushProvisioningOutput</a>!</td>
 <td>
 
 Adds card to given wallet
+
+<p>⚠️ <strong>DEPRECATED</strong></p>
+<blockquote>
+
+Please use more secure requestCardPushProvisioning and confirmCardPushProvisioning
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">android</td>
+<td valign="top"><a href="#pushprovisioningandroidinput">PushProvisioningAndroidInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">ios</td>
+<td valign="top"><a href="#pushprovisioningiosinput">PushProvisioningIosInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">cardId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestCardPushProvisioning</strong></td>
+<td valign="top"><a href="#authorizechangerequestresponse">AuthorizeChangeRequestResponse</a>!</td>
+<td>
+
+Adds card to Apple/Google Pay wallet
 
 </td>
 </tr>
@@ -1163,6 +1193,30 @@ Adds card to given wallet
 <tr>
 <td colspan="2" align="right" valign="top">ios</td>
 <td valign="top"><a href="#pushprovisioningiosinput">PushProvisioningIosInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">cardId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmCardPushProvisioning</strong></td>
+<td valign="top"><a href="#pushprovisioningoutput">PushProvisioningOutput</a>!</td>
+<td>
+
+Confirms adding card to Apple/Google Pay wallet
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#confirmchangerequestargs">ConfirmChangeRequestArgs</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2733,7 +2787,7 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 </tbody>
 </table>
 
-#### AuthorizeChangeRequestRespone
+#### AuthorizeChangeRequestResponse
 
 <table>
 <thead>
@@ -2748,6 +2802,11 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <tr>
 <td colspan="2" valign="top"><strong>stringToSign</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>changeRequestId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -3226,7 +3285,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
-#### ConfirmChangeRequestRespone
+#### ConfirmChangeRequestResponse
 
 <table>
 <thead>
@@ -8360,6 +8419,35 @@ Platform used for signup
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>keyId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ConfirmChangeRequestArgs
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>deviceId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>signature</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>changeRequestId</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
