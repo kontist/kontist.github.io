@@ -2284,6 +2284,30 @@ Creates user activity for device monitoring
 <td valign="top"><a href="#deviceactivitytype">DeviceActivityType</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>addDeviceKey</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Add restricted key to selected device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">key</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -12850,6 +12874,10 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_PROOF_OF_DISABILITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_OTHER</strong></td>
 <td></td>
 </tr>
 </tbody>
