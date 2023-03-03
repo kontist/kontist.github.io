@@ -693,6 +693,20 @@ Get all released generic features, that are needed before user creation
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasDeviceRestrictedKey</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Determines if user device has restricted key added
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
