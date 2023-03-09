@@ -12894,6 +12894,14 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_OTHER</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_PARTNER_PROOF_OF_DISABILITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_PARTNER_OTHER</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
