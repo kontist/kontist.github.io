@@ -1727,6 +1727,39 @@ Update user signup information
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateSolarisUser</strong></td>
+<td valign="top"><a href="#authorizechangerequestresponse">AuthorizeChangeRequestResponse</a>!</td>
+<td>
+
+Update user fields on solaris
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatesolarisuserinput">UpdateSolarisUserInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmUpdateSolarisUser</strong></td>
+<td valign="top"><a href="#user">User</a>!</td>
+<td>
+
+Confirms update of user fields on solaris
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#confirmchangerequestargs">ConfirmChangeRequestArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createUserEmailAlias</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
@@ -2215,6 +2248,16 @@ Creates an user's business address
 <tr>
 <td colspan="2" valign="top"><strong>finalizeTaxCase</strong></td>
 <td valign="top"><a href="#taxcase">TaxCase</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">shouldFinalizeIncomeTax</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">shouldFinalizeBusinessTax</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
@@ -5662,6 +5705,16 @@ List of uploaded Asset files for this transfer
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>incomeTaxFinalizedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessTaxFinalizedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#taxcasestatus">TaxCaseStatus</a>!</td>
 <td></td>
@@ -7159,6 +7212,16 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <tr>
 <td colspan="2" valign="top"><strong>workAsHandyman</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amlFollowUpDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amlConfirmedOn</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 <tr>
@@ -9955,6 +10018,25 @@ The id of the OAuth2 client to update
 Document's category Id
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### UpdateSolarisUserInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amlConfirmed</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
