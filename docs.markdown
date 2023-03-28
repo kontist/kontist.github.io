@@ -707,6 +707,11 @@ Determines if user device has restricted key added
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>draftTransactions</strong></td>
+<td valign="top">[<a href="#drafttransaction">DraftTransaction</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2365,6 +2370,34 @@ Add restricted key to selected device
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createDraftTransaction</strong></td>
+<td valign="top"><a href="#createdrafttransactionresponse">CreateDraftTransactionResponse</a>!</td>
+<td>
+
+Creates a draft external transaction entry
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">fileName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateDraftTransaction</strong></td>
+<td valign="top"><a href="#drafttransaction">DraftTransaction</a></td>
+<td>
+
+Updates draft external transaction entry. Returns null if finalized transaction was created
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatedrafttransactioninput">UpdateDraftTransactionInput</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -3491,6 +3524,31 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tbody>
 </table>
 
+#### CreateDraftTransactionResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetData</strong></td>
+<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### CreateInvoiceLogoResponse
 
 <table>
@@ -3971,6 +4029,61 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
 <td valign="top"><a href="#documentcategory">DocumentCategory</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DraftTransaction
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>paymentDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>note</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#categorycode">CategoryCode</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#vatrate">VatRate</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assets</strong></td>
+<td valign="top">[<a href="#asset">Asset</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -5038,6 +5151,11 @@ Change request id to authenticate verification
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>syncedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#questionnairestatus">QuestionnaireStatus</a>!</td>
 <td></td>
@@ -5098,6 +5216,11 @@ Change request id to authenticate verification
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>syncedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updatedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -5140,6 +5263,11 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>isLastYearSuggestion</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>syncedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 <tr>
@@ -10022,6 +10150,60 @@ Document's category Id
 </tbody>
 </table>
 
+#### UpdateDraftTransactionInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetUploaded</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>paymentDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>note</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
+<td valign="top"><a href="#vatcategorycode">VatCategoryCode</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### UpdateSolarisUserInput
 
 <table>
@@ -11071,6 +11253,249 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>SCRIPT</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CategoryCode
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>PRIVATE_IN</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_GERMANY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_INTL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_REFUND</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_REFUND</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TRADE_TAX_REFUND</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CORONA_HELP</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CONSTRUCTION_REVENUE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REVENUE_SB</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_ON_UNPAID_ITEMS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OTHER_USAGE_AND_SERVICE_WITHDRAWALS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OTHER_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TRAVEL_COSTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ADVERTISING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PRIVATE_OUT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FEES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TELECOMMUNICATION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>IT_COSTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LEASING_MOVABLES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>OFFICE_COSTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LEGAL_TAX_CONSULTING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>RENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EDUCATION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EXTERNAL_FREELANCER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ENTERTAINMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ACCOMMODATION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>GOODS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PAYROLL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ASSETS_LESS_THAN_EUR_250</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ASSETS_GREATER_THAN_EUR_250</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ASSETS_GREATER_THAN_EUR_800</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>MAINTENANCE_COSTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SHIPPING_COSTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INTERESTS_ASSETS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INTERESTS_CAR_ASSETS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INTERESTS_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>GIFTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DAILY_ALLOWANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LEASING_CAR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CAR_FEES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WASTE_DISPOSALS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TAX_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TRADE_TAX_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PRIVATE_WITHDRAWAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CAR_COSTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PUBLIC_TRANSPORT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LIMITED_DEDUCTIBLE_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LIMITED_NOT_DEDUCTIBLE_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BANK_FEES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INSURANCES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SOFTWARE_AND_LICENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BOOKS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DOWN_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>IMPORT_VAT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DEPOSIT</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -12984,6 +13409,38 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_PARTNER_OTHER</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_PROOF_OF_DISABILITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_CHILDCARE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_SCHOOL_FEES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_ADDITIONAL_HEALTH_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_EXTENSIVE_MEDICAL_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_DISABILITY_COSTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_UNIVERSITY_FEES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_CHILD_OTHER</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -14197,6 +14654,164 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>VAT_19</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### VatCategoryCode
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>INCOME_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_16</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_5</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_0_ITD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_0</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_B2B</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_INTRA_B2B</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_INTRA_B2C_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_INTRA_B2C_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_INTRA_B2C_16</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_INTRA_B2C_5</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_B2C_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_B2C_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_B2C_16</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_EU_B2C_5</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EXPORT_DELIVERY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NON_TAXABLE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_13B5_USTG</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DIT_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DIT_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DIT_16</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DIT_5</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INTRA_ACQUISITION_IT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REVERSE_CHARGE_IT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REVERSE_CHARGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO_ITD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO_VAT</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### VatRate
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>VAT_0</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_5</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_7</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_16</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>REVERSE_CHARGE</strong></td>
 <td></td>
 </tr>
 </tbody>
