@@ -2398,6 +2398,20 @@ Updates draft external transaction entry. Returns null if finalized transaction 
 <td valign="top"><a href="#updatedrafttransactioninput">UpdateDraftTransactionInput</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteDraftTransaction</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Deletes draft transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
