@@ -5857,6 +5857,11 @@ List of uploaded Asset files for this transfer
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>userFinalizedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#taxcasestatus">TaxCaseStatus</a>!</td>
 <td></td>
