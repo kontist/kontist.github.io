@@ -13495,6 +13495,126 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>EOY_INCOME_TAX_CHILD_OTHER</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_HEALTH_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_RURUP</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_REISTER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_UNEMPLOYMENT_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PENSION_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_VEHICLE_LIABILITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_ACCIDENT_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_LIFE_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_DISABILITY_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_EXTRAORDINARY_BURDENS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PRIVATE_DONATIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_HOUSEHOLD_SERVICES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_ALIMENTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_UNIVERSITY_FEES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_HEALTH_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_RURUP</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_REISTER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_UNEMPLOYMENT_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_PENSION_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_VEHICLE_LIABILITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_ACCIDENT_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_LIFE_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_DISABILITY_INSURANCE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_EXTRAORDINARY_BURDENS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_PRIVATE_DONATIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_HOUSEHOLD_SERVICES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_ALIMENTS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_UNIVERSITY_FEES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_OTHER</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
