@@ -4086,6 +4086,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>isCashTransaction</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>categoryCode</strong></td>
 <td valign="top"><a href="#categorycode">CategoryCode</a></td>
 <td></td>
@@ -10251,8 +10256,13 @@ Document's category Id
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
-<td valign="top"><a href="#vatcategorycode">VatCategoryCode</a></td>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#vatrate">VatRate</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isCashTransaction</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -14720,6 +14730,10 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>EXTERNAL_TRANSACTION</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>EXTERNAL_TRANSACTION_CASH</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -14900,129 +14914,6 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>VAT_19</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### VatCategoryCode
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>INCOME_19</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_7</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_16</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_5</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_0_ITD</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_0</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_B2B</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_INTRA_B2B</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_INTRA_B2C_19</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_INTRA_B2C_7</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_INTRA_B2C_16</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_INTRA_B2C_5</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_B2C_19</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_B2C_7</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_B2C_16</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_EU_B2C_5</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>EXPORT_DELIVERY</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>NON_TAXABLE</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INCOME_13B5_USTG</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DIT_19</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DIT_7</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DIT_16</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>DIT_5</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>INTRA_ACQUISITION_IT</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>REVERSE_CHARGE_IT</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>REVERSE_CHARGE</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>NO_ITD</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>NO_VAT</strong></td>
 <td></td>
 </tr>
 </tbody>
