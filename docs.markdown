@@ -13452,6 +13452,10 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_RENTAL_AND_LEASE</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>EOY_INCOME_TAX_BASIC_DATA_OTHER</strong></td>
 <td></td>
 </tr>
@@ -13493,6 +13497,78 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_INCOME_TAX_CHILD_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_SALE_OF_PROPERTY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_ADDL_SELF_EMPLOYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_INTERNATIONAL_INCOME</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_CRYPTO</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PENSIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_CAPITAL_ASSETS_INTL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_EMPLOYED_WORK</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_EMPLOYMENT_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_SALE_OF_PROPERTY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_ADDL_SELF_EMPLOYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_INTERNATIONAL_INCOME</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_CRYPTO</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_PENSIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_CAPITAL_ASSETS_INTL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_EMPLOYED_WORK</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER_EMPLOYMENT_EXPENSES</strong></td>
 <td></td>
 </tr>
 <tr>
@@ -13734,10 +13810,6 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>EOY_INCOME_TAX_RENTING_LEASING</strong></td>
 <td></td>
 </tr>
 </tbody>
