@@ -2529,7 +2529,7 @@ The cursor of the item to start from. Use in conjunction with 'last'
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>transaction</strong></td>
-<td valign="top"><a href="#transaction">Transaction</a></td>
+<td valign="top"><a href="#rawtransactionprojection">RawTransactionProjection</a></td>
 <td></td>
 </tr>
 <tr>
@@ -5392,6 +5392,281 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>year</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### RawTransactionProjection
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+The amount of the transaction in cents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#transactionprojectiontype">TransactionProjectionType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>valutaDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+The date at which the transaction was processed and the amount deducted from the user's account
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>e2eId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>mandateNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>merchantCountryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>merchantCategoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>source</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>receiptName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fees</strong></td>
+<td valign="top">[<a href="#transactionfee">TransactionFee</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>splits</strong></td>
+<td valign="top">[<a href="#transactionsplit">TransactionSplit</a>!]!</td>
+<td>
+
+Metadata of separate pseudo-transactions created when splitting the parent transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assets</strong></td>
+<td valign="top">[<a href="#transactionasset">TransactionAsset</a>!]!</td>
+<td>
+
+List of uploaded Asset files for this transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td>
+
+The date at which the transaction was booked (created)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>directDebitFees</strong></td>
+<td valign="top">[<a href="#directdebitfee">DirectDebitFee</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>paymentMethod</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizationType</strong></td>
+<td valign="top"><a href="#categorizationtype">CategorizationType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>personalNote</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>predictedCategory</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>predictedUserSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td>
+
+Date predicted for tax/vat payment/refund predicted category
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentPreviewUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentDownloadUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentType</strong></td>
+<td valign="top"><a href="#documenttype">DocumentType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>foreignCurrency</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>originalAmount</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>actionReason</strong></td>
+<td valign="top"><a href="#actionreason">ActionReason</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>canBeRecategorized</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>verified</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCodeTranslation</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recurlyInvoiceNumber</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionAssets</strong></td>
+<td valign="top">[<a href="#asset">Asset</a>!]!</td>
+<td>
+
+List Assets for a transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>asset</strong></td>
+<td valign="top"><a href="#transactionasset">TransactionAsset</a></td>
+<td>
+
+View a single Asset for a transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionAsset</strong></td>
+<td valign="top"><a href="#asset">Asset</a></td>
+<td>
+
+View a single Asset for a transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 </tbody>
