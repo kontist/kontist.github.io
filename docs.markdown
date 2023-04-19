@@ -11654,6 +11654,18 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>FREE_VALUE_DELIVERY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FREE_VALUE_DELIVERY_PV_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FREE_VALUE_SERVICE</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>OTHER_EXPENSES</strong></td>
 <td></td>
 </tr>
