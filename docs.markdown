@@ -13636,6 +13636,18 @@ Indicates if user started upgrading to Kontax plan
 <td valign="top"><strong>ACCOUNTING</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_LIGHT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_MEDIUM</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_PLUS</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
