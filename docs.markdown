@@ -11656,6 +11656,18 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>ELECTRONIC_SERVICE_EU_B2C_KU</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INCOME_ONLY_VAT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ELECTRONIC_SERVICE_EU_B2C</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>OTHER_EXPENSES</strong></td>
 <td></td>
 </tr>
@@ -12163,6 +12175,14 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>UPLOAD_MANUAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SUBMIT_EXTERNAL_TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SUBMIT_ASSETS</strong></td>
 <td></td>
 </tr>
 </tbody>
@@ -15130,6 +15150,14 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>MANUAL_DOCUMENTS_UPLOADED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SUBMIT_EXTERNAL_TRANSACTIONS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SUBMIT_ASSETS</strong></td>
 <td></td>
 </tr>
 </tbody>
