@@ -6105,6 +6105,11 @@ List of uploaded Asset files for this transfer
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>calculationSheetUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createdBy</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -6141,6 +6146,11 @@ List of uploaded Asset files for this transfer
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>pdfUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>calculationSheetUrl</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
