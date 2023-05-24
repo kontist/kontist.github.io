@@ -1310,7 +1310,7 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-The personal note of the transaction - 140 max characters
+The personal note of the transaction - 250 max characters
 
 </td>
 </tr>
@@ -6886,7 +6886,7 @@ The purpose of the transfer - 140 max characters
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-The personal note of the transfer - 140 max characters
+The personal note of the transfer - 250 max characters
 
 </td>
 </tr>
@@ -8757,7 +8757,7 @@ The purpose of the SEPA Transfer - 140 max characters
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-The personal note of the SEPA Transfer - 140 max characters
+The personal note of the SEPA Transfer - 250 max characters
 
 </td>
 </tr>
@@ -8913,7 +8913,7 @@ The purpose of the transfer - 140 max characters
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-The personal note of the transfer - 140 max characters
+The personal note of the transfer - 250 max characters
 
 </td>
 </tr>
@@ -10241,7 +10241,7 @@ The purpose of the Standing Order - 140 max characters, if not specified with th
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-The personal note of the transfer - 140 max characters
+The personal note of the transfer - 250 max characters
 
 </td>
 </tr>
