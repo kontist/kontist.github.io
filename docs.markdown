@@ -1900,6 +1900,20 @@ Submits UStVA declaration
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>upsertDeclaration</strong></td>
+<td valign="top"><a href="#declaration">Declaration</a>!</td>
+<td>
+
+Submits UStVA declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#upsertdeclarationargs">UpsertDeclarationArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateTaxNumber</strong></td>
 <td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
 <td>
@@ -3600,12 +3614,17 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
+<td valign="top"><a href="#int">Int</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>uploadedAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submissionStatus</strong></td>
+<td valign="top"><a href="#submissionstatus">SubmissionStatus</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -10284,6 +10303,35 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 </tbody>
 </table>
 
+#### UpsertDeclarationArgs
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>period</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submissionStatus</strong></td>
+<td valign="top"><a href="#submissionstatus">SubmissionStatus</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### UserDependentInput
 
 <table>
@@ -14083,6 +14131,25 @@ Indicates if user started upgrading to Kontax plan
 <tbody>
 <tr>
 <td valign="top"><strong>ERROR</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### SubmissionStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>NOT_NEEDED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ALREADY_SUBMITTED</strong></td>
 <td></td>
 </tr>
 </tbody>
