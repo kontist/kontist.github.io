@@ -5346,7 +5346,7 @@ The date at which the transaction was processed and the amount deducted from the
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>source</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#transactionsource">TransactionSource</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -5491,6 +5491,11 @@ Date predicted for tax/vat payment/refund predicted category
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>canBeRecategorized</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasAssets</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
@@ -6362,7 +6367,7 @@ The date at which the transaction was processed and the amount deducted from the
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>source</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#transactionsource">TransactionSource</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -6507,6 +6512,11 @@ Date predicted for tax/vat payment/refund predicted category
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>canBeRecategorized</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasAssets</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
@@ -14724,6 +14734,29 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>EXTERNAL_TRANSACTION_CASH</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TransactionSource
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SOLARIS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BACKOFFICE_MANUAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>USER</strong></td>
 <td></td>
 </tr>
 </tbody>
