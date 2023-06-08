@@ -1315,6 +1315,16 @@ The personal note of the transaction - 250 max characters
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">vatRate</td>
+<td valign="top"><a href="#vatrate">VatRate</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">categoryCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
@@ -2949,6 +2959,176 @@ Business Address of a Kontax User
 </tbody>
 </table>
 
+#### BusinessAssetMetaData
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionValutaDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>transactionDescription</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BusinessAssetReceipt
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>filetype</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fullsize</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BusinessAssetResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetClass</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetType</strong></td>
+<td valign="top"><a href="#assettype">AssetType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>purchaseDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>depreciationPeriodYears</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>receipts</strong></td>
+<td valign="top">[<a href="#businessassetreceipt">BusinessAssetReceipt</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>depreciations</strong></td>
+<td valign="top">[<a href="#depreciation">Depreciation</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>naturallyDepreciated</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>note</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>endAmount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>exitReason</strong></td>
+<td valign="top"><a href="#exitreason">ExitReason</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isExitedWithVat</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>exitDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>exitAmount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bookValueOnExit</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>metaData</strong></td>
+<td valign="top"><a href="#businessassetmetadata">BusinessAssetMetaData</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### Card
 
 <table>
@@ -3730,6 +3910,41 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>uncategorized</strong></td>
 <td valign="top">[<a href="#transactionforaccountingview">TransactionForAccountingView</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### Depreciation
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>startAmount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>depreciationAmount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>depreciationMonths</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -7941,6 +8156,15 @@ User's last business address before a specific date
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAssets</strong></td>
+<td valign="top">[<a href="#businessassetresponse">BusinessAssetResponse</a>!]</td>
+<td>
+
+User's business assets
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -11811,6 +12035,33 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>MOBILE</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ExitReason
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SOLD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>LOST</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PRIVATE_USE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DEPRECIATED</strong></td>
 <td></td>
 </tr>
 </tbody>
