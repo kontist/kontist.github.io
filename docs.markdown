@@ -1876,6 +1876,11 @@ Categorize transaction for VAT declaration
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">vatCategoryCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">category</td>
 <td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
@@ -3368,6 +3373,11 @@ Business Address of a Kontax User
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>date</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
@@ -5695,6 +5705,11 @@ Date predicted for tax/vat payment/refund predicted category
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>vatRate</strong></td>
 <td valign="top"><a href="#vatrate">VatRate</a></td>
 <td></td>
@@ -6712,6 +6727,11 @@ Date predicted for tax/vat payment/refund predicted category
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
