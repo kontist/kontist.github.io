@@ -1325,6 +1325,16 @@ The personal note of the transaction - 250 max characters
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">vatCategoryCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">splits</td>
+<td valign="top">[<a href="#transactionsplitinput">TransactionSplitInput</a>!]</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
@@ -1363,7 +1373,7 @@ Updates overdraft application timestamps for rejected and offered overdraft scre
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>createTransactionSplits</strong></td>
-<td valign="top"><a href="#transaction">Transaction</a>!</td>
+<td valign="top"><a href="#rawtransactionprojection">RawTransactionProjection</a>!</td>
 <td>
 
 Create transaction splits
@@ -1382,7 +1392,7 @@ Create transaction splits
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>updateTransactionSplits</strong></td>
-<td valign="top"><a href="#transaction">Transaction</a>!</td>
+<td valign="top"><a href="#rawtransactionprojection">RawTransactionProjection</a>!</td>
 <td>
 
 Update transaction splits
@@ -1401,7 +1411,7 @@ Update transaction splits
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>deleteTransactionSplits</strong></td>
-<td valign="top"><a href="#transaction">Transaction</a>!</td>
+<td valign="top"><a href="#rawtransactionprojection">RawTransactionProjection</a>!</td>
 <td>
 
 Delete transaction splits
@@ -2297,6 +2307,25 @@ Deletes external transaction
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>exitBusinessAsset</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Exit business asset
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#exitbusinessassetpayload">ExitBusinessAssetPayload</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -7004,7 +7033,7 @@ View a single Asset for a transaction
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a>!</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
 </tr>
 <tr>
@@ -7015,6 +7044,21 @@ View a single Asset for a transaction
 <tr>
 <td colspan="2" valign="top"><strong>categorizationType</strong></td>
 <td valign="top"><a href="#categorizationtype">CategorizationType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
+<td valign="top"><a href="#vatcategorycode">VatCategoryCode</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#vatrate">VatRate</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -8195,6 +8239,20 @@ User's business assets
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAsset</strong></td>
+<td valign="top"><a href="#businessassetresponse">BusinessAssetResponse</a></td>
+<td>
+
+Return a business asset by id
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">businessAssetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -9113,12 +9171,27 @@ The end to end ID of the SEPA Transfer
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a>!</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#vatrate">VatRate</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -9314,6 +9387,45 @@ User has accepted latest Kontist terms when signing up
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>deTaxId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ExitBusinessAssetPayload
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>exitReason</strong></td>
+<td valign="top"><a href="#exitreason">ExitReason</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>exitDate</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>exitAmount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isExitedWithVat</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>note</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -10198,6 +10310,55 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 </tbody>
 </table>
 
+#### TransactionSplitInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>category</strong></td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#vatrate">VatRate</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### TransfersConnectionFilter
 
 <table>
@@ -10371,6 +10532,11 @@ Document's category Id
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>splits</strong></td>
+<td valign="top">[<a href="#transactionsplitinput">TransactionSplitInput</a>!]</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -10444,23 +10610,38 @@ Document's category Id
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>category</strong></td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a>!</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>userSelectedBookingDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatRate</strong></td>
+<td valign="top"><a href="#vatrate">VatRate</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -10709,6 +10890,11 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>businessAssetForm</strong></td>
 <td valign="top"><a href="#businessassetform">BusinessAssetForm</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>splits</strong></td>
+<td valign="top">[<a href="#transactionsplitinput">TransactionSplitInput</a>!]</td>
 <td></td>
 </tr>
 <tr>
