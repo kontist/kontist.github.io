@@ -9430,7 +9430,7 @@ User has accepted latest Kontist terms when signing up
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>exitAmount</strong></td>
-<td valign="top"><a href="#float">Float</a>!</td>
+<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 <tr>
