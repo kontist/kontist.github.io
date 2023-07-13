@@ -1688,6 +1688,51 @@ Update the push-notifications a user should receive
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>initDirectDebitRefund</strong></td>
+<td valign="top"><a href="#authorizethroughdevicesigningormobilenumberresponse">AuthorizeThroughDeviceSigningOrMobileNumberResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmDirectDebitRefund</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">token</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">changeRequestId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createReview</strong></td>
 <td valign="top"><a href="#createreviewresponse">CreateReviewResponse</a>!</td>
 <td></td>
@@ -2870,6 +2915,31 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <tr>
 <td colspan="2" valign="top"><strong>changeRequestId</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### AuthorizeThroughDeviceSigningOrMobileNumberResponse
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>stringToSign</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>changeRequestId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -12131,6 +12201,25 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>GewSt</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DeliveryMethod
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>MOBILE_NUMBER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DEVICE_SIGNING</strong></td>
 <td></td>
 </tr>
 </tbody>
