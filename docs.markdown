@@ -7141,6 +7141,11 @@ View a single Asset for a transaction
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>categoryCodeTranslation</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>vatRate</strong></td>
 <td valign="top"><a href="#vatrate">VatRate</a></td>
 <td></td>
