@@ -5899,6 +5899,15 @@ View a single Asset for a transaction
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAsset</strong></td>
+<td valign="top"><a href="#businessassetresponse">BusinessAssetResponse</a></td>
+<td>
+
+View a single Business Asset for a transaction
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -6924,6 +6933,15 @@ View a single Asset for a transaction
 <td colspan="2" align="right" valign="top">assetId</td>
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAsset</strong></td>
+<td valign="top"><a href="#businessassetresponse">BusinessAssetResponse</a></td>
+<td>
+
+View a single Business Asset for a transaction
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -8792,6 +8810,35 @@ Platform used for signup
 </tbody>
 </table>
 
+#### BusinessAssetInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>assetClass</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>assetType</strong></td>
+<td valign="top"><a href="#assettype">AssetType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>depreciationPeriodYears</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### CardFilter
 
 <table>
@@ -10626,6 +10673,11 @@ Document's category Id
 <td valign="top">[<a href="#transactionsplitinput">TransactionSplitInput</a>!]</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAsset</strong></td>
+<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -10999,6 +11051,11 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>isCashTransaction</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAsset</strong></td>
+<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
 <td></td>
 </tr>
 </tbody>
