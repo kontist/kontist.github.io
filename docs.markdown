@@ -2110,6 +2110,16 @@ Creates an user's business address
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>resetQuestionnaire</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>submitBookkeepingQuestionnaire</strong></td>
 <td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
 <td></td>
@@ -2177,6 +2187,16 @@ Creates an user's business address
 <tr>
 <td colspan="2" align="right" valign="top">shouldFinalizeBusinessTax</td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">taxCaseId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>skipIncomeTax</strong></td>
+<td valign="top"><a href="#taxcase">TaxCase</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -6372,6 +6392,11 @@ List of uploaded Asset files for this transfer
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>userFinalizedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>incomeTaxSkippedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
