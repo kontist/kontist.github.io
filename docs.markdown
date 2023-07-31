@@ -2407,6 +2407,20 @@ Delete business asset
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertUserTour</strong></td>
+<td valign="top"><a href="#usertour">UserTour</a>!</td>
+<td>
+
+Upsert user tour
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#upsertusertourinput">UpsertUserTourInput</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -8385,6 +8399,15 @@ Return a business asset by id
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>userTours</strong></td>
+<td valign="top">[<a href="#usertour">UserTour</a>!]!</td>
+<td>
+
+User's tours
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8721,6 +8744,33 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <tr>
 <td colspan="2" valign="top"><strong>dependents</strong></td>
 <td valign="top">[<a href="#userdependent">UserDependent</a>!]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserTour
+
+Tours of users
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#tourname">TourName</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#tourstatus">TourStatus</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -10807,7 +10857,7 @@ Document's category Id
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
+<td valign="top"><a href="#int">Int</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -10943,6 +10993,30 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 <tr>
 <td colspan="2" valign="top"><strong>submissionStatus</strong></td>
 <td valign="top"><a href="#submissionstatus">SubmissionStatus</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UpsertUserTourInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#tourname">TourName</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#tourstatus">TourStatus</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -15016,6 +15090,44 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>NOT_SURE</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TourName
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>BOOKKEEPING_ONBOARDING</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TourStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>STARTED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>DISMISSED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FINISHED</strong></td>
 <td></td>
 </tr>
 </tbody>
