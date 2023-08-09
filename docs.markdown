@@ -15459,11 +15459,19 @@ Indicates if user started upgrading to Kontax plan
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>INTERNAL_TRANSFER</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>SEPAInstantCreditTransfer</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>Target2CreditTransfer</strong></td>
+<td valign="top"><strong>Target2CreditTransfer1</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>Target2CreditTransfer2</strong></td>
 <td></td>
 </tr>
 <tr>
@@ -15500,6 +15508,10 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>ReimbursementCustomer</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CorrectionNostro</strong></td>
 <td></td>
 </tr>
 <tr>
