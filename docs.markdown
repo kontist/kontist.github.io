@@ -711,6 +711,16 @@ Cancel an existing Timed Order or Standing Order
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
@@ -730,8 +740,26 @@ Confirm a Standing Order cancellation
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Signed stringToSign from transfer cancelation response
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+ID of device which requested transfer cancelation
+
+</td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">authorizationToken</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#string">String</a></td>
 <td>
 
 The confirmation token received by SMS on the user's phone
@@ -814,14 +842,54 @@ Create a transfer. The transfer's type will be determined based on the provided 
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td>
+
+Delivery method of transfer confirmation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+ID of device which requested transfer creation
+
+</td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">transfer</td>
 <td valign="top"><a href="#createtransferinput">CreateTransferInput</a>!</td>
-<td></td>
+<td>
+
+Transfer payload
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>updateTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td>
+
+Delivery method of transfer confirmation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+ID of device which requested transfer update
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">transfer</td>
@@ -838,8 +906,26 @@ Confirm a transfer creation
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Signed stringToSign from transfer creation response
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+ID of device which requested transfer creation
+
+</td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">authorizationToken</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#string">String</a></td>
 <td>
 
 The confirmation token received by SMS on the user's phone
@@ -849,7 +935,11 @@ The confirmation token received by SMS on the user's phone
 <tr>
 <td colspan="2" align="right" valign="top">confirmationId</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td>
+
+ID obtained on transfer creation
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>createTransfers</strong></td>
@@ -3682,6 +3772,11 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>confirmationId</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>stringToSign</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
