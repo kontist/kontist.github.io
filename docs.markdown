@@ -597,6 +597,15 @@ Determines if user device has restricted key added
 <td valign="top">[<a href="#drafttransaction">DraftTransaction</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>datevExports</strong></td>
+<td valign="top">[<a href="#datevexport">DatevExport</a>!]!</td>
+<td>
+
+Get all existing DATEV Exports
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -2511,6 +2520,20 @@ Upsert user tour
 <td valign="top"><a href="#upsertusertourinput">UpsertUserTourInput</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>createDatevExport</strong></td>
+<td valign="top"><a href="#datevexportedurl">DatevExportedURL</a>!</td>
+<td>
+
+Creates a DATEV export and return its url
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#datevexportinput">DatevExportInput</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2533,6 +2556,11 @@ The bank account of the current user
 <tr>
 <td colspan="2" valign="top"><strong>publicId</strong></td>
 <td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -4012,6 +4040,76 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DatevExport
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userId</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>skr</strong></td>
+<td valign="top"><a href="#skr">SKR</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>withReceipts</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>path</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>uploadedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DatevExportedURL
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>datevExportedUrl</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -9675,6 +9773,35 @@ User has accepted latest Kontist terms when signing up
 </tbody>
 </table>
 
+#### DatevExportInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>skr</strong></td>
+<td valign="top"><a href="#skr">SKR</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>withReceipts</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DependentsTaxIds
 
 <table>
@@ -14786,6 +14913,25 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>SCORING_NOT_REQUIRED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### SKR
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SKR03</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SKR04</strong></td>
 <td></td>
 </tr>
 </tbody>
