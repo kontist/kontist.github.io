@@ -606,6 +606,11 @@ Get all existing DATEV Exports
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>naceCodes</strong></td>
+<td valign="top">[<a href="#nacecode">NACECode</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2047,6 +2052,11 @@ Categorize transaction for VAT declaration
 <tr>
 <td colspan="2" align="right" valign="top">isSplit</td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">businessAssetInput</td>
+<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
 <td></td>
 </tr>
 <tr>
@@ -5289,6 +5299,38 @@ The amount the user saves in percentage
 <tr>
 <td colspan="2" valign="top"><strong>success</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### NACECode
+
+NACE codes
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>code</strong></td>
+<td valign="top"><a href="#nacecodeenum">NACECodeEnum</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>enDescription</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deDescription</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -13054,6 +13096,125 @@ Indicates if user started upgrading to Kontax plan
 </tr>
 <tr>
 <td valign="top"><strong>HUNDRED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### NACECodeEnum
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>A</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>C</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>F</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>G</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>H</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>I</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>J</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>J_62_01</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>K</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>L</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_69</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_70_1</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_70_2</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_71</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_72</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_73</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_74_1</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_74_9</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>N_79</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>N_81</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>N_82</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>O</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>P</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>Q</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>R</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>R_90</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>S</strong></td>
 <td></td>
 </tr>
 </tbody>
