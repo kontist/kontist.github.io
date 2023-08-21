@@ -2532,10 +2532,10 @@ Upsert user tour
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>createDatevExport</strong></td>
-<td valign="top"><a href="#datevexportedurl">DatevExportedURL</a>!</td>
+<td valign="top"><a href="#datevexport">DatevExport</a>!</td>
 <td>
 
-Creates a DATEV export and return its url
+Creates a DATEV export
 
 </td>
 </tr>
@@ -4073,11 +4073,6 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>userId</strong></td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>year</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
@@ -4093,33 +4088,18 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>path</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" valign="top"><strong>uploadedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>uploadedAt</strong></td>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
-</tbody>
-</table>
-
-#### DatevExportedURL
-
-<table>
-<thead>
 <tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>datevExportedUrl</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -6214,6 +6194,36 @@ View a single Business Asset for a transaction
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>accountManagementUrl</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### RecurlyInvoice
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recurlyCreatedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -8642,6 +8652,11 @@ Return a business asset by id
 User's tours
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recurlyInvoices</strong></td>
+<td valign="top">[<a href="#recurlyinvoice">RecurlyInvoice</a>!]!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
