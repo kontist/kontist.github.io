@@ -11814,6 +11814,15 @@ Indicates if user started upgrading to Kontax plan
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>websiteSocialMedia</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The website or social media url of the user
+
+</td>
+</tr>
 </tbody>
 </table>
 
