@@ -5299,6 +5299,11 @@ NACE codes
 </thead>
 <tbody>
 <tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>code</strong></td>
 <td valign="top"><a href="#nacecodeenum">NACECodeEnum</a>!</td>
 <td></td>
