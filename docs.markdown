@@ -1023,18 +1023,23 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">changeRequestId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">deviceId</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">changeRequestId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1687,12 +1692,17 @@ Update user signup information
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>updateSolarisUser</strong></td>
-<td valign="top"><a href="#authorizechangerequestresponse">AuthorizeChangeRequestResponse</a>!</td>
+<td valign="top"><a href="#userorauthresponse">UserOrAuthResponse</a>!</td>
 <td>
 
 Update user fields on solaris
 
 </td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
@@ -8239,6 +8249,16 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>naceCodeId</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>websiteSocialMedia</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>clients</strong></td>
 <td valign="top">[<a href="#client">Client</a>!]!</td>
 <td>
@@ -9063,6 +9083,45 @@ Tours of users
 
 ### Inputs
 
+#### AddressInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>streetName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>streetNumber</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### AttributionData
 
 <table>
@@ -9335,18 +9394,23 @@ Platform used for signup
 </thead>
 <tbody>
 <tr>
+<td colspan="2" valign="top"><strong>changeRequestId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>deviceId</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>signature</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>changeRequestId</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" valign="top"><strong>authorizationToken</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -11054,6 +11118,36 @@ Document's category Id
 <tr>
 <td colspan="2" valign="top"><strong>amlConfirmed</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>email</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessTradingName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>websiteSocialMedia</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessPurpose</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>naceCode</strong></td>
+<td valign="top"><a href="#nacecodeenum">NACECodeEnum</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>address</strong></td>
+<td valign="top"><a href="#addressinput">AddressInput</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -13139,111 +13233,131 @@ The website or social media url of the user
 </thead>
 <tbody>
 <tr>
-<td valign="top"><strong>A</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>F</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>H</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>I</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>J</strong></td>
-<td></td>
-</tr>
-<tr>
 <td valign="top"><strong>J_62_01</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>K</strong></td>
+<td valign="top"><strong>A_01_50</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>L</strong></td>
+<td valign="top"><strong>F_43_99</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_69</strong></td>
+<td valign="top"><strong>G_46_90</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_70_1</strong></td>
+<td valign="top"><strong>G_47_19</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_70_2</strong></td>
+<td valign="top"><strong>H_49_32</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_71</strong></td>
+<td valign="top"><strong>H_53_20</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_72</strong></td>
+<td valign="top"><strong>I_55_90</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_73</strong></td>
+<td valign="top"><strong>I_56_10</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_74_1</strong></td>
+<td valign="top"><strong>J_63_11</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>M_74_9</strong></td>
+<td valign="top"><strong>K_64_99</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>N_79</strong></td>
+<td valign="top"><strong>K_66_29</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>N_81</strong></td>
+<td valign="top"><strong>L_68_31</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>N_82</strong></td>
+<td valign="top"><strong>M_69_10</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>O</strong></td>
+<td valign="top"><strong>M_69_20</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>P</strong></td>
+<td valign="top"><strong>M_70_22</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>Q</strong></td>
+<td valign="top"><strong>M_70_21</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>R</strong></td>
+<td valign="top"><strong>M_71_11</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>R_90</strong></td>
+<td valign="top"><strong>M_71_12</strong></td>
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>S</strong></td>
+<td valign="top"><strong>M_72_19</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_73_11</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_74_10</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>M_74_90</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>N_79_90</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>N_81_21</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>N_81_30</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>N_82_11</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>P_85_59</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>Q_86_21</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>Q_88_99</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>R_90_01</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>S_96_09</strong></td>
 <td></td>
 </tr>
 </tbody>
