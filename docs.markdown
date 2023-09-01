@@ -602,7 +602,7 @@ Determines if user device has restricted key added
 <td valign="top">[<a href="#datevexport">DatevExport</a>!]!</td>
 <td>
 
-Get all existing DATEV Exports
+Get all existing DATEV Exports requested by the user
 
 </td>
 </tr>
@@ -4509,7 +4509,7 @@ The scopes the client has access to, limiting access to the corresponding parts 
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>vatCategoryCode</strong></td>
-<td valign="top"><a href="#vatcategorycode">VatCategoryCode</a></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
