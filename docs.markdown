@@ -5315,7 +5315,7 @@ NACE codes
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>code</strong></td>
-<td valign="top"><a href="#nacecodeenum">NACECodeEnum</a>!</td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -5326,6 +5326,11 @@ NACE codes
 <tr>
 <td colspan="2" valign="top"><strong>deDescription</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>priority</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -11142,7 +11147,12 @@ Document's category Id
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>naceCode</strong></td>
-<td valign="top"><a href="#nacecodeenum">NACECodeEnum</a></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>naceCodeId</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 <tr>
@@ -13219,317 +13229,6 @@ The website or social media url of the user
 </tr>
 <tr>
 <td valign="top"><strong>HUNDRED</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### NACECodeEnum
-
-<table>
-<thead>
-<th align="left">Value</th>
-<th align="left">Description</th>
-</thead>
-<tbody>
-<tr>
-<td valign="top"><strong>A</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>A_01_15</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>A_01_70</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>B</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_10</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_10_1</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_12_00</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_19</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_20_51</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_21</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_24_41</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_24_46</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_25_40</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_30_1</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_30_40</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>C_32_1</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>D_35</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>D_35_11</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>D_35_21</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>E</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>F</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_45</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_46</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_46_47</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_46_48</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_46_77</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_46_90</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_47_1</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_47_30</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_47_77</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_47_79</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>G_47_8</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>H_49</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>H_49_32</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>H_49_42</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>H_53_20</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>I</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>J</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>J_62_01</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>J_63_11</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>K</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>K_64_99</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>L</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_69</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_69_10</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_69_20</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_70_21</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_70_22</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_71_11</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_71_12</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_73_11</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>M_74_10</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>N</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>N_78</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>N_80</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>N_81_21</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>N_81_30</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>N_82_19</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>N_82_91</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>O</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>P</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>Q</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>Q_86_21</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>R</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>R_92_00</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>S_94_9</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>S_95</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>S_95_25</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>S_96</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>S_96_01</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>S_96_02</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>T</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>U</strong></td>
 <td></td>
 </tr>
 </tbody>
