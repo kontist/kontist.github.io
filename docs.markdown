@@ -7861,6 +7861,11 @@ This field will be removed in an upcoming release
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>businessAddress</strong></td>
+<td valign="top"><a href="#userbusinessaddress">UserBusinessAddress</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>vatPaymentFrequency</strong> ⚠️</td>
 <td valign="top"><a href="#paymentfrequency">PaymentFrequency</a></td>
 <td>
@@ -8261,6 +8266,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <tr>
 <td colspan="2" valign="top"><strong>websiteSocialMedia</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expectedMonthlyRevenueCents</strong></td>
+<td valign="top"><a href="#float">Float</a></td>
 <td></td>
 </tr>
 <tr>
@@ -8686,6 +8696,48 @@ User's tours
 <tr>
 <td colspan="2" valign="top"><strong>recurlyInvoices</strong></td>
 <td valign="top">[<a href="#recurlyinvoice">RecurlyInvoice</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UserBusinessAddress
+
+Business Address of a User
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>street</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -9165,6 +9217,45 @@ Platform used for signup
 <tr>
 <td colspan="2" valign="top"><strong>irclickid</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BusinessAddressInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>streetName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>streetNumber</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>city</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postCode</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>country</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -11160,6 +11251,16 @@ Document's category Id
 <td valign="top"><a href="#addressinput">AddressInput</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAddress</strong></td>
+<td valign="top"><a href="#businessaddressinput">BusinessAddressInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expectedMonthlyRevenueCents</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -11929,6 +12030,15 @@ Indicates if user started upgrading to Kontax plan
 <td>
 
 The website or social media url of the user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expectedMonthlyRevenueCents</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+
+Expected monthly revenue in euro cents
 
 </td>
 </tr>
@@ -14473,6 +14583,10 @@ The website or social media url of the user
 </tr>
 <tr>
 <td valign="top"><strong>BOOKKEEPING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX</strong></td>
 <td></td>
 </tr>
 </tbody>
