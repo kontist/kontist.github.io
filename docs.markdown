@@ -1877,24 +1877,6 @@ Update the push-notifications a user should receive
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>clearPreselectedPlan</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Clear preselected plan
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>assignKontaxCouponCodeToDeclinedUser</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Assign a secret coupon code to the user who is rejected from kontax onboarding
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>updateInvoiceSettings</strong></td>
 <td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a>!</td>
 <td></td>
