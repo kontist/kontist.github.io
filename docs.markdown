@@ -611,6 +611,11 @@ Get all existing DATEV Exports requested by the user
 <td valign="top">[<a href="#nacecode">NACECode</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>listPaymentMethods</strong></td>
+<td valign="top">[<a href="#paymentmethod">PaymentMethod</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2534,6 +2539,26 @@ Creates a DATEV export
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#datevexportinput">DatevExportInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createTopUp</strong></td>
+<td valign="top"><a href="#topupcreationresult">TopUpCreationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">topUpData</td>
+<td valign="top"><a href="#topupinput">TopUpInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deletePaymentMethod</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">paymentMethodId</td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -5443,6 +5468,36 @@ Indicates if rejection screen for overdraft was shown
 </tbody>
 </table>
 
+#### PaymentMethod
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>paymentMethodId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardLast4</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cardBrand</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### PendingTransactionVerification
 
 <table>
@@ -6929,6 +6984,26 @@ Tax rate that should be applied in the corresponding year
 Flag if the corresponding year should be excluded from the tax calculations completely
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### TopUpCreationResult
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>clientSecret</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -10500,6 +10575,30 @@ Tax rate that should be applied in the corresponding year
 Flag if the corresponding year should be excluded from the tax calculations completely
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### TopUpInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>paymentMethodId</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
