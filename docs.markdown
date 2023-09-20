@@ -6578,28 +6578,48 @@ List of uploaded Asset files for this transfer
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>title</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+@deprecated For backwards compatibility on mobile only. From now on use the title copy coming from Lokalise instead.
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>description</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+@deprecated For backwards compatibility on mobile only. From now on use the description copy coming from Lokalise instead.
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>button</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+@deprecated For backwards compatibility on mobile only. From now on use the button copy coming from Lokalise instead.
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>featuresToggleLabel</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+@deprecated For backwards compatibility on mobile only.
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>featureGroups</strong></td>
-<td valign="top">[<a href="#subscriptionfeaturegroup">SubscriptionFeatureGroup</a>!]!</td>
-<td></td>
+<td valign="top">[<a href="#subscriptionfeaturegroup">SubscriptionFeatureGroup</a>!]</td>
+<td>
+
+@deprecated For backwards compatibility on mobile only. From now on use the features copy coming from Lokalise instead.
+
+</td>
 </tr>
 </tbody>
 </table>
