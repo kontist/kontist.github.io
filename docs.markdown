@@ -616,6 +616,16 @@ Get all existing DATEV Exports requested by the user
 <td valign="top">[<a href="#paymentmethod">PaymentMethod</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>termsAndConditions</strong></td>
+<td valign="top">[<a href="#termsandconditions">TermsAndConditions</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2559,6 +2569,39 @@ Creates a DATEV export
 <tr>
 <td colspan="2" align="right" valign="top">paymentMethodId</td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>signSeizurePaymentOrder</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Allow user to sign the seizure payment order
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">seizureId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateTermsAndConditions</strong></td>
+<td valign="top"><a href="#termsandconditions">TermsAndConditions</a>!</td>
+<td>
+
+Change Terms And Conditions confirmation status
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatetermsandconditionsargs">UpdateTermsAndConditionsArgs</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -7008,6 +7051,43 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 </tbody>
 </table>
 
+#### TermsAndConditions
+
+Terms And conditions
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>rejectedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#termsandconditionsname">TermsAndConditionsName</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### TopUpCreationResult
 
 <table>
@@ -8773,6 +8853,20 @@ User's tours
 <tr>
 <td colspan="2" valign="top"><strong>recurlyInvoices</strong></td>
 <td valign="top">[<a href="#recurlyinvoice">RecurlyInvoice</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>draftSeizurePaymentOrder</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Retrieves draft of seizure payment order
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">seizureId</td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -11399,6 +11493,30 @@ Document's category Id
 <tr>
 <td colspan="2" valign="top"><strong>taxNumber</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### UpdateTermsAndConditionsArgs
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmed</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -15698,6 +15816,21 @@ Expected monthly revenue in euro cents
 <tbody>
 <tr>
 <td valign="top"><strong>QUARTERLY</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### TermsAndConditionsName
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>TOP_UP</strong></td>
 <td></td>
 </tr>
 </tbody>
