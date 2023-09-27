@@ -10794,6 +10794,11 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>type_eq</strong></td>
+<td valign="top"><a href="#transactionprojectiontype">TransactionProjectionType</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>valutaDate_eq</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -11010,6 +11015,11 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <tr>
 <td colspan="2" valign="top"><strong>iban_in</strong></td>
 <td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type_eq</strong></td>
+<td valign="top"><a href="#transactionprojectiontype">TransactionProjectionType</a></td>
 <td></td>
 </tr>
 <tr>
@@ -16276,6 +16286,18 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>CorrectionNostro</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TopUpCard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TopUpCardRefund</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TopUpCardChargeback</strong></td>
 <td></td>
 </tr>
 <tr>
