@@ -2654,6 +2654,11 @@ The bank account of the current user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>freeTopUpCreated</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>canCreateOverdraft</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
@@ -16039,6 +16044,10 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>FREE_KONTIST_TRANSACTION</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TOP_UP</strong></td>
 <td></td>
 </tr>
 </tbody>
