@@ -2587,7 +2587,7 @@ Allow user to sign the seizure payment order
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">seizureId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -8871,7 +8871,7 @@ Retrieves draft of seizure payment order
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">seizureId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 </tbody>
