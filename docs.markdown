@@ -626,6 +626,16 @@ Get all existing DATEV Exports requested by the user
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>BWASummary</strong></td>
+<td valign="top"><a href="#bwasummary">BWASummary</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -3193,6 +3203,66 @@ The difference between taxTotal and accountBalance, if taxTotal > accountbalance
 <td colspan="2" valign="top"><strong>months</strong></td>
 <td valign="top">[<a href="#int">Int</a>!]!</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+
+#### BWASummary
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>income</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Income amount in cents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expenses</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Expenses amount in cents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>netIncome</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+NetIncome amount in cents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>withdrawalsAndDeposits122</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Withdrawals and deposits amount in cents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>withdrawalsAndDeposits123</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td>
+
+Withdrawals and deposits amount in cents
+
+</td>
 </tr>
 </tbody>
 </table>
