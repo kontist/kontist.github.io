@@ -607,6 +607,15 @@ Get all existing DATEV Exports requested by the user
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>getReceiptExports</strong></td>
+<td valign="top">[<a href="#receiptexport">ReceiptExport</a>!]!</td>
+<td>
+
+Get all existing receipt exports requested by the user
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>naceCodes</strong></td>
 <td valign="top">[<a href="#nacecode">NACECode</a>!]!</td>
 <td></td>
@@ -2572,6 +2581,20 @@ Creates a DATEV export
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>generateReceiptExport</strong></td>
+<td valign="top"><a href="#receiptexportresult">ReceiptExportResult</a>!</td>
+<td>
+
+Exports list of receipts for given time frame
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#receiptexportinput">ReceiptExportInput</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createTopUp</strong></td>
 <td valign="top"><a href="#topupcreationresult">TopUpCreationResult</a>!</td>
 <td></td>
@@ -2664,6 +2687,16 @@ Delete contact
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmBizTaxBookkeeping</strong></td>
+<td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -3374,6 +3407,31 @@ Withdrawals and deposits amount in cents
 <tr>
 <td colspan="2" valign="top"><strong>transfers</strong></td>
 <td valign="top">[<a href="#sepatransfer">SepaTransfer</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxBookkeepingConfirmation
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -6424,6 +6482,61 @@ View a single Business Asset for a transaction
 </tbody>
 </table>
 
+#### ReceiptExport
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>filename</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>url</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>creationDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expirationDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ReceiptExportResult
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>count</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### RecurlyAccount
 
 <table>
@@ -9033,6 +9146,16 @@ Retrieves draft of seizure payment order
 <td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>bizTaxBookkeepingConfirmation</strong></td>
+<td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -10840,6 +10963,30 @@ An array of leaf and sub-CA certificates in Base64 encoded format provided by Ap
 <tr>
 <td colspan="2" valign="top"><strong>inputs</strong></td>
 <td valign="top"><a href="#jsonobject">JSONObject</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### ReceiptExportInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>fromDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>toDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 </tbody>
