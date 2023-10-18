@@ -15534,6 +15534,66 @@ Expected monthly revenue in euro cents
 <td valign="top"><strong>EOY_INCOME_TAX_PRIVATE_EXPENSES_PARTNER_OTHER</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_CAR_USAGE_PURCHASE_CONTRACT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_CAR_USAGE_PRIVATELY_PAID_CAR_EXPENSES</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_CAR_USAGE_LOGBOOK</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_CAR_USAGE_TRAVELED_KM_WITH_PRIVATE_CAR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_CAR_USAGE_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_RENT_OR_INTEREST</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_PHONE_OR_INTERNET</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_ELECTRICITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_HEATING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_UTILITY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_UTILITY_AFTER_PAYMENT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_FLOOR_PLAN</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE_OTHER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_TRAVEL_EXPENSES_BUSINESS_TRIPS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_TRAVEL_EXPENSES_OTHER</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -15653,6 +15713,22 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>EOY_INCOME_TAX_ADDITIONAL_INCOME_PARTNER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_BASIC_DATA</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_CAR_USAGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_OFFICE_USAGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_TRAVEL_EXPENSES</strong></td>
 <td></td>
 </tr>
 </tbody>
