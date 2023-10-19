@@ -16331,6 +16331,10 @@ Expected monthly revenue in euro cents
 <td valign="top"><strong>BOOKKEEPING_ONBOARDING</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_QUESTIONNAIRE_PREVIEW</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
