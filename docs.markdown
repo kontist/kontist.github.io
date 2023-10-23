@@ -8107,6 +8107,15 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>reference</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Unique id of transfer session
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -10419,6 +10428,24 @@ The user selected category for the SEPA Transfer
 <td>
 
 When a transaction corresponds to a tax or vat payment, the user may specify at which date it should be considered booked
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#transfertype">TransferType</a></td>
+<td>
+
+The type of transfer created by user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>reference</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Unique id of transfer session
 
 </td>
 </tr>
@@ -16499,6 +16526,10 @@ Expected monthly revenue in euro cents
 <td valign="top"><strong>TOP_UP</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>INSTANT_CREDIT_TRANSFER</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -16869,6 +16900,10 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>TIMED_ORDER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INSTANT_CREDIT_TRANSFER</strong></td>
 <td></td>
 </tr>
 </tbody>
