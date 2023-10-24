@@ -556,6 +556,24 @@ mutation {
 </thead>
 <tbody>
 <tr>
+<td colspan="2" valign="top"><strong>getIBANInformation</strong></td>
+<td valign="top"><a href="#ibaninformation">IBANInformation</a>!</td>
+<td>
+
+Get bank information for IBAN
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">iban</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+IBAN to get information for
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>viewer</strong></td>
 <td valign="top"><a href="#user">User</a></td>
 <td>
@@ -5016,6 +5034,36 @@ Returns an array of transactions which potential match with an email document. N
 <tr>
 <td colspan="2" valign="top"><strong>tokenRefId</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### IBANInformation
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>isSepaInstantTransferAvailable</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bankName</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bic</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -16098,6 +16146,14 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>ANNUALLY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIWEEKLY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WEEKLY</strong></td>
 <td></td>
 </tr>
 </tbody>
