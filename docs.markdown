@@ -1506,6 +1506,11 @@ The personal note of the transaction - 250 max characters
 <td></td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">businessAssetInput</td>
+<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
