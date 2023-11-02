@@ -3460,6 +3460,126 @@ Withdrawals and deposits amount in cents
 </tbody>
 </table>
 
+#### BizTaxCarUsageEuerRows
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>row106</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>row140</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>row142</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>row176</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxHomeOfficeEuerRows
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>row172</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>row185</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxQuestionnairesEuer
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>travelExpenses</strong></td>
+<td valign="top"><a href="#biztaxtravelexpenseseuerrows">BizTaxTravelExpensesEuerRows</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>homeOffice</strong></td>
+<td valign="top"><a href="#biztaxhomeofficeeuerrows">BizTaxHomeOfficeEuerRows</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>carUsage</strong></td>
+<td valign="top"><a href="#biztaxcarusageeuerrows">BizTaxCarUsageEuerRows</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxTravelExpensesEuerRows
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>row147</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>row171</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>row176</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### BusinessAddress
 
 Business Address of a Kontax User
@@ -9211,6 +9331,16 @@ Retrieves draft of seizure payment order
 <tr>
 <td colspan="2" valign="top"><strong>bizTaxBookkeepingConfirmation</strong></td>
 <td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bizTaxQuestionnairesEuer</strong></td>
+<td valign="top"><a href="#biztaxquestionnaireseuer">BizTaxQuestionnairesEuer</a>!</td>
 <td></td>
 </tr>
 <tr>
