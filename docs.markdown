@@ -12268,6 +12268,15 @@ When a transaction corresponds to a tax or vat payment, the user may specify at 
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>reference</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Unique id of transfer session
+
+</td>
+</tr>
 </tbody>
 </table>
 
