@@ -611,6 +611,15 @@ Determines if user device has restricted key added
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>listBoundDevices</strong></td>
+<td valign="top">[<a href="#bounddevice">BoundDevice</a>!]!</td>
+<td>
+
+Returns list of bound devices
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>draftTransactions</strong></td>
 <td valign="top">[<a href="#drafttransaction">DraftTransaction</a>!]!</td>
 <td></td>
@@ -2473,6 +2482,20 @@ Add restricted key to selected device
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>deleteBoundDevice</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Delete bound device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createDraftTransaction</strong></td>
 <td valign="top"><a href="#createdrafttransactionresponse">CreateDraftTransactionResponse</a>!</td>
 <td>
@@ -3575,6 +3598,36 @@ Withdrawals and deposits amount in cents
 <tr>
 <td colspan="2" valign="top"><strong>row176</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BoundDevice
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 </tbody>
