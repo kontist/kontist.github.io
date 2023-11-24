@@ -620,6 +620,20 @@ Returns list of bound devices
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>getDeviceBindingRequest</strong></td>
+<td valign="top"><a href="#devicebindingrequest">DeviceBindingRequest</a></td>
+<td>
+
+Get device binding request
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>draftTransactions</strong></td>
 <td valign="top">[<a href="#drafttransaction">DraftTransaction</a>!]!</td>
 <td></td>
@@ -2496,6 +2510,39 @@ Delete bound device
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createDeviceBindingRequest</strong></td>
+<td valign="top"><a href="#devicebindingrequest">DeviceBindingRequest</a>!</td>
+<td>
+
+Create device binding request
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateDeviceBindingRequest</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Update device binding request
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">isConfirmation</td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createDraftTransaction</strong></td>
 <td valign="top"><a href="#createdrafttransactionresponse">CreateDraftTransactionResponse</a>!</td>
 <td>
@@ -2744,6 +2791,33 @@ Delete contact
 <td colspan="2" align="right" valign="top">year</td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestFrodaAccessUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Request access url
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>onboardUser</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Onboards user if needed
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>getLendingEligibility</strong></td>
+<td valign="top"><a href="#frodalendingeligibility">FrodaLendingEligibility</a>!</td>
+<td>
+
+Check if user is eligible for lending
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -3623,11 +3697,6 @@ Withdrawals and deposits amount in cents
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createdAt</strong></td>
-<td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -4768,6 +4837,58 @@ User transfer contacts
 </tbody>
 </table>
 
+#### DeviceBindingRequest
+
+Device binding attempts
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>ipAddress</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deviceName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>address</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>rejectedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createdAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### DirectDebitFee
 
 <table>
@@ -5147,6 +5268,31 @@ Returns an array of transactions which potential match with an email document. N
 <tr>
 <td colspan="2" valign="top"><strong>value</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### FrodaLendingEligibility
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>eligible</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>canRetryOn</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 </tbody>
