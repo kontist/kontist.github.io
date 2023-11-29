@@ -2793,6 +2793,21 @@ Delete contact
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>previewBizTaxDeclaration</strong></td>
+<td valign="top"><a href="#biztaxdeclarationpreview">BizTaxDeclarationPreview</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#biztaxdeclarationtype">BizTaxDeclarationType</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestFrodaAccessUrl</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
@@ -3587,6 +3602,26 @@ Withdrawals and deposits amount in cents
 <tr>
 <td colspan="2" valign="top"><strong>row176</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxDeclarationPreview
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>pdf</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -6355,6 +6390,16 @@ Change request id to authenticate verification
 <tr>
 <td colspan="2" valign="top"><strong>documents</strong></td>
 <td valign="top">[<a href="#questionnairedocument">QuestionnaireDocument</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>answers</strong></td>
+<td valign="top">[<a href="#questionnaireanswer">QuestionnaireAnswer</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionNames</td>
+<td valign="top">[<a href="#string">String</a>!]</td>
 <td></td>
 </tr>
 </tbody>
@@ -11687,6 +11732,16 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <td valign="top">[<a href="#string">String</a>!]</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -11909,6 +11964,16 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <tr>
 <td colspan="2" valign="top"><strong>purpose_likeAny</strong></td>
 <td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categoryCode_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatCategoryCode_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
@@ -13298,6 +13363,29 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>SUCCESSFUL</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxDeclarationType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>EUER</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_ANNUAL</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TRADE_TAX</strong></td>
 <td></td>
 </tr>
 </tbody>
