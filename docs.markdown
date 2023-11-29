@@ -16032,19 +16032,11 @@ Expected monthly revenue in euro cents
 <td></td>
 </tr>
 <tr>
-<td valign="top"><strong>BIZ_TAX_CAR_USAGE_PRIVATELY_PAID_CAR_EXPENSES</strong></td>
-<td></td>
-</tr>
-<tr>
 <td valign="top"><strong>BIZ_TAX_CAR_USAGE_LOGBOOK</strong></td>
 <td></td>
 </tr>
 <tr>
 <td valign="top"><strong>BIZ_TAX_CAR_USAGE_TRAVELED_KM_WITH_PRIVATE_CAR</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>BIZ_TAX_CAR_USAGE_OTHER</strong></td>
 <td></td>
 </tr>
 <tr>
@@ -16081,10 +16073,6 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>BIZ_TAX_TRAVEL_EXPENSES_BUSINESS_TRIPS</strong></td>
-<td></td>
-</tr>
-<tr>
-<td valign="top"><strong>BIZ_TAX_TRAVEL_EXPENSES_OTHER</strong></td>
 <td></td>
 </tr>
 </tbody>
