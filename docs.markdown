@@ -16786,6 +16786,10 @@ Expected monthly revenue in euro cents
 <td valign="top"><strong>INSTANT_CREDIT_TRANSFER</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>LOAN</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
