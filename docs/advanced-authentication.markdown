@@ -20,7 +20,7 @@ After that, you can use your device id and your private key to get your confirme
 ### Create device binding request
 Before you initiate the device binding you need to create a device binding request which then needs to be confirmed by the user on an existing (already and verified) device or via email.
 
-Please see the `createDeviceBindingRequest` mutation. You can use the `getDeviceBindingRequest` query to check the status of the request.
+Please see the `createDeviceBindingRequest` mutation. You can use the `getDeviceBindingRequest` query to check the status of the request. You have then 3 minutes to create and verify the device.
 
 
 ### Create device
