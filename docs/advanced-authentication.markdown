@@ -17,6 +17,11 @@ To pass device binding authentication you need to generate a pair of private and
 
 After that, you can use your device id and your private key to get your confirmed auth token by creating and verifying device challenge.
 
+### Create device binding request
+Before you initiate the device binding you need to create a device binding request which then needs to be confirmed by the user on an existing (already and verified) device or via email.
+
+Please see the `createDeviceBindingRequest` mutation. You can use the `getDeviceBindingRequest` query to check the status of the request.
+
 
 ### Create device
 
