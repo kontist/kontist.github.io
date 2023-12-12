@@ -2834,6 +2834,21 @@ Check if user is eligible for lending
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateVatYearSetting</strong></td>
+<td valign="top"><a href="#vatyearsetting">VatYearSetting</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">vatPaymentFrequency</td>
+<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -3153,6 +3168,20 @@ Retrieve account balance from Solaris
 <tr>
 <td colspan="2" align="right" valign="top">period</td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatYearSettings</strong></td>
+<td valign="top">[<a href="#vatyearsetting">VatYearSetting</a>!]!</td>
+<td>
+
+Account vat-related settings
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -9997,6 +10026,33 @@ Tours of users
 <tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#tourstatus">TourStatus</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### VatYearSetting
+
+An account's VAT settings specific to a year
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatPaymentFrequency</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
