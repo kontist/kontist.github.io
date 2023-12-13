@@ -11694,6 +11694,11 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>splits_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>assets_exist</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
@@ -11925,6 +11930,11 @@ Flag if the corresponding year should be excluded from the tax calculations comp
 <tr>
 <td colspan="2" valign="top"><strong>source_in</strong></td>
 <td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>splits_exist</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
