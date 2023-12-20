@@ -2519,6 +2519,11 @@ Create device binding request
 </td>
 </tr>
 <tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" align="right" valign="top">deviceName</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
