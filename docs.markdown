@@ -801,6 +801,25 @@ Remove an Asset
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createOCRAsset</strong></td>
+<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
+<td>
+
+Create an OCR Asset and obtain an upload config
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>cancelTransfer</strong></td>
 <td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td>
@@ -2852,6 +2871,20 @@ Check if user is eligible for lending
 <tr>
 <td colspan="2" align="right" valign="top">year</td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>extractOCRData</strong></td>
+<td valign="top"><a href="#ocrresult">OCRResult</a></td>
+<td>
+
+Performs OCR on the asset and extracts data
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -6069,6 +6102,41 @@ NACE codes
 <tr>
 <td colspan="2" valign="top"><strong>active</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### OCRResult
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>iban</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
