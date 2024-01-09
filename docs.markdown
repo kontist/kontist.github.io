@@ -6753,11 +6753,6 @@ The date at which the transaction was processed and the amount deducted from the
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>mandateNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -7955,11 +7950,6 @@ The date at which the transaction was processed and the amount deducted from the
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>mandateNumber</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -8569,15 +8559,6 @@ The purpose of the transfer - 140 max characters
 <td>
 
 The personal note of the transfer - 250 max characters
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the transfer
 
 </td>
 </tr>
@@ -10780,15 +10761,6 @@ The personal note of the SEPA Transfer - 250 max characters
 
 </td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the SEPA Transfer
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -10948,15 +10920,6 @@ The purpose of the transfer - 140 max characters
 <td>
 
 The personal note of the transfer - 250 max characters
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the transfer
 
 </td>
 </tr>
@@ -12632,15 +12595,6 @@ The purpose of the Standing Order - 140 max characters, if not specified with th
 <td>
 
 The personal note of the transfer - 250 max characters
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>e2eId</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The end to end ID of the Standing Order, if not specified with the update, it will be set to null
 
 </td>
 </tr>
