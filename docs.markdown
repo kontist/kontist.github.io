@@ -10074,6 +10074,16 @@ This field will be removed in an upcoming release. Do not rely on it for any new
 <td valign="top">[<a href="#userdependent">UserDependent</a>!]</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatExemptionWithItd</strong></td>
+<td valign="top"><a href="#vatexemptionwithitd">VatExemptionWithItd</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatExemptionWithoutItd</strong></td>
+<td valign="top"><a href="#vatexemptionwithoutitd">VatExemptionWithoutItd</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -12972,6 +12982,16 @@ Unique id of transfer session
 <tr>
 <td colspan="2" valign="top"><strong>dependentsTaxIds</strong></td>
 <td valign="top">[<a href="#dependentstaxids">DependentsTaxIds</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatExemptionWithItd</strong></td>
+<td valign="top"><a href="#vatexemptionwithitd">VatExemptionWithItd</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatExemptionWithoutItd</strong></td>
+<td valign="top"><a href="#vatexemptionwithoutitd">VatExemptionWithoutItd</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -17744,6 +17764,60 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>NO_VAT</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### VatExemptionWithItd
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_7</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### VatExemptionWithoutItd
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_8</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_11</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_14</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_16</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_20</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_21</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SECTION_4_NR_22</strong></td>
 <td></td>
 </tr>
 </tbody>
