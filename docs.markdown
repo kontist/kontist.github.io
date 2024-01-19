@@ -2832,6 +2832,21 @@ Delete contact
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>submitBizTaxDeclaration</strong></td>
+<td valign="top"><a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#biztaxdeclarationtype">BizTaxDeclarationType</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestFrodaAccessUrl</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
@@ -3688,6 +3703,46 @@ Withdrawals and deposits amount in cents
 <tbody>
 <tr>
 <td colspan="2" valign="top"><strong>pdf</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxDeclarationSubmission
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#biztaxdeclarationtype">BizTaxDeclarationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submittedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>pdfUrl</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -9677,6 +9732,16 @@ Retrieves draft of seizure payment order
 <tr>
 <td colspan="2" valign="top"><strong>bizTaxBookkeepingConfirmation</strong></td>
 <td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bizTaxDeclarationSubmissions</strong></td>
+<td valign="top">[<a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!]!</td>
 <td></td>
 </tr>
 <tr>
