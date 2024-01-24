@@ -574,15 +574,6 @@ IBAN to get information for
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>viewer</strong></td>
-<td valign="top"><a href="#user">User</a></td>
-<td>
-
-The current user information
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#systemstatus">SystemStatus</a>!</td>
 <td></td>
@@ -695,6 +686,15 @@ Get all existing receipt exports requested by the user
 <td colspan="2" align="right" valign="top">filter</td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>viewer</strong></td>
+<td valign="top"><a href="#user">User</a></td>
+<td>
+
+The current user information
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -1680,16 +1680,6 @@ Update user's subscription plan
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>dismissBanner</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">name</td>
-<td valign="top"><a href="#bannername">BannerName</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>connectIntegration</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
@@ -1711,20 +1701,6 @@ Connect user to a bookkeeping partner
 Authorization data sent by the bookkeeping partner to allow a user to connect to it
 
 </td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateUserTaxDetails</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Update user's tax details
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#usertaxdetailsinput">UserTaxDetailsInput</a>!</td>
-<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>updateDocument</strong></td>
@@ -1777,67 +1753,6 @@ Deletes document
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>requestIdentification</strong></td>
-<td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
-<td>
-
-Create a new identification if applicable
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateUserSignupInformation</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Update user signup information
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#userupdateinput">UserUpdateInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateSolarisUser</strong></td>
-<td valign="top"><a href="#userorauthresponse">UserOrAuthResponse</a>!</td>
-<td>
-
-Update user fields on solaris
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deliveryMethod</td>
-<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#updatesolarisuserinput">UpdateSolarisUserInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>confirmUpdateSolarisUser</strong></td>
-<td valign="top"><a href="#user">User</a>!</td>
-<td>
-
-Confirms update of user fields on solaris
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#confirmchangerequestargs">ConfirmChangeRequestArgs</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>createUserEmailAlias</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
@@ -1850,21 +1765,6 @@ Confirms update of user fields on solaris
 <tr>
 <td colspan="2" align="right" valign="top">alias</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>userConfirmation</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">confirmation</td>
-<td valign="top"><a href="#userconfirmation">UserConfirmation</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1986,98 +1886,6 @@ Update the push-notifications a user should receive
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>updateInvoiceSettings</strong></td>
-<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#invoicesettingsinput">InvoiceSettingsInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createInvoiceLogo</strong></td>
-<td valign="top"><a href="#createinvoicelogoresponse">CreateInvoiceLogoResponse</a>!</td>
-<td>
-
-The logo a user can add to his invoice. The path to it is stored in invoiceSettings
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">filetype</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteInvoiceLogo</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Deletes the logo of a user's settings entry
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>signPOA</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Allow user to sign Power of Attorney
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">dependents</td>
-<td valign="top">[<a href="#userdependentinput">UserDependentInput</a>!]</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateInvoiceCustomer</strong></td>
-<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#invoicecustomerinput">InvoiceCustomerInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateInvoice</strong></td>
-<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#invoiceinput">InvoiceInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteInvoice</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>duplicateInvoice</strong></td>
-<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>matchEmailDocumentToTransaction</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
@@ -2100,20 +1908,6 @@ Allow user to sign Power of Attorney
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>upsertProducts</strong></td>
-<td valign="top">[<a href="#product">Product</a>!]!</td>
-<td>
-
-Create or update user products that can be linked to the user's invoice(s)
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top">[<a href="#userproductinput">UserProductInput</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -2191,53 +1985,6 @@ Submits UStVA declaration
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#upsertdeclarationargs">UpsertDeclarationArgs</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateTaxNumber</strong></td>
-<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
-<td>
-
-Updates user's taxNumber
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#updatetaxnumberinput">UpdateTaxNumberInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createTaxNumber</strong></td>
-<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
-<td>
-
-Create user's taxNumber
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#createtaxnumberinput">CreateTaxNumberInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteTaxNumber</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Delete user's taxNumber
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2902,6 +2649,259 @@ Performs OCR on the asset and extracts data
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>signPOA</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Allow user to sign Power of Attorney
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">dependents</td>
+<td valign="top">[<a href="#userdependentinput">UserDependentInput</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>dismissBanner</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#bannername">BannerName</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userConfirmation</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmation</td>
+<td valign="top"><a href="#userconfirmation">UserConfirmation</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestIdentification</strong></td>
+<td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
+<td>
+
+Create a new identification if applicable
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateUserTaxDetails</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Update user's tax details
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#usertaxdetailsinput">UserTaxDetailsInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateTaxNumber</strong></td>
+<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
+<td>
+
+Updates user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatetaxnumberinput">UpdateTaxNumberInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createTaxNumber</strong></td>
+<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
+<td>
+
+Create user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createtaxnumberinput">CreateTaxNumberInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteTaxNumber</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Delete user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateUserSignupInformation</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Update user signup information
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#userupdateinput">UserUpdateInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateSolarisUser</strong></td>
+<td valign="top"><a href="#userorauthresponse">UserOrAuthResponse</a>!</td>
+<td>
+
+Update user fields on solaris
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatesolarisuserinput">UpdateSolarisUserInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmUpdateSolarisUser</strong></td>
+<td valign="top"><a href="#user">User</a>!</td>
+<td>
+
+Confirms update of user fields on solaris
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#confirmchangerequestargs">ConfirmChangeRequestArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateInvoiceCustomer</strong></td>
+<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#invoicecustomerinput">InvoiceCustomerInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createInvoiceLogo</strong></td>
+<td valign="top"><a href="#createinvoicelogoresponse">CreateInvoiceLogoResponse</a>!</td>
+<td>
+
+The logo a user can add to his invoice. The path to it is stored in invoiceSettings
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteInvoiceLogo</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Deletes the logo of a user's settings entry
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateInvoice</strong></td>
+<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#invoiceinput">InvoiceInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteInvoice</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>duplicateInvoice</strong></td>
+<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateInvoiceSettings</strong></td>
+<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#invoicesettingsinput">InvoiceSettingsInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertProducts</strong></td>
+<td valign="top">[<a href="#product">Product</a>!]!</td>
+<td>
+
+Create or update user products that can be linked to the user's invoice(s)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top">[<a href="#userproductinput">UserProductInput</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -3124,15 +3124,6 @@ The cursor of the item to start from. Use in conjunction with 'last'
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>stats</strong></td>
-<td valign="top"><a href="#accountstats">AccountStats</a>!</td>
-<td>
-
-Different information about account balances, e.g. taxes, VAT, ...
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>taxYearSettings</strong></td>
 <td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
 <td>
@@ -3171,20 +3162,6 @@ A list of iban/name combinations based on existing user's transactions, provided
 <td>
 
 Overdraft Application - only available for Kontist Application
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>balance</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>solarisBalance</strong></td>
-<td valign="top"><a href="#solarisaccountbalance">SolarisAccountBalance</a>!</td>
-<td>
-
-Retrieve account balance from Solaris
 
 </td>
 </tr>
@@ -3236,6 +3213,29 @@ Account vat-related settings
 <td colspan="2" align="right" valign="top">year</td>
 <td valign="top"><a href="#int">Int</a></td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>balance</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>solarisBalance</strong></td>
+<td valign="top"><a href="#solarisaccountbalance">SolarisAccountBalance</a>!</td>
+<td>
+
+Retrieve account balance from Solaris
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>stats</strong></td>
+<td valign="top"><a href="#accountstats">AccountStats</a>!</td>
+<td>
+
+Different information about account balances, e.g. taxes, VAT, ...
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -9314,11 +9314,6 @@ The details of an existing OAuth2 client
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>mainAccount</strong></td>
-<td valign="top"><a href="#account">Account</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>subscriptions</strong></td>
 <td valign="top">[<a href="#usersubscription">UserSubscription</a>!]!</td>
 <td>
@@ -9339,20 +9334,6 @@ The available subscription plans
 <tr>
 <td colspan="2" align="right" valign="top">couponCode</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>banners</strong></td>
-<td valign="top">[<a href="#banner">Banner</a>!]</td>
-<td>
-
-The state of banners in mobile or web app for the user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">isWebapp</td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
 </tr>
 <tr>
@@ -9377,15 +9358,6 @@ Information about the plans a user can subscribe to
 <td colspan="2" align="right" valign="top">couponCode</td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>taxDetails</strong></td>
-<td valign="top"><a href="#usertaxdetails">UserTaxDetails</a>!</td>
-<td>
-
-Tax details for user
-
-</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>features</strong></td>
@@ -9430,38 +9402,6 @@ User's documents
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>referral</strong></td>
-<td valign="top"><a href="#referraldetails">ReferralDetails</a>!</td>
-<td>
-
-Referral details for user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>identification</strong></td>
-<td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
-<td>
-
-IDNow identification details for user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>metadata</strong></td>
-<td valign="top"><a href="#usermetadata">UserMetadata</a>!</td>
-<td>
-
-User metadata. These fields are likely to get frequently updated or changed.
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">platform</td>
-<td valign="top"><a href="#platform">Platform</a></td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>unfinishedTransfers</strong></td>
 <td valign="top">[<a href="#unfinishedtransfer">UnfinishedTransfer</a>!]!</td>
 <td></td>
@@ -9499,30 +9439,6 @@ Premium subscription discount for user
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>invoiceSettings</strong></td>
-<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>poaUrl</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Retrieves signed POA PDF for user.
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoices</strong></td>
-<td valign="top"><a href="#invoicingdashboarddata">InvoicingDashboardData</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">pageNumber</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>emailDocuments</strong></td>
 <td valign="top">[<a href="#emaildocument">EmailDocument</a>!]!</td>
 <td></td>
@@ -9546,24 +9462,6 @@ Retrieves signed POA PDF for user.
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
-<td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
-<td>
-
-The list of all customers of the current user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>taxNumbers</strong></td>
-<td valign="top">[<a href="#taxnumber">TaxNumber</a>!]!</td>
-<td>
-
-User's tax numbers
-
-</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>businessAddresses</strong></td>
@@ -9756,6 +9654,108 @@ Retrieves draft of seizure payment order
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>banners</strong></td>
+<td valign="top">[<a href="#banner">Banner</a>!]</td>
+<td>
+
+The state of banners in mobile or web app for the user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">isWebapp</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>identification</strong></td>
+<td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
+<td>
+
+IDNow identification details for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>metadata</strong></td>
+<td valign="top"><a href="#usermetadata">UserMetadata</a>!</td>
+<td>
+
+User metadata. These fields are likely to get frequently updated or changed.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">platform</td>
+<td valign="top"><a href="#platform">Platform</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>poaUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Retrieves signed POA PDF for user.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>referral</strong></td>
+<td valign="top"><a href="#referraldetails">ReferralDetails</a>!</td>
+<td>
+
+Referral details for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxDetails</strong></td>
+<td valign="top"><a href="#usertaxdetails">UserTaxDetails</a>!</td>
+<td>
+
+Tax details for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxNumbers</strong></td>
+<td valign="top">[<a href="#taxnumber">TaxNumber</a>!]!</td>
+<td>
+
+User's tax numbers
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>mainAccount</strong></td>
+<td valign="top"><a href="#account">Account</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceSettings</strong></td>
+<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
+<td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
+<td>
+
+The list of all customers of the current user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoices</strong></td>
+<td valign="top"><a href="#invoicingdashboarddata">InvoicingDashboardData</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">pageNumber</td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
