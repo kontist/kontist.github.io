@@ -556,43 +556,6 @@ mutation {
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>getIBANInformation</strong></td>
-<td valign="top"><a href="#ibaninformation">IBANInformation</a>!</td>
-<td>
-
-Get bank information for IBAN
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">iban</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-IBAN to get information for
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>status</strong></td>
-<td valign="top"><a href="#systemstatus">SystemStatus</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>draftTransactions</strong></td>
-<td valign="top">[<a href="#drafttransaction">DraftTransaction</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>datevExports</strong></td>
-<td valign="top">[<a href="#datevexport">DatevExport</a>!]!</td>
-<td>
-
-Get all existing DATEV Exports requested by the user
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>getReceiptExports</strong></td>
 <td valign="top">[<a href="#receiptexport">ReceiptExport</a>!]!</td>
 <td>
@@ -610,6 +573,85 @@ Get all existing receipt exports requested by the user
 <td colspan="2" align="right" valign="top">year</td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>datevExports</strong></td>
+<td valign="top">[<a href="#datevexport">DatevExport</a>!]!</td>
+<td>
+
+Get all existing DATEV Exports requested by the user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>hasDeviceRestrictedKey</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Determines if user device has restricted key added
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>listBoundDevices</strong></td>
+<td valign="top">[<a href="#bounddevice">BoundDevice</a>!]!</td>
+<td>
+
+Returns list of bound devices
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>getDeviceBindingRequest</strong></td>
+<td valign="top"><a href="#devicebindingrequest">DeviceBindingRequest</a></td>
+<td>
+
+Get device binding request
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>draftTransactions</strong></td>
+<td valign="top">[<a href="#drafttransaction">DraftTransaction</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#systemstatus">SystemStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>listPaymentMethods</strong></td>
+<td valign="top">[<a href="#paymentmethod">PaymentMethod</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>getIBANInformation</strong></td>
+<td valign="top"><a href="#ibaninformation">IBANInformation</a>!</td>
+<td>
+
+Get bank information for IBAN
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">iban</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+IBAN to get information for
+
+</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>naceCodes</strong></td>
@@ -653,48 +695,6 @@ Get all released generic features, that are needed before user creation
 The current user information
 
 </td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>hasDeviceRestrictedKey</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td>
-
-Determines if user device has restricted key added
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>listBoundDevices</strong></td>
-<td valign="top">[<a href="#bounddevice">BoundDevice</a>!]!</td>
-<td>
-
-Returns list of bound devices
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>getDeviceBindingRequest</strong></td>
-<td valign="top"><a href="#devicebindingrequest">DeviceBindingRequest</a></td>
-<td>
-
-Get device binding request
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>listPaymentMethods</strong></td>
-<td valign="top">[<a href="#paymentmethod">PaymentMethod</a>!]!</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -773,6 +773,44 @@ Remove an Asset from the Transaction
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateTaxYearSettings</strong></td>
+<td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
+<td>
+
+Update individual tax-related settings per year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">taxYearSettings</td>
+<td valign="top">[<a href="#taxyearsettinginput">TaxYearSettingInput</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateVatYearSetting</strong></td>
+<td valign="top"><a href="#vatyearsetting">VatYearSetting</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">vatPaymentFrequency</td>
+<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>agerasLeadRedirect</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Send Lead data to designated Zap to redirect lead to Agreas
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>finalizeAssetUpload</strong></td>
 <td valign="top"><a href="#asset">Asset</a>!</td>
 <td>
@@ -820,188 +858,74 @@ Create an OCR Asset and obtain an upload config
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>cancelTransfer</strong></td>
-<td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
+<td colspan="2" valign="top"><strong>extractOCRData</strong></td>
+<td valign="top"><a href="#ocrresult">OCRResult</a></td>
 <td>
 
-Cancel an existing Timed Order or Standing Order
+Performs OCR on the asset and extracts data
 
 </td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">deliveryMethod</td>
-<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td colspan="2" align="right" valign="top">assetId</td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a></td>
+<td colspan="2" valign="top"><strong>generateReceiptExport</strong></td>
+<td valign="top"><a href="#receiptexportresult">ReceiptExportResult</a>!</td>
+<td>
+
+Exports list of receipts for given time frame
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#receiptexportinput">ReceiptExportInput</a>!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createClient</strong></td>
+<td valign="top"><a href="#client">Client</a>!</td>
+<td>
+
+Create an OAuth2 client
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">client</td>
+<td valign="top"><a href="#createclientinput">CreateClientInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateClient</strong></td>
+<td valign="top"><a href="#client">Client</a>!</td>
+<td>
+
+Update an OAuth2 client
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">client</td>
+<td valign="top"><a href="#updateclientinput">UpdateClientInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteClient</strong></td>
+<td valign="top"><a href="#client">Client</a>!</td>
+<td>
+
+Delete an OAuth2 client
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#transfertype">TransferType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>confirmCancelTransfer</strong></td>
-<td valign="top"><a href="#transfer">Transfer</a>!</td>
-<td>
-
-Confirm a Standing Order cancellation
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Signed stringToSign from transfer cancelation response
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-ID of device which requested transfer cancelation
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">authorizationToken</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The confirmation token received by SMS on the user's phone
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">confirmationId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#transfertype">TransferType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createTransfer</strong></td>
-<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
-<td>
-
-Create a transfer. The transfer's type will be determined based on the provided input
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deliveryMethod</td>
-<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
-<td>
-
-Delivery method of transfer confirmation
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-ID of device which requested transfer creation
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transfer</td>
-<td valign="top"><a href="#createtransferinput">CreateTransferInput</a>!</td>
-<td>
-
-Transfer payload
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateTransfer</strong></td>
-<td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deliveryMethod</td>
-<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
-<td>
-
-Delivery method of transfer confirmation
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-ID of device which requested transfer update
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transfer</td>
-<td valign="top"><a href="#updatetransferinput">UpdateTransferInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>confirmTransfer</strong></td>
-<td valign="top"><a href="#transfer">Transfer</a>!</td>
-<td>
-
-Confirm a transfer creation
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Signed stringToSign from transfer creation response
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-ID of device which requested transfer creation
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">authorizationToken</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-The confirmation token received by SMS on the user's phone
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">confirmationId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-ID obtained on transfer creation
-
-</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>createTransfers</strong></td>
@@ -1041,53 +965,90 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>whitelistCard</strong></td>
-<td valign="top"><a href="#whitelistcardresponse">WhitelistCardResponse</a>!</td>
+<td colspan="2" valign="top"><strong>confirmBizTaxBookkeeping</strong></td>
+<td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>confirmFraud</strong></td>
-<td valign="top"><a href="#confirmfraudresponse">ConfirmFraudResponse</a>!</td>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>authorizeChangeRequest</strong></td>
-<td valign="top"><a href="#authorizechangerequestresponse">AuthorizeChangeRequestResponse</a>!</td>
+<td colspan="2" valign="top"><strong>previewBizTaxDeclaration</strong></td>
+<td valign="top"><a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">changeRequestId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#biztaxdeclarationtype">BizTaxDeclarationType</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>confirmChangeRequest</strong></td>
-<td valign="top"><a href="#confirmchangerequestresponse">ConfirmChangeRequestResponse</a>!</td>
+<td colspan="2" valign="top"><strong>submitBizTaxDeclaration</strong></td>
+<td valign="top"><a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">changeRequestId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#biztaxdeclarationtype">BizTaxDeclarationType</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a></td>
+<td colspan="2" valign="top"><strong>createBusinessAddress</strong></td>
+<td valign="top"><a href="#businessaddress">BusinessAddress</a>!</td>
+<td>
+
+Creates an user's business address
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createbusinessaddressinput">CreateBusinessAddressInput</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">authorizationToken</td>
-<td valign="top"><a href="#string">String</a></td>
+<td colspan="2" valign="top"><strong>exitBusinessAsset</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Exit business asset
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#exitbusinessassetpayload">ExitBusinessAssetPayload</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteBusinessAsset</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Delete business asset
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -1435,6 +1396,965 @@ Returns encrypted card details for virtual card
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>whitelistCard</strong></td>
+<td valign="top"><a href="#whitelistcardresponse">WhitelistCardResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmFraud</strong></td>
+<td valign="top"><a href="#confirmfraudresponse">ConfirmFraudResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>authorizeChangeRequest</strong></td>
+<td valign="top"><a href="#authorizechangerequestresponse">AuthorizeChangeRequestResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">changeRequestId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmChangeRequest</strong></td>
+<td valign="top"><a href="#confirmchangerequestresponse">ConfirmChangeRequestResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">changeRequestId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createDatevExport</strong></td>
+<td valign="top"><a href="#datevexport">DatevExport</a>!</td>
+<td>
+
+Creates a DATEV export
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#datevexportinput">DatevExportInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizeTransactionForDeclaration</strong></td>
+<td valign="top"><a href="#categorizetransactionfordeclarationresponse">CategorizeTransactionForDeclarationResponse</a>!</td>
+<td>
+
+Categorize transaction for VAT declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">categoryCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">vatCategoryCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">category</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">date</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">isSplit</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">businessAssetInput</td>
+<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitDeclaration</strong></td>
+<td valign="top"><a href="#declaration">Declaration</a>!</td>
+<td>
+
+Submits UStVA declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertDeclaration</strong></td>
+<td valign="top"><a href="#declaration">Declaration</a>!</td>
+<td>
+
+Submits UStVA declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#upsertdeclarationargs">UpsertDeclarationArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>addDeviceKey</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Add restricted key to selected device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">key</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteBoundDevice</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Delete bound device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createDeviceBindingRequest</strong></td>
+<td valign="top"><a href="#devicebindingrequest">DeviceBindingRequest</a>!</td>
+<td>
+
+Create device binding request
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateDeviceBindingRequest</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Update device binding request
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">isConfirmation</td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createConsentForDeviceMonitoring</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Records consent from the given person to collect device fingerprints on their registered device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">eventType</td>
+<td valign="top"><a href="#deviceconsenteventtype">DeviceConsentEventType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateConsentForDeviceMonitoring</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a></td>
+<td>
+
+Records change of consent to collect device fingerprints on their registered device
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">eventType</td>
+<td valign="top"><a href="#deviceconsenteventtype">DeviceConsentEventType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceConsentId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createActivityForDeviceMonitoring</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Creates user activity for device monitoring
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">activityType</td>
+<td valign="top"><a href="#deviceactivitytype">DeviceActivityType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createUserEmailAlias</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">hash</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">alias</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>matchEmailDocumentToTransaction</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">emailDocumentId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteEmailDocument</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createDraftTransaction</strong></td>
+<td valign="top"><a href="#createdrafttransactionresponse">CreateDraftTransactionResponse</a>!</td>
+<td>
+
+Creates a draft external transaction entry
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">fileName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateDraftTransaction</strong></td>
+<td valign="top"><a href="#drafttransaction">DraftTransaction</a></td>
+<td>
+
+Updates draft external transaction entry. Returns null if finalized transaction was created
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatedrafttransactioninput">UpdateDraftTransactionInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteDraftTransaction</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Deletes draft transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestFrodaAccessUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Request access url
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>onboardUser</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Onboards user if needed
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>getLendingEligibility</strong></td>
+<td valign="top"><a href="#frodalendingeligibility">FrodaLendingEligibility</a>!</td>
+<td>
+
+Check if user is eligible for lending
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>connectIntegration</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Connect user to a bookkeeping partner
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#integrationtype">IntegrationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationData</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Authorization data sent by the bookkeeping partner to allow a user to connect to it
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateInvoiceCustomer</strong></td>
+<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#invoicecustomerinput">InvoiceCustomerInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createInvoiceLogo</strong></td>
+<td valign="top"><a href="#createinvoicelogoresponse">CreateInvoiceLogoResponse</a>!</td>
+<td>
+
+The logo a user can add to his invoice. The path to it is stored in invoiceSettings
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteInvoiceLogo</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Deletes the logo of a user's settings entry
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateInvoice</strong></td>
+<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#invoiceinput">InvoiceInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteInvoice</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>duplicateInvoice</strong></td>
+<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateInvoiceSettings</strong></td>
+<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#invoicesettingsinput">InvoiceSettingsInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertProducts</strong></td>
+<td valign="top">[<a href="#product">Product</a>!]!</td>
+<td>
+
+Create or update user products that can be linked to the user's invoice(s)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top">[<a href="#userproductinput">UserProductInput</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateUserNotifications</strong></td>
+<td valign="top">[<a href="#notification">Notification</a>!]!</td>
+<td>
+
+Update the push-notifications a user should receive
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">active</td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#notificationtype">NotificationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
+<td>
+
+Create Overdraft Application  - only available for Kontist Application
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>activateOverdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
+<td>
+
+Activate Overdraft Application  - only available for Kontist Application
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateOverdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
+<td>
+
+Updates overdraft application timestamps for rejected and offered overdraft screens - only available for Kontist Application
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">offeredScreenShown</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">rejectionScreenShown</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateExternalTransaction</strong></td>
+<td valign="top"><a href="#rawtransactionprojection">RawTransactionProjection</a>!</td>
+<td>
+
+Updates external transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#userexternaltransactioninput">UserExternalTransactionInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteExternalTransaction</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Deletes external transaction
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertQuestionnaireDocument</strong></td>
+<td valign="top"><a href="#questionnairedocument">QuestionnaireDocument</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#questionnairedocumentinput">QuestionnaireDocumentInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createQuestionnaireDocumentAsset</strong></td>
+<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireDocumentId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteQuestionnaireDocument</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireDocumentId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>startQuestionnaire</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitQuestionnaireAnswer</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">value</td>
+<td valign="top"><a href="#json">JSON</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>postponeQuestionnaireAnswer</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionName</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>resetLastQuestionnaireAnswer</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>resetQuestionnaire</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitBookkeepingQuestionnaire</strong></td>
+<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">questionnaireId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createReview</strong></td>
+<td valign="top"><a href="#createreviewresponse">CreateReviewResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">platform</td>
+<td valign="top"><a href="#reviewtriggerplatform">ReviewTriggerPlatform</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">triggerName</td>
+<td valign="top"><a href="#reviewtriggername">ReviewTriggerName</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateReview</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">status</td>
+<td valign="top"><a href="#userreviewstatus">UserReviewStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">reviewId</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>signSeizurePaymentOrder</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Allow user to sign the seizure payment order
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">seizureId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateDocument</strong></td>
+<td valign="top"><a href="#document">Document</a>!</td>
+<td>
+
+Updates document meta
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td>
+
+Document id
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Document's name
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">metadata</td>
+<td valign="top"><a href="#updatedocumentmetadata">UpdateDocumentMetadata</a></td>
+<td>
+
+Document's metadata
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteDocument</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Deletes document
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>subscribeToPlan</strong></td>
+<td valign="top"><a href="#usersubscription">UserSubscription</a>!</td>
+<td>
+
+Subscribe user to a plan
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateSubscriptionPlan</strong></td>
+<td valign="top"><a href="#updatesubscriptionplanresult">UpdateSubscriptionPlanResult</a>!</td>
+<td>
+
+Update user's subscription plan
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">newPlan</td>
+<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>finalizeTaxCase</strong></td>
+<td valign="top"><a href="#taxcase">TaxCase</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">shouldFinalizeIncomeTax</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">shouldFinalizeBusinessTax</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">taxCaseId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>skipIncomeTax</strong></td>
+<td valign="top"><a href="#taxcase">TaxCase</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">taxCaseId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>approveDeclaration</strong></td>
+<td valign="top"><a href="#declarationapproval">DeclarationApproval</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createdeclarationapprovalinput">CreateDeclarationApprovalInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declineDeclaration</strong></td>
+<td valign="top"><a href="#declarationdecline">DeclarationDecline</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createdeclarationdeclineinput">CreateDeclarationDeclineInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createTopUp</strong></td>
+<td valign="top"><a href="#topupcreationresult">TopUpCreationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">topUpData</td>
+<td valign="top"><a href="#topupinput">TopUpInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deletePaymentMethod</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">paymentMethodId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>refundDirectDebit</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>initDirectDebitRefund</strong></td>
+<td valign="top"><a href="#authorizethroughdevicesigningormobilenumberresponse">AuthorizeThroughDeviceSigningOrMobileNumberResponse</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmDirectDebitRefund</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">token</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">changeRequestId</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateTransaction</strong></td>
 <td valign="top"><a href="#transaction">Transaction</a>!</td>
 <td>
@@ -1549,637 +2469,188 @@ Delete transaction splits
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>connectIntegration</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td colspan="2" valign="top"><strong>cancelTransfer</strong></td>
+<td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td>
 
-Connect user to a bookkeeping partner
+Cancel an existing Timed Order or Standing Order
 
 </td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#integrationtype">IntegrationType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">authorizationData</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-Authorization data sent by the bookkeeping partner to allow a user to connect to it
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateDocument</strong></td>
-<td valign="top"><a href="#document">Document</a>!</td>
-<td>
-
-Updates document meta
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td>
-
-Document id
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">name</td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Document's name
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">metadata</td>
-<td valign="top"><a href="#updatedocumentmetadata">UpdateDocumentMetadata</a></td>
-<td>
-
-Document's metadata
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteDocument</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Deletes document
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createUserEmailAlias</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">hash</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">alias</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>refundDirectDebit</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>initDirectDebitRefund</strong></td>
-<td valign="top"><a href="#authorizethroughdevicesigningormobilenumberresponse">AuthorizeThroughDeviceSigningOrMobileNumberResponse</a>!</td>
-<td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">deliveryMethod</td>
-<td valign="top"><a href="#deliverymethod">DeliveryMethod</a>!</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>confirmDirectDebitRefund</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">token</td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmCancelTransfer</strong></td>
+<td valign="top"><a href="#transfer">Transfer</a>!</td>
+<td>
+
+Confirm a Standing Order cancellation
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">signature</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
+<td>
+
+Signed stringToSign from transfer cancelation response
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">changeRequestId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>matchEmailDocumentToTransaction</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">transactionId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">emailDocumentId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteEmailDocument</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>categorizeTransactionForDeclaration</strong></td>
-<td valign="top"><a href="#categorizetransactionfordeclarationresponse">CategorizeTransactionForDeclarationResponse</a>!</td>
-<td>
-
-Categorize transaction for VAT declaration
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">categoryCode</td>
 <td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">vatCategoryCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">category</td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">date</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">isSplit</td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">businessAssetInput</td>
-<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>submitDeclaration</strong></td>
-<td valign="top"><a href="#declaration">Declaration</a>!</td>
 <td>
 
-Submits UStVA declaration
+ID of device which requested transfer cancelation
 
 </td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The confirmation token received by SMS on the user's phone
+
+</td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">period</td>
+<td colspan="2" align="right" valign="top">confirmationId</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>upsertDeclaration</strong></td>
-<td valign="top"><a href="#declaration">Declaration</a>!</td>
-<td>
-
-Submits UStVA declaration
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#upsertdeclarationargs">UpsertDeclarationArgs</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createBusinessAddress</strong></td>
-<td valign="top"><a href="#businessaddress">BusinessAddress</a>!</td>
-<td>
-
-Creates an user's business address
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#createbusinessaddressinput">CreateBusinessAddressInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>startQuestionnaire</strong></td>
-<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireId</td>
-<td valign="top"><a href="#id">ID</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#questionnairetype">QuestionnaireType</a>!</td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>submitQuestionnaireAnswer</strong></td>
-<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
+<td colspan="2" valign="top"><strong>createTransfer</strong></td>
+<td valign="top"><a href="#confirmationrequest">ConfirmationRequest</a>!</td>
+<td>
+
+Create a transfer. The transfer's type will be determined based on the provided input
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td>
+
+Delivery method of transfer confirmation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+ID of device which requested transfer creation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transfer</td>
+<td valign="top"><a href="#createtransferinput">CreateTransferInput</a>!</td>
+<td>
+
+Transfer payload
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateTransfer</strong></td>
+<td valign="top"><a href="#confirmationrequestortransfer">ConfirmationRequestOrTransfer</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">value</td>
-<td valign="top"><a href="#json">JSON</a></td>
+<td colspan="2" align="right" valign="top">deliveryMethod</td>
+<td valign="top"><a href="#deliverymethod">DeliveryMethod</a></td>
+<td>
+
+Delivery method of transfer confirmation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+ID of device which requested transfer update
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transfer</td>
+<td valign="top"><a href="#updatetransferinput">UpdateTransferInput</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">questionName</td>
+<td colspan="2" valign="top"><strong>confirmTransfer</strong></td>
+<td valign="top"><a href="#transfer">Transfer</a>!</td>
+<td>
+
+Confirm a transfer creation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Signed stringToSign from transfer creation response
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">deviceId</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+ID of device which requested transfer creation
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">authorizationToken</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The confirmation token received by SMS on the user's phone
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmationId</td>
 <td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>postponeQuestionnaireAnswer</strong></td>
-<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionName</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>resetLastQuestionnaireAnswer</strong></td>
-<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>resetQuestionnaire</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>submitBookkeepingQuestionnaire</strong></td>
-<td valign="top"><a href="#questionnaire">Questionnaire</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>upsertQuestionnaireDocument</strong></td>
-<td valign="top"><a href="#questionnairedocument">QuestionnaireDocument</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#questionnairedocumentinput">QuestionnaireDocumentInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createQuestionnaireDocumentAsset</strong></td>
-<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">filetype</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">name</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireDocumentId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteQuestionnaireDocument</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">questionnaireDocumentId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>finalizeTaxCase</strong></td>
-<td valign="top"><a href="#taxcase">TaxCase</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">shouldFinalizeIncomeTax</td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">shouldFinalizeBusinessTax</td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">taxCaseId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>skipIncomeTax</strong></td>
-<td valign="top"><a href="#taxcase">TaxCase</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">taxCaseId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>approveDeclaration</strong></td>
-<td valign="top"><a href="#declarationapproval">DeclarationApproval</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#createdeclarationapprovalinput">CreateDeclarationApprovalInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declineDeclaration</strong></td>
-<td valign="top"><a href="#declarationdecline">DeclarationDecline</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#createdeclarationdeclineinput">CreateDeclarationDeclineInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>agerasLeadRedirect</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td>
 
-Send Lead data to designated Zap to redirect lead to Agreas
+ID obtained on transfer creation
 
 </td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createDraftTransaction</strong></td>
-<td valign="top"><a href="#createdrafttransactionresponse">CreateDraftTransactionResponse</a>!</td>
-<td>
-
-Creates a draft external transaction entry
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">fileName</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateDraftTransaction</strong></td>
-<td valign="top"><a href="#drafttransaction">DraftTransaction</a></td>
-<td>
-
-Updates draft external transaction entry. Returns null if finalized transaction was created
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#updatedrafttransactioninput">UpdateDraftTransactionInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteDraftTransaction</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Deletes draft transaction
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateExternalTransaction</strong></td>
-<td valign="top"><a href="#rawtransactionprojection">RawTransactionProjection</a>!</td>
-<td>
-
-Updates external transaction
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#userexternaltransactioninput">UserExternalTransactionInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteExternalTransaction</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Deletes external transaction
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>exitBusinessAsset</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Exit business asset
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#exitbusinessassetpayload">ExitBusinessAssetPayload</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteBusinessAsset</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Delete business asset
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createDatevExport</strong></td>
-<td valign="top"><a href="#datevexport">DatevExport</a>!</td>
-<td>
-
-Creates a DATEV export
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#datevexportinput">DatevExportInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>generateReceiptExport</strong></td>
-<td valign="top"><a href="#receiptexportresult">ReceiptExportResult</a>!</td>
-<td>
-
-Exports list of receipts for given time frame
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#receiptexportinput">ReceiptExportInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>confirmBizTaxBookkeeping</strong></td>
-<td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>previewBizTaxDeclaration</strong></td>
-<td valign="top"><a href="#biztaxdeclarationpreview">BizTaxDeclarationPreview</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#biztaxdeclarationtype">BizTaxDeclarationType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>submitBizTaxDeclaration</strong></td>
-<td valign="top"><a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#biztaxdeclarationtype">BizTaxDeclarationType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>extractOCRData</strong></td>
-<td valign="top"><a href="#ocrresult">OCRResult</a></td>
-<td>
-
-Performs OCR on the asset and extracts data
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">assetId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>createContact</strong></td>
@@ -2431,477 +2902,6 @@ Confirms update of user fields on solaris
 <td valign="top"><a href="#confirmchangerequestargs">ConfirmChangeRequestArgs</a>!</td>
 <td></td>
 </tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateTaxYearSettings</strong></td>
-<td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
-<td>
-
-Update individual tax-related settings per year
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">taxYearSettings</td>
-<td valign="top">[<a href="#taxyearsettinginput">TaxYearSettingInput</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateVatYearSetting</strong></td>
-<td valign="top"><a href="#vatyearsetting">VatYearSetting</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">vatPaymentFrequency</td>
-<td valign="top"><a href="#paymentfrequency">PaymentFrequency</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateInvoiceCustomer</strong></td>
-<td valign="top"><a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#invoicecustomerinput">InvoiceCustomerInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createInvoiceLogo</strong></td>
-<td valign="top"><a href="#createinvoicelogoresponse">CreateInvoiceLogoResponse</a>!</td>
-<td>
-
-The logo a user can add to his invoice. The path to it is stored in invoiceSettings
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">filetype</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteInvoiceLogo</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Deletes the logo of a user's settings entry
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateInvoice</strong></td>
-<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#invoiceinput">InvoiceInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteInvoice</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>duplicateInvoice</strong></td>
-<td valign="top"><a href="#invoiceoutput">InvoiceOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateInvoiceSettings</strong></td>
-<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#invoicesettingsinput">InvoiceSettingsInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>upsertProducts</strong></td>
-<td valign="top">[<a href="#product">Product</a>!]!</td>
-<td>
-
-Create or update user products that can be linked to the user's invoice(s)
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top">[<a href="#userproductinput">UserProductInput</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateUserNotifications</strong></td>
-<td valign="top">[<a href="#notification">Notification</a>!]!</td>
-<td>
-
-Update the push-notifications a user should receive
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">active</td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#notificationtype">NotificationType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createClient</strong></td>
-<td valign="top"><a href="#client">Client</a>!</td>
-<td>
-
-Create an OAuth2 client
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">client</td>
-<td valign="top"><a href="#createclientinput">CreateClientInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateClient</strong></td>
-<td valign="top"><a href="#client">Client</a>!</td>
-<td>
-
-Update an OAuth2 client
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">client</td>
-<td valign="top"><a href="#updateclientinput">UpdateClientInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteClient</strong></td>
-<td valign="top"><a href="#client">Client</a>!</td>
-<td>
-
-Delete an OAuth2 client
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>addDeviceKey</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-Add restricted key to selected device
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">key</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteBoundDevice</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td>
-
-Delete bound device
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createDeviceBindingRequest</strong></td>
-<td valign="top"><a href="#devicebindingrequest">DeviceBindingRequest</a>!</td>
-<td>
-
-Create device binding request
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceId</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceName</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateDeviceBindingRequest</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td>
-
-Update device binding request
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">isConfirmation</td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>requestFrodaAccessUrl</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Request access url
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>onboardUser</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-Onboards user if needed
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>getLendingEligibility</strong></td>
-<td valign="top"><a href="#frodalendingeligibility">FrodaLendingEligibility</a>!</td>
-<td>
-
-Check if user is eligible for lending
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createConsentForDeviceMonitoring</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Records consent from the given person to collect device fingerprints on their registered device
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">eventType</td>
-<td valign="top"><a href="#deviceconsenteventtype">DeviceConsentEventType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateConsentForDeviceMonitoring</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a></td>
-<td>
-
-Records change of consent to collect device fingerprints on their registered device
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">eventType</td>
-<td valign="top"><a href="#deviceconsenteventtype">DeviceConsentEventType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">deviceConsentId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createActivityForDeviceMonitoring</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Creates user activity for device monitoring
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">activityType</td>
-<td valign="top"><a href="#deviceactivitytype">DeviceActivityType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>requestOverdraft</strong></td>
-<td valign="top"><a href="#overdraft">Overdraft</a></td>
-<td>
-
-Create Overdraft Application  - only available for Kontist Application
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>activateOverdraft</strong></td>
-<td valign="top"><a href="#overdraft">Overdraft</a></td>
-<td>
-
-Activate Overdraft Application  - only available for Kontist Application
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateOverdraft</strong></td>
-<td valign="top"><a href="#overdraft">Overdraft</a></td>
-<td>
-
-Updates overdraft application timestamps for rejected and offered overdraft screens - only available for Kontist Application
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">offeredScreenShown</td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">rejectionScreenShown</td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createTopUp</strong></td>
-<td valign="top"><a href="#topupcreationresult">TopUpCreationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">topUpData</td>
-<td valign="top"><a href="#topupinput">TopUpInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deletePaymentMethod</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">paymentMethodId</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>signSeizurePaymentOrder</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Allow user to sign the seizure payment order
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">seizureId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createReview</strong></td>
-<td valign="top"><a href="#createreviewresponse">CreateReviewResponse</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">platform</td>
-<td valign="top"><a href="#reviewtriggerplatform">ReviewTriggerPlatform</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">triggerName</td>
-<td valign="top"><a href="#reviewtriggername">ReviewTriggerName</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateReview</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">status</td>
-<td valign="top"><a href="#userreviewstatus">UserReviewStatus</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">reviewId</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>subscribeToPlan</strong></td>
-<td valign="top"><a href="#usersubscription">UserSubscription</a>!</td>
-<td>
-
-Subscribe user to a plan
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">couponCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateSubscriptionPlan</strong></td>
-<td valign="top"><a href="#updatesubscriptionplanresult">UpdateSubscriptionPlanResult</a>!</td>
-<td>
-
-Update user's subscription plan
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">couponCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">newPlan</td>
-<td valign="top"><a href="#purchasetype">PurchaseType</a>!</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
@@ -2977,53 +2977,107 @@ The bank account of the current user
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>transfers</strong></td>
-<td valign="top"><a href="#transfersconnection">TransfersConnection</a>!</td>
+<td colspan="2" valign="top"><strong>balance</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">where</td>
-<td valign="top"><a href="#transfersconnectionfilter">TransfersConnectionFilter</a></td>
+<td colspan="2" valign="top"><strong>solarisBalance</strong></td>
+<td valign="top"><a href="#solarisaccountbalance">SolarisAccountBalance</a>!</td>
+<td>
+
+Retrieve account balance from Solaris
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>stats</strong></td>
+<td valign="top"><a href="#accountstats">AccountStats</a>!</td>
+<td>
+
+Different information about account balances, e.g. taxes, VAT, ...
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxYearSettings</strong></td>
+<td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
+<td>
+
+Individual tax-related settings per year
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vatYearSettings</strong></td>
+<td valign="top">[<a href="#vatyearsetting">VatYearSetting</a>!]!</td>
+<td>
+
+Account vat-related settings
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>cards</strong></td>
+<td valign="top">[<a href="#card">Card</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>card</strong></td>
+<td valign="top"><a href="#card">Card</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filter</td>
+<td valign="top"><a href="#cardfilter">CardFilter</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarations</strong></td>
+<td valign="top">[<a href="#declaration">Declaration</a>!]!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#transfertype">TransferType</a>!</td>
+<td valign="top"><a href="#declarationtype">DeclarationType</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">first</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td>
-
-The number of items to return after the provided cursor up to 50
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">last</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td>
-
-The number of items to return before the provided cursor up to 50
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">after</td>
+<td colspan="2" valign="top"><strong>declarationPdfUrl</strong></td>
 <td valign="top"><a href="#string">String</a></td>
-<td>
-
-The cursor of the item to start from. Use in conjunction with 'first'
-
-</td>
+<td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">before</td>
-<td valign="top"><a href="#string">String</a></td>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarationStats</strong></td>
+<td valign="top"><a href="#declarationstats">DeclarationStats</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>overdraft</strong></td>
+<td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
 
-The cursor of the item to start from. Use in conjunction with 'last'
+Overdraft Application - only available for Kontist Application
 
 </td>
 </tr>
@@ -3124,116 +3178,62 @@ The cursor of the item to start from. Use in conjunction with 'last'
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>transfers</strong></td>
+<td valign="top"><a href="#transfersconnection">TransfersConnection</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">where</td>
+<td valign="top"><a href="#transfersconnectionfilter">TransfersConnectionFilter</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#transfertype">TransferType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">first</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+
+The number of items to return after the provided cursor up to 50
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">last</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td>
+
+The number of items to return before the provided cursor up to 50
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">after</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The cursor of the item to start from. Use in conjunction with 'first'
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">before</td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+The cursor of the item to start from. Use in conjunction with 'last'
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>transferSuggestions</strong></td>
 <td valign="top">[<a href="#transfersuggestion">TransferSuggestion</a>!]</td>
 <td>
 
 A list of iban/name combinations based on existing user's transactions, provided to assist users when creating new transfers
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>cards</strong></td>
-<td valign="top">[<a href="#card">Card</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>card</strong></td>
-<td valign="top"><a href="#card">Card</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">filter</td>
-<td valign="top"><a href="#cardfilter">CardFilter</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declarations</strong></td>
-<td valign="top">[<a href="#declaration">Declaration</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#declarationtype">DeclarationType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declarationPdfUrl</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declarationStats</strong></td>
-<td valign="top"><a href="#declarationstats">DeclarationStats</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">period</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>balance</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>solarisBalance</strong></td>
-<td valign="top"><a href="#solarisaccountbalance">SolarisAccountBalance</a>!</td>
-<td>
-
-Retrieve account balance from Solaris
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>stats</strong></td>
-<td valign="top"><a href="#accountstats">AccountStats</a>!</td>
-<td>
-
-Different information about account balances, e.g. taxes, VAT, ...
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>taxYearSettings</strong></td>
-<td valign="top">[<a href="#taxyearsetting">TaxYearSetting</a>!]!</td>
-<td>
-
-Individual tax-related settings per year
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>vatYearSettings</strong></td>
-<td valign="top">[<a href="#vatyearsetting">VatYearSetting</a>!]!</td>
-<td>
-
-Account vat-related settings
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>overdraft</strong></td>
-<td valign="top"><a href="#overdraft">Overdraft</a></td>
-<td>
-
-Overdraft Application - only available for Kontist Application
 
 </td>
 </tr>
@@ -3689,7 +3689,7 @@ Withdrawals and deposits amount in cents
 </tbody>
 </table>
 
-#### BizTaxDeclarationPreview
+#### BizTaxDeclarationResultMessage
 
 <table>
 <thead>
@@ -3702,7 +3702,22 @@ Withdrawals and deposits amount in cents
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>pdf</strong></td>
+<td colspan="2" valign="top"><strong>type</strong></td>
+<td valign="top"><a href="#biztaxdeclarationresultmessagetype">BizTaxDeclarationResultMessageType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>text</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>formLineNumber</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>fieldIdentifier</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -3722,11 +3737,6 @@ Withdrawals and deposits amount in cents
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>id</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>year</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
@@ -3737,13 +3747,28 @@ Withdrawals and deposits amount in cents
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>isFinal</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isSuccessful</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>submittedAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>pdfUrl</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
+<td colspan="2" valign="top"><strong>pdf</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>messages</strong></td>
+<td valign="top">[<a href="#biztaxdeclarationresultmessage">BizTaxDeclarationResultMessage</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -9291,50 +9316,102 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>integrations</strong></td>
-<td valign="top">[<a href="#userintegration">UserIntegration</a>!]!</td>
+<td colspan="2" valign="top"><strong>mainAccount</strong></td>
+<td valign="top"><a href="#account">Account</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>clients</strong></td>
+<td valign="top">[<a href="#client">Client</a>!]!</td>
 <td>
 
-Bookkeeping partners information for user
+The list of all OAuth2 clients for the current user
 
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>documents</strong></td>
-<td valign="top">[<a href="#document">Document</a>!]!</td>
+<td colspan="2" valign="top"><strong>client</strong></td>
+<td valign="top"><a href="#client">Client</a></td>
 <td>
 
-User's documents
+The details of an existing OAuth2 client
 
 </td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bizTaxBookkeepingConfirmation</strong></td>
+<td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a></td>
+<td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a></td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">categoryIds</td>
-<td valign="top">[<a href="#string">String</a>!]</td>
+<td colspan="2" valign="top"><strong>bizTaxDeclarationSubmissions</strong></td>
+<td valign="top">[<a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!]!</td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>documentCategories</strong></td>
-<td valign="top">[<a href="#documentcategory">DocumentCategory</a>!]!</td>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bizTaxQuestionnairesEuer</strong></td>
+<td valign="top"><a href="#biztaxquestionnaireseuer">BizTaxQuestionnairesEuer</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAddresses</strong></td>
+<td valign="top">[<a href="#businessaddress">BusinessAddress</a>!]!</td>
 <td>
 
-User's documents
+User's business addresses
 
 </td>
 </tr>
 <tr>
-<td colspan="2" align="right" valign="top">categoryNames</td>
-<td valign="top">[<a href="#string">String</a>!]</td>
-<td></td>
+<td colspan="2" valign="top"><strong>lastBusinessAddress</strong></td>
+<td valign="top"><a href="#businessaddress">BusinessAddress</a>!</td>
+<td>
+
+User's last business address before a specific date
+
+</td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>unfinishedTransfers</strong></td>
-<td valign="top">[<a href="#unfinishedtransfer">UnfinishedTransfer</a>!]!</td>
+<td colspan="2" valign="top"><strong>businessAssets</strong></td>
+<td valign="top">[<a href="#businessassetresponse">BusinessAssetResponse</a>!]</td>
+<td>
+
+User's business assets
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessAsset</strong></td>
+<td valign="top"><a href="#businessassetresponse">BusinessAssetResponse</a></td>
+<td>
+
+Return a business asset by id
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">businessAssetId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -9363,20 +9440,54 @@ User's documents
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>businessAddresses</strong></td>
-<td valign="top">[<a href="#businessaddress">BusinessAddress</a>!]!</td>
+<td colspan="2" valign="top"><strong>fibuFinalCheckTasks</strong></td>
+<td valign="top">[<a href="#fibufinalchecktask">FibuFinalCheckTask</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>integrations</strong></td>
+<td valign="top">[<a href="#userintegration">UserIntegration</a>!]!</td>
 <td>
 
-User's business addresses
+Bookkeeping partners information for user
 
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>lastBusinessAddress</strong></td>
-<td valign="top"><a href="#businessaddress">BusinessAddress</a>!</td>
+<td colspan="2" valign="top"><strong>invoiceSettings</strong></td>
+<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
+<td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
 <td>
 
-User's last business address before a specific date
+The list of all customers of the current user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>invoices</strong></td>
+<td valign="top"><a href="#invoicingdashboarddata">InvoicingDashboardData</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">pageNumber</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>notifications</strong></td>
+<td valign="top">[<a href="#notification">Notification</a>!]!</td>
+<td>
+
+All push-notification types and their state
 
 </td>
 </tr>
@@ -9416,18 +9527,120 @@ User's last business address before a specific date
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>taxCase</strong></td>
-<td valign="top"><a href="#taxcase">TaxCase</a></td>
+<td colspan="2" valign="top"><strong>recurlyAccount</strong></td>
+<td valign="top"><a href="#recurlyaccount">RecurlyAccount</a></td>
+<td>
+
+The user's associated Recurly Account
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>recurlyInvoices</strong></td>
+<td valign="top">[<a href="#recurlyinvoice">RecurlyInvoice</a>!]!</td>
 <td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>draftSeizurePaymentOrder</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td>
+
+Retrieves draft of seizure payment order
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">seizureId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documents</strong></td>
+<td valign="top">[<a href="#document">Document</a>!]!</td>
+<td>
+
+User's documents
+
+</td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
+<td valign="top"><a href="#int">Int</a></td>
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>fibuFinalCheckTasks</strong></td>
-<td valign="top">[<a href="#fibufinalchecktask">FibuFinalCheckTask</a>!]</td>
+<td colspan="2" align="right" valign="top">categoryIds</td>
+<td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentCategories</strong></td>
+<td valign="top">[<a href="#documentcategory">DocumentCategory</a>!]!</td>
+<td>
+
+User's documents
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">categoryNames</td>
+<td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>availablePlans</strong></td>
+<td valign="top">[<a href="#subscriptionplan">SubscriptionPlan</a>!]!</td>
+<td>
+
+Information about the plans a user can subscribe to
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>premiumSubscriptionDiscount</strong></td>
+<td valign="top"><a href="#discount">Discount</a>!</td>
+<td>
+
+Premium subscription discount for user
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>subscriptionPlans</strong></td>
+<td valign="top"><a href="#subscriptionplansresponse">SubscriptionPlansResponse</a>!</td>
+<td>
+
+The available subscription plans
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">couponCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>subscriptions</strong></td>
+<td valign="top">[<a href="#usersubscription">UserSubscription</a>!]!</td>
+<td>
+
+The plans a user has subscribed to
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxCase</strong></td>
+<td valign="top"><a href="#taxcase">TaxCase</a></td>
 <td></td>
 </tr>
 <tr>
@@ -9476,56 +9689,8 @@ User's last business address before a specific date
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>businessAssets</strong></td>
-<td valign="top">[<a href="#businessassetresponse">BusinessAssetResponse</a>!]</td>
-<td>
-
-User's business assets
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>businessAsset</strong></td>
-<td valign="top"><a href="#businessassetresponse">BusinessAssetResponse</a></td>
-<td>
-
-Return a business asset by id
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">businessAssetId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bizTaxBookkeepingConfirmation</strong></td>
-<td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bizTaxDeclarationSubmissions</strong></td>
-<td valign="top">[<a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>bizTaxQuestionnairesEuer</strong></td>
-<td valign="top"><a href="#biztaxquestionnaireseuer">BizTaxQuestionnairesEuer</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
+<td colspan="2" valign="top"><strong>unfinishedTransfers</strong></td>
+<td valign="top">[<a href="#unfinishedtransfer">UnfinishedTransfer</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -9616,146 +9781,6 @@ User's tax numbers
 <td>
 
 User's tours
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>mainAccount</strong></td>
-<td valign="top"><a href="#account">Account</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoiceSettings</strong></td>
-<td valign="top"><a href="#invoicesettingsoutput">InvoiceSettingsOutput</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoiceCustomers</strong></td>
-<td valign="top">[<a href="#invoicecustomeroutput">InvoiceCustomerOutput</a>!]</td>
-<td>
-
-The list of all customers of the current user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>invoices</strong></td>
-<td valign="top"><a href="#invoicingdashboarddata">InvoicingDashboardData</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">pageNumber</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>notifications</strong></td>
-<td valign="top">[<a href="#notification">Notification</a>!]!</td>
-<td>
-
-All push-notification types and their state
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>clients</strong></td>
-<td valign="top">[<a href="#client">Client</a>!]!</td>
-<td>
-
-The list of all OAuth2 clients for the current user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>client</strong></td>
-<td valign="top"><a href="#client">Client</a></td>
-<td>
-
-The details of an existing OAuth2 client
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>draftSeizurePaymentOrder</strong></td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td>
-
-Retrieves draft of seizure payment order
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">seizureId</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>recurlyInvoices</strong></td>
-<td valign="top">[<a href="#recurlyinvoice">RecurlyInvoice</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>availablePlans</strong></td>
-<td valign="top">[<a href="#subscriptionplan">SubscriptionPlan</a>!]!</td>
-<td>
-
-Information about the plans a user can subscribe to
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">couponCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>premiumSubscriptionDiscount</strong></td>
-<td valign="top"><a href="#discount">Discount</a>!</td>
-<td>
-
-Premium subscription discount for user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">couponCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>subscriptionPlans</strong></td>
-<td valign="top"><a href="#subscriptionplansresponse">SubscriptionPlansResponse</a>!</td>
-<td>
-
-The available subscription plans
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">couponCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>subscriptions</strong></td>
-<td valign="top">[<a href="#usersubscription">UserSubscription</a>!]!</td>
-<td>
-
-The plans a user has subscribed to
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>recurlyAccount</strong></td>
-<td valign="top"><a href="#recurlyaccount">RecurlyAccount</a></td>
-<td>
-
-The user's associated Recurly Account
 
 </td>
 </tr>
@@ -13587,6 +13612,25 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>SUCCESSFUL</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxDeclarationResultMessageType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>VALIDATION_ERROR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NOTICE</strong></td>
 <td></td>
 </tr>
 </tbody>
