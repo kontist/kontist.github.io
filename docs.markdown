@@ -3767,6 +3767,11 @@ Withdrawals and deposits amount in cents
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>calculationSheet</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>messages</strong></td>
 <td valign="top">[<a href="#biztaxdeclarationresultmessage">BizTaxDeclarationResultMessage</a>!]!</td>
 <td></td>
