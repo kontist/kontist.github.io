@@ -4827,6 +4827,11 @@ User transfer contacts
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>status</strong></td>
+<td valign="top"><a href="#datevexportstatus">DatevExportStatus</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createdAt</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
 <td></td>
@@ -14215,6 +14220,33 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>VETTING_NOT_REQUIRED</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DatevExportStatus
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>CREATED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>IN_PROGRESS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SUCCEEDED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>FAILED</strong></td>
 <td></td>
 </tr>
 </tbody>
