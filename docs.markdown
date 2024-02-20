@@ -2902,6 +2902,20 @@ Confirms update of user fields on solaris
 <td valign="top"><a href="#confirmchangerequestargs">ConfirmChangeRequestArgs</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitQuestionSet</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Submit answer to a question
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">input</td>
+<td valign="top"><a href="#submitquestionsetinput">SubmitQuestionSetInput</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -6512,6 +6526,76 @@ Change request id to authenticate verification
 </tbody>
 </table>
 
+#### Question
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>question</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>answerType</strong></td>
+<td valign="top"><a href="#answertype">AnswerType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentType</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### QuestionSet
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deadline</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>questions</strong></td>
+<td valign="top">[<a href="#question">Question</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### Questionnaire
 
 <table>
@@ -9794,6 +9878,15 @@ User's tours
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>showQuestionSet</strong></td>
+<td valign="top"><a href="#questionset">QuestionSet</a></td>
+<td>
+
+Show question set
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -11632,6 +11725,35 @@ An array of leaf and sub-CA certificates in Base64 encoded format provided by Ap
 </tbody>
 </table>
 
+#### QuestionAnswer
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>questionId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>answer</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>documentIds</strong></td>
+<td valign="top">[<a href="#string">String</a>!]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### QuestionnaireDocumentInput
 
 <table>
@@ -11680,6 +11802,30 @@ An array of leaf and sub-CA certificates in Base64 encoded format provided by Ap
 <tr>
 <td colspan="2" valign="top"><strong>toDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### SubmitQuestionSetInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>questionSetId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>answers</strong></td>
+<td valign="top">[<a href="#questionanswer">QuestionAnswer</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
@@ -13502,6 +13648,25 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>REVERSE_CHARGE_INFORMATION</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### AnswerType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>TEXT_ONLY</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>TEXT_AND_FILES</strong></td>
 <td></td>
 </tr>
 </tbody>
