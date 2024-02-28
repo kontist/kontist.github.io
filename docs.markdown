@@ -5005,6 +5005,11 @@ User transfer contacts
 <td valign="top">[<a href="#transactionforaccountingview">TransactionForAccountingView</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>exitedBusinessAssetsWithVat</strong></td>
+<td valign="top">[<a href="#businessassetresponse">BusinessAssetResponse</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
