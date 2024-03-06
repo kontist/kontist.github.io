@@ -9460,6 +9460,11 @@ Coupon code assigned to the user that can be redeemed during subscription update
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>biztaxTrialBannerDismissedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>workAsHandyman</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
@@ -13817,6 +13822,10 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>RECEIPT_MATCHING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_TRIAL</strong></td>
 <td></td>
 </tr>
 </tbody>
