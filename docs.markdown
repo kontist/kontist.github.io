@@ -556,6 +556,21 @@ mutation {
 </thead>
 <tbody>
 <tr>
+<td colspan="2" valign="top"><strong>insights</strong></td>
+<td valign="top">[<a href="#accountinsight">AccountInsight</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">endDate</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">startDate</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>getReceiptExports</strong></td>
 <td valign="top">[<a href="#receiptexport">ReceiptExport</a>!]!</td>
 <td>
@@ -3279,6 +3294,41 @@ A list of iban/name combinations based on existing user's transactions, provided
 <tr>
 <td colspan="2" valign="top"><strong>unit</strong></td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### AccountInsight
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>income</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expense</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>profitAndLoss</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>period</strong></td>
+<td valign="top"><a href="#period">Period</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -6437,6 +6487,31 @@ Change request id to decline verification
 Change request id to authenticate verification
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### Period
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>month</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
