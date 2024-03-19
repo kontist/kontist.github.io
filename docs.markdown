@@ -3753,6 +3753,31 @@ Withdrawals and deposits amount in cents
 </tbody>
 </table>
 
+#### BizTaxDeclarationCheckResult
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>success</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### BizTaxDeclarationResultMessage
 
 <table>
@@ -9520,6 +9545,16 @@ The details of an existing OAuth2 client
 <tr>
 <td colspan="2" valign="top"><strong>bizTaxBookkeepingConfirmation</strong></td>
 <td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bizTaxDeclarationChecks</strong></td>
+<td valign="top">[<a href="#biztaxdeclarationcheckresult">BizTaxDeclarationCheckResult</a>!]!</td>
 <td></td>
 </tr>
 <tr>
