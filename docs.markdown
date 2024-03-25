@@ -711,6 +711,16 @@ The current user information
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>municipalities</strong></td>
+<td valign="top">[<a href="#municipality">Municipality</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">searchTerm</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -6200,6 +6210,31 @@ The amount plus discount amount
 The amount the user saves in percentage
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### Municipality
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>taxRate</strong></td>
+<td valign="top"><a href="#float">Float</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
