@@ -1030,6 +1030,21 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>updateBizTaxIsRelevant</strong></td>
+<td valign="top"><a href="#biztaxdeclarationsetting">BizTaxDeclarationSetting</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">isRelevant</td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createBusinessAddress</strong></td>
 <td valign="top"><a href="#businessaddress">BusinessAddress</a>!</td>
 <td>
@@ -3818,6 +3833,31 @@ Withdrawals and deposits amount in cents
 <tr>
 <td colspan="2" valign="top"><strong>fieldIdentifier</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxDeclarationSetting
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isRelevant</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -9600,6 +9640,16 @@ The details of an existing OAuth2 client
 <tr>
 <td colspan="2" valign="top"><strong>bizTaxDeclarationSubmissions</strong></td>
 <td valign="top">[<a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bizTaxDeclarationSetting</strong></td>
+<td valign="top"><a href="#biztaxdeclarationsetting">BizTaxDeclarationSetting</a></td>
 <td></td>
 </tr>
 <tr>
