@@ -1956,6 +1956,15 @@ Activate Overdraft Application  - only available for Kontist Application
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>terminateOverdraft</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a></td>
+<td>
+
+Terminate Overdraft  - only available for Kontist Application
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateOverdraft</strong></td>
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
