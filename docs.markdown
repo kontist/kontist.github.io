@@ -9658,7 +9658,7 @@ The details of an existing OAuth2 client
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>bizTaxDeclarationSetting</strong></td>
-<td valign="top"><a href="#biztaxdeclarationsetting">BizTaxDeclarationSetting</a></td>
+<td valign="top"><a href="#biztaxdeclarationsetting">BizTaxDeclarationSetting</a>!</td>
 <td></td>
 </tr>
 <tr>
