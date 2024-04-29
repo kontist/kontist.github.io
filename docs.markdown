@@ -40,22 +40,26 @@ sequenceDiagram
     Kontist API->>Your App: Access Token (+ Refresh Token)
 </div>
 
+### NOTE
+
+Token Expires after One Year. It means you need to refresh the token after a year to be able to continue using API.
+
 Let us go through the process step by step. At first we need to send the user to a special url in the browser:
 
 `https://api.kontist.com/api/oauth/authorize?scope=offline&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE`
 
 Adjust the parameters like this:
 
-| Parameter     | Description                                                                                                          |
-| ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| scope         | Space delimited list of scopes your application is going to access. Please see the list below.                       |
-| response_type | Set fixed as "code".                                                                                                 |
-| client_id     | This is your client id you got from us. Do not include the secret here.                                              |
-| redirect_uri  | This is your application's callback url which is bound to your client id.                                            |
-| state         | Can be used to verify our response. You can put in anything here and we will send it back to your application later. |
-| skip_mfa         | Optional, defaults to false. If you skip the MFA process during login you need to do it later manually before you can access most parts of the API.|
+| Parameter     | Description                                                                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| scope         | Space delimited list of scopes your application is going to access. Please see the list below.                                                      |
+| response_type | Set fixed as "code".                                                                                                                                |
+| client_id     | This is your client id you got from us. Do not include the secret here.                                                                             |
+| redirect_uri  | This is your application's callback url which is bound to your client id.                                                                           |
+| state         | Can be used to verify our response. You can put in anything here and we will send it back to your application later.                                |
+| skip_mfa      | Optional, defaults to false. If you skip the MFA process during login you need to do it later manually before you can access most parts of the API. |
 
-*Response case 1: The user denied giving access to your application:*
+_Response case 1: The user denied giving access to your application:_
 
 The browser is being redirected to your url with an error parameter attached.
 
@@ -63,7 +67,7 @@ The browser is being redirected to your url with an error parameter attached.
 
 Your application might then inform the user that you can not continue without granting access.
 
-*Response case 2: The user accepted giving access to your application:*
+_Response case 2: The user accepted giving access to your application:_
 
 The browser is being redirected to your url with a code parameter attached.
 
@@ -134,7 +138,6 @@ Response is again a JSON object, similar to the original one:
 
 You can use the refresh token multiple times until the refresh token expires itself and you need to go through the process again.
 
-
 ### PKCE Extension for Authorization Code
 
 The standarad [Authorization Code](#authorization-code) flow uses client secrets to grant access tokens, however this is not always practical: some environments can't securely store such a secret (e.g. a single page web application).
@@ -164,9 +167,9 @@ To generate the code verifier, it is recommended to use the output of a random n
 
 Once the code verifier has been generated, we will need to transform it to a code challenge:
 
-* First hash it using the SHA256 hash function
-* Then encode it to a base64 string
-* And finally, remove padding from the base64 encoded string (as defined in: https://tools.ietf.org/html/rfc7636#appendix-A)
+- First hash it using the SHA256 hash function
+- Then encode it to a base64 string
+- And finally, remove padding from the base64 encoded string (as defined in: https://tools.ietf.org/html/rfc7636#appendix-A)
 
 Here is sample javascript code to perform the transformation:
 
@@ -192,10 +195,10 @@ https://api.kontist.com/api/oauth/authorize
 
 The parameters are the same as for the standard Authorization Code flow, with these additional parameters:
 
-| Parameter              | Description                                                           |
-| ---------------------- | --------------------------------------------------------------------- |
-| code_challenge         | Code challenge generated from the code verifier.                      |
-| code_challenge_method  | Code challenge method, only "S256" is supported.                      |
+| Parameter             | Description                                      |
+| --------------------- | ------------------------------------------------ |
+| code_challenge        | Code challenge generated from the code verifier. |
+| code_challenge_method | Code challenge method, only "S256" is supported. |
 
 After the user has accepted the access request, you will be able to obtain an access token with the code you received and the code verifier you used to generate the code challenge (without specifying the `client_secret`):
 
@@ -210,9 +213,8 @@ curl https://api.kontist.com/api/oauth/token \
   -d code_verifier=7963393253896189
 ```
 
-*Note*: Using the PKCE flow will not grant you refresh tokens, even if you specify the `offline` scope. In order to renew an access token when using this authorization flow, you can use the [method described below](#renewing-access-tokens-with-pkce).
+_Note_: Using the PKCE flow will not grant you refresh tokens, even if you specify the `offline` scope. In order to renew an access token when using this authorization flow, you can use the [method described below](#renewing-access-tokens-with-pkce).
 The above restriction does not apply if you are using a custom scheme for your application (and thus for your `redirect_uri`, e.g. `my-app://callback-uri`).
-
 
 ### Refresh with PKCE
 
@@ -241,20 +243,25 @@ While the above method will work for Single Page Applications (SPA), it has the 
 To work around this issue, we can use the web message response type by following these steps:
 
 1. Setup a web message listener to get the authorization code:
+
 ```javascript
-  window.addEventListener("message", event => {
-    if (event.origin === "https://api.kontist.com") {
-      const { code } = event.data.response;
-    }
-  });
+window.addEventListener("message", (event) => {
+  if (event.origin === "https://api.kontist.com") {
+    const { code } = event.data.response;
+  }
+});
 ```
+
 2. Create an iframe and set its source to the authorization url, specifying `response_mode=web_message`:
+
 ```javascript
 const iframe = document.createElement("iframe");
 iframe.style.display = "none";
 document.body.appendChild(iframe);
-iframe.src = "https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w&prompt=none&response_mode=web_message"
+iframe.src =
+  "https://api.kontist.com/api/oauth/authorize?scope=transactions&response_type=code&client_id=78b5c170-a600-4193-978c-e6cb3018dba9&redirect_uri=https://your-application/callback&state=OPAQUE_VALUE&code_challenge_method=S256&code_challenge=xc3uY4-XMuobNWXzzfEqbYx3rUYBH69_zu4EFQIJH8w&prompt=none&response_mode=web_message";
 ```
+
 3. The server will then send a web message with the new authorization code that we can use to get a new access token
 
 ### Multi-Factor Authentication
@@ -287,6 +294,7 @@ sequenceDiagram
 
     Your App->>Kontist API: Get Token
     Kontist API->>Your App: Access Token
+
 </div>
 
 #### Creating a challenge
@@ -299,8 +307,8 @@ curl "https://api.kontist.com/api/user/mfa/challenges" \
   -X POST
 ```
 
-
 > The above command returns JSON structured like this:
+
 ```json
 {
   "id": "5f7c36e2-e0bf-4755-8376-ac6d0711192e",
@@ -315,12 +323,11 @@ curl "https://api.kontist.com/api/user/mfa/challenges" \
 
 ##### Response
 
-| Field      | Description                                                                                    |
-| ---------- | ---------------------------------------------------------------------------------------------- |
-| id         | ID of the challenge.                                                                           |
-| status     | Status of the challenge. One of PENDING, VERIFIED, DENIED. When created, it will be "PENDING". |
-| expiresAt  | Time at which the challenge will expire.                                                       |
-
+| Field     | Description                                                                                    |
+| --------- | ---------------------------------------------------------------------------------------------- |
+| id        | ID of the challenge.                                                                           |
+| status    | Status of the challenge. One of PENDING, VERIFIED, DENIED. When created, it will be "PENDING". |
+| expiresAt | Time at which the challenge will expire.                                                       |
 
 #### Verifying a challenge
 
@@ -328,7 +335,6 @@ The next step to pass MFA is to verify the challenge that was just created.
 
 The Kontist user will receive a push notification on his device prompting him to "Confirm login".
 After logging into the application and confirming, the challenge will be verified (its status will be updated to `VERIFIED`).
-
 
 #### Polling for challenge verification
 
@@ -341,6 +347,7 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 ```
 
 > The above command returns JSON structured like this:
+
 ```json
 {
   "id": "5f7c36e2-e0bf-4755-8376-ac6d0711192e",
@@ -355,12 +362,11 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 
 ##### Response
 
-| Field      | Description                                                  |
-| ---------- | ------------------------------------------------------------ |
-| id         | ID of the challenge.                                         |
-| status     | Status of the challenge. One of PENDING, VERIFIED, DENIED.   |
-| expiresAt  | Time at which the challenge will expire.                     |
-
+| Field     | Description                                                |
+| --------- | ---------------------------------------------------------- |
+| id        | ID of the challenge.                                       |
+| status    | Status of the challenge. One of PENDING, VERIFIED, DENIED. |
+| expiresAt | Time at which the challenge will expire.                   |
 
 #### Getting a confirmed token
 
@@ -375,6 +381,7 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 ```
 
 > The above command returns JSON structured like this:
+
 ```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ODNjNTc4ZS01M2QwLTRhYmEtOTBiNC02MmRmZmFkNTE5NTMiLCJzY29wZSI6ImF1dGgiLCJjbmYiOnsia2lkIjoiMmExNjRlYzYtZTJkNC00OTI4LTk5NDItZDU5YWI2Yzc4ZDU5In0sImlhdCI6MTU2NzQwOTExNSwiZXhwIjoxNTY3NDEyNzE1fQ.m35NDpQMAB5DMebXUxEzWupP3i-iAwoyVy2sGF1zp_8",
@@ -388,11 +395,10 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 
 ##### Response
 
-| Field           | Description                                                                                                          |
-| --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| token           | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication.    |
-| refresh_token   | Refresh token with confirmation claim that can be used to renew confirmed access tokens.                             |
-
+| Field         | Description                                                                                                       |
+| ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| token         | Auth token with confirmation claim that should be used for endpoints that require strong customer authentication. |
+| refresh_token | Refresh token with confirmation claim that can be used to renew confirmed access tokens.                          |
 
 ### Scopes
 
@@ -406,25 +412,27 @@ curl "https://api.kontist.com/api/user/mfa/challenges/5f7c36e2-e0bf-4755-8376-ac
 - users
 
 ### Logout
+
 During login, we do create a browser-based session and store which clients and scopes already have been authenticated by the user. So next time the user wants to access the application we do not require the user to enter his credentials again.
 This session is automatically destroyed once the browser is closed. If you want to explicitly logout the user you can redirect him to the `/oauth/logout` endpoint. This should be done inside the browser context and in a hidden iframe.
 
 ### Limits
+
 To ensure our API is available to all of our users, we do apply some limits. Depending on the situation, the actual limits may vary. Please make sure to stay below the following values to be on the safe side. For single requests these values might be exceeded.
 
-| Limit           | Description                                                                                                          |
-| --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Requests           | <100 per minute    |
-| Query size   | <10,000 characters |
-| Query complexity   | limited, i.e. <500 different fields |
-| Errors   | <= 3 errors are returned |
-
+| Limit            | Description                         |
+| ---------------- | ----------------------------------- |
+| Requests         | <100 per minute                     |
+| Query size       | <10,000 characters                  |
+| Query complexity | limited, i.e. <500 different fields |
+| Errors           | <= 3 errors are returned            |
 
 ### Advanced Topics
+
 Some clients might use device binding with certificates as MFA or make use of other OAuth2 grant types. This depends on the environment where this application will run. Please see our [advanced topics](/docs/advanced-authentication) on authentication.
 
-
 ## Using the GraphQL API
+
 ### Fetch transactions
 
 Transactions are returned using the [Connection pattern](https://relay.dev/graphql/connections.htm) to allow pagination. A simple query showing the first 3 transactions may look like this:
@@ -499,7 +507,6 @@ Result:
 
 Creating transfers consist of two steps. First the transfer is created with `createTransfer` which will return the `confirmationId` of the new transfer. Then we send a SMS to the user that contains a code and we need to call `confirmTransfer`.
 
-
 <div class="mermaid">
 sequenceDiagram
     participant Your App
@@ -513,6 +520,7 @@ sequenceDiagram
     User->>Your App: Code from SMS
 
     Your App->>Kontist API: confirmTransfer (with confirmationId, code)
+
 </div>
 
 #### 1. Step - add a new transfer
@@ -538,13 +546,12 @@ mutation {
 }
 ```
 
-
 ## Schema Reference
 
 <!-- START graphql-markdown -->
 
-
 ### Query
+
 <table>
 <thead>
 <tr>
@@ -725,6 +732,7 @@ The current user information
 </table>
 
 ### Mutation
+
 <table>
 <thead>
 <tr>
@@ -1942,7 +1950,7 @@ Update the push-notifications a user should receive
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
 
-Create Overdraft Application  - only available for Kontist Application
+Create Overdraft Application - only available for Kontist Application
 
 </td>
 </tr>
@@ -1951,7 +1959,7 @@ Create Overdraft Application  - only available for Kontist Application
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
 
-Activate Overdraft Application  - only available for Kontist Application
+Activate Overdraft Application - only available for Kontist Application
 
 </td>
 </tr>
@@ -1960,7 +1968,7 @@ Activate Overdraft Application  - only available for Kontist Application
 <td valign="top"><a href="#mutationresult">MutationResult</a></td>
 <td>
 
-Terminate Overdraft  - only available for Kontist Application
+Terminate Overdraft - only available for Kontist Application
 
 </td>
 </tr>
@@ -18416,9 +18424,7 @@ The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](
 
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
 
-
 ### Interfaces
-
 
 #### FilterPreset
 
