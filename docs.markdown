@@ -550,8 +550,8 @@ mutation {
 
 <!-- START graphql-markdown -->
 
-### Query
 
+### Query
 <table>
 <thead>
 <tr>
@@ -732,7 +732,6 @@ The current user information
 </table>
 
 ### Mutation
-
 <table>
 <thead>
 <tr>
@@ -1950,7 +1949,7 @@ Update the push-notifications a user should receive
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
 
-Create Overdraft Application - only available for Kontist Application
+Create Overdraft Application  - only available for Kontist Application
 
 </td>
 </tr>
@@ -1959,7 +1958,7 @@ Create Overdraft Application - only available for Kontist Application
 <td valign="top"><a href="#overdraft">Overdraft</a></td>
 <td>
 
-Activate Overdraft Application - only available for Kontist Application
+Activate Overdraft Application  - only available for Kontist Application
 
 </td>
 </tr>
@@ -1968,7 +1967,7 @@ Activate Overdraft Application - only available for Kontist Application
 <td valign="top"><a href="#mutationresult">MutationResult</a></td>
 <td>
 
-Terminate Overdraft - only available for Kontist Application
+Terminate Overdraft  - only available for Kontist Application
 
 </td>
 </tr>
@@ -18424,7 +18423,9 @@ The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](
 
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
 
+
 ### Interfaces
+
 
 #### FilterPreset
 
