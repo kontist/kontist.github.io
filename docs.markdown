@@ -578,6 +578,21 @@ mutation {
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>insightsV2</strong></td>
+<td valign="top">[<a href="#accountinsightv2">AccountInsightV2</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">endDate</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">startDate</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>getReceiptExports</strong></td>
 <td valign="top">[<a href="#receiptexport">ReceiptExport</a>!]!</td>
 <td>
@@ -997,16 +1012,6 @@ The confirmation token received by SMS on the user's phone
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>confirmBizTaxBookkeeping</strong></td>
-<td valign="top"><a href="#biztaxbookkeepingconfirmation">BizTaxBookkeepingConfirmation</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>previewBizTaxDeclaration</strong></td>
 <td valign="top"><a href="#biztaxdeclarationsubmission">BizTaxDeclarationSubmission</a>!</td>
 <td></td>
@@ -1038,12 +1043,22 @@ The confirmation token received by SMS on the user's phone
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>updateBizTaxIsRelevant</strong></td>
-<td valign="top"><a href="#biztaxdeclarationsetting">BizTaxDeclarationSetting</a>!</td>
+<td valign="top"><a href="#biztaxdeclarationisrelevant">BizTaxDeclarationIsRelevant</a>!</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">isRelevant</td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmBizTaxBookkeeping</strong></td>
+<td valign="top"><a href="#biztaxdeclarationbookkeepingconfirmation">BizTaxDeclarationBookkeepingConfirmation</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -3375,6 +3390,41 @@ A list of iban/name combinations based on existing user's transactions, provided
 </tbody>
 </table>
 
+#### AccountInsightV2
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>income</strong></td>
+<td valign="top"><a href="#insight">Insight</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>expense</strong></td>
+<td valign="top"><a href="#insight">Insight</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>profitAndLoss</strong></td>
+<td valign="top"><a href="#insight">Insight</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>period</strong></td>
+<td valign="top"><a href="#period">Period</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### AccountStats
 
 <table>
@@ -3794,6 +3844,31 @@ Withdrawals and deposits amount in cents
 </tbody>
 </table>
 
+#### BizTaxDeclarationBookkeepingConfirmation
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>confirmedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### BizTaxDeclarationCheckResult
 
 <table>
@@ -3813,6 +3888,31 @@ Withdrawals and deposits amount in cents
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>success</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BizTaxDeclarationIsRelevant
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isRelevant</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
 <td></td>
 </tr>
@@ -3874,6 +3974,11 @@ Withdrawals and deposits amount in cents
 <tr>
 <td colspan="2" valign="top"><strong>isRelevant</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>bookkeepingConfirmedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -5803,6 +5908,51 @@ The user's IDNow identification status
 The number of identifications attempted by the user
 
 </td>
+</tr>
+</tbody>
+</table>
+
+#### Insight
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>private</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>gross</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>net</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>grossAndPrivate</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>netAndPrivate</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>vat</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
