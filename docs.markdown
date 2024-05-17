@@ -2987,6 +2987,11 @@ Submit answer to a question
 <td valign="top"><a href="#submitquestionsetinput">SubmitQuestionSetInput</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>declineTrial</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
