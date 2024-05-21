@@ -5962,6 +5962,36 @@ The number of identifications attempted by the user
 </tbody>
 </table>
 
+#### InsightsFilterPreset
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>value</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>insightPresetType</strong></td>
+<td valign="top"><a href="#insightpresettype">InsightPresetType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>insightWithPrivateTransactions</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### Invoice
 
 <table>
@@ -11752,6 +11782,16 @@ User has accepted latest Kontist terms when signing up
 <td valign="top"><a href="#int">Int</a></td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>insightPresetType</strong></td>
+<td valign="top"><a href="#insightpresettype">InsightPresetType</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>insightWithPrivateTransactions</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -15165,6 +15205,29 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>SMS</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### InsightPresetType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>INCOME</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EXPENSE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>PROFIT_AND_LOSS</strong></td>
 <td></td>
 </tr>
 </tbody>
