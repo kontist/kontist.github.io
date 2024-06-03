@@ -2992,6 +2992,16 @@ Submit answer to a question
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>markViewAsSeen</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -10528,6 +10538,15 @@ Is user's Kontist account closed
 <td valign="top">[<a href="#string">String</a>!]!</td>
 <td></td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>viewLogs</strong></td>
+<td valign="top">[<a href="#string">String</a>!]</td>
+<td>
+
+Screens and banners seen by user
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -17738,6 +17757,10 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>BIZ_TAX_QUESTIONNAIRE_PREVIEW</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>BIZ_TAX_TRIAL</strong></td>
 <td></td>
 </tr>
 </tbody>
