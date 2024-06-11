@@ -5579,6 +5579,11 @@ Device binding attempts
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>note</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -13027,6 +13032,11 @@ Document's category Id
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
