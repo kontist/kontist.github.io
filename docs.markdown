@@ -563,23 +563,8 @@ mutation {
 </thead>
 <tbody>
 <tr>
-<td colspan="2" valign="top"><strong>insights</strong></td>
-<td valign="top">[<a href="#accountinsight">AccountInsight</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">endDate</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">startDate</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>insightsV2</strong></td>
-<td valign="top">[<a href="#accountinsightv2">AccountInsightV2</a>!]!</td>
+<td valign="top">[<a href="#accountinsight">AccountInsight</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -693,6 +678,11 @@ IBAN to get information for
 <tr>
 <td colspan="2" valign="top"><strong>naceCodes</strong></td>
 <td valign="top">[<a href="#nacecode">NACECode</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#nacecodequeryargs">NaceCodeQueryArgs</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3371,41 +3361,6 @@ A list of iban/name combinations based on existing user's transactions, provided
 </table>
 
 #### AccountInsight
-
-<table>
-<thead>
-<tr>
-<th align="left">Field</th>
-<th align="right">Argument</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2" valign="top"><strong>income</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>expense</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>profitAndLoss</strong></td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>period</strong></td>
-<td valign="top"><a href="#period">Period</a>!</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-#### AccountInsightV2
 
 <table>
 <thead>
@@ -12082,6 +12037,35 @@ Number of days which get added to today's date to create a default value for due
 <tr>
 <td colspan="2" valign="top"><strong>e</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### NaceCodeQueryArgs
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>level4Code</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>priority</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 </tbody>
