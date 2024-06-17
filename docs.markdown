@@ -648,6 +648,16 @@ Get device binding request
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>municipalities</strong></td>
+<td valign="top">[<a href="#municipality">Municipality</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">searchTerm</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>status</strong></td>
 <td valign="top"><a href="#systemstatus">SystemStatus</a>!</td>
 <td></td>
@@ -722,16 +732,6 @@ Get all released generic features, that are needed before user creation
 The current user information
 
 </td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>municipalities</strong></td>
-<td valign="top">[<a href="#municipality">Municipality</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">searchTerm</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1512,83 +1512,6 @@ Creates a DATEV export
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>categorizeTransactionForDeclaration</strong></td>
-<td valign="top"><a href="#categorizetransactionfordeclarationresponse">CategorizeTransactionForDeclarationResponse</a>!</td>
-<td>
-
-Categorize transaction for VAT declaration
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">categoryCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">vatCategoryCode</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">category</td>
-<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">date</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">isSplit</td>
-<td valign="top"><a href="#boolean">Boolean</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">businessAssetInput</td>
-<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>submitDeclaration</strong></td>
-<td valign="top"><a href="#declaration">Declaration</a>!</td>
-<td>
-
-Submits UStVA declaration
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">period</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>upsertDeclaration</strong></td>
-<td valign="top"><a href="#declaration">Declaration</a>!</td>
-<td>
-
-Submits UStVA declaration
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#upsertdeclarationargs">UpsertDeclarationArgs</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>addDeviceKey</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td>
@@ -1996,6 +1919,25 @@ Updates overdraft application timestamps for rejected and offered overdraft scre
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>signPOA</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Allow user to sign Power of Attorney
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">dependents</td>
+<td valign="top">[<a href="#userdependentinput">UserDependentInput</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">signature</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateExternalTransaction</strong></td>
 <td valign="top"><a href="#rawtransactionprojection">RawTransactionProjection</a>!</td>
 <td>
@@ -2338,6 +2280,53 @@ Update user's subscription plan
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#createdeclarationdeclineinput">CreateDeclarationDeclineInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateTaxNumber</strong></td>
+<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
+<td>
+
+Updates user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatetaxnumberinput">UpdateTaxNumberInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createTaxNumber</strong></td>
+<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
+<td>
+
+Create user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createtaxnumberinput">CreateTaxNumberInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteTaxNumber</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Delete user's taxNumber
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2770,25 +2759,6 @@ Create a new user
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>signPOA</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Allow user to sign Power of Attorney
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">dependents</td>
-<td valign="top">[<a href="#userdependentinput">UserDependentInput</a>!]</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">signature</td>
-<td valign="top"><a href="#string">String</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>updateTermsAndConditions</strong></td>
 <td valign="top"><a href="#termsandconditions">TermsAndConditions</a>!</td>
 <td>
@@ -2848,53 +2818,6 @@ Update user's tax details
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#usertaxdetailsinput">UserTaxDetailsInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateTaxNumber</strong></td>
-<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
-<td>
-
-Updates user's taxNumber
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#updatetaxnumberinput">UpdateTaxNumberInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>createTaxNumber</strong></td>
-<td valign="top"><a href="#taxnumber">TaxNumber</a>!</td>
-<td>
-
-Create user's taxNumber
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#createtaxnumberinput">CreateTaxNumberInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteTaxNumber</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Delete user's taxNumber
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2990,6 +2913,83 @@ Submit answer to a question
 <tr>
 <td colspan="2" align="right" valign="top">name</td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>categorizeTransactionForDeclaration</strong></td>
+<td valign="top"><a href="#categorizetransactionfordeclarationresponse">CategorizeTransactionForDeclarationResponse</a>!</td>
+<td>
+
+Categorize transaction for VAT declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">categoryCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">vatCategoryCode</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">category</td>
+<td valign="top"><a href="#transactioncategory">TransactionCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">date</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">isSplit</td>
+<td valign="top"><a href="#boolean">Boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">businessAssetInput</td>
+<td valign="top"><a href="#businessassetinput">BusinessAssetInput</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submitDeclaration</strong></td>
+<td valign="top"><a href="#declaration">Declaration</a>!</td>
+<td>
+
+Submits UStVA declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertDeclaration</strong></td>
+<td valign="top"><a href="#declaration">Declaration</a>!</td>
+<td>
+
+Submits UStVA declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#upsertdeclarationargs">UpsertDeclarationArgs</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -3125,41 +3125,6 @@ Account vat-related settings
 <tr>
 <td colspan="2" align="right" valign="top">filter</td>
 <td valign="top"><a href="#cardfilter">CardFilter</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declarations</strong></td>
-<td valign="top">[<a href="#declaration">Declaration</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">type</td>
-<td valign="top"><a href="#declarationtype">DeclarationType</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declarationPdfUrl</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>declarationStats</strong></td>
-<td valign="top"><a href="#declarationstats">DeclarationStats</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">period</td>
-<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -3326,6 +3291,41 @@ The cursor of the item to start from. Use in conjunction with 'last'
 A list of iban/name combinations based on existing user's transactions, provided to assist users when creating new transfers
 
 </td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarations</strong></td>
+<td valign="top">[<a href="#declaration">Declaration</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">type</td>
+<td valign="top"><a href="#declarationtype">DeclarationType</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarationPdfUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>declarationStats</strong></td>
+<td valign="top"><a href="#declarationstats">DeclarationStats</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -9957,6 +9957,15 @@ All push-notification types and their state
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>poaUrl</strong></td>
+<td valign="top"><a href="#string">String</a></td>
+<td>
+
+Retrieves signed POA PDF for user.
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>questionnaire</strong></td>
 <td valign="top"><a href="#questionnaire">Questionnaire</a></td>
 <td></td>
@@ -10154,6 +10163,15 @@ The plans a user has subscribed to
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>taxNumbers</strong></td>
+<td valign="top">[<a href="#taxnumber">TaxNumber</a>!]!</td>
+<td>
+
+User's tax numbers
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>unfinishedTransfers</strong></td>
 <td valign="top">[<a href="#unfinishedtransfer">UnfinishedTransfer</a>!]!</td>
 <td></td>
@@ -10205,15 +10223,6 @@ User metadata. These fields are likely to get frequently updated or changed.
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>poaUrl</strong></td>
-<td valign="top"><a href="#string">String</a></td>
-<td>
-
-Retrieves signed POA PDF for user.
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>referral</strong></td>
 <td valign="top"><a href="#referraldetails">ReferralDetails</a>!</td>
 <td>
@@ -10228,15 +10237,6 @@ Referral details for user
 <td>
 
 Tax details for user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>taxNumbers</strong></td>
-<td valign="top">[<a href="#taxnumber">TaxNumber</a>!]!</td>
-<td>
-
-User's tax numbers
 
 </td>
 </tr>
