@@ -597,6 +597,16 @@ Get all existing receipt exports requested by the user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>contacts</strong></td>
+<td valign="top">[<a href="#contact">Contact</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filter</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>datevExports</strong></td>
 <td valign="top">[<a href="#datevexport">DatevExport</a>!]!</td>
 <td>
@@ -648,6 +658,15 @@ Get device binding request
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>genericFeatures</strong></td>
+<td valign="top">[<a href="#genericfeature">GenericFeature</a>!]!</td>
+<td>
+
+Get all released generic features, that are needed before user creation
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>municipalities</strong></td>
 <td valign="top">[<a href="#municipality">Municipality</a>!]!</td>
 <td></td>
@@ -694,25 +713,6 @@ IBAN to get information for
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#nacecodequeryargs">NaceCodeQueryArgs</a></td>
 <td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>contacts</strong></td>
-<td valign="top">[<a href="#contact">Contact</a>!]!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">filter</td>
-<td valign="top"><a href="#string">String</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>genericFeatures</strong></td>
-<td valign="top">[<a href="#genericfeature">GenericFeature</a>!]!</td>
-<td>
-
-Get all released generic features, that are needed before user creation
-
-</td>
 </tr>
 <tr>
 <td colspan="2" valign="top"><strong>termsAndConditions</strong></td>
@@ -1495,6 +1495,48 @@ Returns encrypted card details for virtual card
 <tr>
 <td colspan="2" align="right" valign="top">authorizationToken</td>
 <td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createContact</strong></td>
+<td valign="top"><a href="#contact">Contact</a>!</td>
+<td>
+
+Create contact
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#createcontactargs">CreateContactArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateContact</strong></td>
+<td valign="top"><a href="#contact">Contact</a>!</td>
+<td>
+
+Update contact
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatecontactargs">UpdateContactArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteContact</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Delete contact
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#id">ID</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2703,48 +2745,6 @@ ID obtained on transfer creation
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>createContact</strong></td>
-<td valign="top"><a href="#contact">Contact</a>!</td>
-<td>
-
-Create contact
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#createcontactargs">CreateContactArgs</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>updateContact</strong></td>
-<td valign="top"><a href="#contact">Contact</a>!</td>
-<td>
-
-Update contact
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#updatecontactargs">UpdateContactArgs</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>deleteContact</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td>
-
-Delete contact
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">id</td>
-<td valign="top"><a href="#id">ID</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>createUser</strong></td>
 <td valign="top"><a href="#publicmutationresult">PublicMutationResult</a>!</td>
 <td>
@@ -2818,20 +2818,6 @@ Update user's tax details
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#usertaxdetailsinput">UserTaxDetailsInput</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>upsertUserTour</strong></td>
-<td valign="top"><a href="#usertour">UserTour</a>!</td>
-<td>
-
-Upsert user tour
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#upsertusertourinput">UpsertUserTourInput</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2913,6 +2899,20 @@ Submit answer to a question
 <tr>
 <td colspan="2" align="right" valign="top">name</td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>upsertUserTour</strong></td>
+<td valign="top"><a href="#usertour">UserTour</a>!</td>
+<td>
+
+Upsert user tour
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#upsertusertourinput">UpsertUserTourInput</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -9905,6 +9905,15 @@ Return a business asset by id
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>features</strong></td>
+<td valign="top">[<a href="#string">String</a>!]!</td>
+<td>
+
+Active user features
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>fibuFinalCheckTasks</strong></td>
 <td valign="top">[<a href="#fibufinalchecktask">FibuFinalCheckTask</a>!]</td>
 <td></td>
@@ -10191,15 +10200,6 @@ The state of banners in mobile or web app for the user
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>features</strong></td>
-<td valign="top">[<a href="#string">String</a>!]!</td>
-<td>
-
-Active user features
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>identification</strong></td>
 <td valign="top"><a href="#identificationdetails">IdentificationDetails</a>!</td>
 <td>
@@ -10241,20 +10241,20 @@ Tax details for user
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>userTours</strong></td>
-<td valign="top">[<a href="#usertour">UserTour</a>!]!</td>
-<td>
-
-User's tours
-
-</td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>showQuestionSet</strong></td>
 <td valign="top"><a href="#questionset">QuestionSet</a></td>
 <td>
 
 Show question set
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>userTours</strong></td>
+<td valign="top">[<a href="#usertour">UserTour</a>!]!</td>
+<td>
+
+User's tours
 
 </td>
 </tr>
