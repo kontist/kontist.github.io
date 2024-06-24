@@ -682,6 +682,16 @@ Get all released generic features, that are needed before user creation
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>termsAndConditions</strong></td>
+<td valign="top">[<a href="#termsandconditions">TermsAndConditions</a>!]</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>listPaymentMethods</strong></td>
 <td valign="top">[<a href="#paymentmethod">PaymentMethod</a>!]!</td>
 <td></td>
@@ -712,16 +722,6 @@ IBAN to get information for
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#nacecodequeryargs">NaceCodeQueryArgs</a></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>termsAndConditions</strong></td>
-<td valign="top">[<a href="#termsandconditions">TermsAndConditions</a>!]</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">name</td>
-<td valign="top"><a href="#string">String</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2008,6 +2008,20 @@ Deletes external transaction
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>submitQuestionSet</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td>
+
+Submit answer to a question
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">input</td>
+<td valign="top"><a href="#submitquestionsetinput">SubmitQuestionSetInput</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>upsertQuestionnaireDocument</strong></td>
 <td valign="top"><a href="#questionnairedocument">QuestionnaireDocument</a>!</td>
 <td></td>
@@ -2369,6 +2383,20 @@ Delete user's taxNumber
 <tr>
 <td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateTermsAndConditions</strong></td>
+<td valign="top"><a href="#termsandconditions">TermsAndConditions</a>!</td>
+<td>
+
+Change Terms And Conditions confirmation status
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top"><a href="#updatetermsandconditionsargs">UpdateTermsAndConditionsArgs</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2759,20 +2787,6 @@ Create a new user
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>updateTermsAndConditions</strong></td>
-<td valign="top"><a href="#termsandconditions">TermsAndConditions</a>!</td>
-<td>
-
-Change Terms And Conditions confirmation status
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">payload</td>
-<td valign="top"><a href="#updatetermsandconditionsargs">UpdateTermsAndConditionsArgs</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>dismissBanner</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
@@ -2873,32 +2887,8 @@ Confirms update of user fields on solaris
 <td></td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>submitQuestionSet</strong></td>
-<td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td>
-
-Submit answer to a question
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">input</td>
-<td valign="top"><a href="#submitquestionsetinput">SubmitQuestionSetInput</a>!</td>
-<td></td>
-</tr>
-<tr>
 <td colspan="2" valign="top"><strong>declineTrial</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>markViewAsSeen</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">name</td>
-<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 <tr>
@@ -2990,6 +2980,16 @@ Submits UStVA declaration
 <tr>
 <td colspan="2" align="right" valign="top">payload</td>
 <td valign="top"><a href="#upsertdeclarationargs">UpsertDeclarationArgs</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>markViewAsSeen</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -9975,6 +9975,15 @@ Retrieves signed POA PDF for user.
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>showQuestionSet</strong></td>
+<td valign="top"><a href="#questionset">QuestionSet</a></td>
+<td>
+
+Show question set
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>questionnaire</strong></td>
 <td valign="top"><a href="#questionnaire">Questionnaire</a></td>
 <td></td>
@@ -10237,15 +10246,6 @@ Referral details for user
 <td>
 
 Tax details for user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>showQuestionSet</strong></td>
-<td valign="top"><a href="#questionset">QuestionSet</a></td>
-<td>
-
-Show question set
 
 </td>
 </tr>
