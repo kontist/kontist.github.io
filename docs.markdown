@@ -1498,6 +1498,21 @@ Returns encrypted card details for virtual card
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>userConfirmation</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">confirmation</td>
+<td valign="top"><a href="#userconfirmation">UserConfirmation</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>createContact</strong></td>
 <td valign="top"><a href="#contact">Contact</a>!</td>
 <td>
@@ -2808,21 +2823,6 @@ Create a new user
 <tr>
 <td colspan="2" align="right" valign="top">name</td>
 <td valign="top"><a href="#bannername">BannerName</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>userConfirmation</strong></td>
-<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">confirmation</td>
-<td valign="top"><a href="#userconfirmation">UserConfirmation</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" align="right" valign="top">year</td>
-<td valign="top"><a href="#int">Int</a></td>
 <td></td>
 </tr>
 <tr>
