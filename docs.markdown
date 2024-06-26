@@ -1731,6 +1731,20 @@ Creates a draft external transaction entry
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createDraftTransactions</strong></td>
+<td valign="top">[<a href="#createdrafttransactionresponse">CreateDraftTransactionResponse</a>!]!</td>
+<td>
+
+Creates draft external transactions entries
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">payload</td>
+<td valign="top">[<a href="#createdrafttransactioninput">CreateDraftTransactionInput</a>!]!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>updateDraftTransaction</strong></td>
 <td valign="top"><a href="#drafttransaction">DraftTransaction</a></td>
 <td>
@@ -11300,6 +11314,40 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>reason</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CreateDraftTransactionInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>name</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>description</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>paymentDate</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>amount</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
 </tr>
 </tbody>
