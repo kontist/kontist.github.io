@@ -14122,6 +14122,46 @@ Expected monthly revenue in euro cents
 <td valign="top"><strong>REVERSE_CHARGE_INFORMATION</strong></td>
 <td></td>
 </tr>
+<tr>
+<td valign="top"><strong>INVOICE_ABOVE_250</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INVOICE_BELOW_250</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>UNCLEAR_EXPENSE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>EXTERNAL_BANK_ACCOUNT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>CAR_USAGE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>VAT_ID_MISSING</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>SMALL_BUSINESS_VAT</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>WRONG_OUTGOING_INVOICE</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>INVOICE_REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>ELECTRONIC_SERVICES</strong></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
