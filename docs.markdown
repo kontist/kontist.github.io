@@ -1788,6 +1788,30 @@ Deletes draft transaction
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>createDraftTransactionAsset</strong></td>
+<td valign="top"><a href="#createassetresponse">CreateAssetResponse</a>!</td>
+<td>
+
+Create a draft transaction Asset and obtain an upload config
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">filetype</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">transactionId</td>
+<td valign="top"><a href="#id">ID</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>requestFrodaAccessUrl</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
