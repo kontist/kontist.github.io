@@ -9526,6 +9526,11 @@ The user's Solaris customer vetting status
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>businessType</strong></td>
+<td valign="top"><a href="#businesstype">BusinessType</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>birthDate</strong></td>
 <td valign="top"><a href="#datetime">DateTime</a></td>
 <td></td>
@@ -13878,6 +13883,11 @@ The version of terms user has accepted
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>businessType</strong></td>
+<td valign="top"><a href="#businesstype">BusinessType</a></td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>isSelfEmployed</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a></td>
 <td></td>
@@ -14369,6 +14379,33 @@ Expected monthly revenue in euro cents
 </tr>
 <tr>
 <td valign="top"><strong>TRADE_TAX</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### BusinessType
+
+<table>
+<thead>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><strong>SELF_EMPLOYED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>GBR</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>GMBH_AND_OTHERS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td valign="top"><strong>NO_BUSINESS</strong></td>
 <td></td>
 </tr>
 </tbody>
