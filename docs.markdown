@@ -3021,6 +3021,25 @@ Submits UStVA declaration
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>resetDeclaration</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td>
+
+Reset UStVA declaration
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>markViewAsSeen</strong></td>
 <td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
 <td></td>
