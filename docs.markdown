@@ -16751,6 +16751,10 @@ Expected monthly revenue in euro cents
 <td></td>
 </tr>
 <tr>
+<td valign="top"><strong>FREE_CARD</strong></td>
+<td></td>
+</tr>
+<tr>
 <td valign="top"><strong>LEXOFFICE</strong></td>
 <td></td>
 </tr>
