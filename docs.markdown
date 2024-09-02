@@ -3360,6 +3360,21 @@ A list of iban/name combinations based on existing user's transactions, provided
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>vatDeclarationSubmissions</strong></td>
+<td valign="top">[<a href="#declarationsubmission">DeclarationSubmission</a>!]!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">period</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">year</td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>declarationPdfUrl</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -5281,6 +5296,56 @@ User transfer contacts
 <tr>
 <td colspan="2" valign="top"><strong>exitedBusinessAssetsWithVat</strong></td>
 <td valign="top">[<a href="#businessassetresponse">BusinessAssetResponse</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### DeclarationSubmission
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>year</strong></td>
+<td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>period</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isFinal</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>isSuccessful</strong></td>
+<td valign="top"><a href="#boolean">Boolean</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>submittedAt</strong></td>
+<td valign="top"><a href="#datetime">DateTime</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>messages</strong></td>
+<td valign="top">[<a href="#biztaxdeclarationresultmessage">BizTaxDeclarationResultMessage</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
