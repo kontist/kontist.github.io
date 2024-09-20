@@ -3089,6 +3089,11 @@ The bank account of the current user
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>cardHolderRepresentations</strong></td>
+<td valign="top">[<a href="#string">String</a>!]!</td>
+<td></td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>availableBalance</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
 <td></td>
@@ -3106,11 +3111,6 @@ The bank account of the current user
 <tr>
 <td colspan="2" valign="top"><strong>canCreateOverdraft</strong></td>
 <td valign="top"><a href="#boolean">Boolean</a>!</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>cardHolderRepresentations</strong></td>
-<td valign="top">[<a href="#string">String</a>!]!</td>
 <td></td>
 </tr>
 <tr>
@@ -9686,6 +9686,15 @@ This field will be removed in an upcoming release. You should now rely on "isSel
 <td></td>
 </tr>
 <tr>
+<td colspan="2" valign="top"><strong>cardHolderRepresentations</strong></td>
+<td valign="top">[<a href="#string">String</a>!]!</td>
+<td>
+
+Suggested card holder representations for user
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top"><strong>country</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td></td>
@@ -10378,15 +10387,6 @@ Referral details for user
 <td>
 
 Tax details for user
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top"><strong>cardHolderRepresentations</strong></td>
-<td valign="top">[<a href="#string">String</a>!]!</td>
-<td>
-
-Suggested card holder representations for user
 
 </td>
 </tr>
