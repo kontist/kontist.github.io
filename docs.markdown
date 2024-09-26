@@ -733,6 +733,11 @@ The current user information
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top"><strong>listLegalRepresentatives</strong></td>
+<td valign="top">[<a href="#legalrepresentative">LegalRepresentative</a>!]!</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -3046,6 +3051,41 @@ Reset UStVA declaration
 </tr>
 <tr>
 <td colspan="2" align="right" valign="top">name</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>createLegalRepresentative</strong></td>
+<td valign="top"><a href="#legalrepresentative">LegalRepresentative</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">data</td>
+<td valign="top"><a href="#createlegalrepresentativeinput">CreateLegalRepresentativeInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>updateLegalRepresentative</strong></td>
+<td valign="top"><a href="#legalrepresentative">LegalRepresentative</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">data</td>
+<td valign="top"><a href="#createlegalrepresentativeinput">CreateLegalRepresentativeInput</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>deleteLegalRepresentative</strong></td>
+<td valign="top"><a href="#mutationresult">MutationResult</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" align="right" valign="top">id</td>
 <td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
@@ -6466,6 +6506,41 @@ If a user's setting has a logoPath, we calculate a url to the thumbnail from it
 <tr>
 <td colspan="2" valign="top"><strong>data</strong></td>
 <td valign="top">[<a href="#dashboardinvoice">DashboardInvoice</a>!]!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### LegalRepresentative
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>id</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>businessId</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>firstName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
@@ -11480,6 +11555,30 @@ The scopes the client has access to, limiting access to the corresponding parts 
 <tr>
 <td colspan="2" valign="top"><strong>amount</strong></td>
 <td valign="top"><a href="#int">Int</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+#### CreateLegalRepresentativeInput
+
+<table>
+<thead>
+<tr>
+<th colspan="2" align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>firstName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
 <td></td>
 </tr>
 </tbody>
