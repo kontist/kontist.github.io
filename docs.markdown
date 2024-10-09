@@ -1999,7 +1999,7 @@ Deletes the logo of a user's settings entry
 <td valign="top">[<a href="#product">Product</a>!]!</td>
 <td>
 
-Create or update user products that can be linked to the user's invoice(s)
+Create or update products that can be linked to the invoice(s)
 
 </td>
 </tr>
@@ -4503,6 +4503,33 @@ Business Address of a Kontax User
 </tbody>
 </table>
 
+#### BusinessResultLegalRepresentative
+
+Commercial registration provided by Solaris
+
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="right">Argument</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2" valign="top"><strong>firstName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>lastName</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 #### Card
 
 <table>
@@ -5984,6 +6011,16 @@ Commercial registration provided by Solaris
 <tr>
 <td colspan="2" valign="top"><strong>registrationIssuer</strong></td>
 <td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>registrationDate</strong></td>
+<td valign="top"><a href="#string">String</a>!</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="2" valign="top"><strong>legalRepresentatives</strong></td>
+<td valign="top">[<a href="#businessresultlegalrepresentative">BusinessResultLegalRepresentative</a>!]!</td>
 <td></td>
 </tr>
 </tbody>
